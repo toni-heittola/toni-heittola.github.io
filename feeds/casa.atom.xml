@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Toni Heittola - CASA</title><link href="/" rel="alternate"></link><link href="/feeds/casa.atom.xml" rel="self"></link><id>/</id><updated>2022-06-27T12:00:00+03:00</updated><entry><title>Award for the Phd thesis</title><link href="/articles/award-for-the-phd-thesis" rel="alternate"></link><published>2022-06-27T12:00:00+03:00</published><updated>2022-06-27T12:00:00+03:00</updated><author><name>Toni Heittola</name></author><id>tag:None,2022-06-27:/articles/award-for-the-phd-thesis</id><summary type="html">&lt;p&gt;I received an honorary award from the Finnish Society for Computer Science for my PhD thesis.&lt;/p&gt;</summary><content type="html">&lt;p&gt;I received an honorary award from the Finnish Society for Computer Science for my PhD thesis on 20.6.2022.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://tkts.fi/2022/06/27/tietojenkasittelytieteen-seura-ry-jakoi-palkintoja-opinnaytetoille/"&gt;News article in Finnish&lt;/a&gt;&lt;/p&gt;
+&lt;div class="text-center"&gt;
+&lt;img src="https://tkts.fi/wp-content/uploads/sites/29/2022/06/tkts1_20-768x724.jpg" style="width:50%;"/&gt;
+&lt;br/&gt;
+&lt;em&gt;Photo by Kari Systä&lt;/em&gt;
+&lt;/div&gt;</content><category term="CASA"></category></entry><entry><title>My doctoral thesis has been published</title><link href="/articles/my-doctoral-thesis-has-been-published" rel="alternate"></link><published>2021-06-19T12:00:00+03:00</published><updated>2021-06-19T12:00:00+03:00</updated><author><name>Toni Heittola</name></author><id>tag:None,2021-06-19:/articles/my-doctoral-thesis-has-been-published</id><summary type="html">&lt;p&gt;My thesis titled "Computational Audio Content Analysis in Everyday Environments" has been published by Tampere University.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="Book cover" src="https://trepo.tuni.fi/bitstream/handle/10024/132786/978-952-03-2006-5.pdf.jpg?sequence=5&amp;amp;isAllowed=y"/&gt;&lt;/p&gt;
+&lt;p&gt;My thesis titled &lt;a href="https://trepo.tuni.fi/bitstream/handle/10024/132786/978-952-03-2006-5.pdf?sequence=2&amp;amp;isAllowed=y"&gt;Computational Audio Content Analysis in Everyday Environments&lt;/a&gt; has been published by Tampere University. The thesis contains introduction to audio content analysis in everyday environments.&lt;/p&gt;</content><category term="CASA"></category></entry><entry><title>Slides for ICASSP2019 Tutorial: 'Detection and Classification of Acoustic Scenes and Events'</title><link href="/articles/slides-for-icassp2019-tutorial-detection-and-classification-of-acoustic-scenes-and-events" rel="alternate"></link><published>2019-05-13T23:00:00+03:00</published><updated>2019-05-13T23:00:00+03:00</updated><author><name>Toni Heittola</name></author><id>tag:None,2019-05-13:/articles/slides-for-icassp2019-tutorial-detection-and-classification-of-acoustic-scenes-and-events</id><content type="html">&lt;p&gt;Final slides for a tutorial at ICASSP 2019 on &lt;a href="https://2019.ieeeicassp.org/program#tutorials"&gt;"Detection and Classification of Acoustic Scenes and Events"&lt;/a&gt; are now available &lt;a href="https://homepages.tuni.fi/toni.heittola/pubs/ICASSP2019_DCASE_tutorial.pdf"&gt;&lt;strong&gt;here&lt;/strong&gt;&lt;/a&gt;. Jupyter notebooks for the Python examples are available at &lt;a href="https://github.com/toni-heittola/icassp2019-tutorial"&gt;Github repository&lt;/a&gt;.&lt;/p&gt;</content><category term="CASA"></category></entry><entry><title>ICASSP2019 Tutorial: 'Detection and Classification of Acoustic Scenes and Events'</title><link href="/articles/icassp2019-tutorial-detection-and-classification-of-acoustic-scenes-and-events" rel="alternate"></link><published>2019-04-23T14:00:00+03:00</published><updated>2019-04-23T14:00:00+03:00</updated><author><name>Toni Heittola</name></author><id>tag:None,2019-04-23:/articles/icassp2019-tutorial-detection-and-classification-of-acoustic-scenes-and-events</id><summary type="html">&lt;p&gt;I will be presenting a tutorial at ICASSP 2019 on &lt;a href="https://2019.ieeeicassp.org/program#tutorials"&gt;"Detection and Classification of Acoustic Scenes and Events"&lt;/a&gt;, together with Tuomas Virtanen and Annamaria Mesaros, on Monday 13.5.2019&lt;/p&gt;</summary><content type="html">&lt;p&gt;I will be presenting a tutorial at ICASSP 2019 on &lt;a href="https://2019.ieeeicassp.org/program#tutorials"&gt;"Detection and Classification of Acoustic Scenes and Events"&lt;/a&gt;, together with Tuomas Virtanen and Annamaria Mesaros, on Monday 13.5.2019. Tutorial slides are available &lt;a href="../pubs/ICASSP2019_DCASE_tutorial.pdf"&gt;here&lt;/a&gt;.&lt;/p&gt;</content><category term="CASA"></category></entry><entry><title>Glossary</title><link href="/articles/glossary" rel="alternate"></link><published>2018-10-15T12:00:00+03:00</published><updated>2018-10-15T12:00:00+03:00</updated><author><name>Toni Heittola</name></author><id>tag:None,2018-10-15:/articles/glossary</id><summary type="html">&lt;p&gt;I started to collect glossary with key terms from the field of computational audio content analysis.&lt;/p&gt;</summary><content type="html">&lt;p&gt;I started to collect glossary with key terms from the field of &lt;strong&gt;computational audio content analysis&lt;/strong&gt;. Aim is to casually collect key terms along with their brief definitions, and try to find Finnish translations for them.&lt;/p&gt;
+&lt;p&gt;Glossary can be found &lt;a href="/glossary"&gt;here&lt;/a&gt;.&lt;/p&gt;</content><category term="casa"></category></entry><entry><title>Computational Analysis of Sound Scenes and Events book published</title><link href="/articles/computational-analysis-of-sound-scenes-and-events-book-published" rel="alternate"></link><published>2017-11-02T12:00:00+02:00</published><updated>2017-11-02T12:00:00+02:00</updated><author><name>Toni Heittola</name></author><id>tag:None,2017-11-02:/articles/computational-analysis-of-sound-scenes-and-events-book-published</id><summary type="html">&lt;p&gt;New book "Computational Analysis of Sound Scenes and Events" published. I have contributed to two chapters in this book.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="Book cover" src="https://static-content.springer.com/cover/book/978-3-319-63450-0.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;Book titled &lt;a href="http://www.springer.com/us/book/9783319634494"&gt;Computational Analysis of Sound Scenes and Events&lt;/a&gt;, edited by Tuomas Virtanen, Mark D. Plumbley and Dan Ellis has been published. Book covers basic and advanced topics related to sound scene analysis.  &lt;/p&gt;
+&lt;p&gt;I have contributed to two of the chapter in this book:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Chapter 2: &lt;a href="https://link.springer.com/chapter/10.1007/978-3-319-63450-0_2"&gt;The Machine Learning Approach for Analysis of Sound Scenes and Events&lt;/a&gt;, &lt;em&gt;Toni Heittola, Emre Çakır, Tuomas Virtanen&lt;/em&gt;, pages 13-40&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Chapter 6: &lt;a href="https://link.springer.com/chapter/10.1007/978-3-319-63450-0_6"&gt;Datasets and Evaluation&lt;/a&gt;, &lt;em&gt;Annamaria Mesaros, Toni Heittola, Dan Ellis&lt;/em&gt;, pages 147-179&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</content><category term="CASA"></category></entry><entry><title>Listening Experiment for Acoustic Scene Recognition</title><link href="/articles/listening-experiment-for-acoustic-scene-recognition" rel="alternate"></link><published>2016-11-01T12:00:00+02:00</published><updated>2016-11-01T12:00:00+02:00</updated><author><name>Toni Heittola</name></author><id>tag:None,2016-11-01:/articles/listening-experiment-for-acoustic-scene-recognition</id><summary type="html">&lt;p&gt;We are currently conducting a listening experiment for acoustic scene recognition. This test is supporting the result analysis of DCASE2016 challange task for acoustic scene recognition.&lt;/p&gt;</summary><content type="html">&lt;p&gt;We are currently conducting a &lt;a href="http://arg.cs.tut.fi/listening_experiments/index.php?task=start&amp;amp;id=57e12aefd97f"&gt;listening experiment for acoustic scene recognition&lt;/a&gt;. This test is supporting the result analysis of &lt;a href="http://www.cs.tut.fi/sgn/arg/dcase2016/task-acoustic-scene-classification"&gt;DCASE2016 challange task for acoustic scene recognition&lt;/a&gt;. &lt;/p&gt;
+&lt;div class="label label-success"&gt;Update&lt;/div&gt;
+&lt;p&gt;Listening experiment is now ended and results are published in the paper:&lt;/p&gt;
+&lt;div class="btex-item" data-item="Mesaros2017_WASPAA" data-source="content/data/publications.bib"&gt;
+&lt;div class="card mb-3"&gt;
+&lt;span class="label label-default" style="width:100px;padding-top:0.4em;margin-left:0em;margin-top:0em;"&gt;Publication&lt;a name="Mesaros2017_WASPAA"&gt;&lt;/a&gt;&lt;/span&gt;
+&lt;div class="card-body"&gt;
+&lt;div class="row"&gt;
+&lt;div class="col-md-9"&gt;
+&lt;p style="text-align:left"&gt;
+                                Annamaria Mesaros, Toni Heittola, and Tuomas Virtanen.
+&lt;em&gt;Assessment of human and machine performance in acoustic scene classification: DCASE 2016 case study.&lt;/em&gt;
+In 2017 IEEE Workshop on Applications of Signal Processing to Audio and Acoustics (WASPAA), 319–323. IEEE Computer Society, 2017.
+&lt;a href="https://doi.org/10.1109/WASPAA.2017.8170047"&gt;doi:10.1109/WASPAA.2017.8170047&lt;/a&gt;.
+                                
+                                
+                                &lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="col-md-3"&gt;
+&lt;div class="btn-group pull-right"&gt;
+&lt;button class="btn btn-xs btn-danger" data-bs-target="#bibtexMesaros2017_WASPAA298b94fd72a347508470b529eb61d70a" data-bs-toggle="modal" type="button"&gt;&lt;i class="fa fa-solid fa-file-text fa-file-text-o"&gt;&lt;/i&gt; Bib&lt;/button&gt;
+&lt;a class="btn btn-xs btn-warning btn-btex text-white" data-placement="bottom" href="https://toni-heittola.github.io/pubs/mesaros-waspaa2017-humans-vs-machines-asc.pdf" rel="tooltip" title="Download pdf"&gt;&lt;i class="fa fa-solid fa-file-pdf fa-file-pdf-o fa-1x"&gt;&lt;/i&gt; PDF&lt;/a&gt;
+&lt;button aria-controls="collapseMesaros2017_WASPAA298b94fd72a347508470b529eb61d70a" aria-expanded="true" class="btn btn-default btn-xs" data-bs-parent="#btex-items-accordion" data-bs-target="#collapseMesaros2017_WASPAA298b94fd72a347508470b529eb61d70a" data-bs-toggle="collapse" type="button"&gt;
+&lt;i class="fa fa-solid fa-caret-down"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div aria-labelledby="headingMesaros2017_WASPAA298b94fd72a347508470b529eb61d70a" class="panel-collapse collapse mb-3" id="collapseMesaros2017_WASPAA298b94fd72a347508470b529eb61d70a"&gt;
+&lt;h4&gt;Assessment of Human and Machine Performance in Acoustic Scene Classification: DCASE 2016 Case Study&lt;/h4&gt;
+&lt;h5&gt;Abstract&lt;/h5&gt;
+&lt;p class="text-justify"&gt;Human and machine performance in acoustic scene classification is examined through a parallel experiment using TUT Acoustic Scenes 2016 dataset. The machine learning perspective is presented based on the systems submitted for the 2016 challenge on Detection and Classification of Acoustic Scenes and Events. The human performance, assessed through a listening experiment, was found to be significantly lower than machine performance. Test subjects exhibited different behavior throughout the experiment, leading to significant differences in performance between groups of subjects. An expert listener trained for the task obtained similar accuracy to the average of submitted systems, comparable also to previous studies of human abilities in recognizing everyday acoustic scenes.&lt;/p&gt;
+&lt;div class="btn-group"&gt;
+&lt;button class="btn btn-sm btn-danger" data-target="#bibtexMesaros2017_WASPAA298b94fd72a347508470b529eb61d70a" data-toggle="modal" type="button"&gt;&lt;i class="fa fa-solid fa-file-text fa-file-text-o"&gt;&lt;/i&gt; Bibtex&lt;/button&gt;
+&lt;a class="btn btn-sm btn-warning text-white btn-btex2" data-placement="bottom" href="https://toni-heittola.github.io/pubs/mesaros-waspaa2017-humans-vs-machines-asc.pdf" rel="tooltip" title="Download pdf"&gt;&lt;i class="fa fa-solid fa-file-pdf fa-file-pdf-o fa-1x"&gt;&lt;/i&gt; PDF&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class="btn-group"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- Modal --&gt;
+&lt;div aria-hidden="true" aria-labelledby="bibtexMesaros2017_WASPAA298b94fd72a347508470b529eb61d70alabel" class="modal fade" id="bibtexMesaros2017_WASPAA298b94fd72a347508470b529eb61d70a" role="dialog" tabindex="-1"&gt;
+&lt;div class="modal-dialog"&gt;
+&lt;div class="modal-content"&gt;
+&lt;div class="modal-header"&gt;
+&lt;h4 class="modal-title" id="bibtexMesaros2017_WASPAA298b94fd72a347508470b529eb61d70alabel"&gt;Assessment of Human and Machine Performance in Acoustic Scene Classification: DCASE 2016 Case Study&lt;/h4&gt;
+&lt;button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"&gt;&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class="modal-body"&gt;&lt;pre&gt;@inproceedings{Mesaros2017_WASPAA,
+    author = "Mesaros, Annamaria and Heittola, Toni and Virtanen, Tuomas",
+    title = "Assessment of Human and Machine Performance in Acoustic Scene Classification: {DCASE} 2016 Case Study",
+    year = "2017",
+    pages = "319--323",
+    booktitle = "2017 IEEE Workshop on Applications of Signal Processing to Audio and Acoustics (WASPAA)",
+    publisher = "IEEE Computer Society",
+    language = "English",
+    abstract = "Human and machine performance in acoustic scene classification is examined through a parallel experiment using TUT Acoustic Scenes 2016 dataset. The machine learning perspective is presented based on the systems submitted for the 2016 challenge on Detection and Classification of Acoustic Scenes and Events. The human performance, assessed through a listening experiment, was found to be significantly lower than machine performance. Test subjects exhibited different behavior throughout the experiment, leading to significant differences in performance between groups of subjects. An expert listener trained for the task obtained similar accuracy to the average of submitted systems, comparable also to previous studies of human abilities in recognizing everyday acoustic scenes.",
+    doi = "10.1109/WASPAA.2017.8170047"
+}
+&lt;/pre&gt;&lt;/div&gt;
+&lt;div class="modal-footer"&gt;&lt;button class="btn btn-default" data-bs-dismiss="modal" type="button"&gt;Close&lt;/button&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</content><category term="CASA"></category></entry><entry><title>TUT Acoustic Scenes and Sound Events Datasets</title><link href="/articles/tut-acoustic-scenes-and-sound-events-datasets" rel="alternate"></link><published>2016-02-08T12:00:00+02:00</published><updated>2016-02-08T12:00:00+02:00</updated><author><name>Toni Heittola</name></author><id>tag:None,2016-02-08:/articles/tut-acoustic-scenes-and-sound-events-datasets</id><summary type="html">&lt;p&gt;Our research group has published open datasets to support the development of acoustic scene classification and sound event detection approaches.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Our research group has published open datasets to support the development of acoustic scene classification and sound event detection approaches.&lt;/p&gt;
+&lt;div class="list-group brepository-container mb-4"&gt;
+&lt;a class="list-group-item" href="https://zenodo.org/record/45739" target="_blank"&gt;
+&lt;div class="d-inline-flex align-items-center"&gt;
+&lt;div class="p-1"&gt;
+&lt;span class="fa-stack fa-2x"&gt;
+&lt;i class="fa fa-square fa-stack-2x text-success"&gt;&lt;/i&gt;
+&lt;i class="fa fa-solid fa-file-audio fa-file-audio-o fa-stack-1x fa-inverse"&gt;&lt;/i&gt;
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="p-1"&gt;
+&lt;h5 class="list-group-item-heading"&gt;TUT Acoustic scenes 2016, &lt;strong&gt;development dataset&lt;/strong&gt; &lt;i class="fa fa-solid fa-download"&gt;&lt;/i&gt;&lt;/h5&gt;
+&lt;span class="text-muted"&gt;(7.5 GB)&lt;/span&gt;&lt;br/&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/a&gt;
+&lt;a class="list-group-item" href="https://zenodo.org/record/165995" target="_blank"&gt;
+&lt;div class="d-inline-flex align-items-center"&gt;
+&lt;div class="p-1"&gt;
+&lt;span class="fa-stack fa-2x"&gt;
+&lt;i class="fa fa-square fa-stack-2x text-success"&gt;&lt;/i&gt;
+&lt;i class="fa fa-solid fa-file-audio fa-file-audio-o fa-stack-1x fa-inverse"&gt;&lt;/i&gt;
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="p-1"&gt;
+&lt;h5 class="list-group-item-heading"&gt;TUT Acoustic scenes 2016, &lt;strong&gt;evaluation dataset&lt;/strong&gt; &lt;i class="fa fa-solid fa-download"&gt;&lt;/i&gt;&lt;/h5&gt;
+&lt;span class="text-muted"&gt;(2.5 GB)&lt;/span&gt;&lt;br/&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/a&gt;
+&lt;a class="list-group-item" href="https://zenodo.org/record/4575" target="_blank"&gt;
+&lt;div class="d-inline-flex align-items-center"&gt;
+&lt;div class="p-1"&gt;
+&lt;span class="fa-stack fa-2x"&gt;
+&lt;i class="fa fa-square fa-stack-2x text-success"&gt;&lt;/i&gt;
+&lt;i class="fa fa-solid fa-file-audio fa-file-audio-o fa-stack-1x fa-inverse"&gt;&lt;/i&gt;
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="p-1"&gt;
+&lt;h5 class="list-group-item-heading"&gt;TUT Sound events 2016, &lt;strong&gt;development dataset&lt;/strong&gt; &lt;i class="fa fa-solid fa-download"&gt;&lt;/i&gt;&lt;/h5&gt;
+&lt;span class="text-muted"&gt;(0.9 GB)&lt;/span&gt;&lt;br/&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/a&gt;
+&lt;/div&gt;
+</content><category term="CASA"></category></entry></feed>

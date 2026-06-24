@@ -1,0 +1,1124 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <title>Sound Event Detection in Everyday Environments - Toni Heittola</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <link href="/static/favicon.png" rel="icon">
+<link rel="canonical" href="/thesis/sed">
+        <meta name="author" content="Toni Heittola" />
+        <meta name="description" content="This page presents an excerpt from the chapter Sound Event Detection in Everyday Environments, taken from my PhD thesis titled Computational Audio Content Analysis in Everyday Environments. Publication Toni Heittola. Computational Audio Content Analysis in Everyday Environments. PhD thesis, Tampere University, 6 2021. Bib PDF Computational Audio Content Analysis in …" />
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;900&family=Roboto:wght@900&family=Bungee+Spice" rel="stylesheet">
+    <link rel="stylesheet" href="/theme/assets/bootstrap5/css/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/assets/fontawesome6/css/all.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/assets/academicons/css/academicons.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/assets/dcaseicons/css/dcaseicons.css?v=1.1" type="text/css"/>
+<link rel="stylesheet" href="/theme/assets/highlight/styles/atom-one-light.css" type="text/css"/>
+                <link rel="stylesheet" href="/theme/css/btoc-bot.min.css">
+<link rel="stylesheet" href="/theme/css/theme5.css?v=1.1" type="text/css"/><link rel="stylesheet" href="/static/assets/css/icons.css" type="text/css"/><link rel="stylesheet" href="/static/assets/css/extra.css" type="text/css"/><script type="text/javascript" src="/theme/assets/jquery/jquery-3.7.1.min.js"></script>    <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Toni Heittola ATOM Feed"/>
+
+
+</head>
+<body>
+
+
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark pt-0 pb-0 flex-column" role="navigation" data-spy="affix" data-offset-top="195" id="topmenu">
+    <div class="container p-0">
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-main" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar-main">
+            <div class="container-fluid p-0">
+                <div class="row g-0 p-0">
+                    <div class="col-md d-flex">
+                        <a href="/" class="navbar-brand align-self-start" ></a><ul class="navbar-nav flex-sm-row2 flex-lg-grow flex-lg-fill align-self-start" id="menuitem-list-main"><li class="nav-item ">
+        <a href="/"
+        class="nav-link"
+        ><strong>Toni Heittola</strong></a>
+    </li></ul><ul class="navbar-nav flex-lg-nowrap align-self-start" id="menuitem-list"><li class="nav-item " data-bs-toggle="tooltip" data-bs-placement="bottom" title="About me">
+        <a href="/about-me"
+        class="nav-link"
+        ><i class="fa fa-solid fa-user fa-1x fa-fw"></i>&nbsp;About</a>
+    </li><li class="nav-item dropdown  active">
+        <a href="#"
+ class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+        ><i class="fa fa-solid fa-magnifying-glass fa-1x fa-fw text-danger text-dcase-a1"></i>&nbsp;Research&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class=" ">
+        <a href="/research"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-circle-notch fa-circle-o-notch fa-1x fa-fw text-dcase-a1"></i>&nbsp;Overview</a>
+    </li>
+            <li class=" ">
+        <a href="/research-portfolio"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-cog fa-1x fa-fw text-dcase-a2"></i>&nbsp;Portfolio</a>
+    </li>
+            <li class=" ">
+        <a href="/guiding-research"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-users fa-fw text-dcase-a3"></i>&nbsp;Guiding Research</a>
+    </li>
+            <li class="nav-item divider dropdown-divider" role="presentation"></li>
+            <li class=" ">
+        <a href="/publications"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-copy fa-files-o fa-1x fa-fw text-dcase-a4"></i>&nbsp;Publications</a>
+    </li>
+            <li class=" ">
+        <a href="/opendata"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-database fa-fw text-dcase-a5"></i>&nbsp;Open Data</a>
+    </li>
+            <li class="nav-item divider dropdown-divider" role="presentation"></li>
+            <li class=" ">
+        <a href="/academic-illustrations"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-image fa-1x fa-fw text-dcase-a7"></i>&nbsp;Illustrations</a>
+    </li>
+            <li class="nav-item divider dropdown-divider" role="presentation"></li>
+            <li class=" ">
+        <a href="/academic-bio"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-user fa-1x fa-fw text-dcase-a6"></i>&nbsp;Biography</a>
+    </li>
+            <li class="nav-item divider dropdown-divider" role="presentation"></li>
+            <li class=" ">
+        <a href="/glossary"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-list fa-1x fa-fw text-dcase-a7"></i>&nbsp;Glossary</a>
+    </li>
+            <li class="nav-item divider dropdown-divider" role="presentation"></li>
+            <li class="nav-link disabled subheader" >
+       <a><strong><small class="fw-light">Audio Content Analysis <br>in Everyday Environments</small></strong></a>
+    </li>
+            <li class=" ">
+        <a href="/thesis/introduction"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-book-open fa-1x fa-fw text-dcase-a1"></i>&nbsp;Introduction</a>
+    </li>
+            <li class=" ">
+        <a href="/thesis/everyday_environments"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-person-walking fa-1x fa-fw text-dcase-a1"></i>&nbsp;Everyday Environments</a>
+    </li>
+            <li class=" ">
+        <a href="/thesis/content_analysis"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-brain fa-1x fa-fw text-dcase-a1"></i>&nbsp;Audio Content Analysis</a>
+    </li>
+            <li class="  active">
+        <a href="/thesis/sed"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-ear-listen fa-1x fa-fw text-dcase-a1"></i>&nbsp;Sound Event Detection</a>
+    </li>
+            <li class="nav-item divider dropdown-divider" role="presentation"></li>
+            <li class="nav-item dropdown ">
+        <a href="#"
+ class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+        ><i class="fa fa-solid fa-file-alt fa-1x fa-fw"></i>&nbsp;Publication Add-ons&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class=" ">
+        <a href="/audiotexture/index"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-file-alt fa-1x fa-fw"></i>&nbsp;Location-Specific Audio Textures</a>
+    </li>
+            <li class=" ">
+        <a href="/ismir09/index"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-file-alt fa-1x fa-fw"></i>&nbsp;Musical Instrument Recognition</a>
+    </li>
+            <li class=" ">
+        <a href="/musicalgenre/index"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-file-alt fa-1x fa-fw"></i>&nbsp;Musical Genre Classification</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li><li class="nav-item dropdown ">
+        <a href="/development"
+ class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+        ><i class="fa fa-solid fa-code fa-1x fa-fw text-warning text-thesis-a3"></i>&nbsp;Develop&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class=" ">
+        <a href="/development"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-code fa-1x fa-fw text-thesis-a3"></i>&nbsp;Introduction</a>
+    </li>
+            <li class="nav-item divider dropdown-divider" role="presentation"></li>
+            <li class=" ">
+        <a href="/ml-development"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-search fa-1x fa-fw text-thesis-a4"></i>&nbsp;Machine Learning</a>
+    </li>
+            <li class=" ">
+        <a href="/websites"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-desktop fa-1x fa-fw text-thesis-a2"></i>&nbsp;Websites</a>
+    </li>
+            <li class=" ">
+        <a href="/web-development"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-plug fa-1x fa-fw text-thesis-a1"></i>&nbsp;Web Development</a>
+    </li>
+        </ul>
+    </li><li class="nav-item ">
+        <a href="/publications"
+        class="nav-link"
+        ><i class="fa fa-solid fa-copy fa-files-o fa-1x fa-fw text-success text-dcase-a4"></i>&nbsp;Publish</a>
+    </li><li class="nav-item dropdown ">
+        <a href="#"
+ class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+        ><i class="fa fa-solid fa-wave-square fa-fw text-primary text-dcase-a5"></i>&nbsp;Data&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class=" ">
+        <a href="/opendata"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-folder-open fa-fw"></i>&nbsp;Open Data</a>
+    </li>
+            <li class=" ">
+        <a href="/datasets"
+ class="dropdown-item"
+        ><i class="fa fa-list-ul fa-fw"></i>&nbsp;Data & Tools</a>
+    </li>
+            <li class="nav-item divider dropdown-divider" role="presentation"></li>
+            <li class=" " data-bs-toggle="tooltip" data-bs-placement="bottom" title="DCASE Datalist">
+        <a href="https://dcase-repo.github.io/dcase_datalist/"
+ target="_blank"  class="dropdown-item"
+        ><i class="fa fa-database fa-1x fa-fw"></i>&nbsp;DCASE DataList</a>
+    </li>
+        </ul>
+    </li><li class="nav-item " data-bs-toggle="tooltip" data-bs-placement="bottom" title="Glossary">
+        <a href="/glossary"
+        class="nav-link"
+        ><i class="fa fa-solid fa-list fa-1x fa-fw"></i>&nbsp;</a>
+    </li><li class="nav-item " data-bs-toggle="tooltip" data-bs-placement="bottom" title="News articles">
+        <a href="/news"
+        class="nav-link"
+        ><i class="fa fa-solid fa-newspaper fa-newspaper-o fa-fw"></i>&nbsp;</a>
+    </li><li class="nav-item " data-bs-toggle="tooltip" data-bs-placement="bottom" title="Github">
+        <a href="https://github.com/toni-heittola?tab=repositories"
+ target="_blank"         class="nav-link"
+        ><i class="fa fa-brands fa-github fa-1x"></i>&nbsp;</a>
+    </li>                        </ul>                    </div></div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+<header class="page-top" style="background-image: url(../theme/images/everyday-patterns/bricks-toledo-02.jpg);box-shadow: 0px 1000px rgba(0, 0, 0, 0.65) inset;overflow:hidden;position:relative">
+    <div class="container" style="box-shadow: 0px 1000px rgba(255, 255, 255, 0.1) inset;;height:100%;padding-bottom:20px;">
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                <div class="page-heading text-end"><h1 class="toc-skip bold" data-toc-skip>Sound Event Detection in Everyday Environments</h1><hr class="small right bold"><span class="subheading">Computational Audio Content Analysis in Everyday Environments</span></div>
+            </div>
+        </div>
+    </div>
+<span class="header-cc-logo" data-bs-toggle="tooltip" data-bs-placement="top" title="Background photo by Toni Heittola / CC BY-NC 4.0"><i class="fa fa-brands fa-creative-commons" aria-hidden="true"></i></span></header><div class="container">
+    <div class="row">
+        <div class="col-sm-3 sidecolumn-left ">
+        <div class="btn-group-vertical pb-4" role="group"><button type="button" class="btn btn-secondary btn-sm text-start" disabled><i class="fa-solid fa-layer-group"></i> Chapters</button><a href="introduction" class="btn btn-outline-secondary btn-sm text-start">Introduction</a><a href="everyday_environments" class="btn btn-outline-secondary btn-sm text-start">Sounds in Everyday Environments</a><a href="content_analysis" class="btn btn-outline-secondary btn-sm text-start">Computational Audio Content Analysis</a><a href="sed" class="btn btn-dark btn-sm text-start">Sound Event Detection in Everyday Environments</a></div>
+ <div class="btoc-container hidden-print sticky-top" role="complementary">
+<div class="btoc-header bg-light text-muted">Content</div>
+<div class="btoc-body">
+<nav class="btoc-nav" data-toc-levels="h1,h2,h3"></nav>
+</div>
+</div>
+
+        </div>
+        <div class="col-sm-9 content">
+            <section id="content" class="body">
+                <div class="entry-content">
+                    <p class="lead">This page presents an excerpt from the chapter Sound Event Detection in Everyday Environments, taken from my PhD thesis titled Computational Audio Content Analysis in Everyday Environments.</p>
+<div class="row bg-light py-2">
+<div class="col-2"><img alt="Thesis cover" class="img-fluid" src="../images/thesis_cover.jpg"/></div>
+<div class="col-10"><div class="btex-item" data-item="phdthesis" data-source="content/data/publications.bib" data-template="default">
+<div class="card mb-3">
+<span class="label label-default" style="width:100px;padding-top:0.4em;margin-left:0em;margin-top:0em;">Publication<a name="phdthesis"></a></span>
+<div class="card-body">
+<div class="row">
+<div class="col-md-9">
+<p style="text-align:left">
+                                Toni Heittola.
+Computational Audio Content Analysis in Everyday Environments.
+PhD thesis, Tampere University, 6 2021.
+                                
+                                
+                                </p>
+</div>
+<div class="col-md-3">
+<div class="btn-group pull-right">
+<button class="btn btn-xs btn-danger" data-bs-target="#bibtexphdthesis7146bb3859e74d25881b0db4451dff8b" data-bs-toggle="modal" type="button"><i class="fa fa-solid fa-file-text fa-file-text-o"></i> Bib</button>
+<a class="btn btn-xs btn-warning btn-btex text-white" data-placement="bottom" href="https://trepo.tuni.fi/bitstream/handle/10024/132786/978-952-03-2006-5.pdf?sequence=2&amp;isAllowed=y" rel="tooltip" title="Download pdf"><i class="fa fa-solid fa-file-pdf fa-file-pdf-o fa-1x"></i> PDF</a>
+<button aria-controls="collapsephdthesis7146bb3859e74d25881b0db4451dff8b" aria-expanded="true" class="btn btn-default btn-xs" data-bs-parent="#btex-items-accordion" data-bs-target="#collapsephdthesis7146bb3859e74d25881b0db4451dff8b" data-bs-toggle="collapse" type="button">
+<i class="fa fa-solid fa-caret-down"></i></button>
+</div>
+</div>
+</div>
+<div aria-labelledby="headingphdthesis7146bb3859e74d25881b0db4451dff8b" class="panel-collapse collapse mb-3" id="collapsephdthesis7146bb3859e74d25881b0db4451dff8b">
+<h4>Computational Audio Content Analysis in Everyday Environments</h4>
+<h5>Abstract</h5>
+<p class="text-justify">Our everyday environments are full of sounds that have a vital role in providing us information and allowing us to understand what is happening around us. Humans have formed strong associations between physical events in their environment and the sounds that these events produce. Such associations are described using textual labels, sound events, and they allow us to understand, recognize, and interpret the concepts behind sounds. Examples of such sound events are dog barking, person shouting or car passing by. This thesis deals with computational methods for audio content analysis of everyday environments. Along with the increased usage of digital audio in our everyday life, automatic audio content analysis has become a more and more pursued ability. Content analysis enables an in-depth understanding of what was happening in the environment when the audio was captured, and this further facilitates applications that can accurately react to the events in the environment. The methods proposed in this thesis focus on sound event detection, the task of recognizing and temporally locating sound events within an audio signal, and include aspects related to development of methods dealing with a large set of sound classes, detection of multiple sounds, and evaluation of such methods. The work presented in this thesis focuses on developing methods that allow the detection of multiple overlapping sound events and robust acoustic model training based on mixture audio containing overlapping sounds. Starting with an HMM-based approach for prominent sound event detection, the work advanced by extending it into polyphonic detection using multiple Viterbi iterations or sound source separation. These polyphonic sound event detection systems were based on a collection of generative classifiers to produce multiple labels for the same time instance, which doubled or in some cases tripled the detection performance. As an alternative approach, polyphonic detection was implemented using class-wise activity detectors in which the activity of each event class was detected independently and class-wise event sequences were merged to produce the polyphonic system output. The polyphonic detection increased applicability of the methods in everyday environments substantially. For evaluation of methods, the work proposed a new metric for polyphonic sound event detection which takes into account the polyphony. The new metric, a segment-based F-score, provides rigorous definitions for the correct and erroneous detections, besides being more suitable for comparing polyphonic annotation and polyphonic system output than the previously used metrics and has since become one of the standard metrics in the research field. Part of this thesis includes studying sound events as a constituent part of the acoustic scene based on contextual information provided by their co-occurrence. This information was used for both sound event detection and acoustic scene classification. In sound event detection, context information was used to identify the acoustic scene in order to narrow down the selection of possible sound event classes based on this information, which allowed use of context-dependent acoustic models and event priors. This approach provided moderate yet consistent performance increase across all tested acoustic scene types, and enabled the detection system to be easily expanded to new scenes. In acoustic scene classification, the scenes were identified based on the distinctive and scene-specific sound events detected, with performance comparable to traditional approaches, while the fusion of these two approaches showed a significant further increase in the performance. The thesis also includes significant contribution to the development of tools for open research in the field, such as standardized evaluation protocols, and release of open datasets, benchmark systems, and open-source tools.</p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtexphdthesis7146bb3859e74d25881b0db4451dff8b" data-toggle="modal" type="button"><i class="fa fa-solid fa-file-text fa-file-text-o"></i> Bibtex</button>
+<a class="btn btn-sm btn-warning text-white btn-btex2" data-placement="bottom" href="https://trepo.tuni.fi/bitstream/handle/10024/132786/978-952-03-2006-5.pdf?sequence=2&amp;isAllowed=y" rel="tooltip" title="Download pdf"><i class="fa fa-solid fa-file-pdf fa-file-pdf-o fa-1x"></i> PDF</a>
+<a class="btn btn-sm btn-info btn-btex2 text-white" href="https://trepo.tuni.fi/handle/10024/136508" title=""><i class="fa fa-solid fa-book"></i> Web publication</a>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtexphdthesis7146bb3859e74d25881b0db4451dff8blabel" class="modal fade" id="bibtexphdthesis7146bb3859e74d25881b0db4451dff8b" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<h4 class="modal-title" id="bibtexphdthesis7146bb3859e74d25881b0db4451dff8blabel">Computational Audio Content Analysis in Everyday Environments</h4>
+<button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+</div>
+<div class="modal-body"><pre>@phdthesis{phdthesis,
+    author = "Heittola, Toni",
+    title = "Computational Audio Content Analysis in Everyday Environments",
+    school = "Tampere University",
+    year = "2021",
+    month = "6",
+    abstract = "Our everyday environments are full of sounds that have a vital role in providing us information and allowing us to understand what is happening around us. Humans have formed strong associations between physical events in their environment and the sounds that these events produce. Such associations are described using textual labels, sound events, and they allow us to understand, recognize, and interpret the concepts behind sounds. Examples of such sound events are dog barking, person shouting or car passing by. This thesis deals with computational methods for audio content analysis of everyday environments. Along with the increased usage of digital audio in our everyday life, automatic audio content analysis has become a more and more pursued ability. Content analysis enables an in-depth understanding of what was happening in the environment when the audio was captured, and this further facilitates applications that can accurately react to the events in the environment. The methods proposed in this thesis focus on sound event detection, the task of recognizing and temporally locating sound events within an audio signal, and include aspects related to development of methods dealing with a large set of sound classes, detection of multiple sounds, and evaluation of such methods. The work presented in this thesis focuses on developing methods that allow the detection of multiple overlapping sound events and robust acoustic model training based on mixture audio containing overlapping sounds. Starting with an HMM-based approach for prominent sound event detection, the work advanced by extending it into polyphonic detection using multiple Viterbi iterations or sound source separation. These polyphonic sound event detection systems were based on a collection of generative classifiers to produce multiple labels for the same time instance, which doubled or in some cases tripled the detection performance. As an alternative approach, polyphonic detection was implemented using class-wise activity detectors in which the activity of each event class was detected independently and class-wise event sequences were merged to produce the polyphonic system output. The polyphonic detection increased applicability of the methods in everyday environments substantially. For evaluation of methods, the work proposed a new metric for polyphonic sound event detection which takes into account the polyphony. The new metric, a segment-based F-score, provides rigorous definitions for the correct and erroneous detections, besides being more suitable for comparing polyphonic annotation and polyphonic system output than the previously used metrics and has since become one of the standard metrics in the research field. Part of this thesis includes studying sound events as a constituent part of the acoustic scene based on contextual information provided by their co-occurrence. This information was used for both sound event detection and acoustic scene classification. In sound event detection, context information was used to identify the acoustic scene in order to narrow down the selection of possible sound event classes based on this information, which allowed use of context-dependent acoustic models and event priors. This approach provided moderate yet consistent performance increase across all tested acoustic scene types, and enabled the detection system to be easily expanded to new scenes. In acoustic scene classification, the scenes were identified based on the distinctive and scene-specific sound events detected, with performance comparable to traditional approaches, while the fusion of these two approaches showed a significant further increase in the performance. The thesis also includes significant contribution to the development of tools for open research in the field, such as standardized evaluation protocols, and release of open datasets, benchmark systems, and open-source tools."
+}
+</pre></div>
+<div class="modal-footer"><button class="btn btn-default" data-bs-dismiss="modal" type="button">Close</button></div>
+</div>
+</div>
+</div>
+</div></div>
+</div><div class="section" id="sound-event-detection-in-everyday-environments-1">
+<h2 id="sound-event-detection-in-everyday-environments">Sound Event Detection in Everyday Environments</h2>
+<p>Detection of sound events is required to gain an understanding of the content of audio recordings from everyday environments. Sound events encountered in our everyday environments are often overlapping other sounds in time and frequency, as discussed in the previous chapters. Therefore, polyphonic sound event detection is essential for well-performing audio content analysis in everyday environments.
+This chapter goes through the work published in [<a class="reference internal" href="#mesaros2010">Mesaros2010</a>, <a class="reference internal" href="#heittola2010">Heittola2010</a>, <a class="reference internal" href="#heittola2011">Heittola2011</a>, <a class="reference internal" href="#heittola2013a">Heittola2013a</a>, <a class="reference internal" href="#heittola2013b">Heittola2013b</a>, <a class="reference internal" href="#mesaros2016">Mesaros2016</a>, <a class="reference internal" href="#mesaros2018">Mesaros2018</a>]. These publications are dealing with various aspects of polyphonic detection system: forming audio datasets, evaluating the detection performance, training acoustic models from mixture signals, detecting overlapping sounds, using contextual information, and organizing evaluation campaigns related to sound event detection.</p>
+<div class="section" id="problem-definition">
+<h3 id="problem-definition">Problem Definition</h3>
+<p>Sound event detection aims to simultaneously estimate <em>what</em> is happening and <em>when</em> it is happening. In other words, the aim is to automatically find a start and end time for a sound event and associate a textual class label for the sound event. The detection can be done either by outputting the most prominent sound event at the time (monophonic detection) or by outputting also other simultaneously active events (polyphonic detection). Examples of both types of detection are shown in Figure <a class="reference external" href="#fig-sound-event-detection">4.1</a>. Monophonic detection captures a fragmented view of the auditory scene, long sound events could be split in the detection into smaller events, and quieter event in the background might get covered by louder events and not get detected at all. Sound events detected with monophonic detection scheme might be sufficient for certain applications, however, for general content analysis, the polyphonic detection is often required.</p>
+<p>
+<div class="figure text-center">
+<img alt="Illustration on how monophonic and polyphonic sound event detection captures the events in the auditory scene." class="img-fluid text-center" id="fig-sound-event-detection" src="/images/thesis_fig41.png" title="Illustration on how monophonic and polyphonic sound event detection captures the events in the auditory scene."/>
+<p class="caption">
+<strong>Figure 4.1</strong> 
+                Illustration on how monophonic and polyphonic sound event detection captures the events in the auditory scene.
+            </p>
+<div class="d-flex justify-content-end">
+<div class="license text-start w-100 small text-muted">
+<a class="text" href="https://creativecommons.org">Monophonic and polyphonic sound event detection</a> © 2021 by <a class="text" href="https://creativecommons.org">Toni Heittola</a> is licensed under <a class="text" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a><img alt="" src="/images/cc/cc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/><img alt="" src="/images/cc/by.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/><img alt="" src="/images/cc/nc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/><img alt="" src="/images/cc/nd.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/>
+</div>
+</div>
+</div>
+</p>
+<p>Input to the detection system is acoustic features <span class="math">\(\boldsymbol{x}_{t}\)</span> which are extracted in each time frame <span class="math">\(t\)</span> for the input signal. Aim is to learn an acoustic model able to estimate presence of predefined sound event classes at each time frame <span class="math">\(\boldsymbol{y}_{t}\)</span>. The model learning is done based on learning examples: audio recordings along with annotated sound event activities. The sound event class presence probability at the time frame is given by posterior probability <span class="math">\(p(\boldsymbol{y}_{t}|\boldsymbol{x}_{t})\)</span>. The probabilities are converted into binary class activity per frame, <em>event roll</em>, and sound event onset and offset time stamps are acquired based on consecutive active frames. The output of the system is usually formatted as a list of detected events, <em>event list</em>, containing a class label with onset and offset timestamps for each event.</p>
+</div>
+<div class="section" id="challenges">
+<h3 id="challenges">Challenges</h3>
+<p>The main challenges faced in the development of a robust polyphonic SED are related to characteristics of everyday environments and everyday sounds. When the main part of the work included in this theses was done, the additional challenges were related to the dataset quality, amount of examples in the dataset, and lack of established benchmark datasets and evaluation protocols to support the SED system development.</p>
+<p>Simultaneously occurring sound events in the auditory scene produce a mixture signal, and the challenge of the SED system is to be able to detect individual sound events from this signal. The detection should be focusing only on certain sound event classes while being robust against the <em>interfering sounds</em>. As the number of sound event classes that can be realistically used in the SED system is much lower than the actual number of sound sources in most of the natural auditory scenes, some amount of these overlapping sounds will be always unknown to the SED system and can be considered to be interfering sound. In a real use case, the position of the sound-producing source in relation to the audio capturing microphone cannot be controlled, leading to varying loudness levels of the sound events and together with overlapping sounds challenging signal-to-noise ratios in the captured audio recordings. The variability in the acoustic properties of the environments (e.g. room acoustics, or reverberation), will further contribute to the diversity of audio material.</p>
+<p>Sound instances assigned with the same sound event label have often a large intra-class variability. This is due to the variability in the sound-producing mechanisms of the sound events, and this variability should be taken into account when learning the acoustic models for the sound events to produce a well-performing SED system. Ideally, one needs a large set of learning examples to fully cover the variability of the sounds in the model learning, however, in practice for most use cases it is impossible to collect such dataset. Thus the robust acoustic modeling of the sound events with limited amount of learning examples is one of the major challenges. Sound events occurring in natural everyday environments are connected through the context they appear, however, the temporal sequence of these events seldom follows any strict structure. This unstructured nature of the audio presents an extra challenge for the SED system design compared to speech recognition or music context retrieval systems where the analysis can be steered with structural constrains of the target signal.</p>
+<p>The development of the robust SED system is dependent on the dataset quality and the number of examples per sound event class available in the dataset. The collection of data is relatively easy, however, manual annotation is a subjective process and this poses a challenge for the learning and evaluation of the system. In the annotation stage, the person is listening to the recordings and manually indicating the onset and offset timestamps of the sound events, and selecting the appropriate textual label to describe the sound event. As the amplitude envelopes of the sound events are often quite smooth, clear change points are hard to determine and this temporal ambiguity will eventually lead some degree of subjectivity in the onset/offset annotations. Furthermore, the selection of the textual label involves the listener’s own prior experiences, and if free label selection is allowed, sounds will be labeled in a varying manner across annotators. Even the same annotator might label similar sounds differently depending on the context the sound event occurred. These subjective aspects of the annotation process produce noisy reference data, which has to be taken into account in the development and evaluation of the SED systems.</p>
+</div>
+</div>
+<div class="section" id="related-work">
+<h2 id="related-work">Related Work</h2>
+<p>The research effort related to audio content analysis in everyday environments has been steadily increasing over the last ten years. The works in this field can be divided into five major research topics: acoustic scene classification (ASC), sound event classification, audio tagging, sound event detection, and joint sound event localization and detection (SELD). The research history of this field together with the works included in this thesis are illustrated on the timeline in Figure <a class="reference external" href="#fig-research-field-timeline">4.2</a>. This section discusses the related work including research tasks, approaches, evaluation campaigns, and milestones.</p>
+<p>
+<div class="figure text-center">
+<img alt="Research timeline in the field of audio content analysis in everyday environments indicating major trends in research topics and approaches and highlighting evaluation campaigns and major milestones." class="img-fluid text-center" id="fig-research-field-timeline" src="/images/thesis_fig42.png" title="Research timeline in the field of audio content analysis in everyday environments indicating major trends in research topics and approaches and highlighting evaluation campaigns and major milestones."/>
+<p class="caption">
+<strong>Figure 4.2</strong> 
+                Research timeline in the field of audio content analysis in everyday environments indicating major trends in research topics and approaches and highlighting evaluation campaigns and major milestones.
+            </p>
+<div class="d-flex justify-content-end">
+<div class="license text-start w-100 small text-muted">
+<a class="text" href="https://creativecommons.org">Research timeline in the field of audio content analysis in everyday environments</a> © 2021 by <a class="text" href="https://creativecommons.org">Toni Heittola</a> is licensed under <a class="text" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a><img alt="" src="/images/cc/cc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/><img alt="" src="/images/cc/by.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/><img alt="" src="/images/cc/nc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/><img alt="" src="/images/cc/nd.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/>
+</div>
+</div>
+</div>
+</p>
+<div class="section" id="research-field">
+<h3 id="research-field">Research Field</h3>
+<p>Audio content analysis in everyday environments has existed as a separate and identifiable research field only in the last 10-15 years. Preliminary research work falls mostly under Computational Auditory Scene Analysis (CASA), where computational methods mimicking the human auditory system are used to derive properties of individual sounds in mixture signals and group them into sound events [<a class="reference internal" href="#ellis1996">Ellis1996</a>, <a class="reference internal" href="#szabo2016">Szabo2016</a>]. The early research in the field is inspired predominantly by speech recognition and music information retrieval, and the approaches are based on the traditional supervised machine learning methods such as GMM <a class="citation-reference" href="#kumar2013" id="citation-reference-1">[Kumar2013]</a>, HMM <a class="citation-reference" href="#zhou2007" id="citation-reference-2">[Zhou2007]</a>, and SVM <a class="citation-reference" href="#zhuang2010" id="citation-reference-3">[Zhuang2010]</a>. The contemporary work is based on deep learning <a class="citation-reference" href="#cakir2017" id="citation-reference-4">[Cakir2017]</a>, and the approaches are influenced strongly by general machine learning development across major research domains such as speech recognition, computer vision, and natural language processing. Whereas the early works utilized limited sized strongly labeled datasets in the training and evaluation, the contemporary works employ substantially more extensive datasets containing possibly weakly labeled data.</p>
+<p>Evaluation campaigns have had a substantial role in the growth of the research field in recent years by standardizing the evaluation protocols, establishing evaluation metrics, publishing open benchmark datasets, and providing an easy access platform for researchers from neighboring research fields. The first evaluation campaign to include tasks related to the analysis of everyday environments was the Classification of Events, Activities, and Relationships (CLEAR) Evaluation organized in 2006 and 2007 <a class="citation-reference" href="#stiefelhagen2006" id="citation-reference-5">[Stiefelhagen2006]</a>. The campaign presented monophonic sound event detection and sound event classification tasks in the meeting room environment while using a multi-microphone setup [<a class="reference internal" href="#temko2006a">Temko2006a</a>, <a class="reference internal" href="#stiefelhagen2007">Stiefelhagen2007</a>]. A community-driven international challenge, the Detection and Classification of Acoustic Scenes and Events (DCASE), was organized first in 2013 <a class="citation-reference" href="#stowell2015" id="citation-reference-6">[Stowell2015]</a> and has been organized annually since 2016 <a class="citation-reference" href="#mesaros2018" id="citation-reference-7">[Mesaros2018]</a>. The challenge attracts annually 200-400 system submissions from 60-130 international research teams. The new topics are being introduced at each edition to spark new research and to foster ongoing research in the research field. Acoustic scene classification and sound event detection have been the core topics for each challenge edition, and different research questions related to these topics have been addressed by varying the task setups. The DCASE challenge uses public datasets, and these datasets have gained extensive popularity outside the evaluation campaigns as well.</p>
+<p>The annual DCASE Workshop, organized since 2016, has had an instrumental role in the growth of the research field by providing a focused and peer-reviewed publication platform for the community [<a class="reference internal" href="#dcase2016workshop">DCASE2016Workshop</a>, <a class="reference internal" href="#dcase2017workshop">DCASE2017Workshop</a>, <a class="reference internal" href="#dcase2018workshop">DCASE2018Workshop</a>, <a class="reference internal" href="#dcase2019workshop">DCASE2019Workshop</a>]. The first and currently the only book to cover topics broadly in the research field was “Computational Analysis of Sound Scenes and Events“ edited by T. Virtanen <em>et al.</em> <a class="citation-reference" href="#virtanen2018" id="citation-reference-8">[Virtanen2018]</a>. The book can be considered as one of the milestones in the field, as it exclusively focuses on content analysis of environmental audio and comprehensively goes through research topics related to it while describing the current state-of-the-art methods.</p>
+</div>
+<div class="section" id="everyday-sound-recognition">
+<h3 id="everyday-sound-recognition">Everyday Sound Recognition</h3>
+<p>Works related to the recognition of everyday sounds can be categorized roughly into two groups; ones aiming at recognizing acoustic scenes, and ones aiming at recognizing individual sounds or sound events.</p>
+<p><em>Acoustic scene classification</em> is a task where a textual label identifying the environment is assigned to an audio segment <a class="citation-reference" href="#barchiesi2015" id="citation-reference-9">[Barchiesi2015]</a>. In addition to ASC, the task is referred in the literature as computational auditory scene recognition <a class="citation-reference" href="#peltonen2002" id="citation-reference-10">[Peltonen2002]</a> or as audio-based context recognition <a class="citation-reference" href="#eronen2006" id="citation-reference-11">[Eronen2006]</a>. The main application for the ASC is context awareness, the ability to determine the context around the device, and to self-adjust the operation mode of the device accordingly. The task can be set either as a closed-set classification task where all scene classes are assumed to be known in advance or an open-set classification task where unknown scene classes may be encountered as well while the system is running <a class="citation-reference" href="#mesaros2019a" id="citation-reference-12">[Mesaros2019a]</a>. Early approaches for the task were based on traditional supervised machine learning methods such as GMM <a class="citation-reference" href="#peltonen2002" id="citation-reference-13">[Peltonen2002]</a> and HMM <a class="citation-reference" href="#eronen2006" id="citation-reference-14">[Eronen2006]</a> using spectral features such as MFCCs. DCASE2013 introduced ASC as an evaluation campaign task <a class="citation-reference" href="#stowell2015" id="citation-reference-15">[Stowell2015]</a>. A clear trend emerging among the best performing submissions for the task was the usage of the temporal information in the acoustic features within the medium-long time segments (400 ms - 4 s) as features [<a class="reference internal" href="#roma2013">Roma2013</a>, <a class="reference internal" href="#rakotomamonjy2015">Rakotomamonjy2015</a>, <a class="reference internal" href="#geiger2013">Geiger2013</a>]. Deep learning approaches surfaced by the DCASE2016 challenge, where almost half of the submission used FNNs, CNNs, or RNNs <a class="citation-reference" href="#mesaros2018" id="citation-reference-16">[Mesaros2018]</a>. However, due to the limited datasets at the time, the classical learning methods such as SVM and factor analysis methods such as NMF performed respectably well against deep learning methods. Along with the bigger datasets introduced in the later DCASE challenges, deep learning methods have outperformed the classic approaches with a clear margin. State-of-the-art datasets contain recordings captured with a few types of recording devices simultaneously in a large selection of locations. Current state-of-the-art systems usually utilize the convolutional neural networks as an acoustic model to take advantage of the 2D structure of the time-frequency representation of the audio input <a class="citation-reference" href="#abesser2020" id="citation-reference-17">[Abesser2020]</a>. Furthermore, these systems tend to use a multitude of <em>data augmentation</em> techniques to diversify the learning examples and to produce a more robust acoustic model capable of dealing with different recording conditions, devices, and locations. The current state-of-the-art systems can surpass human recognition accuracy in individual cases where the test subject is not familiar with the specific environment (so-called non-expert listener) <a class="citation-reference" href="#mesaros2017a" id="citation-reference-18">[Mesaros2017a]</a>.</p>
+<p><em>Sound classification and tagging</em> task aims to assign one or multiple textual labels to an audio segment, labels that describe the sound-producing events active within the segment. In case only a single label at a time can be assigned to an audio segment, the task is usually referred to as a <em>sound event classification</em> or <em>environmental sound classification</em>. The task is closely related to sound event detection, as the tagging or classification in short time-segments can be easily used to produce detection output. For example, sound event tagging and classification can be applied in audio based monitoring systems within fixed time-segments to produce activity information of specific sound events <a class="citation-reference" href="#bello2019" id="citation-reference-19">[Bello2019]</a>. Early works on this topic focused on a small selection of sound classes related to a single environment such as kitchen <a class="citation-reference" href="#kraft2005" id="citation-reference-20">[Kraft2005]</a>, bathroom <a class="citation-reference" href="#chen2005" id="citation-reference-21">[Chen2005]</a>, office <a class="citation-reference" href="#tran2011" id="citation-reference-22">[Tran2011]</a>, or meeting room <a class="citation-reference" href="#temko2006b" id="citation-reference-23">[Temko2006b]</a>, whereas the more recent works have expanded both the selection of classes and environments used in the development [<a class="reference internal" href="#piczak2015">Piczak2015</a>, <a class="reference internal" href="#hershey2017">Hershey2017</a> ]. Techniques for the task follow the same main trends as for acoustic scene classification. The early works are based on classic machine learning approaches such as SVM and HMM, while the more recent works are based on deep learning methods such as CNN and CRNN. Some of the recent works have moved away from traditional handcrafted features such as MFCCs or mel-band energies by applying feature learning techniques <a class="citation-reference" href="#salamon2015" id="citation-reference-24">[Salamon2015]</a> or using an end-to-end classification scheme <a class="citation-reference" href="#tokozume2017" id="citation-reference-25">[Tokozume2017]</a>. Similarly to ASC, data augmentation techniques are widely used in the state-of-the-art systems <a class="citation-reference" href="#salamon2017" id="citation-reference-26">[Salamon2017]</a>.</p>
+</div>
+<div class="section" id="sound-event-detection">
+<h3 id="sound-event-detection">Sound Event Detection</h3>
+<p><em>Sound event detection</em> is a task where sound events are temporally located and classified in an audio signal at the same time: for each detected sound event instance an onset and offset are determined and a textual label describing the sound is assigned. Works related to sound event detection can be roughly categorized based on the complexity of the system output into monophonic and polyphonic sound event detection approaches. The main applications for sound event detection include audio-based monitoring, multimedia access, and human activity analysis. These applications are very much related to general audio content analysis applications discussed earlier in <a class="reference external" href="thesis/introduction#applications">Introduction page</a>. Event detection can be applied in monitoring and surveillance systems that require detailed information about event onset and offset timestamps in addition to event labels <a class="citation-reference" href="#crocco2016" id="citation-reference-27">[Crocco2016]</a>. Example use cases for monitoring are the detection of specific events such as glass breaking <a class="citation-reference" href="#mesaros2019b" id="citation-reference-28">[Mesaros2019b]</a>, gunshots <a class="citation-reference" href="#clavel2005" id="citation-reference-29">[Clavel2005]</a>, screams <a class="citation-reference" href="#valenzise2007" id="citation-reference-30">[Valenzise2007]</a>, or footsteps <a class="citation-reference" href="#atrey2006" id="citation-reference-31">[Atrey2006]</a>. As content-based analysis for multimedia, sound event detection can be used to automatically generate keywords [<a class="reference internal" href="#jansen2017">Jansen2017</a>, <a class="reference internal" href="#takahashi2018">Takahashi2018</a>] for large repositories and further enable content-based indexing and search functionality. In human activity analysis, SED can be used to detect individual sound events which are associated with certain activity <a class="citation-reference" href="#chahuara2016" id="citation-reference-32">[Chahuara2016]</a>. Research done in sound event detection also supports and complements the research in many neighboring fields such as bioacoustics where it is used to assess the biodiversity <a class="citation-reference" href="#gasc2013" id="citation-reference-33">[Gasc2013]</a>, and in robotics to facilitate human-robot interaction <a class="citation-reference" href="#do2016" id="citation-reference-34">[Do2016]</a>.</p>
+<p>Early approaches for sound event detection were based on traditional pattern recognition techniques like GMM [<a class="reference internal" href="#vacher2004">Vacher2004</a>, <a class="reference internal" href="#zhuang2009">Zhuang2009</a>], HMM [<a class="reference internal" href="#zhou2007">Zhou2007</a>, <a class="reference internal" href="#heittola2008">Heittola2008</a>], and SVM [<a class="reference internal" href="#temko2007">Temko2007</a>, <a class="reference internal" href="#temko2009">Temko2009</a>]. These works usually focused on cases where sound events were encountered mostly as a sequence of individual sounds with silence or background noise between them, and use cases with a relatively small number of classes. Many of these works are related to early evaluation campaigns such as CLEAR 2006 and 2007 [<a class="reference internal" href="#temko2006">Temko2006</a>, <a class="reference internal" href="#stiefelhagen2008">Stiefelhagen2008</a>], and DCASE2013 <a class="citation-reference" href="#stowell2015" id="citation-reference-35">[Stowell2015]</a>. Starting about one decade ago, the specific tasks tackled in SED became more diverse and complex: the number of event classes has increased <a class="citation-reference" href="#mesaros2010" id="citation-reference-36">[Mesaros2010]</a>, detection of overlapping sound event has been studied using synthetic <a class="citation-reference" href="#lafay2017" id="citation-reference-37">[Lafay2017]</a> and real data <a class="citation-reference" href="#mesaros2018" id="citation-reference-38">[Mesaros2018]</a>, and imbalanced data has been studied as a task of rare sound event detection <a class="citation-reference" href="#mesaros2019b" id="citation-reference-39">[Mesaros2019b]</a>.</p>
+<p>The more recent works are based on deep learning methods such as CNN <a class="citation-reference" href="#kong2019" id="citation-reference-40">[Kong2019]</a> and CRNN <a class="citation-reference" href="#cakir2017" id="citation-reference-41">[Cakir2017]</a>, and similarly to recent sound recognition approaches, data augmentation techniques <a class="citation-reference" href="#parascandolo2016" id="citation-reference-42">[Parascandolo2016]</a> are often used to increase data diversity. Commonly these works use handcrafted acoustic features such as mel-band energies, while some work has been done to learn automatically better representations from the spectrogram <a class="citation-reference" href="#salamon2015" id="citation-reference-43">[Salamon2015]</a> or directly from the raw audio signal <a class="citation-reference" href="#cakir2018" id="citation-reference-44">[Cakir2018]</a>. As an alternative to data augmentation, transfer learning techniques are used to cope with the lack of sufficient data. In these techniques, a neural network based model is trained to solve a pretext task using large amount of data, then the outputs of the pretrained model are used to produce new features, <em>embeddings</em>, to be used in the actual target task [<a class="reference internal" href="#cramer2019">Cramer2019</a>, <a class="reference internal" href="#jung2019">Jung2019</a>]. The deep learning-based approaches have highlighted a need for large open-access datasets. First sound event datasets were individual research group efforts [<a class="reference internal" href="#mesaros2016">Mesaros2016</a>, <a class="reference internal" href="#mesaros2017b">Mesaros2017b</a>] containing manually annotated event onsets and offsets. As the datasets got larger, such detailed annotations became impractical to produce. Most recent datasets contain only recording-level annotations of sound event activity (weak annotation), which allows producing annotated data easier at larger volumes. Instead of using expert annotators, the annotation effort has been further decreased by using crowd-sourced non-expert annotators <a class="citation-reference" href="#fonseca2019" id="citation-reference-45">[Fonseca2019]</a>, possibly automatically tagging segments and get them verified by annotators <a class="citation-reference" href="#gemmeke2017" id="citation-reference-46">[Gemmeke2017]</a>. Data collected this way can be considered noisy because some event labels may be incorrect or missing, and weak because it does not contain onset and offset timestamps for the sound events. Learning from such data requires special techniques to compensate for the unreliability of the event labels (Fonseca et al. 2019), and weakly-supervised learning approaches [<a class="reference internal" href="#kumar2016">Kumar2016</a>, <a class="reference internal" href="#xu2018">Xu2018</a>] for being able to train detection system.</p>
+</div>
+</div>
+<div class="section" id="audio-datasets">
+<span id="ch4-sec-audio-datasets"></span><h2 id="audio-datasets">Audio Datasets</h2>
+<p>The work included in this thesis is based on three datasets: Sound Effects 2009, TUT-SED 2009, and TUT-SED 2016. All of these datasets were collected and annotated for sound event detection research in the Audio Research Group at Tampere University. The information about these datasets is summarised in Table <a class="reference external" href="#table-datasets">4.1</a>.</p>
+<div class="docutils container" id="table-datasets">
+<table class="table table-striped pt-4">
+<caption><strong>Table 4.1</strong> Information about the datasets used in this thesis.</caption>
+<thead>
+<tr>
+<th colspan="2"></th>
+<th colspan="3">Meta data</th>
+<th colspan="2">Audio data</th>
+<th></th>
+</tr>
+<tr>
+<th>Dataset</th>
+<th>Used in</th>
+<th>Event instances</th>
+<th>Event classes</th>
+<th>Scene classes</th>
+<th>Files</th>
+<th>Length</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Sound Effects 2009</strong></td>
+<td><a class="citation-reference" href="#mesaros2010">[Mesaros2010]</a></td>
+<td>1359</td><td>61</td><td>9</td>
+<td>1359</td><td>9h 24min</td>
+<td>Isolated sounds,<br/> Proprietary dataset</td>
+</tr>
+<tr>
+<td><strong>TUT-SED 2009</strong></td>
+<td>[<a class="citation-reference" href="#mesaros2010">Mesaros2010</a>, <a class="citation-reference" href="#Heittola2010">Heittola2010</a>, <a class="citation-reference" href="#Heittola2011">Heittola2011</a>, <a class="citation-reference" href="#Heittola2013a">Heittola2013a</a>, <a class="citation-reference" href="#Heittola2013b">Heittola2013b</a>]</td>
+<td>10040</td><td>61</td><td>10</td>
+<td>103</td><td>18h 53min</td>
+<td>Continuous recordings,<br/> Proprietary dataset</td>
+</tr>
+<tr>
+<td><strong>TUT-SED 2006</strong>, Development</td>
+<td>[<a class="citation-reference" href="#Mesaros2016">Mesaros2016</a>, <a class="citation-reference" href="#Mesaros2018">Mesaros2018</a>]</td>
+<td>954</td><td>18</td><td>2</td>
+<td>22</td><td>1h 18min</td>
+<td>Continuous recordings,<br/> Open dataset</td>
+</tr>
+<tr>
+<td><strong>TUT-SED 2006</strong>, Evaluation</td>
+<td>[<a class="citation-reference" href="#Mesaros2018">Mesaros2018</a>]</td>
+<td>511</td><td>18</td><td>2</td>
+<td>10</td><td>35min</td>
+<td>Continuous recordings,<br/> Open dataset</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section" id="sound-effects-2009">
+<span id="ch4-sec-sound-effect-2009-dataset"></span><h3 id="sound-effects-2009">Sound Effects 2009</h3>
+<p>For work in <a class="citation-reference" href="#mesaros2010" id="citation-reference-47">[Mesaros2010]</a>, a collection of isolated sounds was collected from a commercial online sound effects sample database (Sound Ideas samples through StockMusic.com). The samples were originally captured for commercial audio-visual productions in a close-microphone setup having relatively minimal background ambiance presence. Samples were collected from nine general contextual classes: crowd, hallway, household, human, nature, office, outdoors, shop, vehicles. In total the dataset comprises 1359 samples belonging to 61 distinct classes.</p>
+</div>
+<div class="section" id="tut-sed-2009">
+<span id="ch4-sec-tut-sed-2009"></span><h3 id="tut-sed-2009">TUT-SED 2009</h3>
+<p>The TUT-SED 2009 dataset was the first sound event dataset having real-life continuous recordings captured in large amount of common everyday environments. The dataset was manually annotated with strong labels. This dataset was used in the majority of the works included in this thesis [<a class="reference internal" href="#mesaros2010">Mesaros2010</a>, <a class="reference internal" href="#heittola2010">Heittola2010</a>, <a class="reference internal" href="#heittola2011">Heittola2011</a>, <a class="reference internal" href="#heittola2013a">Heittola2013a</a>, <a class="reference internal" href="#heittola2013b">Heittola2013b</a>]. The dataset is a proprietary data collection, and cannot be shared outside the University of Tampere. The data was originally collected as part of an industrial project where the public release was never the aim. As a result, permissions for public data release were not asked from persons present in the recorded scenes. The aim of the data collection was to have a representative collection of audio scenes, and recordings were collected from ten acoustic scenes. Typical office work environments were represented in the data collection with <em>office</em> and <em>hallway</em> scenes. The <em>street</em>, <em>inside a moving car</em>, and <em>inside a moving bus</em> scenes represented typical urban transportation scenarios, whereas the <em>grocery shop</em> and <em>restaurant</em> scenes represented typical public space scenarios. Examples of leisure time scenarios were represented by <em>beach</em>, <em>in the audience of basketball game</em>, and <em>in the audience of track and field event</em> scenes.</p>
+<p>For each scene type, a single location with multiple recording positions (8-14 positions) was selected as the aim of the data collection was to see how well material from a tightly focused set of acoustic scenes could be modeled. Each recording was 10-30 minutes long to capture a representative set of events in the scene. In total, the dataset consists of 103 recordings totaling almost 19 hours. The audio recordings were captured using a <em>binaural</em> recording setup, where a person is wearing in-ear microphones (Soundman OKM II Classic/Studio A3) in his/her ears during the recordings. Recordings were stored in a portable digital recorder (Roland Edirol R-09) using a 44.1kHz sampling rate and 24-bit resolution.</p>
+<p>All the recordings were manually annotated by indicating onset and offset timestamps of events and assigning a descriptive textual label for the sound events. The annotations were done mostly by the same person who did the recordings to ensure as detailed as possible annotations: the annotator had some prior knowledge of the auditory scene to help identify the sound sources. A low-quality video was captured during the audio capture to help annotation of complex scenes with a large variety of sound sources (e.g. street environment) by helping the annotator to recall the scene better while doing the annotation. Due to the complexity of the material and the annotation task, the annotator first made a list of active events in the recording, and then annotated temporal activity for these events within the recording. The event labels for the list were freely chosen instead of using predefined set of global labels. This resulted in a large set of labels which were then manually grouped into 61 distinct event classes after the whole dataset was annotated. On average, there was 2.7 simultaneous sound events active at all times in the recordings. In the grouping process, labels describing the same or very similar sound events were pooled under the same event class, for example, “cheer” and “cheering”, and “barcode reader beep” and “card reader beep”. Only event classes containing at least 10 examples were taken into account, while more rare events were collected into a single class labeled as “unknown”. Figure <a class="reference external" href="#fig-tut-sed-2009-stats">4.3</a> illustrates the relative amount of event activity per class for the whole dataset as well as per scene. Each scene class has 14 to 23 active events, and many event classes appear in multiple scenes (e.g., speech), while some event classes are highly scene-specific (e.g., referee whistle in basketball games). For example, “speech” events covers 43.9% of the recorded time in the dataset. Overall, the activity amount of event classes is not well-balanced as expected for natural everyday environments.</p>
+<p>
+<div class="figure text-center">
+<img alt="Event activity statistics for TUT-SED 2009 dataset. Event activity is presented as percentage of active event time versus overall duration. Upper panel shows overall event activity, while lower panel shows scene-wise event activity." class="img-fluid text-center" id="fig-tut-sed-2009-stats" src="/images/thesis_fig43.png" title="Event activity statistics for TUT-SED 2009 dataset. Event activity is presented as percentage of active event time versus overall duration. Upper panel shows overall event activity, while lower panel shows scene-wise event activity."/>
+<p class="caption">
+<strong>Figure 4.3</strong> 
+                Event activity statistics for TUT-SED 2009 dataset. Event activity is presented as percentage of active event time versus overall duration. Upper panel shows overall event activity, while lower panel shows scene-wise event activity.
+            </p>
+<div class="d-flex justify-content-end">
+<div class="license text-start w-100 small text-muted">
+<a class="text" href="https://creativecommons.org">Event activity statistics for TUT-SED 2009 dataset</a> © 2021 by <a class="text" href="https://creativecommons.org">Toni Heittola</a> is licensed under <a class="text" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a><img alt="" src="/images/cc/cc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/><img alt="" src="/images/cc/by.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/><img alt="" src="/images/cc/nc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/><img alt="" src="/images/cc/nd.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/>
+</div>
+</div>
+</div>
+</p>
+</div>
+<div class="section" id="tut-sed-2016">
+<span id="ch4-sec-tut-sed-2016"></span><h3 id="tut-sed-2016">TUT-SED 2016</h3>
+<p>The creation of the TUT Sound events 2016 dataset (TUT-SED 2016) was motivated by the lack of an <em>open dataset</em> with high acoustic variability <a class="citation-reference" href="#mesaros2016" id="citation-reference-48">[Mesaros2016]</a>. The data collection was implemented in 2015-2016 under the European Research Council funded Everysound project, and the recording locations were selected from Finland. To ensure high acoustic variability of the captured audio each recording was done in a different location: different streets, different homes. Compared to the TUT-SED 2009 dataset, the TUT-SED 2016 dataset has two scene classes (indoor home environments and outdoor residential areas) and larger acoustic variability within the scene classes. The recording setup was similar to TUT-SED 2009, binaural in-ear microphone setup with the same microphone model and digital recorder device with the same format settings (44.1 kHz and 24-bit). The duration of recordings were set to 3-5 minutes considering this would be the most likely length that someone would record in a real use case. The person recording was required to keep the body and head movement minimum during the recording to enable the possible use of spatial information present in binaural recordings. Furthermore, the person was instructed to keep the amount of his/her own speech to a minimum to avoid near-field speech.</p>
+<p>The sound events in the recordings were manually annotated with the onset and offset timestamps, and freely chosen event label. A noun-verb pair was used as an event label during the annotation (e.g. “people; talking” and “car; passing”); nouns were used to characterize the sound source while verbs to characterize the sound production mechanism. Recordings and annotations were done by two research assistants, each annotated the material he/she recorded and they were instructed to annotate all audible sound events in the scene. In the post-processing stage, recordings were annotated for microphone failures and interference noises caused by mobile phones, and this was stored as extra meta information. Sound event classes used in the published dataset were selected based on their frequency in the raw annotations and the number of different recordings they appeared in. The event labels that were semantically similar given the context were mapped together to ensure distinct classes. For example, “car engine; running” and “engine; running” were mapped together, and various impact sounds such as “banging” and “clacking” were grouped together under “object impact”. This resulted in a total of 18 sound classes, each having sufficient amount of examples for learning acoustic models.</p>
+<p>The dataset was used in DCASE Challenge 2016 task for sound event detection in real life audio <a class="citation-reference" href="#mesaros2018" id="citation-reference-49">[Mesaros2018]</a>, and the data was released in two datasets: <em>development dataset</em> and <em>evaluation dataset</em>. The development dataset was bundled with 4-fold cross-validation setup, while the evaluation dataset was originally released without reference annotations and later updated with reference annotations after the evaluation campaign.</p>
+<p>During the data collection campaign a large amount of recordings from 10 scene types were collected, and only a small subset was published in the TUT-SED 2016 dataset [<a class="reference internal" href="#tutsed2016dev">TUTSED2016DEV</a>, <a class="reference internal" href="#tutsed2016eval">TUTSED2016EVAL</a>]. Later, more material was annotated in a similar fashion, and released as TUT-SED 2017 dataset [<a class="reference internal" href="#tutsed2017dev">TUTSED2017DEV</a>, <a class="reference internal" href="#tutsed2017eval">TUTSED2017EVAL</a>] for the DCASE challenge 2017 <a class="citation-reference" href="#mesaros2019b" id="citation-reference-50">[Mesaros2019b]</a>. This dataset contained recordings from a single scene class (street), and had relatively small number of target sound event classes (6). The rest of the material was released without sound event annotations as datasets for acoustic scene classification tasks: TUT Acoustic Scenes 2016 (TUT-ASC 2016) [<a class="reference internal" href="#tutasc2016dev">TUTASC2016DEV</a>, <a class="reference internal" href="#tutasc2016eval">TUTASC2016EVAL</a>] for DCASE challenge 2016 <a class="citation-reference" href="#mesaros2016" id="citation-reference-51">[Mesaros2016]</a> and TUT Acoustic Scenes 2017 (TUT-ASC 2017) [<a class="reference internal" href="#tutasc2017dev">TUTASC2017DEV</a>, <a class="reference internal" href="#tutasc2017eval">TUTASC2017EVAL</a>] for DCASE challenge 2017 <a class="citation-reference" href="#mesaros2019b" id="citation-reference-52">[Mesaros2019b]</a>.</p>
+</div>
+</div>
+<div class="section" id="evaluation">
+<span id="ch4-sec-evaluation"></span><h2 id="evaluation">Evaluation</h2>
+<p>The quantitative evaluation of the SED system performance is done by comparing the system output with a reference available for the test data. For the datasets used in this thesis, the reference was created by manually annotating the audio material (<a class="reference external" href="content_analysis#annotations">see about annotations</a>) and storing the annotations as a list of sound event instances with associated textual label and temporal information (onset and offset timestamps). The evaluation takes into account both the label and the temporal information. When dealing with monophonic annotations and monophonic SED systems, the evaluation is straightforward as the system output at a given time is correct if the predicted event class coincides with the reference class. However, in the case of polyphonic annotations and polyphonic SED systems, the reference can contain multiple active sound events at a given time and there can be multiple correctly and erroneously detected events at the same time instance. All these cases have to be counted for the metric. The evaluation metrics for polyphonic SED can be categorized into <em>segment-based</em> and <em>event-based</em> metrics depending on how the temporal information is handled in the evaluation. This section is based on work published in [<a class="reference internal" href="#heittola2013a">Heittola2013a</a>, <a class="reference internal" href="#heittola2011">Heittola2011</a>, <a class="reference internal" href="#mesaros2016b">Mesaros2016b</a>], and it addresses the research question on how to evaluate sound event detection systems with polyphonic system output.</p>
+<div class="section" id="segment-based-metrics">
+<h3 id="segment-based-metrics">Segment-Based Metrics</h3>
+<p>The first segment-based metric for polyphonic sound event detection, called block-wise F-score, was introduced and used in . In (Annamaria Mesaros, Heittola, and Virtanen 2016a) this metric was formalized as <em>segment-based F-score</em>, and <em>segment-based error rate (ER)</em> was introduced to complement it. These metrics have since become the standard metrics in the research field, and they have been used in many DCASE challenge tasks as ranking criteria. In this thesis, the segment-based F-score is used as performance measurement in , and segment-based ER is used as metric in . In the segment-based evaluation, the intermediate statistics for the metric are calculated in a fixed time grid, often in one-second time segments. An illustrative example showing metrics calculation is shown in Figure <a class="reference external" href="#fig-segment-based-metrics">4.4</a>.</p>
+<p>
+<div class="figure text-center">
+<img alt="Calculation of two segment-based metrics: F-score and error rate. Comparisons are made at a fixed time-segment level, where both the reference annotations and system output are rounded into the same time resolution. Binary event activities in each segment are then compared and intermediate statistics are calculated." class="img-fluid text-center" id="fig-segment-based-metrics" src="/images/thesis_fig44.png" title="Calculation of two segment-based metrics: F-score and error rate. Comparisons are made at a fixed time-segment level, where both the reference annotations and system output are rounded into the same time resolution. Binary event activities in each segment are then compared and intermediate statistics are calculated."/>
+<p class="caption">
+<strong>Figure 4.4</strong> 
+                Calculation of two segment-based metrics: F-score and error rate. Comparisons are made at a fixed time-segment level, where both the reference annotations and system output are rounded into the same time resolution. Binary event activities in each segment are then compared and intermediate statistics are calculated.
+            </p>
+<div class="d-flex justify-content-end">
+<div class="license text-start w-100 small text-muted">
+<a class="text" href="https://creativecommons.org">Segment-based metrics</a> © 2021 by <a class="text" href="https://creativecommons.org">Toni Heittola</a> is licensed under <a class="text" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a><img alt="" src="/images/cc/cc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/><img alt="" src="/images/cc/by.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/><img alt="" src="/images/cc/nc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/><img alt="" src="/images/cc/nd.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/>
+</div>
+</div>
+</div>
+</p>
+<p>The sound event activity is compared between the reference annotation and the system output in fixed one-second segments. The event is considered correctly detected if both reference and output indicate event activity and this case is referred to as <em>true positive</em>. In case the system output indicates an event to be active within the segment but the reference annotation indicates the event to be inactive, the output is considered as a <em>false positive</em> within the time segment. Conversely, in case the reference indicates the event to be active within the segment, and the system output indicates inactivity for the same event class, the output is considered as a <em>false negative</em>. Total counts of true positives, false positives and false negatives are denoted as <span class="math">\(TP\)</span>, <span class="math">\(FP\)</span>, and <span class="math">\(FN\)</span>.</p>
+<div class="section" id="f-score">
+<h4>F-score</h4>
+<p>Segment-based F-score is calculated by first accumulating the intermediate statistics over evaluated segments for all classes and then summing them up to get overall intermediate statistics (instance-based metric, micro-averaging). The precision <span class="math">\(P\)</span> and recall <span class="math">\(R\)</span> are calculated according to the overall statistics as</p>
+$$ \label{eq-segment-based-precision-and-recall}
+    P = \frac{{TP}}{{TP}+{FP}}\,\,,\quad R = \frac{{TP}}{{TP}+{FN}} \tag{4.1} $$<p>and the F-score:</p>
+$$ \label{eq-segment-based-fscore}
+{{F}}=\frac{2\cdot{P}\cdot{R}}{{P}+{R}}=\frac{2\cdot{TP}}{2\cdot{TP}+{FP}+{FN}} \tag{4.2} $$<p>The calculation process is illustrated in panel (a) of Figure <a class="reference external" href="#fig-segment-based-metrics">4.4</a>.</p>
+<p>The F-score is a widely known metric and easy to understand, and because of this, it is often the preferred metric for SED evaluation. The magnitude of the F-score is largely determined by the number of true positives, which is dominated by the system performance on the large classes. In this case, it may be preferable to use class-based averaging (macro-averaging) as overall performance measurement, which means calculating F-score for each class based on the class-wise intermediate statistics, and then averaging the class-wise F-scores in order to get a single value. However, this requires the presence of all classes in the test material to avoid classes with undefined recall (<span class="math">\(TP + FN = 0\)</span>). This calls for extra attention when designing experiments in a train/test setting, especially when using recordings from uncontrolled everyday environments. In this thesis the segment based F-score is used with two different segment lengths, and is denoted as <span class="math">\(F_{seg,1sec}\)</span> for 1-second segments lengths and as <span class="math">\(F_{seg,30sec}\)</span> for 30-second lengths.</p>
+</div>
+<div class="section" id="error-rate">
+<h4>Error Rate</h4>
+<p>Error rate (ER) measures the amount of errors in terms of <em>substitutions</em> (<span class="math">\(S\)</span>), <em>insertions</em> (<span class="math">\(I\)</span>), and <em>deletions</em> (<span class="math">\(D\)</span>) that are calculated in a segment-by-segment manner. In the metric calculation, true positives, false positives, and false negatives are counted in each segment and based on these counts substitutions, insertions, and deletions are then calculated in each segment. In a segment <span class="math">\(k\)</span>, the number of substitution errors <span class="math">\(S\left ( k \right )\)</span> is defined as the number of reference events for which the system outputted an event but with an incorrect event label. In this case, there is one false positive and one false negative in the segment; substitution errors are calculated by pairing false positives and false negatives without designating which erroneous event substitutes which event. Once the substitution errors are counted per segment, the remaining false positives are counted as insertion errors <span class="math">\(I\left ( k \right )\)</span> and false negatives as deletion errors <span class="math">\(D\left ( k \right )\)</span>. The insertion errors are attributed to segments having incorrect event activity in the system output, and the deletion errors are attributed to segments having event activity in the reference but not in the system output. This can be formulated as follows:</p>
+$$    \begin{aligned}
+  S\left ( k \right ) &amp;= \min \left ( FN\left ( k \right ), FP\left ( k\right ) \right ) \\
+  D\left ( k \right ) &amp;= \max \left ( 0, FN\left ( k\right ) - FP\left ( k\right )\right ) \\
+  I\left ( k \right ) &amp;= max \left ( 0, FP\left ( k\right ) - FN\left ( k\right )\right )  \label{eq-segment-based-er-intermediate}\end{aligned} \tag{4.3} $$<p>The error rate is calculated then by summing the segment-wise counts for <span class="math">\(S\)</span>, <span class="math">\(D\)</span>, and <span class="math">\(I\)</span> over the total number of evaluated segments <span class="math">\(K\)</span>, with <span class="math">\(N(k)\)</span> being the number of active reference events in segment <span class="math">\(k\)</span> <a class="citation-reference" href="#poliner2006" id="citation-reference-53">[Poliner2006]</a>:</p>
+$$ \label{eq-segment-based-er}
+ER=\frac{\sum_{k=1}^K{S(k)}+\sum_{k=1}^K{D(k)}+\sum_{k=1}^K{I(k)}}{\sum_{k=1}^K{N(k)}} \tag{4.4} $$<p>The metric calculation is illustrated in panel (b) of
+Figure <a class="reference external" href="#fig-segment-based-metrics">4.4</a>.</p>
+<p>The total error rate is commonly used to evaluate the system performance in speech recognition and speaker diarization evaluation, and parallel use in SED makes the metric more approachable for many researchers. On the other hand, interpretation of the error rate can be difficult as the value is a score rather than a percentage and the value can be over 1 if the system makes more errors than correct estimations. An error rate with exact value of 1.0 is also trivial to achieve with the system outputting no active events. Therefore, additional metrics, such as segment-based F-score, should be used together with ER to get a more comprehensive performance estimate for the system.</p>
+</div>
+</div>
+<div class="section" id="event-based-metrics">
+<h3 id="event-based-metrics">Event-Based Metrics</h3>
+<p>The event-based F-score and error rate are used as metrics in <a class="citation-reference" href="#mesaros2016" id="citation-reference-54">[Mesaros2016]</a>. In these metrics, the system output and the reference annotation are compared in an event-by-event manner: intermediate statistics (true positives, false positives, and false negatives) are counted based on event instances. In the evaluation process, an event in the system output is regarded as correctly detected (true positive) if it has a temporal position that is overlapping with the temporal position of an event in the reference annotation with the same label, and its onset and offset meet specified conditions. An event in the system output without correspondence to the reference annotation according to the onset and offset condition is regarded as a false positive, whereas the event in the reference annotation without correspondence to system output is regarded as a false negative.</p>
+<p>For the true positive, the positions of event onsets and offsets are compared using a temporal <em>collar</em> to allow some tolerance and set the desired evaluation resolution. The manually created reference annotations have some level of subjectivity in the temporal positions of onset and offset (<a class="reference external" href="content_analysis#annotations">see about annotations</a>) and the temporal tolerance can be used to alleviate the effect of this subjectivity in the evaluation. In <a class="citation-reference" href="#mesaros2016" id="citation-reference-55">[Mesaros2016]</a>, a collar of 200 ms was used, while a more permissive collar of 500 ms was used, for example, in DCASE challenge task for rare sound event detection <a class="citation-reference" href="#mesaros2019b" id="citation-reference-56">[Mesaros2019b]</a>. The offset condition is set to be more permissive as the exact offset timestamp is often less important than the onset of well-performing SED. The collar size for the offset condition adapts to different event sizes by selecting maximum among the fixed 200 ms collar and the 50% of the current reference event duration to cover the differences between short and long events. Evaluation of event instances based on these conditions is shown in Figure <a class="reference external" href="#fig-event-based-evaluation">4.5</a>.</p>
+<p>
+<div class="figure text-center">
+<img alt="The reference event and events in the system output with the same event labels compared based on onset condition and offset condition." class="img-fluid text-center" id="fig-event-based-evaluation" src="/images/thesis_fig45.png" title="The reference event and events in the system output with the same event labels compared based on onset condition and offset condition."/>
+<p class="caption">
+<strong>Figure 4.5</strong> 
+                The reference event and events in the system output with the same event labels compared based on onset condition and offset condition.
+            </p>
+<div class="d-flex justify-content-end">
+<div class="license text-start w-100 small text-muted">
+<a class="text" href="https://creativecommons.org">Event-based evaluation</a> © 2021 by <a class="text" href="https://creativecommons.org">Toni Heittola</a> is licensed under <a class="text" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a><img alt="" src="/images/cc/cc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/><img alt="" src="/images/cc/by.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/><img alt="" src="/images/cc/nc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/><img alt="" src="/images/cc/nd.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/>
+</div>
+</div>
+</div>
+</p>
+<p>The evaluation can be done solely based on onset condition or based on both onset and offset conditions depending on how the system performance is required to be evaluated. In , both conditions are used together.</p>
+<p>The event-based F-score is calculated the same way as the segment-based F-score. The event-based intermediate statistics (<span class="math">\(TP\)</span>, <span class="math">\(FP\)</span>, and <span class="math">\(FN\)</span>) are counted and summed up to get overall counts. Precision, recall, and F-score are calculated based on Equations 4.1 and 4.2. Same as for segment-based F-score, event-based F-score can be calculated based on total counts (instance-based, micro-average) or based on class-wise performance (class-based, macro-average). The metric calculation is illustrated in Figure <a class="reference external" href="#ch4:fig:event-based-metrics">4.6</a> panel (a). The event-based error rate is defined with respect to the number of reference sound event instances. The substitutions are defined differently than in segment-based error rate: events with the correct temporal position but incorrect class labels are counted as substitutions, whereas, insertions and deletions are assigned for events unaccounted for as correct or substituted in system output or reference. The overall metric is calculated based on these error counts similarly to segment-based metric with Equation 4.3. The metric calculation is illustrated in Figure <a class="reference external" href="#fig-event-based-metrics">4.6</a> panel (b).</p>
+<p>
+<div class="figure text-center">
+<img alt="Calculation of two event-based metrics: F-score and error rate. F-score is calculated based on overall intermediate statistics counts. Error rate counts total number of errors of different types (substitutions, insertion and deletion)." class="img-fluid text-center" id="fig-event-based-metrics" src="/images/thesis_fig46.png" title="Calculation of two event-based metrics: F-score and error rate. F-score is calculated based on overall intermediate statistics counts. Error rate counts total number of errors of different types (substitutions, insertion and deletion)."/>
+<p class="caption">
+<strong>Figure 4.6</strong> 
+                Calculation of two event-based metrics: F-score and error rate. F-score is calculated based on overall intermediate statistics counts. Error rate counts total number of errors of different types (substitutions, insertion and deletion).
+            </p>
+<div class="d-flex justify-content-end">
+<div class="license text-start w-100 small text-muted">
+<a class="text" href="https://creativecommons.org">Event-based metrics</a> © 2021 by <a class="text" href="https://creativecommons.org">Toni Heittola</a> is licensed under <a class="text" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a><img alt="" src="/images/cc/cc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/><img alt="" src="/images/cc/by.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/><img alt="" src="/images/cc/nc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/><img alt="" src="/images/cc/nd.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/>
+</div>
+</div>
+</div>
+</p>
+<p>In comparison to the segment-based metrics, the event-based metrics will usually give lower performance estimate values because it is generally more complicated to match onsets and offsets than overall activity of the event. The event-based metrics measure the ability of the system to detect the correct event in the right temporal position, acting as a measure of onset/offset detection capability. Thus, event-based metrics are the recommended choice for applications where the detection of onsets and offsets of sounds is an essential feature.</p>
+</div>
+<div class="section" id="legacy-metrics">
+<h3 id="legacy-metrics">Legacy Metrics</h3>
+<p>Earlier works included in this thesis, , used metrics defined for the CLEAR 2006 and CLEAR 2007 evaluation campaigns (Andrey Temko et al. 2009). These metrics were evaluated only for known non-speech events, and therefore “speech” and “unknown” events were excluded from the calculations. The first metric originating from CLEAR campaign was defined as a balanced F-score and denoted by ACC. In the evaluation, the outputted sound event was considered to be correctly detected if the temporal center of the event lies between the timestamps of a reference event with the same event class, or if there exists at least one reference event with the same event class whose temporal center lies between the timestamps of the outputted event. Conversely, the reference event was considered to be correctly detected if there was at least one outputted event whose temporal center is situated between the timestamps of reference sound event from the same event class, or if the temporal center of the reference event lies between the timestamps of at least one outputted event from the same event class. The calculation process of the intermediate statistics for the metric is illustrated in Figure <a class="reference external" href="#fig-CLEAR-metrics">4.7</a> panel a. The metric was defined as</p>
+$$    ACC = \frac{2\cdot P\cdot R}{P+R} \label{eq-f-score} \tag{4.5} $$<p>with the precision <span class="math">\(P\)</span> and the recall <span class="math">\(R\)</span> defined as</p>
+$$  P = \frac{N_{sys\_cor}}{N_{ref}}\,\,,\quad R = \frac{N_{ref\_cor}}{N_{sys}}
+    \label{eq-CLEAR-precision-and-recall} \tag{4.6} $$<p>
+<div class="figure text-center">
+<img alt="Calculation of intermediate statistics for two legacy metrics: ACC and AEER." class="img-fluid text-center" id="fig-CLEAR-metrics" src="/images/thesis_fig47.png" title="Calculation of intermediate statistics for two legacy metrics: ACC and AEER."/>
+<p class="caption">
+<strong>Figure 4.7</strong> 
+                Calculation of intermediate statistics for two legacy metrics: ACC and AEER.
+            </p>
+<div class="d-flex justify-content-end">
+<div class="license text-start w-100 small text-muted">
+<a class="text" href="https://creativecommons.org">ACC and AEER metrics</a> © 2021 by <a class="text" href="https://creativecommons.org">Toni Heittola</a> is licensed under <a class="text" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a><img alt="" src="/images/cc/cc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/><img alt="" src="/images/cc/by.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/><img alt="" src="/images/cc/nc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/><img alt="" src="/images/cc/nd.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/>
+</div>
+</div>
+</div>
+</p>
+<p>The second metric originating from CLEAR campaign considered the temporal resolution of the outputted sound events by using a metric adapted from a speaker diarization task. The metric defined the acoustic event error rate (AEER) expressed as time percentage <a class="citation-reference" href="#temko2009a" id="citation-reference-57">[Temko2009a]</a>. The metric computes intermediate statistics in adjacent time segments defined by onsets and offsets of the reference and system output events. In each segment (<span class="math">\(seg\)</span>), the number of the events is counted (<span class="math">\(N_{ref}\)</span> and <span class="math">\(N_{sys}\)</span>) along with the correctly outputted events <span class="math">\(N_{cor}\)</span>. The intermediate statistic calculation for AEER is illustrated in Figure <a class="reference external" href="#fig-CLEAR-metrics">4.7</a> panel b. The overall AEER score is calculated as the fraction of the time that is not attributed correctly to a sound event:</p>
+$$  AEER = \frac{\sum\limits_{seg}\left \{  \text{dur}(seg)\cdot\max(N_{\text{ref}},N_{\text{sys}})-N_{\text{cor}}\right \}}{\sum\limits_{seg}\left \{  \text{dur}(seg)\cdot N_{\text{ref}}\right \}}\label{ch4:eq:AEER} \tag{4.7} $$<p>where <span class="math">\(\text{dur}(seg)\)</span> is the duration of the segment.</p>
+<p>The ACC metric can be seen as an event-based F-score where the correctness of the events is defined using centers of events instead of their onsets and offsets. Similarly, the AEER metric can be seen as a segment-based metric calculated in non-constant sized segments. As a result, these metrics are measuring different aspects of performance at different time-scales. This is problematic as neither of them will give sufficient performance measures alone, but their simultaneous usage is not advisable due to their different definition. These shortcomings are alleviated by the new metrics (F-score and ER) for segment-based and event-based measurement defined in <a class="citation-reference" href="#mesaros2016b" id="citation-reference-58">[Mesaros2016b]</a>. These metrics were defined using the same temporal resolution, and even though individually they still provide only an incomplete view of the system performance, they can be used together easily to get a more complete view of the performance. Moreover, the evaluation with AEER is based on non-constant segment lengths determined by the combination of reference events and system output events, making the evaluation segments different from system to system. Error rate defined in <a class="citation-reference" href="#mesaros2016b" id="citation-reference-59">[Mesaros2016b]</a> uses uniform segment length and simple rules to determine the correctness of the system output per segment, making the metric easier to understand.</p>
+</div>
+</div>
+<div class="section" id="references">
+<h2 id="references">References</h2>
+<table class="docutils citation" frame="void" id="abesser2020" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-17">[Abesser2020]</a></td><td>Abeßer, Jakob. 2020. “A Review of Deep Learning Based Methods for Acoustic Scene Classification.” <em>Applied Sciences</em> 10 (6): 2020.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="atrey2006" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-31">[Atrey2006]</a></td><td>Atrey, Pradeep K, Namunu C Maddage, and Mohan S Kankanhalli. 2006. “Audio Based Event Detection for Multimedia Surveillance.” In <em>2006 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)</em>, 5:V–. IEEE.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="barchiesi2015" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-9">[Barchiesi2015]</a></td><td>Barchiesi, D., D. Giannoulis, D. Stowell, and M. D. Plumbley. 2015. “Acoustic Scene Classification: Classifying Environments from the Sounds They Produce.” <em>IEEE Signal Processing Magazine</em> 32 (3): 16–34.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="bello2019" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-19">[Bello2019]</a></td><td>Bello, Juan P., Claudio Silva, Oded Nov, R. Luke Dubois, Anish Arora, Justin Salamon, Charles Mydlarz, and Harish Doraiswamy. 2019. “SONYC: A System for Monitoring, Analyzing, and Mitigating Urban Noise Pollution.” <em>Communications of the ACM</em> 62 (2): 68–77.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="cakir2017" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Cakir2017]</td><td><em>(<a class="fn-backref" href="#citation-reference-4">1</a>, <a class="fn-backref" href="#citation-reference-41">2</a>)</em> Çakır, Emre, Giambattista Parascandolo, Toni Heittola, Heikki Huttunen, and Tuomas Virtanen. 2017. “Convolutional Recurrent Neural Networks for Polyphonic Sound Event Detection.” <em>Transactions on Audio, Speech and Language Processing</em> 25 (6): 1291–1303.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="cakir2018" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-44">[Cakir2018]</a></td><td>Çakir, E., and T. Virtanen. 2018. “End-to-End Polyphonic Sound Event Detection Using Convolutional Recurrent Neural Networks with Learned Time-Frequency Representation Input.” In <em>2018 International Joint Conference on Neural Networks (IJCNN)</em>, 1–7.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="chahuara2016" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-32">[Chahuara2016]</a></td><td>Chahuara, Pedro, Anthony Fleury, François Portet, and Michel Vacher. 2016. “On-Line Human Activity Recognition from Audio and Home Automation Sensors: Comparison of Sequential and Non-Sequential Models in Realistic Smart Homes 1.” <em>Journal of Ambient Intelligence and Smart Environments</em> 8 (4): 399–422.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="chen2005" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-21">[Chen2005]</a></td><td>Chen, Jianfeng, Alvin Harvey Kam, Jianmin Zhang, Ning Liu, and Louis Shue. 2005. “Bathroom Activity Monitoring Based on Sound.” In <em>International Conference on Pervasive Computing</em>, 47–61. Springer.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="clavel2005" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-29">[Clavel2005]</a></td><td>Clavel, C., T. Ehrette, and G. Richard. 2005. “Events Detection for an Audio-Based Surveillance System.” In <em>IEEE International Conference on Multimedia and Expo</em>, 1306–9.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="cramer2019" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Cramer2019]</td><td>Cramer, J., H. Wu, J. Salamon, and J. P. Bello. 2019. “Look, Listen, and Learn More: Design Choices for Deep Audio Embeddings.” In <em>2019 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)</em>, 3852–56.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="crocco2016" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-27">[Crocco2016]</a></td><td>Crocco, Marco, Marco Cristani, Andrea Trucco, and Vittorio Murino. 2016. “Audio Surveillance: A Systematic Review.” <em>ACM Computing Surveys</em> 48 (4).</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="dcase2016workshop" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[DCASE2016Workshop]</td><td>Virtanen, Tuomas, Annamaria Mesaros, Toni Heittola, Mark D. Plumbley, Peter Foster, Emmanouil Benetos, and Mathieu Lagrange. 2016. <em>Proceedings of the Detection and Classification of Acoustic Scenes and Events 2016 Workshop (Dcase2016)</em>. Tampere, Finland: Tampere University of Technology. Department of Signal Processing.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="dcase2017workshop" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[DCASE2017Workshop]</td><td>Virtanen, Tuomas, Annamaria Mesaros, Toni Heittola, Aleksandr Diment, Emmanuel Vincent, Emmanouil Benetos, and Benjamin Martinez Elizalde. 2017. <em>Proceedings of the Detection and Classification of Acoustic Scenes and Events 2017 Workshop (Dcase2017)</em>. Tampere, Finland: Tampere University of Technology. Laboratory of Signal Processing.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="dcase2018workshop" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[DCASE2018Workshop]</td><td>Plumbley, Mark D., Christian Kroos, Juan P. Bello, Gaël Richard, Daniel P. W. Ellis, and Annamaria Mesaros. 2018. <em>Proceedings of the Detection and Classification of Acoustic Scenes and Events 2018 Workshop (Dcase2018)</em>. Tampere, Finland: Tampere University of Technology. Laboratory of Signal Processing.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="dcase2019workshop" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[DCASE2019Workshop]</td><td>Mandel, Michael, Justin Salamon, and Daniel P. W. Ellis. 2019. <em>Proceedings of the Detection and Classification of Acoustic Scenes and Events 2019 Workshop (Dcase2019)</em>. New York, NY, USA: New York University.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="do2016" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-34">[Do2016]</a></td><td>Do, H. M., W. Sheng, M. Liu, and Senlin Zhang. 2016. “Context-Aware Sound Event Recognition for Home Service Robots.” In <em>2016 IEEE International Conference on Automation Science and Engineering (CASE)</em>, 739–44.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="ellis1996" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Ellis1996]</td><td>Ellis, D.P. W. 1996. “Prediction-Driven Computational Auditory Scene Analysis.” PhD thesis, MIT Media Laboratory, Cambridge, Massachusetts.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="eronen2006" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Eronen2006]</td><td><em>(<a class="fn-backref" href="#citation-reference-11">1</a>, <a class="fn-backref" href="#citation-reference-14">2</a>)</em> Eronen, A. J., V. T. Peltonen, J. T. Tuomi, A. P. Klapuri, S. Fagerlund, T. Sorsa, G. Lorho, and J. Huopaniemi. 2006. “Audio-Based Context Recognition.” <em>IEEE Transactions on Audio, Speech, and Language Processing</em> 14 (1): 321–29.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="fonseca2019" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-45">[Fonseca2019]</a></td><td>Fonseca, Eduardo, Manoj Plakal, Daniel PW Ellis, Frederic Font, Xavier Favory, and Xavier Serra. 2019. “Learning Sound Event Classifiers from Web Audio with Noisy Labels.” In <em>2019 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)</em>, 21–25. IEEE.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="gasc2013" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-33">[Gasc2013]</a></td><td>Gasc, A., J. Sueur, F. Jiguet, V. Devictor, P. Grandcolas, C. Burrow, M. Depraetere, and S. Pavoine. 2013. “Assessing Biodiversity with Sound: Do Acoustic Diversity Indices Reflect Phylogenetic and Functional Diversities of Bird Communities?” <em>Ecological Indicators</em> 25: 279–87.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="geiger2013" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Geiger2013]</td><td>Geiger, J. T., B. Schuller, and G. Rigoll. 2013. “Large-Scale Audio Feature Extraction and SVM for Acoustic Scene Classification.” In <em>2013 IEEE Workshop on Applications of Signal Processing to Audio and Acoustics (WASPAA)</em>, 1–4.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="gemmeke2017" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-46">[Gemmeke2017]</a></td><td>Gemmeke, Jort F, Daniel PW Ellis, Dylan Freedman, Aren Jansen, Wade Lawrence, R Channing Moore, Manoj Plakal, and Marvin Ritter. 2017. “Audio Set: An Ontology and Human-Labeled Dataset for Audio Events.” In <em>2017 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)</em>, 776–80.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="heittola2008" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Heittola2008]</td><td>Heittola, Toni, and Anssi Klapuri. 2008. “TUT Acoustic Event Detection System 2007.” In <em>Multimodal Technologies for Perception of Humans: International Evaluation Workshops CLEAR 2007 and RT 2007</em>, edited by Rainer Stiefelhagen, Rachel Bowers, and Jonathan Fiscus, 364–70. Cham, Switzerland: Springer Verlag.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="heittola2010" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Heittola2010]</td><td>Heittola Toni, Annamaria Mesaros, Antti Eronen, and Tuomas Virtanen, “Audio Context Recognition Using Audio Event Histograms,” in Proceedings of 2010 European Signal Processing Conference, (Aalborg, Denmark), pp. 1272–1276, 2010.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="heittola2011" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Heittola2011]</td><td>Heittola Toni, Annamaria Mesaros, Tuomas Virtanen, and Antti Eronen, “Sound Event Detection in Multisource Environments Using Source Separation,” in Workshop on Machine Listening in Multisource Environments, (Florence, Italy), pp. 36–40, 2011.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="heittola2013a" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Heittola2013a]</td><td>Heittola Toni, Annamaria Mesaros,Antti Eronen, and Tuomas Virtanen, “Context-Dependent Sound Event Detection,” in EURASIP Journal on Audio, Speech and Music Processing, Vol. 2013, No. 1, 13 pages, 2013.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="heittola2013b" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Heittola2013b]</td><td>Heittola Toni, Annamaria Mesaros, Tuomas Virtanen, and Moncef Gabbouj, “Supervised Model Training for Overlapping Sound Events Based on Unsupervised Source Separation,” in Proceedings of the 35th International Conference on Acoustics, Speech, and Signal Processing, (Vancouver, Canada), pp. 8677–8681, 2013.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="hershey2017" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Hershey2017]</td><td>Hershey, S., S. Chaudhuri, D. P. W. Ellis, J. F. Gemmeke, A. Jansen, R. C. Moore, M. Plakal, et al. 2017. “CNN Architectures for Large-Scale Audio Classification.” In <em>2017 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)</em>, 131–35.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="jansen2017" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Jansen2017]</td><td>Jansen, A., J. F. Gemmeke, D. P. W. Ellis, X. Liu, W. Lawrence, and D. Freedman. 2017. “Large-Scale Audio Event Discovery in One Million YouTube Videos.” In <em>2017 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)</em>, 786–90.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="jung2019" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Jung2019]</td><td>Jung, S., J. Park, and S. Lee. 2019. “Polyphonic Sound Event Detection Using Convolutional Bidirectional LSTM and Synthetic Data-Based Transfer Learning.” In <em>2019 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)</em>, 885–89.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="kong2019" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-40">[Kong2019]</a></td><td>Kong, Qiuqiang, Yong Xu, Iwona Sobieraj, Wenwu Wang, and Mark D Plumbley. 2019. “Sound Event Detection and Time–Frequency Segmentation from Weakly Labelled Data.” <em>IEEE/ACM Transactions on Audio, Speech, and Language Processing</em> 27 (4): 777–87.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="kraft2005" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-20">[Kraft2005]</a></td><td>Kraft, F., R. Malkin, T. Schaaf, and A. Waibel. 2005. “Temporal ICA Classification of Acoustic Events in a Kitchen Enviroment.” In <em>Proceedings of ICSLP-Interspeech</em>, 2689–92.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="kumar2013" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-1">[Kumar2013]</a></td><td>Kumar, A., R. M. Hegde, R. Singh, and B. Raj. 2013. “Event Detection in Short Duration Audio Using Gaussian Mixture Model and Random Forest Classifier.” In <em>21st European Signal Processing Conference (EUSIPCO)</em>, 1–5.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="kumar2016" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Kumar2016]</td><td>Kumar, Anurag, and Bhiksha Raj. 2016. “Weakly Supervised Scalable Audio Content Analysis.” In <em>2016 IEEE International Conference on Multimedia and Expo (ICME)</em>, 1–6. IEEE.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="lafay2017" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-37">[Lafay2017]</a></td><td>Lafay, G., E. Benetos, and M. Lagrange. 2017. “Sound Event Detection in Synthetic Audio: Analysis of the DCASE 2016 Task Results.” In <em>2017 IEEE Workshop on Applications of Signal Processing to Audio and Acoustics (WASPAA)</em>, 11–15.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="mesaros2010" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Mesaros2010]</td><td><em>(<a class="fn-backref" href="#citation-reference-36">1</a>, <a class="fn-backref" href="#citation-reference-47">2</a>)</em> Mesaros Annamaria, Toni Heittola, Antti Eronen, and Tuomas Virtanen, “Acoustic Event Detection in Real Life Recordings,” in Proceedings of 2010 European Signal Processing Conference, Aalborg, Denmark), pp. 1267–1271, 2010</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="mesaros2016" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Mesaros2016]</td><td><em>(<a class="fn-backref" href="#citation-reference-48">1</a>, <a class="fn-backref" href="#citation-reference-51">2</a>, <a class="fn-backref" href="#citation-reference-54">3</a>, <a class="fn-backref" href="#citation-reference-55">4</a>)</em> Mesaros Annamaria, Toni Heittola, and Tuomas Virtanen, “TUT Database for Acoustic Scene Classification and Sound Event Detection,” In 24th European Signal Processing Conference 2016 (EUSIPCO 2016), pp. 1128–1132, 2016.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="mesaros2016b" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Mesaros2016b]</td><td><em>(<a class="fn-backref" href="#citation-reference-58">1</a>, <a class="fn-backref" href="#citation-reference-59">2</a>)</em> Mesaros, Annamaria, Toni Heittola, and Tuomas Virtanen. 2016. “Metrics for Polyphonic Sound Event Detection.” <em>Applied Sciences</em> 6 (6).</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="mesaros2017a" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-18">[Mesaros2017a]</a></td><td>Mesaros, Annamaria, Toni Heittola, and Tuomas Virtanen. 2017a. “Assessment of Human and Machine Performance in Acoustic Scene Classification: DCASE 2016 Case Study.” In <em>2017 IEEE Workshop on Applications of Signal Processing to Audio and Acoustics (WASPAA)</em>, 319–23.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="mesaros2017b" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Mesaros2017b]</td><td>Mesaros, A., T. Heittola, A. Diment, B. Elizalde, A. Shah, E. Vincent, B. Raj, and T. Virtanen. 2017. “DCASE 2017 Challenge Setup: Tasks, Datasets and Baseline System.” In <em>Proceedings of the Detection and Classification of Acoustic Scenes and Events 2017 Workshop (Dcase2017)</em>, 85–92.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="mesaros2018" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Mesaros2018]</td><td><em>(<a class="fn-backref" href="#citation-reference-7">1</a>, <a class="fn-backref" href="#citation-reference-16">2</a>, <a class="fn-backref" href="#citation-reference-38">3</a>, <a class="fn-backref" href="#citation-reference-49">4</a>)</em> Mesaros Annamaria, Toni Heittola, Emmanouil Benetos, Peter Foster, Mathieu Lagrange, Tuomas Virtanen, and Mark D. Plumbley, “Detection and Classification of Acoustic Scenes and Events: Outcome of the DCASE 2016 Challenge,” IEEE/ACM Transactions on Audio, Speech, and Language Processing, 26(2):379–393, Feb 2018.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="mesaros2019a" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-12">[Mesaros2019a]</a></td><td>Mesaros, Annamaria, Toni Heittola, and Tuomas Virtanen. 2019. “Acoustic Scene Classification in DCASE 2019 Challenge: Closed and Open Set Classification and Data Mismatch Setups.” In <em>Proceedings of the Detection and Classification of Acoustic Scenes and Events 2019 Workshop (Dcase2019)</em>, 164–68.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="mesaros2019b" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Mesaros2019b]</td><td><em>(<a class="fn-backref" href="#citation-reference-28">1</a>, <a class="fn-backref" href="#citation-reference-39">2</a>, <a class="fn-backref" href="#citation-reference-50">3</a>, <a class="fn-backref" href="#citation-reference-52">4</a>, <a class="fn-backref" href="#citation-reference-56">5</a>)</em> Mesaros, Annamaria, Aleksandr Diment, Benjamin Elizalde, Toni Heittola, Emmanuel Vincent, Bhiksha Raj, and Tuomas Virtanen. 2019. “Sound Event Detection in the DCASE 2017 Challenge.” <em>IEEE/ACM Transactions on Audio, Speech, and Language Processing</em> 27 (6): 992–1006.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="parascandolo2016" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-42">[Parascandolo2016]</a></td><td>Parascandolo, G., H. Huttunen, and T. Virtanen. 2016. “Recurrent Neural Networks for Polyphonic Sound Event Detection in Real Life Recordings.” In <em>2016 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)</em>, 6440–44.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="peltonen2002" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Peltonen2002]</td><td><em>(<a class="fn-backref" href="#citation-reference-10">1</a>, <a class="fn-backref" href="#citation-reference-13">2</a>)</em> Peltonen, V., J. Tuomi, A. Klapuri, J. Huopaniemi, and T. Sorsa. 2002. “Computational Auditory Scene Recognition.” In <em>2002 IEEE International Conference on Acoustics, Speech, and Signal Processing</em>, 2:II-1941-II-1944.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="piczak2015" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Piczak2015]</td><td>Piczak, K. J. 2015. “Environmental Sound Classification with Convolutional Neural Networks.” In <em>2015 IEEE 25th International Workshop on Machine Learning for Signal Processing (MLSP)</em>, 1–6.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="poliner2006" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-53">[Poliner2006]</a></td><td>Poliner, Graham E, and Daniel PW Ellis. 2006. “A Discriminative Model for Polyphonic Piano Transcription.” <em>EURASIP Journal on Advances in Signal Processing</em> 2007: 1–9.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="rakotomamonjy2015" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Rakotomamonjy2015]</td><td>Rakotomamonjy, A., and G. Gasso. 2015. “Histogram of Gradients of Time–Frequency Representations for Audio Scene Classification.” <em>IEEE/ACM Transactions on Audio, Speech, and Language Processing</em> 23 (1): 142–53.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="roma2013" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Roma2013]</td><td>Roma, G., W. Nogueira, and P. Herrera. 2013. “Recurrence Quantification Analysis Features for Environmental Sound Recognition.” In <em>2013 IEEE Workshop on Applications of Signal Processing to Audio and Acoustics (WASPAA)</em>, 1–4.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="salamon2015" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Salamon2015]</td><td><em>(<a class="fn-backref" href="#citation-reference-24">1</a>, <a class="fn-backref" href="#citation-reference-43">2</a>)</em> Salamon, J., and J. P. Bello. 2015. “Unsupervised Feature Learning for Urban Sound Classification.” In <em>2015 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)</em>, 171–75.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="salamon2017" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-26">[Salamon2017]</a></td><td>Salamon, Justin, and Juan Pablo Bello. 2017. “Deep Convolutional Neural Networks and Data Augmentation for Environmental Sound Classification.” <em>IEEE Signal Processing Letters</em> 24 (3): 279–83.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="stiefelhagen2006" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-5">[Stiefelhagen2006]</a></td><td>Stiefelhagen, Rainer, Keni Bernardin, Rachel Bowers, John Garofolo, Djamel Mostefa, and Padmanabhan Soundararajan. 2006. “The CLEAR 2006 Evaluation.” In <em>Proceedings of the 1st International Evaluation Conference on Classification of Events, Activities and Relationships</em>, 1–44. CLEAR’06. Berlin, Heidelberg: Springer-Verlag.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="stiefelhagen2007" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Stiefelhagen2007]</td><td>Stiefelhagen, Rainer, Keni Bernardin, Rachel Bowers, R. Travis Rose, Martial Michel, and John S. Garofolo. 2007. “The CLEAR 2007 Evaluation.” In <em>Multimodal Technologies for Perception of Humans, International Evaluation Workshops CLEAR 2007 and RT 2007</em>, edited by Rainer Stiefelhagen, Rachel Bowers, and Jonathan G. Fiscus, 4625:3–34. Lecture Notes in Computer Science. Cham, Switzerland: Springer Verlag.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="stiefelhagen2008" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Stiefelhagen2008]</td><td>Stiefelhagen, Rainer, Rachel Bowers, and Jonathan Fiscus. 2008. <em>Multimodal Technologies for Perception of Humans: International Evaluation Workshops CLEAR 2007 and RT 2007</em>. Vol. 4625. Cham, Switzerland: Springer Verlag.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="stowell2015" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Stowell2015]</td><td><em>(<a class="fn-backref" href="#citation-reference-6">1</a>, <a class="fn-backref" href="#citation-reference-15">2</a>, <a class="fn-backref" href="#citation-reference-35">3</a>)</em> Stowell, D., D. Giannoulis, E. Benetos, M. Lagrange, and M. D. Plumbley. 2015. “Detection and Classification of Acoustic Scenes and Events.” <em>Multimedia, IEEE Transactions on</em> 17 (10): 1733–46.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="szabo2016" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Szabo2016]</td><td>Szabó, Beáta T., Susan L. Denham, and István Winkler. 2016. “Computational Models of Auditory Scene Analysis: A Review.” <em>Frontiers in Neuroscience</em> 10: 524.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="tutasc2016dev" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[TUTASC2016DEV]</td><td>Mesaros, Annamaria, Toni Heittola, and Tuomas Virtanen. 2016. “TUT Acoustic Scenes 2016, Development Dataset.” Zenodo. <a class="reference external" href="https://doi.org/10.5281/zenodo.45739">https://doi.org/10.5281/zenodo.45739</a>.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="tutasc2016eval" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[TUTASC2016EVAL]</td><td>Mesaros, Annamaria, Toni Heittola, and Tuomas Virtanen. 2016. “TUT Acoustic Scenes 2016, Evaluation Dataset.” Zenodo. <a class="reference external" href="https://doi.org/10.5281/zenodo.165995">https://doi.org/10.5281/zenodo.165995</a>.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="tutasc2017dev" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[TUTASC2017DEV]</td><td>Mesaros, Annamaria, Toni Heittola, and Tuomas Virtanen. 2017. “TUT Acoustic Scenes 2017, Development Dataset.” Zenodo. <a class="reference external" href="https://doi.org/10.5281/zenodo.400515">https://doi.org/10.5281/zenodo.400515</a>.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="tutasc2017eval" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[TUTASC2017EVAL]</td><td>Mesaros, Annamaria, Toni Heittola, and Tuomas Virtanen. 2017c. “TUT Acoustic Scenes 2017, Evaluation Dataset.” Zenodo. <a class="reference external" href="https://doi.org/10.5281/zenodo.1040168">https://doi.org/10.5281/zenodo.1040168</a>.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="tutsed2016dev" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[TUTSED2016DEV]</td><td>Mesaros, Annamaria, Toni Heittola, and Tuomas Virtanen. 2016. “TUT Sound Events 2016, Development Dataset.” Zenodo. <a class="reference external" href="https://doi.org/10.5281/zenodo.45759">https://doi.org/10.5281/zenodo.45759</a></td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="tutsed2016eval" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[TUTSED2016EVAL]</td><td>Mesaros, Annamaria, Toni Heittola, and Tuomas Virtanen. 2017. “TUT Sound Events 2016, Evaluation Dataset.” Zenodo. <a class="reference external" href="https://doi.org/10.5281/zenodo.996424">https://doi.org/10.5281/zenodo.996424</a></td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="tutsed2017dev" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[TUTSED2017DEV]</td><td>Mesaros, Annamaria, Toni Heittola, and Tuomas Virtanen. 2017. “TUT Sound Events 2017, Development Dataset.” Zenodo. <a class="reference external" href="https://doi.org/10.5281/zenodo.814831">https://doi.org/10.5281/zenodo.814831</a></td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="tutsed2017eval" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[TUTSED2017EVAL]</td><td>Mesaros, Annamaria, Toni Heittola, and Tuomas Virtanen. 2017. “TUT Sound Events 2017, Evaluation Dataset.” Zenodo. <a class="reference external" href="https://doi.org/10.5281/zenodo.1040179">https://doi.org/10.5281/zenodo.1040179</a></td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="takahashi2018" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Takahashi2018]</td><td>Takahashi, N., M. Gygli, and L. Van Gool. 2018. “AENet: Learning Deep Audio Features for Video Analysis.” <em>IEEE Transactions on Multimedia</em> 20 (3): 513–24.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="temko2006" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Temko2006]</td><td>Temko, Andrey, Robert Malkin, Christian Zieger, Dušan Macho, Climent Nadeu, and Maurizio Omologo. 2006. “CLEAR Evaluation of Acoustic Event Detection and Classification Systems.” In <em>International Evaluation Workshop on Classification of Events, Activities and Relationships</em>, 311–22. Springer.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="temko2006a" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Temko2006a]</td><td>Temko, Andrey, Robert Malkin, Christian Zieger, Dušan Macho, Climent Nadeu, and Maurizio Omologo. 2006. “CLEAR Evaluation of Acoustic Event Detection and Classification Systems.” In <em>International Evaluation Workshop on Classification of Events, Activities and Relationships</em>, 311–22. Springer.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="temko2006b" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-23">[Temko2006b]</a></td><td>Temko, Andrey, and Climent Nadeu. 2006. “Classification of Acoustic Events Using SVM-Based Clustering Schemes.” <em>Pattern Recognition</em> 39 (4): 682–94.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="temko2007" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Temko2007]</td><td>Temko, Andrey, Climent Nadeu, and Joan-Isaac Biel. 2007. “Acoustic Event Detection: SVM-Based System and Evaluation Setup in CLEAR’07.” In <em>Multimodal Technologies for Perception of Humans: International Evaluation Workshops CLEAR 2007 and RT 2007</em>, edited by Rainer Stiefelhagen, Rachel Bowers, and Jonathan Fiscus, 354–63. Cham, Switzerland: Springer Verlag.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="temko2009" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Temko2009]</td><td>Temko, A., and C. Nadeu. 2009. “Acoustic Event Detection in a Meeting-Room Environment.” <em>Pattern Recognition Letters</em> 30 (14): 1281–88.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="temko2009a" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-57">[Temko2009a]</a></td><td>Temko, Andrey, Climent Nadeu, Dusan Macho, Robert Malkin, Christian Zieger, and Maurizio Omologo. 2009. “Acoustic Event Detection and Classification.” In <em>Computers in the Human Interaction Loop</em>, edited by Alexander H. Waibel and Rainer Stiefelhagen, 61–73. Springer London.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="tokozume2017" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-25">[Tokozume2017]</a></td><td>Tokozume, Y., and T. Harada. 2017. “Learning Environmental Sounds with End-to-End Convolutional Neural Network.” In <em>2017 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)</em>, 2721–25.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="tran2011" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-22">[Tran2011]</a></td><td>Tran, Huy Dat, and Haizhou Li. 2011. “Probabilistic Distance SVM with Hellinger-Exponential Kernel for Sound Event Classification.” In <em>2011 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)</em>, 2272–75. IEEE.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="vacher2004" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Vacher2004]</td><td>Vacher, M, D Istrate, Laurent Besacier, Jean-François Serignat, and E Castelli. 2004. “Sound Detection and Classification for Medical Telesurvey.” In <em>2nd Conference on Biomedical Engineering</em>, edited by Calgary ACTA Press, 395–98.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="valenzise2007" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-30">[Valenzise2007]</a></td><td>Valenzise, G., L. Gerosa, M. Tagliasacchi, F. Antonacci, and A. Sarti. 2007. “Scream and Gunshot Detection and Localization for Audio-Surveillance Systems.” In <em>Proceedings of the 2007 IEEE Conference on Advanced Video and Signal Based Surveillance</em>, 21–26.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="virtanen2018" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-8">[Virtanen2018]</a></td><td>Virtanen, Tuomas, Mark D Plumbley, and Dan Ellis. 2018. <em>Computational Analysis of Sound Scenes and Events</em>. Cham, Switzerland: Springer Verlag.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="xu2018" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Xu2018]</td><td>Xu, Y., Q. Kong, W. Wang, and M. D. Plumbley. 2018. “Large-Scale Weakly Supervised Audio Classification Using Gated Convolutional Neural Network.” In <em>2018 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)</em>, 121–25.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="zhou2007" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-2">[Zhou2007]</a></td><td>Zhou, Xi, Xiaodan Zhuang, Ming Liu, Hao Tang, Mark Hasegawa-Johnson, and Thomas Huang. 2007. “HMM-Based Acoustic Event Detection with AdaBoost Feature Selection.” In <em>Multimodal Technologies for Perception of Humans: International Evaluation Workshops CLEAR 2007 and RT 2007</em>, edited by Rainer Stiefelhagen, Rachel Bowers, and Jonathan Fiscus, 345–53. Cham, Switzerland: Springer Verlag.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="zhuang2009" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Zhuang2009]</td><td>Xiaodan Zhuang, J. Huang, G. Potamianos, and M. Hasegawa-Johnson. 2009. “Acoustic Fall Detection Using Gaussian Mixture Models and GMM Supervectors.” In <em>2009 IEEE International Conference on Acoustics, Speech and Signal Processing</em>, 69–72.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="zhuang2010" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-3">[Zhuang2010]</a></td><td>Zhuang, Xiaodan, Xi Zhou, Mark A Hasegawa-Johnson, and Thomas S Huang. 2010. “Real-World Acoustic Event Detection.” <em>Pattern Recognition Letters</em> 31 (12): 1543–51.</td></tr>
+</tbody>
+</table>
+<br/><br/><br/></div>
+<script type='text/javascript'>if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>    
+
+<ul class="nav pull-right scroll-top">
+  <li>
+    <a title="Scroll to top" href="#" class="page-scroll-top">
+      <i class="glyphicon glyphicon-chevron-up"></i>
+    </a>
+  </li>
+</ul>
+<script type="text/javascript" src="/theme/assets/jquery/jquery.easing.min.js"></script>
+<script type="text/javascript" src="/theme/assets/bootstrap5/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="/theme/js/theme5.js"></script><script type="text/javascript" src="/theme/assets/scrollreveal/scrollreveal.min.js"></script>
+<script type="text/javascript" src="/theme/js/setup.scrollreveal.js"></script>
+<script type="text/javascript" src="/theme/assets/highlight/highlight.pack.js"></script>
+<script type="text/javascript">
+    document.querySelectorAll('pre code:not([class])').forEach(function($) {$.className = 'no-highlight';});
+    hljs.initHighlightingOnLoad();
+</script>
+<script type="text/javascript" src="/theme/js/respond.min.js"></script>
+<script type="text/javascript" src="/theme/js/tocbot.min.js"></script>
+<script type="text/javascript" src="/theme/js/btoc-bot.min.js"></script>
+</body>
+</html>

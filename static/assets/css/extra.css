@@ -1,0 +1,72 @@
+.docutils .label {
+    color:black;
+    width:150px;
+    text-align:left;
+    display:inline-block;
+    color:#666 !important;
+}
+.docutils .label a, .citation-reference, a.internal{
+    text-decoration: none !important;
+    border-bottom:none !important;
+    color:#666 !important;
+}
+.figure{
+    border-top:1px dotted #AAA;
+    border-bottom:1px dotted #AAA;
+    padding-top:15px;
+    margin-bottom:10px;
+}
+.caption{
+    padding-top:15px;
+    padding-bottom:10px;
+    margin-bottom:0.5rem;
+}
+
+.text-dcase-a1{color: #45818e !important;}
+.text-dcase-a2{color: #b4a7d8 !important;}
+.text-dcase-a3{color: #a4c2f4 !important;}
+.text-dcase-a4{color: #6aa84f !important;}
+.text-dcase-a5{color: #93c47d !important;}
+.text-dcase-a6{color: #f1c232 !important;}
+.text-dcase-a7{color: #ff9900 !important;}
+
+.text-dcase-b1{color: #93c47d !important;}
+.text-dcase-b2{color: #ffd966 !important;}
+.text-dcase-b3{color: #f6b26b !important;}
+
+.text-dcase-c1{color: #d4eeff !important;}
+.text-dcase-c2{color: #dbffa4 !important;}
+.text-dcase-c3{color: #ffd4a4 !important;}
+
+.text-dcase-d1{color: #e3cfff !important;}
+.text-dcase-d2{color: #ffbcef !important;}
+.text-dcase-d3{color: #c0ffab !important;}
+
+.text-dcase-e1{color: #fff7cf !important;}
+.text-dcase-e2{color: #bcffc4 !important;}
+.text-dcase-e3{color: #abfff3 !important;}
+
+.text-spm-a1{color: #abfff3 !important;}
+.text-spm-a2{color: #45818e !important;}
+.text-spm-a3{color: #9ccdcc !important;}
+.text-spm-a4{color: #f5b66f !important;}
+.text-spm-a5{color: #f1c232 !important;}
+.text-spm-a6{color: #fee5ac !important;}
+
+.text-taslp-a1{color: #e0cd6d !important;}
+.text-taslp-a2{color: #97c65e !important;}
+.text-taslp-a3{color: #b9d5ad !important;}
+.text-taslp-a4{color: #f0f0f0 !important;}
+
+.text-thesis-a1{color: #98cac8 !important;}
+.text-thesis-a2{color: #ebc5b7 !important;}
+.text-thesis-a3{color: #f4b369 !important;}
+.text-thesis-a4{color: #f0d638 !important;}
+.text-thesis-a5{color: #fee3a9 !important;}
+.text-thesis-a6{color: #a7f56a !important;}
+.text-thesis-a7{color: #2c6c7b !important;}
+
+.text-thesis-b1{color: #377789 !important;}
+.text-thesis-b2{color: #54babc !important;}
+.text-thesis-b3{color: #f7a956 !important;}
+.text-thesis-b4{color: #fcdea1 !important;}

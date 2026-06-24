@@ -1,0 +1,4597 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <title>Open Data - Toni Heittola</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <link href="/static/favicon.png" rel="icon">
+<link rel="canonical" href="/opendata">
+        <meta name="author" content="Toni Heittola" />
+        <meta name="description" content="This page collects the open datasets I created and maintain from my time at Tampere University. Introduction These datasets support research and development in DCASE-related domains — machine learning, acoustic scene analysis, environmental audio signal processing — and are freely available to keep that research transparent and reproducible. Researchers, students, and developers …" />
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;900&family=Roboto:wght@900&family=Bungee+Spice" rel="stylesheet">
+    <link rel="stylesheet" href="/theme/assets/bootstrap5/css/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/assets/fontawesome6/css/all.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/assets/academicons/css/academicons.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/assets/dcaseicons/css/dcaseicons.css?v=1.1" type="text/css"/>
+<link rel="stylesheet" href="/theme/assets/highlight/styles/atom-one-light.css" type="text/css"/>
+                <link rel="stylesheet" href="/theme/css/btex.min.css">
+                <link rel="stylesheet" href="/theme/css/btoc-bot.min.css">
+<link rel="stylesheet" href="/theme/css/theme5.css?v=1.1" type="text/css"/><link rel="stylesheet" href="/static/assets/css/icons.css" type="text/css"/><link rel="stylesheet" href="/static/assets/css/extra.css" type="text/css"/><script type="text/javascript" src="/theme/assets/jquery/jquery-3.7.1.min.js"></script>    <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Toni Heittola ATOM Feed"/>
+
+
+</head>
+<body>
+
+
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark pt-0 pb-0 flex-column" role="navigation" data-spy="affix" data-offset-top="195" id="topmenu">
+    <div class="container p-0">
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-main" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar-main">
+            <div class="container-fluid p-0">
+                <div class="row g-0 p-0">
+                    <div class="col-md d-flex">
+                        <a href="/" class="navbar-brand align-self-start" ></a><ul class="navbar-nav flex-sm-row2 flex-lg-grow flex-lg-fill align-self-start" id="menuitem-list-main"><li class="nav-item ">
+        <a href="/"
+        class="nav-link"
+        ><strong>Toni Heittola</strong></a>
+    </li></ul><ul class="navbar-nav flex-lg-nowrap align-self-start" id="menuitem-list"><li class="nav-item " data-bs-toggle="tooltip" data-bs-placement="bottom" title="About me">
+        <a href="/about-me"
+        class="nav-link"
+        ><i class="fa fa-solid fa-user fa-1x fa-fw"></i>&nbsp;About</a>
+    </li><li class="nav-item dropdown  active">
+        <a href="#"
+ class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+        ><i class="fa fa-solid fa-magnifying-glass fa-1x fa-fw text-danger text-dcase-a1"></i>&nbsp;Research&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class=" ">
+        <a href="/research"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-circle-notch fa-circle-o-notch fa-1x fa-fw text-dcase-a1"></i>&nbsp;Overview</a>
+    </li>
+            <li class=" ">
+        <a href="/research-portfolio"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-cog fa-1x fa-fw text-dcase-a2"></i>&nbsp;Portfolio</a>
+    </li>
+            <li class=" ">
+        <a href="/guiding-research"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-users fa-fw text-dcase-a3"></i>&nbsp;Guiding Research</a>
+    </li>
+            <li class="nav-item divider dropdown-divider" role="presentation"></li>
+            <li class=" ">
+        <a href="/publications"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-copy fa-files-o fa-1x fa-fw text-dcase-a4"></i>&nbsp;Publications</a>
+    </li>
+            <li class="  active">
+        <a href="/opendata"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-database fa-fw text-dcase-a5"></i>&nbsp;Open Data</a>
+    </li>
+            <li class="nav-item divider dropdown-divider" role="presentation"></li>
+            <li class=" ">
+        <a href="/academic-illustrations"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-image fa-1x fa-fw text-dcase-a7"></i>&nbsp;Illustrations</a>
+    </li>
+            <li class="nav-item divider dropdown-divider" role="presentation"></li>
+            <li class=" ">
+        <a href="/academic-bio"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-user fa-1x fa-fw text-dcase-a6"></i>&nbsp;Biography</a>
+    </li>
+            <li class="nav-item divider dropdown-divider" role="presentation"></li>
+            <li class=" ">
+        <a href="/glossary"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-list fa-1x fa-fw text-dcase-a7"></i>&nbsp;Glossary</a>
+    </li>
+            <li class="nav-item divider dropdown-divider" role="presentation"></li>
+            <li class="nav-link disabled subheader" >
+       <a><strong><small class="fw-light">Audio Content Analysis <br>in Everyday Environments</small></strong></a>
+    </li>
+            <li class=" ">
+        <a href="/thesis/introduction"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-book-open fa-1x fa-fw text-dcase-a1"></i>&nbsp;Introduction</a>
+    </li>
+            <li class=" ">
+        <a href="/thesis/everyday_environments"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-person-walking fa-1x fa-fw text-dcase-a1"></i>&nbsp;Everyday Environments</a>
+    </li>
+            <li class=" ">
+        <a href="/thesis/content_analysis"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-brain fa-1x fa-fw text-dcase-a1"></i>&nbsp;Audio Content Analysis</a>
+    </li>
+            <li class=" ">
+        <a href="/thesis/sed"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-ear-listen fa-1x fa-fw text-dcase-a1"></i>&nbsp;Sound Event Detection</a>
+    </li>
+            <li class="nav-item divider dropdown-divider" role="presentation"></li>
+            <li class="nav-item dropdown ">
+        <a href="#"
+ class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+        ><i class="fa fa-solid fa-file-alt fa-1x fa-fw"></i>&nbsp;Publication Add-ons&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class=" ">
+        <a href="/audiotexture/index"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-file-alt fa-1x fa-fw"></i>&nbsp;Location-Specific Audio Textures</a>
+    </li>
+            <li class=" ">
+        <a href="/ismir09/index"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-file-alt fa-1x fa-fw"></i>&nbsp;Musical Instrument Recognition</a>
+    </li>
+            <li class=" ">
+        <a href="/musicalgenre/index"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-file-alt fa-1x fa-fw"></i>&nbsp;Musical Genre Classification</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li><li class="nav-item dropdown ">
+        <a href="/development"
+ class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+        ><i class="fa fa-solid fa-code fa-1x fa-fw text-warning text-thesis-a3"></i>&nbsp;Develop&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class=" ">
+        <a href="/development"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-code fa-1x fa-fw text-thesis-a3"></i>&nbsp;Introduction</a>
+    </li>
+            <li class="nav-item divider dropdown-divider" role="presentation"></li>
+            <li class=" ">
+        <a href="/ml-development"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-search fa-1x fa-fw text-thesis-a4"></i>&nbsp;Machine Learning</a>
+    </li>
+            <li class=" ">
+        <a href="/websites"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-desktop fa-1x fa-fw text-thesis-a2"></i>&nbsp;Websites</a>
+    </li>
+            <li class=" ">
+        <a href="/web-development"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-plug fa-1x fa-fw text-thesis-a1"></i>&nbsp;Web Development</a>
+    </li>
+        </ul>
+    </li><li class="nav-item ">
+        <a href="/publications"
+        class="nav-link"
+        ><i class="fa fa-solid fa-copy fa-files-o fa-1x fa-fw text-success text-dcase-a4"></i>&nbsp;Publish</a>
+    </li><li class="nav-item dropdown  active">
+        <a href="#"
+ class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+        ><i class="fa fa-solid fa-wave-square fa-fw text-primary text-dcase-a5"></i>&nbsp;Data&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="  active">
+        <a href="/opendata"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-folder-open fa-fw"></i>&nbsp;Open Data</a>
+    </li>
+            <li class=" ">
+        <a href="/datasets"
+ class="dropdown-item"
+        ><i class="fa fa-list-ul fa-fw"></i>&nbsp;Data & Tools</a>
+    </li>
+            <li class="nav-item divider dropdown-divider" role="presentation"></li>
+            <li class=" " data-bs-toggle="tooltip" data-bs-placement="bottom" title="DCASE Datalist">
+        <a href="https://dcase-repo.github.io/dcase_datalist/"
+ target="_blank"  class="dropdown-item"
+        ><i class="fa fa-database fa-1x fa-fw"></i>&nbsp;DCASE DataList</a>
+    </li>
+        </ul>
+    </li><li class="nav-item " data-bs-toggle="tooltip" data-bs-placement="bottom" title="Glossary">
+        <a href="/glossary"
+        class="nav-link"
+        ><i class="fa fa-solid fa-list fa-1x fa-fw"></i>&nbsp;</a>
+    </li><li class="nav-item " data-bs-toggle="tooltip" data-bs-placement="bottom" title="News articles">
+        <a href="/news"
+        class="nav-link"
+        ><i class="fa fa-solid fa-newspaper fa-newspaper-o fa-fw"></i>&nbsp;</a>
+    </li><li class="nav-item " data-bs-toggle="tooltip" data-bs-placement="bottom" title="Github">
+        <a href="https://github.com/toni-heittola?tab=repositories"
+ target="_blank"         class="nav-link"
+        ><i class="fa fa-brands fa-github fa-1x"></i>&nbsp;</a>
+    </li>                        </ul>                    </div></div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+<header class="page-top" style="background-image: url(theme/images/everyday-patterns/crystal-07.jpg);box-shadow: 0px 1000px rgba(0, 0, 0, 0.85) inset;overflow:hidden;position:relative">
+    <div class="container" style="box-shadow: 0px 1000px rgba(255, 255, 255, 0.1) inset;;height:100%;padding-bottom:20px;">
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                <div class="page-heading text-end"><h1 class="toc-skip bold" data-toc-skip>Open Data</h1><hr class="small right bold"><span class="subheading">Open Data Resources for Environmental Sound Analysis and Machine Learning</span></div>
+            </div>
+        </div>
+    </div>
+<span class="header-cc-logo" data-bs-toggle="tooltip" data-bs-placement="top" title="Background photo by Toni Heittola / CC BY-NC 4.0"><i class="fa fa-brands fa-creative-commons" aria-hidden="true"></i></span></header><div class="container">
+    <div class="row">
+        <div class="col-sm-3 sidecolumn-left ">
+ <div class="btoc-container hidden-print sticky-top" role="complementary">
+<div class="btoc-header bg-light text-muted">Content</div>
+<div class="btoc-body">
+<nav class="btoc-nav" data-toc-levels="h1,h2,h3"></nav>
+</div>
+</div>
+
+        </div>
+        <div class="col-sm-9 content">
+            <section id="content" class="body">
+                <div class="entry-content">
+                    <p class="lead">This page collects the open datasets I created and maintain from my time at Tampere University.</p>
+<h1 id="introduction">Introduction</h1>
+<p>These datasets support research and development in DCASE-related domains — machine learning, acoustic scene analysis, environmental audio signal processing — and are freely available to keep that research transparent and reproducible.</p>
+<p>Researchers, students, and developers are welcome to use them for non-commercial projects; just check the license that comes with each one. Every dataset ships with documentation to get you started quickly.</p>
+<p class="alert alert-info">
+For a broader overview of publicly available datasets in the DCASE community, visit the <a href="https://dcase-repo.github.io/dcase_datalist/" target="_blank">DCASE Datalist</a> (also maintained by me), a curated index featuring metadata, licensing information, and direct access links.
+</p>
+<h1 id="datasets"><i class="fa fa-solid fa-fw fa-database"></i>  Datasets</h1>
+<div class="btex" data-source="content/data/opendata.bib">
+<div aria-multiselectable="true" class="panel-group" id="accordion" role="tablist">
+<h2 id="2024">
+   2024
+  </h2>
+<div class="panel publication-item" id="heittola_2024_11366913" style="box-shadow: none">
+<div class="panel-heading" id="headingheittola_2024_11366913" role="tab">
+<div class="row pb-2">
+<div class="col-2">
+<span class="label label-default label-block mb-2" style="min-width:100px;">
+       ASC
+      </span>
+<span class="label label-warning label-block mb-2">
+       DCASE/Eval
+      </span>
+<div class="btn-group mb-2">
+<a class="btn btn-xs btn-default btn-btex" data-placement="bottom" href="https://doi.org/10.5281/zenodo.11366913" rel="tooltip" title="Downloads">
+<i class="fa fa-download fa-1x">
+</i>
+        2K
+       </a>
+</div>
+</div>
+<div class="col-7">
+<p style="text-align:left">
+       Toni Heittola, Annamaria Mesaros, and Tuomas Virtanen.
+<em>TAU Urban Acoustic Scenes 2024 Mobile, Evaluation dataset.</em>
+May 2024.
+URL: <a href="https://doi.org/10.5281/zenodo.11366913">https://doi.org/10.5281/zenodo.11366913</a>, <a href="https://doi.org/10.5281/zenodo.11366913">doi:10.5281/zenodo.11366913</a>.
+                                
+                                
+      </p>
+<button aria-controls="collapseheittola_2024_11366913" aria-expanded="true" class="btn btn-default btn-xs" data-bs-target="#collapseheittola_2024_11366913" data-bs-toggle="collapse" type="button">
+<i class="fa fa-caret-down">
+</i>
+       Read more...
+      </button>
+</div>
+<div class="col-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-bs-target="#bibtexheittola_2024_11366913" data-bs-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bib
+       </button>
+<a class="btn btn-xs btn-warning btn-btex text-white" data-placement="bottom" href="https://doi.org/10.5281/zenodo.11366913" rel="tooltip" target="_blank" title="DOI">
+<i class="fa fa-asterisk fa-1x">
+</i>
+        DOI
+       </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="headingheittola_2024_11366913" class="panel-collapse collapse card p-4 mt-1 mb-2" data-bs-parent="#accordion" id="collapseheittola_2024_11366913" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+      TAU Urban Acoustic Scenes 2024 Mobile, Evaluation dataset
+     </h4>
+<p>
+<strong>
+       DOI:
+      </strong>
+<a href="https://doi.org/10.5281/zenodo.11366913" target="_blank">
+       https://doi.org/10.5281/zenodo.11366913
+      </a>
+</p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtexheittola_2024_11366913" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+       Bibtex
+      </button>
+</div>
+<div class="btn-group">
+<a class="btn btn-sm btn-info btn-btex2 text-white" data-placement="bottom" href="https://doi.org/10.5281/zenodo.11366913" rel="tooltip" title="Toolbox">
+<i class="fa fa-database">
+</i>
+       Download
+      </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtexheittola_2024_11366913label" class="modal fade" id="bibtexheittola_2024_11366913" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true" class="glyphicon glyphicon-remove-sign">
+</span>
+<span class="sr-only">
+        Close
+       </span>
+</button>
+<h4 class="modal-title" id="bibtexheittola_2024_11366913label">
+       TAU Urban Acoustic Scenes 2024 Mobile, Evaluation dataset
+      </h4>
+</div>
+<div class="modal-body">
+<pre>@misc{heittola_2024_11366913,
+    author = "Heittola, Toni and Mesaros, Annamaria and Virtanen, Tuomas",
+    title = "{TAU Urban Acoustic Scenes 2024 Mobile, Evaluation dataset}",
+    month = "May",
+    year = "2024",
+    publisher = "Zenodo",
+    doi = "10.5281/zenodo.11366913",
+    url = "https://doi.org/10.5281/zenodo.11366913"
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+       Close
+      </button>
+</div>
+</div>
+</div>
+</div>
+<h2 id="2023">
+   2023
+  </h2>
+<div class="panel publication-item" id="heittola_2023_7870258" style="box-shadow: none">
+<div class="panel-heading" id="headingheittola_2023_7870258" role="tab">
+<div class="row pb-2">
+<div class="col-2">
+<span class="label label-default label-block mb-2" style="min-width:100px;">
+       ASC
+      </span>
+<span class="label label-warning label-block mb-2">
+       DCASE/Eval
+      </span>
+<div class="btn-group mb-2">
+<a class="btn btn-xs btn-default btn-btex" data-placement="bottom" href="https://doi.org/10.5281/zenodo.7870258" rel="tooltip" title="Downloads">
+<i class="fa fa-download fa-1x">
+</i>
+        2K
+       </a>
+</div>
+</div>
+<div class="col-7">
+<p style="text-align:left">
+       Toni Heittola, Annamaria Mesaros, and Tuomas Virtanen.
+<em>TAU Urban Acoustic Scenes 2023 Mobile, Evaluation dataset.</em>
+May 2023.
+URL: <a href="https://doi.org/10.5281/zenodo.7870258">https://doi.org/10.5281/zenodo.7870258</a>, <a href="https://doi.org/10.5281/zenodo.7870258">doi:10.5281/zenodo.7870258</a>.
+                                
+                                
+      </p>
+<button aria-controls="collapseheittola_2023_7870258" aria-expanded="true" class="btn btn-default btn-xs" data-bs-target="#collapseheittola_2023_7870258" data-bs-toggle="collapse" type="button">
+<i class="fa fa-caret-down">
+</i>
+       Read more...
+      </button>
+</div>
+<div class="col-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-bs-target="#bibtexheittola_2023_7870258" data-bs-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bib
+       </button>
+<a class="btn btn-xs btn-warning btn-btex text-white" data-placement="bottom" href="https://doi.org/10.5281/zenodo.7870258" rel="tooltip" target="_blank" title="DOI">
+<i class="fa fa-asterisk fa-1x">
+</i>
+        DOI
+       </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="headingheittola_2023_7870258" class="panel-collapse collapse card p-4 mt-1 mb-2" data-bs-parent="#accordion" id="collapseheittola_2023_7870258" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+      TAU Urban Acoustic Scenes 2023 Mobile, Evaluation dataset
+     </h4>
+<p>
+<strong>
+       DOI:
+      </strong>
+<a href="https://doi.org/10.5281/zenodo.7870258" target="_blank">
+       https://doi.org/10.5281/zenodo.7870258
+      </a>
+</p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtexheittola_2023_7870258" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+       Bibtex
+      </button>
+</div>
+<div class="btn-group">
+<a class="btn btn-sm btn-info btn-btex2 text-white" data-placement="bottom" href="https://doi.org/10.5281/zenodo.7870258" rel="tooltip" title="Toolbox">
+<i class="fa fa-database">
+</i>
+       Download
+      </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtexheittola_2023_7870258label" class="modal fade" id="bibtexheittola_2023_7870258" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true" class="glyphicon glyphicon-remove-sign">
+</span>
+<span class="sr-only">
+        Close
+       </span>
+</button>
+<h4 class="modal-title" id="bibtexheittola_2023_7870258label">
+       TAU Urban Acoustic Scenes 2023 Mobile, Evaluation dataset
+      </h4>
+</div>
+<div class="modal-body">
+<pre>@misc{heittola_2023_7870258,
+    author = "Heittola, Toni and Mesaros, Annamaria and Virtanen, Tuomas",
+    title = "{TAU Urban Acoustic Scenes 2023 Mobile, Evaluation dataset}",
+    month = "May",
+    year = "2023",
+    publisher = "Zenodo",
+    doi = "10.5281/zenodo.7870258",
+    url = "https://doi.org/10.5281/zenodo.7870258"
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+       Close
+      </button>
+</div>
+</div>
+</div>
+</div>
+<h2 id="2022">
+   2022
+  </h2>
+<div class="panel publication-item" id="heittola_toni_2022_6591203" style="box-shadow: none">
+<div class="panel-heading" id="headingheittola_toni_2022_6591203" role="tab">
+<div class="row pb-2">
+<div class="col-2">
+<span class="label label-default label-block mb-2" style="min-width:100px;">
+       ASC
+      </span>
+<span class="label label-warning label-block mb-2">
+       DCASE/Eval
+      </span>
+<div class="btn-group mb-2">
+<a class="btn btn-xs btn-default btn-btex" data-placement="bottom" href="https://doi.org/10.5281/zenodo.6591203" rel="tooltip" title="Downloads">
+<i class="fa fa-download fa-1x">
+</i>
+        2K
+       </a>
+</div>
+</div>
+<div class="col-7">
+<p style="text-align:left">
+       Toni Heittola, Annamaria Mesaros, and Tuomas Virtanen.
+<em>TAU Urban Acoustic Scenes 2022 Mobile, Evaluation dataset.</em>
+June 2022.
+URL: <a href="https://doi.org/10.5281/zenodo.6591203">https://doi.org/10.5281/zenodo.6591203</a>, <a href="https://doi.org/10.5281/zenodo.6591203">doi:10.5281/zenodo.6591203</a>.
+                                
+                                
+      </p>
+<button aria-controls="collapseheittola_toni_2022_6591203" aria-expanded="true" class="btn btn-default btn-xs" data-bs-target="#collapseheittola_toni_2022_6591203" data-bs-toggle="collapse" type="button">
+<i class="fa fa-caret-down">
+</i>
+       Read more...
+      </button>
+</div>
+<div class="col-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-bs-target="#bibtexheittola_toni_2022_6591203" data-bs-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bib
+       </button>
+<a class="btn btn-xs btn-warning btn-btex text-white" data-placement="bottom" href="https://doi.org/10.5281/zenodo.6591203" rel="tooltip" target="_blank" title="DOI">
+<i class="fa fa-asterisk fa-1x">
+</i>
+        DOI
+       </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="headingheittola_toni_2022_6591203" class="panel-collapse collapse card p-4 mt-1 mb-2" data-bs-parent="#accordion" id="collapseheittola_toni_2022_6591203" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+      TAU Urban Acoustic Scenes 2022 Mobile, Evaluation dataset
+     </h4>
+<p>
+<strong>
+       DOI:
+      </strong>
+<a href="https://doi.org/10.5281/zenodo.6591203" target="_blank">
+       https://doi.org/10.5281/zenodo.6591203
+      </a>
+</p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtexheittola_toni_2022_6591203" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+       Bibtex
+      </button>
+</div>
+<div class="btn-group">
+<a class="btn btn-sm btn-info btn-btex2 text-white" data-placement="bottom" href="https://doi.org/10.5281/zenodo.6591203" rel="tooltip" title="Toolbox">
+<i class="fa fa-database">
+</i>
+       Download
+      </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtexheittola_toni_2022_6591203label" class="modal fade" id="bibtexheittola_toni_2022_6591203" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true" class="glyphicon glyphicon-remove-sign">
+</span>
+<span class="sr-only">
+        Close
+       </span>
+</button>
+<h4 class="modal-title" id="bibtexheittola_toni_2022_6591203label">
+       TAU Urban Acoustic Scenes 2022 Mobile, Evaluation dataset
+      </h4>
+</div>
+<div class="modal-body">
+<pre>@misc{heittola_toni_2022_6591203,
+    author = "Heittola, Toni and Mesaros, Annamaria and Virtanen, Tuomas",
+    title = "{TAU Urban Acoustic Scenes 2022 Mobile, Evaluation dataset}",
+    month = "June",
+    year = "2022",
+    publisher = "Zenodo",
+    doi = "10.5281/zenodo.6591203",
+    url = "https://doi.org/10.5281/zenodo.6591203"
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+       Close
+      </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="heittola_toni_2022_6337421" style="box-shadow: none">
+<div class="panel-heading" id="headingheittola_toni_2022_6337421" role="tab">
+<div class="row pb-2">
+<div class="col-2">
+<span class="label label-default label-block mb-2" style="min-width:100px;">
+       ASC
+      </span>
+<span class="label label-success label-block mb-2">
+       DCASE/Dev
+      </span>
+<div class="btn-group mb-2">
+<a class="btn btn-xs btn-default btn-btex" data-placement="bottom" href="https://doi.org/10.5281/zenodo.6337421" rel="tooltip" title="Duration">
+<i class="fa fa-database fa-1x">
+</i>
+        64h
+       </a>
+<a class="btn btn-xs btn-default btn-btex" data-placement="bottom" href="https://doi.org/10.5281/zenodo.6337421" rel="tooltip" title="Downloads">
+<i class="fa fa-download fa-1x">
+</i>
+        34K
+       </a>
+</div>
+</div>
+<div class="col-7">
+<p style="text-align:left">
+       Toni Heittola, Annamaria Mesaros, and Tuomas Virtanen.
+<em>TAU Urban Acoustic Scenes 2022 Mobile, Development dataset.</em>
+March 2022.
+URL: <a href="https://doi.org/10.5281/zenodo.6337421">https://doi.org/10.5281/zenodo.6337421</a>, <a href="https://doi.org/10.5281/zenodo.6337421">doi:10.5281/zenodo.6337421</a>.
+                                
+                                
+      </p>
+<button aria-controls="collapseheittola_toni_2022_6337421" aria-expanded="true" class="btn btn-default btn-xs" data-bs-target="#collapseheittola_toni_2022_6337421" data-bs-toggle="collapse" type="button">
+<i class="fa fa-caret-down">
+</i>
+       Read more...
+      </button>
+</div>
+<div class="col-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-bs-target="#bibtexheittola_toni_2022_6337421" data-bs-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bib
+       </button>
+<a class="btn btn-xs btn-warning btn-btex text-white" data-placement="bottom" href="https://doi.org/10.5281/zenodo.6337421" rel="tooltip" target="_blank" title="DOI">
+<i class="fa fa-asterisk fa-1x">
+</i>
+        DOI
+       </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="headingheittola_toni_2022_6337421" class="panel-collapse collapse card p-4 mt-1 mb-2" data-bs-parent="#accordion" id="collapseheittola_toni_2022_6337421" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+      TAU Urban Acoustic Scenes 2022 Mobile, Development dataset
+     </h4>
+<p>
+<strong>
+       DOI:
+      </strong>
+<a href="https://doi.org/10.5281/zenodo.6337421" target="_blank">
+       https://doi.org/10.5281/zenodo.6337421
+      </a>
+</p>
+<p>
+<strong>
+       Duration:
+      </strong>
+      64h
+     </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtexheittola_toni_2022_6337421" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+       Bibtex
+      </button>
+</div>
+<div class="btn-group">
+<a class="btn btn-sm btn-info btn-btex2 text-white" data-placement="bottom" href="https://doi.org/10.5281/zenodo.6337421" rel="tooltip" title="Toolbox">
+<i class="fa fa-database">
+</i>
+       Download
+      </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtexheittola_toni_2022_6337421label" class="modal fade" id="bibtexheittola_toni_2022_6337421" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true" class="glyphicon glyphicon-remove-sign">
+</span>
+<span class="sr-only">
+        Close
+       </span>
+</button>
+<h4 class="modal-title" id="bibtexheittola_toni_2022_6337421label">
+       TAU Urban Acoustic Scenes 2022 Mobile, Development dataset
+      </h4>
+</div>
+<div class="modal-body">
+<pre>@misc{heittola_toni_2022_6337421,
+    author = "Heittola, Toni and Mesaros, Annamaria and Virtanen, Tuomas",
+    title = "{TAU Urban Acoustic Scenes 2022 Mobile, Development dataset}",
+    month = "March",
+    year = "2022",
+    publisher = "Zenodo",
+    doi = "10.5281/zenodo.6337421",
+    url = "https://doi.org/10.5281/zenodo.6337421"
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+       Close
+      </button>
+</div>
+</div>
+</div>
+</div>
+<h2 id="2021">
+   2021
+  </h2>
+<div class="panel publication-item" id="mesaros_annamaria_2021_4767103" style="box-shadow: none">
+<div class="panel-heading" id="headingmesaros_annamaria_2021_4767103" role="tab">
+<div class="row pb-2">
+<div class="col-2">
+<span class="label label-default label-block mb-2" style="min-width:100px;">
+       ASC
+      </span>
+<span class="label label-warning label-block mb-2">
+       DCASE/Eval
+      </span>
+<div class="btn-group mb-2">
+<a class="btn btn-xs btn-default btn-btex" data-placement="bottom" href="https://doi.org/10.5281/zenodo.4767103" rel="tooltip" title="Downloads">
+<i class="fa fa-download fa-1x">
+</i>
+        2K
+       </a>
+</div>
+</div>
+<div class="col-7">
+<p style="text-align:left">
+       Annamaria Mesaros, Toni Heittola, and Tuomas Virtanen.
+<em>TAU Urban Audio-Visual Scenes 2021, Evaluation dataset.</em>
+June 2021.
+URL: <a href="https://doi.org/10.5281/zenodo.4767103">https://doi.org/10.5281/zenodo.4767103</a>, <a href="https://doi.org/10.5281/zenodo.4767103">doi:10.5281/zenodo.4767103</a>.
+                                
+                                
+      </p>
+<button aria-controls="collapsemesaros_annamaria_2021_4767103" aria-expanded="true" class="btn btn-default btn-xs" data-bs-target="#collapsemesaros_annamaria_2021_4767103" data-bs-toggle="collapse" type="button">
+<i class="fa fa-caret-down">
+</i>
+       Read more...
+      </button>
+</div>
+<div class="col-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-bs-target="#bibtexmesaros_annamaria_2021_4767103" data-bs-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bib
+       </button>
+<a class="btn btn-xs btn-warning btn-btex text-white" data-placement="bottom" href="https://doi.org/10.5281/zenodo.4767103" rel="tooltip" target="_blank" title="DOI">
+<i class="fa fa-asterisk fa-1x">
+</i>
+        DOI
+       </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="headingmesaros_annamaria_2021_4767103" class="panel-collapse collapse card p-4 mt-1 mb-2" data-bs-parent="#accordion" id="collapsemesaros_annamaria_2021_4767103" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+      TAU Urban Audio-Visual Scenes 2021, Evaluation dataset
+     </h4>
+<p>
+<strong>
+       DOI:
+      </strong>
+<a href="https://doi.org/10.5281/zenodo.4767103" target="_blank">
+       https://doi.org/10.5281/zenodo.4767103
+      </a>
+</p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtexmesaros_annamaria_2021_4767103" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+       Bibtex
+      </button>
+</div>
+<div class="btn-group">
+<a class="btn btn-sm btn-info btn-btex2 text-white" data-placement="bottom" href="https://doi.org/10.5281/zenodo.4767103" rel="tooltip" title="Toolbox">
+<i class="fa fa-database">
+</i>
+       Download
+      </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtexmesaros_annamaria_2021_4767103label" class="modal fade" id="bibtexmesaros_annamaria_2021_4767103" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true" class="glyphicon glyphicon-remove-sign">
+</span>
+<span class="sr-only">
+        Close
+       </span>
+</button>
+<h4 class="modal-title" id="bibtexmesaros_annamaria_2021_4767103label">
+       TAU Urban Audio-Visual Scenes 2021, Evaluation dataset
+      </h4>
+</div>
+<div class="modal-body">
+<pre>@misc{mesaros_annamaria_2021_4767103,
+    author = "Mesaros, Annamaria and Heittola, Toni and Virtanen, Tuomas",
+    title = "{TAU Urban Audio-Visual Scenes 2021, Evaluation dataset}",
+    month = "June",
+    year = "2021",
+    publisher = "Zenodo",
+    doi = "10.5281/zenodo.4767103",
+    url = "https://doi.org/10.5281/zenodo.4767103"
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+       Close
+      </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="mesaros_annamaria_2021_4477542" style="box-shadow: none">
+<div class="panel-heading" id="headingmesaros_annamaria_2021_4477542" role="tab">
+<div class="row pb-2">
+<div class="col-2">
+<span class="label label-default label-block mb-2" style="min-width:100px;">
+       ASC
+      </span>
+<span class="label label-success label-block mb-2">
+       DCASE/Dev
+      </span>
+<div class="btn-group mb-2">
+<a class="btn btn-xs btn-default btn-btex" data-placement="bottom" href="https://doi.org/10.5281/zenodo.4477542" rel="tooltip" title="Duration">
+<i class="fa fa-database fa-1x">
+</i>
+        34h
+       </a>
+<a class="btn btn-xs btn-default btn-btex" data-placement="bottom" href="https://doi.org/10.5281/zenodo.4477542" rel="tooltip" title="Downloads">
+<i class="fa fa-download fa-1x">
+</i>
+        8K
+       </a>
+</div>
+</div>
+<div class="col-7">
+<p style="text-align:left">
+       Annamaria Mesaros, Toni Heittola, and Tuomas Virtanen.
+<em>TAU Urban Audio-Visual Scenes 2021, Development dataset.</em>
+February 2021.
+URL: <a href="https://doi.org/10.5281/zenodo.4477542">https://doi.org/10.5281/zenodo.4477542</a>, <a href="https://doi.org/10.5281/zenodo.4477542">doi:10.5281/zenodo.4477542</a>.
+                                
+                                
+      </p>
+<button aria-controls="collapsemesaros_annamaria_2021_4477542" aria-expanded="true" class="btn btn-default btn-xs" data-bs-target="#collapsemesaros_annamaria_2021_4477542" data-bs-toggle="collapse" type="button">
+<i class="fa fa-caret-down">
+</i>
+       Read more...
+      </button>
+</div>
+<div class="col-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-bs-target="#bibtexmesaros_annamaria_2021_4477542" data-bs-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bib
+       </button>
+<a class="btn btn-xs btn-warning btn-btex text-white" data-placement="bottom" href="https://doi.org/10.5281/zenodo.4477542" rel="tooltip" target="_blank" title="DOI">
+<i class="fa fa-asterisk fa-1x">
+</i>
+        DOI
+       </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="headingmesaros_annamaria_2021_4477542" class="panel-collapse collapse card p-4 mt-1 mb-2" data-bs-parent="#accordion" id="collapsemesaros_annamaria_2021_4477542" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+      TAU Urban Audio-Visual Scenes 2021, Development dataset
+     </h4>
+<p>
+<strong>
+       DOI:
+      </strong>
+<a href="https://doi.org/10.5281/zenodo.4477542" target="_blank">
+       https://doi.org/10.5281/zenodo.4477542
+      </a>
+</p>
+<p>
+<strong>
+       Duration:
+      </strong>
+      34h
+     </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtexmesaros_annamaria_2021_4477542" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+       Bibtex
+      </button>
+</div>
+<div class="btn-group">
+<a class="btn btn-sm btn-info btn-btex2 text-white" data-placement="bottom" href="https://doi.org/10.5281/zenodo.4477542" rel="tooltip" title="Toolbox">
+<i class="fa fa-database">
+</i>
+       Download
+      </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtexmesaros_annamaria_2021_4477542label" class="modal fade" id="bibtexmesaros_annamaria_2021_4477542" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true" class="glyphicon glyphicon-remove-sign">
+</span>
+<span class="sr-only">
+        Close
+       </span>
+</button>
+<h4 class="modal-title" id="bibtexmesaros_annamaria_2021_4477542label">
+       TAU Urban Audio-Visual Scenes 2021, Development dataset
+      </h4>
+</div>
+<div class="modal-body">
+<pre>@misc{mesaros_annamaria_2021_4477542,
+    author = "Mesaros, Annamaria and Heittola, Toni and Virtanen, Tuomas",
+    title = "{TAU Urban Audio-Visual Scenes 2021, Development dataset}",
+    month = "February",
+    year = "2021",
+    publisher = "Zenodo",
+    doi = "10.5281/zenodo.4477542",
+    url = "https://doi.org/10.5281/zenodo.4477542"
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+       Close
+      </button>
+</div>
+</div>
+</div>
+</div>
+<h2 id="2020">
+   2020
+  </h2>
+<div class="panel publication-item" id="heittola_toni_2020_3819968" style="box-shadow: none">
+<div class="panel-heading" id="headingheittola_toni_2020_3819968" role="tab">
+<div class="row pb-2">
+<div class="col-2">
+<span class="label label-default label-block mb-2" style="min-width:100px;">
+       ASC
+      </span>
+<span class="label label-success label-block mb-2">
+       DCASE/Dev
+      </span>
+<div class="btn-group mb-2">
+<a class="btn btn-xs btn-default btn-btex" data-placement="bottom" href="https://doi.org/10.5281/zenodo.3819968" rel="tooltip" title="Duration">
+<i class="fa fa-database fa-1x">
+</i>
+        64h
+       </a>
+<a class="btn btn-xs btn-default btn-btex" data-placement="bottom" href="https://doi.org/10.5281/zenodo.3819968" rel="tooltip" title="Downloads">
+<i class="fa fa-download fa-1x">
+</i>
+        32K
+       </a>
+</div>
+</div>
+<div class="col-7">
+<p style="text-align:left">
+       Toni Heittola, Annamaria Mesaros, and Tuomas Virtanen.
+<em>TAU Urban Acoustic Scenes 2020 Mobile, Development dataset.</em>
+February 2020.
+URL: <a href="https://doi.org/10.5281/zenodo.3819968">https://doi.org/10.5281/zenodo.3819968</a>, <a href="https://doi.org/10.5281/zenodo.3819968">doi:10.5281/zenodo.3819968</a>.
+                                
+                                
+      </p>
+<button aria-controls="collapseheittola_toni_2020_3819968" aria-expanded="true" class="btn btn-default btn-xs" data-bs-target="#collapseheittola_toni_2020_3819968" data-bs-toggle="collapse" type="button">
+<i class="fa fa-caret-down">
+</i>
+       Read more...
+      </button>
+</div>
+<div class="col-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-bs-target="#bibtexheittola_toni_2020_3819968" data-bs-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bib
+       </button>
+<a class="btn btn-xs btn-warning btn-btex text-white" data-placement="bottom" href="https://doi.org/10.5281/zenodo.3819968" rel="tooltip" target="_blank" title="DOI">
+<i class="fa fa-asterisk fa-1x">
+</i>
+        DOI
+       </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="headingheittola_toni_2020_3819968" class="panel-collapse collapse card p-4 mt-1 mb-2" data-bs-parent="#accordion" id="collapseheittola_toni_2020_3819968" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+      TAU Urban Acoustic Scenes 2020 Mobile, Development dataset
+     </h4>
+<p>
+<strong>
+       DOI:
+      </strong>
+<a href="https://doi.org/10.5281/zenodo.3819968" target="_blank">
+       https://doi.org/10.5281/zenodo.3819968
+      </a>
+</p>
+<p>
+<strong>
+       Duration:
+      </strong>
+      64h
+     </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtexheittola_toni_2020_3819968" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+       Bibtex
+      </button>
+</div>
+<div class="btn-group">
+<a class="btn btn-sm btn-info btn-btex2 text-white" data-placement="bottom" href="https://doi.org/10.5281/zenodo.3819968" rel="tooltip" title="Toolbox">
+<i class="fa fa-database">
+</i>
+       Download
+      </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtexheittola_toni_2020_3819968label" class="modal fade" id="bibtexheittola_toni_2020_3819968" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true" class="glyphicon glyphicon-remove-sign">
+</span>
+<span class="sr-only">
+        Close
+       </span>
+</button>
+<h4 class="modal-title" id="bibtexheittola_toni_2020_3819968label">
+       TAU Urban Acoustic Scenes 2020 Mobile, Development dataset
+      </h4>
+</div>
+<div class="modal-body">
+<pre>@misc{heittola_toni_2020_3819968,
+    author = "Heittola, Toni and Mesaros, Annamaria and Virtanen, Tuomas",
+    title = "{TAU Urban Acoustic Scenes 2020 Mobile, Development dataset}",
+    month = "February",
+    year = "2020",
+    publisher = "Zenodo",
+    doi = "10.5281/zenodo.3819968",
+    url = "https://doi.org/10.5281/zenodo.3819968"
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+       Close
+      </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="heittola_toni_2020_3685828" style="box-shadow: none">
+<div class="panel-heading" id="headingheittola_toni_2020_3685828" role="tab">
+<div class="row pb-2">
+<div class="col-2">
+<span class="label label-default label-block mb-2" style="min-width:100px;">
+       ASC
+      </span>
+<span class="label label-warning label-block mb-2">
+       DCASE/Eval
+      </span>
+<div class="btn-group mb-2">
+<a class="btn btn-xs btn-default btn-btex" data-placement="bottom" href="https://doi.org/10.5281/zenodo.3685828" rel="tooltip" title="Duration">
+<i class="fa fa-database fa-1x">
+</i>
+        33h
+       </a>
+<a class="btn btn-xs btn-default btn-btex" data-placement="bottom" href="https://doi.org/10.5281/zenodo.3685828" rel="tooltip" title="Downloads">
+<i class="fa fa-download fa-1x">
+</i>
+        5K
+       </a>
+</div>
+</div>
+<div class="col-7">
+<p style="text-align:left">
+       Toni Heittola, Annamaria Mesaros, and Tuomas Virtanen.
+<em>TAU Urban Acoustic Scenes 2020 Mobile, Evaluation dataset.</em>
+February 2020.
+URL: <a href="https://doi.org/10.5281/zenodo.3685828">https://doi.org/10.5281/zenodo.3685828</a>, <a href="https://doi.org/10.5281/zenodo.3685828">doi:10.5281/zenodo.3685828</a>.
+                                
+                                
+      </p>
+<button aria-controls="collapseheittola_toni_2020_3685828" aria-expanded="true" class="btn btn-default btn-xs" data-bs-target="#collapseheittola_toni_2020_3685828" data-bs-toggle="collapse" type="button">
+<i class="fa fa-caret-down">
+</i>
+       Read more...
+      </button>
+</div>
+<div class="col-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-bs-target="#bibtexheittola_toni_2020_3685828" data-bs-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bib
+       </button>
+<a class="btn btn-xs btn-warning btn-btex text-white" data-placement="bottom" href="https://doi.org/10.5281/zenodo.3685828" rel="tooltip" target="_blank" title="DOI">
+<i class="fa fa-asterisk fa-1x">
+</i>
+        DOI
+       </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="headingheittola_toni_2020_3685828" class="panel-collapse collapse card p-4 mt-1 mb-2" data-bs-parent="#accordion" id="collapseheittola_toni_2020_3685828" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+      TAU Urban Acoustic Scenes 2020 Mobile, Evaluation dataset
+     </h4>
+<p>
+<strong>
+       DOI:
+      </strong>
+<a href="https://doi.org/10.5281/zenodo.3685828" target="_blank">
+       https://doi.org/10.5281/zenodo.3685828
+      </a>
+</p>
+<p>
+<strong>
+       Duration:
+      </strong>
+      33h
+     </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtexheittola_toni_2020_3685828" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+       Bibtex
+      </button>
+</div>
+<div class="btn-group">
+<a class="btn btn-sm btn-info btn-btex2 text-white" data-placement="bottom" href="https://doi.org/10.5281/zenodo.3685828" rel="tooltip" title="Toolbox">
+<i class="fa fa-database">
+</i>
+       Download
+      </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtexheittola_toni_2020_3685828label" class="modal fade" id="bibtexheittola_toni_2020_3685828" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true" class="glyphicon glyphicon-remove-sign">
+</span>
+<span class="sr-only">
+        Close
+       </span>
+</button>
+<h4 class="modal-title" id="bibtexheittola_toni_2020_3685828label">
+       TAU Urban Acoustic Scenes 2020 Mobile, Evaluation dataset
+      </h4>
+</div>
+<div class="modal-body">
+<pre>@misc{heittola_toni_2020_3685828,
+    author = "Heittola, Toni and Mesaros, Annamaria and Virtanen, Tuomas",
+    title = "{TAU Urban Acoustic Scenes 2020 Mobile, Evaluation dataset}",
+    month = "February",
+    year = "2020",
+    publisher = "Zenodo",
+    doi = "10.5281/zenodo.3685828",
+    url = "https://doi.org/10.5281/zenodo.3685828"
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+       Close
+      </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="heittola_toni_2020_3670185" style="box-shadow: none">
+<div class="panel-heading" id="headingheittola_toni_2020_3670185" role="tab">
+<div class="row pb-2">
+<div class="col-2">
+<span class="label label-default label-block mb-2" style="min-width:100px;">
+       ASC
+      </span>
+<span class="label label-success label-block mb-2">
+       DCASE/Dev
+      </span>
+<div class="btn-group mb-2">
+<a class="btn btn-xs btn-default btn-btex" data-placement="bottom" href="https://doi.org/10.5281/zenodo.3670185" rel="tooltip" title="Duration">
+<i class="fa fa-database fa-1x">
+</i>
+        40h
+       </a>
+<a class="btn btn-xs btn-default btn-btex" data-placement="bottom" href="https://doi.org/10.5281/zenodo.3670185" rel="tooltip" title="Downloads">
+<i class="fa fa-download fa-1x">
+</i>
+        11K
+       </a>
+</div>
+</div>
+<div class="col-7">
+<p style="text-align:left">
+       Toni Heittola, Annamaria Mesaros, and Tuomas Virtanen.
+<em>TAU Urban Acoustic Scenes 2020 3Class, Development dataset.</em>
+February 2020.
+URL: <a href="https://doi.org/10.5281/zenodo.3670185">https://doi.org/10.5281/zenodo.3670185</a>, <a href="https://doi.org/10.5281/zenodo.3670185">doi:10.5281/zenodo.3670185</a>.
+                                
+                                
+      </p>
+<button aria-controls="collapseheittola_toni_2020_3670185" aria-expanded="true" class="btn btn-default btn-xs" data-bs-target="#collapseheittola_toni_2020_3670185" data-bs-toggle="collapse" type="button">
+<i class="fa fa-caret-down">
+</i>
+       Read more...
+      </button>
+</div>
+<div class="col-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-bs-target="#bibtexheittola_toni_2020_3670185" data-bs-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bib
+       </button>
+<a class="btn btn-xs btn-warning btn-btex text-white" data-placement="bottom" href="https://doi.org/10.5281/zenodo.3670185" rel="tooltip" target="_blank" title="DOI">
+<i class="fa fa-asterisk fa-1x">
+</i>
+        DOI
+       </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="headingheittola_toni_2020_3670185" class="panel-collapse collapse card p-4 mt-1 mb-2" data-bs-parent="#accordion" id="collapseheittola_toni_2020_3670185" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+      TAU Urban Acoustic Scenes 2020 3Class, Development dataset
+     </h4>
+<p>
+<strong>
+       DOI:
+      </strong>
+<a href="https://doi.org/10.5281/zenodo.3670185" target="_blank">
+       https://doi.org/10.5281/zenodo.3670185
+      </a>
+</p>
+<p>
+<strong>
+       Duration:
+      </strong>
+      40h
+     </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtexheittola_toni_2020_3670185" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+       Bibtex
+      </button>
+</div>
+<div class="btn-group">
+<a class="btn btn-sm btn-info btn-btex2 text-white" data-placement="bottom" href="https://doi.org/10.5281/zenodo.3670185" rel="tooltip" title="Toolbox">
+<i class="fa fa-database">
+</i>
+       Download
+      </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtexheittola_toni_2020_3670185label" class="modal fade" id="bibtexheittola_toni_2020_3670185" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true" class="glyphicon glyphicon-remove-sign">
+</span>
+<span class="sr-only">
+        Close
+       </span>
+</button>
+<h4 class="modal-title" id="bibtexheittola_toni_2020_3670185label">
+       TAU Urban Acoustic Scenes 2020 3Class, Development dataset
+      </h4>
+</div>
+<div class="modal-body">
+<pre>@misc{heittola_toni_2020_3670185,
+    author = "Heittola, Toni and Mesaros, Annamaria and Virtanen, Tuomas",
+    title = "{TAU Urban Acoustic Scenes 2020 3Class, Development dataset}",
+    month = "February",
+    year = "2020",
+    publisher = "Zenodo",
+    doi = "10.5281/zenodo.3670185",
+    url = "https://doi.org/10.5281/zenodo.3670185"
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+       Close
+      </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="heittola_toni_2020_3685835" style="box-shadow: none">
+<div class="panel-heading" id="headingheittola_toni_2020_3685835" role="tab">
+<div class="row pb-2">
+<div class="col-2">
+<span class="label label-default label-block mb-2" style="min-width:100px;">
+       ASC
+      </span>
+<span class="label label-warning label-block mb-2">
+       DCASE/Eval
+      </span>
+<div class="btn-group mb-2">
+<a class="btn btn-xs btn-default btn-btex" data-placement="bottom" href="https://doi.org/10.5281/zenodo.3685835" rel="tooltip" title="Duration">
+<i class="fa fa-database fa-1x">
+</i>
+        24h
+       </a>
+<a class="btn btn-xs btn-default btn-btex" data-placement="bottom" href="https://doi.org/10.5281/zenodo.3685835" rel="tooltip" title="Downloads">
+<i class="fa fa-download fa-1x">
+</i>
+        11K
+       </a>
+</div>
+</div>
+<div class="col-7">
+<p style="text-align:left">
+       Toni Heittola, Annamaria Mesaros, and Tuomas Virtanen.
+<em>TAU Urban Acoustic Scenes 2020 3Class, Evaluation dataset.</em>
+February 2020.
+URL: <a href="https://doi.org/10.5281/zenodo.3685835">https://doi.org/10.5281/zenodo.3685835</a>, <a href="https://doi.org/10.5281/zenodo.3685835">doi:10.5281/zenodo.3685835</a>.
+                                
+                                
+      </p>
+<button aria-controls="collapseheittola_toni_2020_3685835" aria-expanded="true" class="btn btn-default btn-xs" data-bs-target="#collapseheittola_toni_2020_3685835" data-bs-toggle="collapse" type="button">
+<i class="fa fa-caret-down">
+</i>
+       Read more...
+      </button>
+</div>
+<div class="col-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-bs-target="#bibtexheittola_toni_2020_3685835" data-bs-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bib
+       </button>
+<a class="btn btn-xs btn-warning btn-btex text-white" data-placement="bottom" href="https://doi.org/10.5281/zenodo.3685835" rel="tooltip" target="_blank" title="DOI">
+<i class="fa fa-asterisk fa-1x">
+</i>
+        DOI
+       </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="headingheittola_toni_2020_3685835" class="panel-collapse collapse card p-4 mt-1 mb-2" data-bs-parent="#accordion" id="collapseheittola_toni_2020_3685835" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+      TAU Urban Acoustic Scenes 2020 3Class, Evaluation dataset
+     </h4>
+<p>
+<strong>
+       DOI:
+      </strong>
+<a href="https://doi.org/10.5281/zenodo.3685835" target="_blank">
+       https://doi.org/10.5281/zenodo.3685835
+      </a>
+</p>
+<p>
+<strong>
+       Duration:
+      </strong>
+      24h
+     </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtexheittola_toni_2020_3685835" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+       Bibtex
+      </button>
+</div>
+<div class="btn-group">
+<a class="btn btn-sm btn-info btn-btex2 text-white" data-placement="bottom" href="https://doi.org/10.5281/zenodo.3685835" rel="tooltip" title="Toolbox">
+<i class="fa fa-database">
+</i>
+       Download
+      </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtexheittola_toni_2020_3685835label" class="modal fade" id="bibtexheittola_toni_2020_3685835" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true" class="glyphicon glyphicon-remove-sign">
+</span>
+<span class="sr-only">
+        Close
+       </span>
+</button>
+<h4 class="modal-title" id="bibtexheittola_toni_2020_3685835label">
+       TAU Urban Acoustic Scenes 2020 3Class, Evaluation dataset
+      </h4>
+</div>
+<div class="modal-body">
+<pre>@misc{heittola_toni_2020_3685835,
+    author = "Heittola, Toni and Mesaros, Annamaria and Virtanen, Tuomas",
+    title = "{TAU Urban Acoustic Scenes 2020 3Class, Evaluation dataset}",
+    month = "February",
+    year = "2020",
+    publisher = "Zenodo",
+    doi = "10.5281/zenodo.3685835",
+    url = "https://doi.org/10.5281/zenodo.3685835"
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+       Close
+      </button>
+</div>
+</div>
+</div>
+</div>
+<h2 id="2019">
+   2019
+  </h2>
+<div class="panel publication-item" id="heittola_toni_2019_3064132" style="box-shadow: none">
+<div class="panel-heading" id="headingheittola_toni_2019_3064132" role="tab">
+<div class="row pb-2">
+<div class="col-2">
+<span class="label label-default label-block mb-2" style="min-width:100px;">
+       ASC
+      </span>
+<span class="label label-warning label-block mb-2">
+       DCASE/Eval
+      </span>
+<div class="btn-group mb-2">
+<a class="btn btn-xs btn-default btn-btex" data-placement="bottom" href="https://doi.org/10.5281/zenodo.3064132" rel="tooltip" title="Duration">
+<i class="fa fa-database fa-1x">
+</i>
+        20h
+       </a>
+<a class="btn btn-xs btn-default btn-btex" data-placement="bottom" href="https://doi.org/10.5281/zenodo.3064132" rel="tooltip" title="Downloads">
+<i class="fa fa-download fa-1x">
+</i>
+        1K
+       </a>
+</div>
+</div>
+<div class="col-7">
+<p style="text-align:left">
+       Toni Heittola, Annamaria Mesaros, and Tuomas Virtanen.
+<em>TAU Urban Acoustic Scenes 2019 Openset, Evaluation dataset.</em>
+May 2019.
+URL: <a href="https://doi.org/10.5281/zenodo.3064132">https://doi.org/10.5281/zenodo.3064132</a>, <a href="https://doi.org/10.5281/zenodo.3064132">doi:10.5281/zenodo.3064132</a>.
+                                
+                                
+      </p>
+<button aria-controls="collapseheittola_toni_2019_3064132" aria-expanded="true" class="btn btn-default btn-xs" data-bs-target="#collapseheittola_toni_2019_3064132" data-bs-toggle="collapse" type="button">
+<i class="fa fa-caret-down">
+</i>
+       Read more...
+      </button>
+</div>
+<div class="col-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-bs-target="#bibtexheittola_toni_2019_3064132" data-bs-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bib
+       </button>
+<a class="btn btn-xs btn-warning btn-btex text-white" data-placement="bottom" href="https://doi.org/10.5281/zenodo.3064132" rel="tooltip" target="_blank" title="DOI">
+<i class="fa fa-asterisk fa-1x">
+</i>
+        DOI
+       </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="headingheittola_toni_2019_3064132" class="panel-collapse collapse card p-4 mt-1 mb-2" data-bs-parent="#accordion" id="collapseheittola_toni_2019_3064132" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+      TAU Urban Acoustic Scenes 2019 Openset, Evaluation dataset
+     </h4>
+<p>
+<strong>
+       DOI:
+      </strong>
+<a href="https://doi.org/10.5281/zenodo.3064132" target="_blank">
+       https://doi.org/10.5281/zenodo.3064132
+      </a>
+</p>
+<p>
+<strong>
+       Duration:
+      </strong>
+      20h
+     </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtexheittola_toni_2019_3064132" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+       Bibtex
+      </button>
+</div>
+<div class="btn-group">
+<a class="btn btn-sm btn-info btn-btex2 text-white" data-placement="bottom" href="https://doi.org/10.5281/zenodo.3064132" rel="tooltip" title="Toolbox">
+<i class="fa fa-database">
+</i>
+       Download
+      </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtexheittola_toni_2019_3064132label" class="modal fade" id="bibtexheittola_toni_2019_3064132" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true" class="glyphicon glyphicon-remove-sign">
+</span>
+<span class="sr-only">
+        Close
+       </span>
+</button>
+<h4 class="modal-title" id="bibtexheittola_toni_2019_3064132label">
+       TAU Urban Acoustic Scenes 2019 Openset, Evaluation dataset
+      </h4>
+</div>
+<div class="modal-body">
+<pre>@misc{heittola_toni_2019_3064132,
+    author = "Heittola, Toni and Mesaros, Annamaria and Virtanen, Tuomas",
+    title = "{TAU Urban Acoustic Scenes 2019 Openset, Evaluation dataset}",
+    month = "May",
+    year = "2019",
+    doi = "10.5281/zenodo.3064132",
+    url = "https://doi.org/10.5281/zenodo.3064132"
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+       Close
+      </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="heittola_toni_2019_3063980" style="box-shadow: none">
+<div class="panel-heading" id="headingheittola_toni_2019_3063980" role="tab">
+<div class="row pb-2">
+<div class="col-2">
+<span class="label label-default label-block mb-2" style="min-width:100px;">
+       ASC
+      </span>
+<span class="label label-warning label-block mb-2">
+       DCASE/Eval
+      </span>
+<div class="btn-group mb-2">
+<a class="btn btn-xs btn-default btn-btex" data-placement="bottom" href="https://doi.org/10.5281/zenodo.3063980" rel="tooltip" title="Duration">
+<i class="fa fa-database fa-1x">
+</i>
+        30h
+       </a>
+<a class="btn btn-xs btn-default btn-btex" data-placement="bottom" href="https://doi.org/10.5281/zenodo.3063980" rel="tooltip" title="Downloads">
+<i class="fa fa-download fa-1x">
+</i>
+        1K
+       </a>
+</div>
+</div>
+<div class="col-7">
+<p style="text-align:left">
+       Toni Heittola, Annamaria Mesaros, and Tuomas Virtanen.
+<em>TAU Urban Acoustic Scenes 2019 Mobile, Evaluation dataset.</em>
+June 2019.
+URL: <a href="https://doi.org/10.5281/zenodo.3063980">https://doi.org/10.5281/zenodo.3063980</a>, <a href="https://doi.org/10.5281/zenodo.3063980">doi:10.5281/zenodo.3063980</a>.
+                                
+                                
+      </p>
+<button aria-controls="collapseheittola_toni_2019_3063980" aria-expanded="true" class="btn btn-default btn-xs" data-bs-target="#collapseheittola_toni_2019_3063980" data-bs-toggle="collapse" type="button">
+<i class="fa fa-caret-down">
+</i>
+       Read more...
+      </button>
+</div>
+<div class="col-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-bs-target="#bibtexheittola_toni_2019_3063980" data-bs-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bib
+       </button>
+<a class="btn btn-xs btn-warning btn-btex text-white" data-placement="bottom" href="https://doi.org/10.5281/zenodo.3063980" rel="tooltip" target="_blank" title="DOI">
+<i class="fa fa-asterisk fa-1x">
+</i>
+        DOI
+       </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="headingheittola_toni_2019_3063980" class="panel-collapse collapse card p-4 mt-1 mb-2" data-bs-parent="#accordion" id="collapseheittola_toni_2019_3063980" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+      TAU Urban Acoustic Scenes 2019 Mobile, Evaluation dataset
+     </h4>
+<p>
+<strong>
+       DOI:
+      </strong>
+<a href="https://doi.org/10.5281/zenodo.3063980" target="_blank">
+       https://doi.org/10.5281/zenodo.3063980
+      </a>
+</p>
+<p>
+<strong>
+       Duration:
+      </strong>
+      30h
+     </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtexheittola_toni_2019_3063980" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+       Bibtex
+      </button>
+</div>
+<div class="btn-group">
+<a class="btn btn-sm btn-info btn-btex2 text-white" data-placement="bottom" href="https://doi.org/10.5281/zenodo.3063980" rel="tooltip" title="Toolbox">
+<i class="fa fa-database">
+</i>
+       Download
+      </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtexheittola_toni_2019_3063980label" class="modal fade" id="bibtexheittola_toni_2019_3063980" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true" class="glyphicon glyphicon-remove-sign">
+</span>
+<span class="sr-only">
+        Close
+       </span>
+</button>
+<h4 class="modal-title" id="bibtexheittola_toni_2019_3063980label">
+       TAU Urban Acoustic Scenes 2019 Mobile, Evaluation dataset
+      </h4>
+</div>
+<div class="modal-body">
+<pre>@misc{heittola_toni_2019_3063980,
+    author = "Heittola, Toni and Mesaros, Annamaria and Virtanen, Tuomas",
+    title = "{TAU Urban Acoustic Scenes 2019 Mobile, Evaluation dataset}",
+    month = "June",
+    year = "2019",
+    doi = "10.5281/zenodo.3063980",
+    url = "https://doi.org/10.5281/zenodo.3063980"
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+       Close
+      </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="heittola_toni_2019_3063822" style="box-shadow: none">
+<div class="panel-heading" id="headingheittola_toni_2019_3063822" role="tab">
+<div class="row pb-2">
+<div class="col-2">
+<span class="label label-default label-block mb-2" style="min-width:100px;">
+       ASC
+      </span>
+<span class="label label-warning label-block mb-2">
+       DCASE/Eval
+      </span>
+<div class="btn-group mb-2">
+<a class="btn btn-xs btn-default btn-btex" data-placement="bottom" href="https://doi.org/10.5281/zenodo.3063822" rel="tooltip" title="Duration">
+<i class="fa fa-database fa-1x">
+</i>
+        20h
+       </a>
+<a class="btn btn-xs btn-default btn-btex" data-placement="bottom" href="https://doi.org/10.5281/zenodo.3063822" rel="tooltip" title="Downloads">
+<i class="fa fa-download fa-1x">
+</i>
+        9K
+       </a>
+</div>
+</div>
+<div class="col-7">
+<p style="text-align:left">
+       Toni Heittola, Annamaria Mesaros, and Tuomas Virtanen.
+<em>TAU Urban Acoustic Scenes 2019, Evaluation dataset.</em>
+June 2019.
+URL: <a href="https://doi.org/10.5281/zenodo.3063822">https://doi.org/10.5281/zenodo.3063822</a>, <a href="https://doi.org/10.5281/zenodo.3063822">doi:10.5281/zenodo.3063822</a>.
+                                
+                                
+      </p>
+<button aria-controls="collapseheittola_toni_2019_3063822" aria-expanded="true" class="btn btn-default btn-xs" data-bs-target="#collapseheittola_toni_2019_3063822" data-bs-toggle="collapse" type="button">
+<i class="fa fa-caret-down">
+</i>
+       Read more...
+      </button>
+</div>
+<div class="col-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-bs-target="#bibtexheittola_toni_2019_3063822" data-bs-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bib
+       </button>
+<a class="btn btn-xs btn-warning btn-btex text-white" data-placement="bottom" href="https://doi.org/10.5281/zenodo.3063822" rel="tooltip" target="_blank" title="DOI">
+<i class="fa fa-asterisk fa-1x">
+</i>
+        DOI
+       </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="headingheittola_toni_2019_3063822" class="panel-collapse collapse card p-4 mt-1 mb-2" data-bs-parent="#accordion" id="collapseheittola_toni_2019_3063822" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+      TAU Urban Acoustic Scenes 2019, Evaluation dataset
+     </h4>
+<p>
+<strong>
+       DOI:
+      </strong>
+<a href="https://doi.org/10.5281/zenodo.3063822" target="_blank">
+       https://doi.org/10.5281/zenodo.3063822
+      </a>
+</p>
+<p>
+<strong>
+       Duration:
+      </strong>
+      20h
+     </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtexheittola_toni_2019_3063822" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+       Bibtex
+      </button>
+</div>
+<div class="btn-group">
+<a class="btn btn-sm btn-info btn-btex2 text-white" data-placement="bottom" href="https://doi.org/10.5281/zenodo.3063822" rel="tooltip" title="Toolbox">
+<i class="fa fa-database">
+</i>
+       Download
+      </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtexheittola_toni_2019_3063822label" class="modal fade" id="bibtexheittola_toni_2019_3063822" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true" class="glyphicon glyphicon-remove-sign">
+</span>
+<span class="sr-only">
+        Close
+       </span>
+</button>
+<h4 class="modal-title" id="bibtexheittola_toni_2019_3063822label">
+       TAU Urban Acoustic Scenes 2019, Evaluation dataset
+      </h4>
+</div>
+<div class="modal-body">
+<pre>@misc{heittola_toni_2019_3063822,
+    author = "Heittola, Toni and Mesaros, Annamaria and Virtanen, Tuomas",
+    title = "{TAU Urban Acoustic Scenes 2019, Evaluation dataset}",
+    month = "June",
+    year = "2019",
+    doi = "10.5281/zenodo.3063822",
+    url = "https://doi.org/10.5281/zenodo.3063822"
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+       Close
+      </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="heittola_toni_2019_2673006" style="box-shadow: none">
+<div class="panel-heading" id="headingheittola_toni_2019_2673006" role="tab">
+<div class="row pb-2">
+<div class="col-2">
+<span class="label label-default label-block mb-2" style="min-width:100px;">
+       ASC
+      </span>
+<span class="label label-danger label-block mb-2">
+       DCASE/LB
+      </span>
+<div class="btn-group mb-2">
+<a class="btn btn-xs btn-default btn-btex" data-placement="bottom" href="https://doi.org/10.5281/zenodo.2673006" rel="tooltip" title="Duration">
+<i class="fa fa-database fa-1x">
+</i>
+        3:20h
+       </a>
+<a class="btn btn-xs btn-default btn-btex" data-placement="bottom" href="https://doi.org/10.5281/zenodo.2673006" rel="tooltip" title="Downloads">
+<i class="fa fa-download fa-1x">
+</i>
+        415
+       </a>
+</div>
+</div>
+<div class="col-7">
+<p style="text-align:left">
+       Toni Heittola, Annamaria Mesaros, and Tuomas Virtanen.
+<em>TAU Urban Acoustic Scenes 2019 Openset, Leaderboard dataset.</em>
+May 2019.
+URL: <a href="https://doi.org/10.5281/zenodo.2673006">https://doi.org/10.5281/zenodo.2673006</a>, <a href="https://doi.org/10.5281/zenodo.2673006">doi:10.5281/zenodo.2673006</a>.
+                                
+                                
+      </p>
+<button aria-controls="collapseheittola_toni_2019_2673006" aria-expanded="true" class="btn btn-default btn-xs" data-bs-target="#collapseheittola_toni_2019_2673006" data-bs-toggle="collapse" type="button">
+<i class="fa fa-caret-down">
+</i>
+       Read more...
+      </button>
+</div>
+<div class="col-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-bs-target="#bibtexheittola_toni_2019_2673006" data-bs-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bib
+       </button>
+<a class="btn btn-xs btn-warning btn-btex text-white" data-placement="bottom" href="https://doi.org/10.5281/zenodo.2673006" rel="tooltip" target="_blank" title="DOI">
+<i class="fa fa-asterisk fa-1x">
+</i>
+        DOI
+       </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="headingheittola_toni_2019_2673006" class="panel-collapse collapse card p-4 mt-1 mb-2" data-bs-parent="#accordion" id="collapseheittola_toni_2019_2673006" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+      TAU Urban Acoustic Scenes 2019 Openset, Leaderboard dataset
+     </h4>
+<p>
+<strong>
+       DOI:
+      </strong>
+<a href="https://doi.org/10.5281/zenodo.2673006" target="_blank">
+       https://doi.org/10.5281/zenodo.2673006
+      </a>
+</p>
+<p>
+<strong>
+       Duration:
+      </strong>
+      3:20h
+     </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtexheittola_toni_2019_2673006" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+       Bibtex
+      </button>
+</div>
+<div class="btn-group">
+<a class="btn btn-sm btn-info btn-btex2 text-white" data-placement="bottom" href="https://doi.org/10.5281/zenodo.2673006" rel="tooltip" title="Toolbox">
+<i class="fa fa-database">
+</i>
+       Download
+      </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtexheittola_toni_2019_2673006label" class="modal fade" id="bibtexheittola_toni_2019_2673006" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true" class="glyphicon glyphicon-remove-sign">
+</span>
+<span class="sr-only">
+        Close
+       </span>
+</button>
+<h4 class="modal-title" id="bibtexheittola_toni_2019_2673006label">
+       TAU Urban Acoustic Scenes 2019 Openset, Leaderboard dataset
+      </h4>
+</div>
+<div class="modal-body">
+<pre>@misc{heittola_toni_2019_2673006,
+    author = "Heittola, Toni and Mesaros, Annamaria and Virtanen, Tuomas",
+    title = "{TAU Urban Acoustic Scenes 2019 Openset, Leaderboard dataset}",
+    month = "May",
+    year = "2019",
+    doi = "10.5281/zenodo.2673006",
+    url = "https://doi.org/10.5281/zenodo.2673006"
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+       Close
+      </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="heittola_toni_2019_2673004" style="box-shadow: none">
+<div class="panel-heading" id="headingheittola_toni_2019_2673004" role="tab">
+<div class="row pb-2">
+<div class="col-2">
+<span class="label label-default label-block mb-2" style="min-width:100px;">
+       ASC
+      </span>
+<span class="label label-danger label-block mb-2">
+       DCASE/LB
+      </span>
+<div class="btn-group mb-2">
+<a class="btn btn-xs btn-default btn-btex" data-placement="bottom" href="https://doi.org/10.5281/zenodo.2673004" rel="tooltip" title="Duration">
+<i class="fa fa-database fa-1x">
+</i>
+        3:20h
+       </a>
+<a class="btn btn-xs btn-default btn-btex" data-placement="bottom" href="https://doi.org/10.5281/zenodo.2673004" rel="tooltip" title="Downloads">
+<i class="fa fa-download fa-1x">
+</i>
+        565
+       </a>
+</div>
+</div>
+<div class="col-7">
+<p style="text-align:left">
+       Toni Heittola, Annamaria Mesaros, and Tuomas Virtanen.
+<em>TAU Urban Acoustic Scenes 2019 Mobile, Leaderboard dataset.</em>
+May 2019.
+URL: <a href="https://doi.org/10.5281/zenodo.2673004">https://doi.org/10.5281/zenodo.2673004</a>, <a href="https://doi.org/10.5281/zenodo.2673004">doi:10.5281/zenodo.2673004</a>.
+                                
+                                
+      </p>
+<button aria-controls="collapseheittola_toni_2019_2673004" aria-expanded="true" class="btn btn-default btn-xs" data-bs-target="#collapseheittola_toni_2019_2673004" data-bs-toggle="collapse" type="button">
+<i class="fa fa-caret-down">
+</i>
+       Read more...
+      </button>
+</div>
+<div class="col-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-bs-target="#bibtexheittola_toni_2019_2673004" data-bs-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bib
+       </button>
+<a class="btn btn-xs btn-warning btn-btex text-white" data-placement="bottom" href="https://doi.org/10.5281/zenodo.2673004" rel="tooltip" target="_blank" title="DOI">
+<i class="fa fa-asterisk fa-1x">
+</i>
+        DOI
+       </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="headingheittola_toni_2019_2673004" class="panel-collapse collapse card p-4 mt-1 mb-2" data-bs-parent="#accordion" id="collapseheittola_toni_2019_2673004" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+      TAU Urban Acoustic Scenes 2019 Mobile, Leaderboard dataset
+     </h4>
+<p>
+<strong>
+       DOI:
+      </strong>
+<a href="https://doi.org/10.5281/zenodo.2673004" target="_blank">
+       https://doi.org/10.5281/zenodo.2673004
+      </a>
+</p>
+<p>
+<strong>
+       Duration:
+      </strong>
+      3:20h
+     </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtexheittola_toni_2019_2673004" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+       Bibtex
+      </button>
+</div>
+<div class="btn-group">
+<a class="btn btn-sm btn-info btn-btex2 text-white" data-placement="bottom" href="https://doi.org/10.5281/zenodo.2673004" rel="tooltip" title="Toolbox">
+<i class="fa fa-database">
+</i>
+       Download
+      </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtexheittola_toni_2019_2673004label" class="modal fade" id="bibtexheittola_toni_2019_2673004" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true" class="glyphicon glyphicon-remove-sign">
+</span>
+<span class="sr-only">
+        Close
+       </span>
+</button>
+<h4 class="modal-title" id="bibtexheittola_toni_2019_2673004label">
+       TAU Urban Acoustic Scenes 2019 Mobile, Leaderboard dataset
+      </h4>
+</div>
+<div class="modal-body">
+<pre>@misc{heittola_toni_2019_2673004,
+    author = "Heittola, Toni and Mesaros, Annamaria and Virtanen, Tuomas",
+    title = "{TAU Urban Acoustic Scenes 2019 Mobile, Leaderboard dataset}",
+    month = "May",
+    year = "2019",
+    doi = "10.5281/zenodo.2673004",
+    url = "https://doi.org/10.5281/zenodo.2673004"
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+       Close
+      </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="heittola_toni_2019_2672993" style="box-shadow: none">
+<div class="panel-heading" id="headingheittola_toni_2019_2672993" role="tab">
+<div class="row pb-2">
+<div class="col-2">
+<span class="label label-default label-block mb-2" style="min-width:100px;">
+       ASC
+      </span>
+<span class="label label-danger label-block mb-2">
+       DCASE/LB
+      </span>
+<div class="btn-group mb-2">
+<a class="btn btn-xs btn-default btn-btex" data-placement="bottom" href="https://doi.org/10.5281/zenodo.2672993" rel="tooltip" title="Duration">
+<i class="fa fa-database fa-1x">
+</i>
+        3:20h
+       </a>
+<a class="btn btn-xs btn-default btn-btex" data-placement="bottom" href="https://doi.org/10.5281/zenodo.2672993" rel="tooltip" title="Downloads">
+<i class="fa fa-download fa-1x">
+</i>
+        2K
+       </a>
+</div>
+</div>
+<div class="col-7">
+<p style="text-align:left">
+       Toni Heittola, Annamaria Mesaros, and Tuomas Virtanen.
+<em>TAU Urban Acoustic Scenes 2019, Leaderboard dataset.</em>
+May 2019.
+URL: <a href="https://doi.org/10.5281/zenodo.2672993">https://doi.org/10.5281/zenodo.2672993</a>, <a href="https://doi.org/10.5281/zenodo.2672993">doi:10.5281/zenodo.2672993</a>.
+                                
+                                
+      </p>
+<button aria-controls="collapseheittola_toni_2019_2672993" aria-expanded="true" class="btn btn-default btn-xs" data-bs-target="#collapseheittola_toni_2019_2672993" data-bs-toggle="collapse" type="button">
+<i class="fa fa-caret-down">
+</i>
+       Read more...
+      </button>
+</div>
+<div class="col-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-bs-target="#bibtexheittola_toni_2019_2672993" data-bs-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bib
+       </button>
+<a class="btn btn-xs btn-warning btn-btex text-white" data-placement="bottom" href="https://doi.org/10.5281/zenodo.2672993" rel="tooltip" target="_blank" title="DOI">
+<i class="fa fa-asterisk fa-1x">
+</i>
+        DOI
+       </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="headingheittola_toni_2019_2672993" class="panel-collapse collapse card p-4 mt-1 mb-2" data-bs-parent="#accordion" id="collapseheittola_toni_2019_2672993" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+      TAU Urban Acoustic Scenes 2019, Leaderboard dataset
+     </h4>
+<p>
+<strong>
+       DOI:
+      </strong>
+<a href="https://doi.org/10.5281/zenodo.2672993" target="_blank">
+       https://doi.org/10.5281/zenodo.2672993
+      </a>
+</p>
+<p>
+<strong>
+       Duration:
+      </strong>
+      3:20h
+     </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtexheittola_toni_2019_2672993" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+       Bibtex
+      </button>
+</div>
+<div class="btn-group">
+<a class="btn btn-sm btn-info btn-btex2 text-white" data-placement="bottom" href="https://doi.org/10.5281/zenodo.2672993" rel="tooltip" title="Toolbox">
+<i class="fa fa-database">
+</i>
+       Download
+      </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtexheittola_toni_2019_2672993label" class="modal fade" id="bibtexheittola_toni_2019_2672993" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true" class="glyphicon glyphicon-remove-sign">
+</span>
+<span class="sr-only">
+        Close
+       </span>
+</button>
+<h4 class="modal-title" id="bibtexheittola_toni_2019_2672993label">
+       TAU Urban Acoustic Scenes 2019, Leaderboard dataset
+      </h4>
+</div>
+<div class="modal-body">
+<pre>@misc{heittola_toni_2019_2672993,
+    author = "Heittola, Toni and Mesaros, Annamaria and Virtanen, Tuomas",
+    title = "{TAU Urban Acoustic Scenes 2019, Leaderboard dataset}",
+    month = "May",
+    year = "2019",
+    doi = "10.5281/zenodo.2672993",
+    url = "https://doi.org/10.5281/zenodo.2672993"
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+       Close
+      </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="heittola_toni_2019_2591503" style="box-shadow: none">
+<div class="panel-heading" id="headingheittola_toni_2019_2591503" role="tab">
+<div class="row pb-2">
+<div class="col-2">
+<span class="label label-default label-block mb-2" style="min-width:100px;">
+       ASC
+      </span>
+<span class="label label-success label-block mb-2">
+       DCASE/Dev
+      </span>
+<div class="btn-group mb-2">
+<a class="btn btn-xs btn-default btn-btex" data-placement="bottom" href="https://doi.org/10.5281/zenodo.2591503" rel="tooltip" title="Duration">
+<i class="fa fa-database fa-1x">
+</i>
+        44h
+       </a>
+<a class="btn btn-xs btn-default btn-btex" data-placement="bottom" href="https://doi.org/10.5281/zenodo.2591503" rel="tooltip" title="Downloads">
+<i class="fa fa-download fa-1x">
+</i>
+        4K
+       </a>
+</div>
+</div>
+<div class="col-7">
+<p style="text-align:left">
+       Toni Heittola, Annamaria Mesaros, and Tuomas Virtanen.
+<em>TAU Urban Acoustic Scenes 2019 Openset, Development dataset.</em>
+March 2019.
+URL: <a href="https://doi.org/10.5281/zenodo.2591503">https://doi.org/10.5281/zenodo.2591503</a>, <a href="https://doi.org/10.5281/zenodo.2591503">doi:10.5281/zenodo.2591503</a>.
+                                
+                                
+      </p>
+<button aria-controls="collapseheittola_toni_2019_2591503" aria-expanded="true" class="btn btn-default btn-xs" data-bs-target="#collapseheittola_toni_2019_2591503" data-bs-toggle="collapse" type="button">
+<i class="fa fa-caret-down">
+</i>
+       Read more...
+      </button>
+</div>
+<div class="col-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-bs-target="#bibtexheittola_toni_2019_2591503" data-bs-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bib
+       </button>
+<a class="btn btn-xs btn-warning btn-btex text-white" data-placement="bottom" href="https://doi.org/10.5281/zenodo.2591503" rel="tooltip" target="_blank" title="DOI">
+<i class="fa fa-asterisk fa-1x">
+</i>
+        DOI
+       </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="headingheittola_toni_2019_2591503" class="panel-collapse collapse card p-4 mt-1 mb-2" data-bs-parent="#accordion" id="collapseheittola_toni_2019_2591503" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+      TAU Urban Acoustic Scenes 2019 Openset, Development dataset
+     </h4>
+<p>
+<strong>
+       DOI:
+      </strong>
+<a href="https://doi.org/10.5281/zenodo.2591503" target="_blank">
+       https://doi.org/10.5281/zenodo.2591503
+      </a>
+</p>
+<p>
+<strong>
+       Duration:
+      </strong>
+      44h
+     </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtexheittola_toni_2019_2591503" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+       Bibtex
+      </button>
+</div>
+<div class="btn-group">
+<a class="btn btn-sm btn-info btn-btex2 text-white" data-placement="bottom" href="https://doi.org/10.5281/zenodo.2591503" rel="tooltip" title="Toolbox">
+<i class="fa fa-database">
+</i>
+       Download
+      </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtexheittola_toni_2019_2591503label" class="modal fade" id="bibtexheittola_toni_2019_2591503" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true" class="glyphicon glyphicon-remove-sign">
+</span>
+<span class="sr-only">
+        Close
+       </span>
+</button>
+<h4 class="modal-title" id="bibtexheittola_toni_2019_2591503label">
+       TAU Urban Acoustic Scenes 2019 Openset, Development dataset
+      </h4>
+</div>
+<div class="modal-body">
+<pre>@misc{heittola_toni_2019_2591503,
+    author = "Heittola, Toni and Mesaros, Annamaria and Virtanen, Tuomas",
+    title = "{TAU Urban Acoustic Scenes 2019 Openset, Development dataset}",
+    month = "March",
+    year = "2019",
+    doi = "10.5281/zenodo.2591503",
+    url = "https://doi.org/10.5281/zenodo.2591503"
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+       Close
+      </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="mesaros_annamaria_2019_2598364" style="box-shadow: none">
+<div class="panel-heading" id="headingmesaros_annamaria_2019_2598364" role="tab">
+<div class="row pb-2">
+<div class="col-2">
+<span class="label label-default label-block mb-2">
+       DCASE
+      </span>
+<div class="btn-group mb-2">
+<a class="btn btn-xs btn-default btn-btex" data-placement="bottom" href="https://doi.org/10.5281/zenodo.2598364" rel="tooltip" title="Downloads">
+<i class="fa fa-download fa-1x">
+</i>
+        265
+       </a>
+</div>
+</div>
+<div class="col-7">
+<p style="text-align:left">
+       Annamaria Mesaros, Aleksandr Diment, Toni Heittola, Benjamin Elizalde, Emmanuel Vincent, Bhiksha Raj, and Tuomas Virtanen.
+<em>DCASE2017 Challenge Submissions Package.</em>
+March 2019.
+URL: <a href="https://doi.org/10.5281/zenodo.2598364">https://doi.org/10.5281/zenodo.2598364</a>, <a href="https://doi.org/10.5281/zenodo.2598364">doi:10.5281/zenodo.2598364</a>.
+                                
+                                
+      </p>
+<button aria-controls="collapsemesaros_annamaria_2019_2598364" aria-expanded="true" class="btn btn-default btn-xs" data-bs-target="#collapsemesaros_annamaria_2019_2598364" data-bs-toggle="collapse" type="button">
+<i class="fa fa-caret-down">
+</i>
+       Read more...
+      </button>
+</div>
+<div class="col-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-bs-target="#bibtexmesaros_annamaria_2019_2598364" data-bs-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bib
+       </button>
+<a class="btn btn-xs btn-warning btn-btex text-white" data-placement="bottom" href="https://doi.org/10.5281/zenodo.2598364" rel="tooltip" target="_blank" title="DOI">
+<i class="fa fa-asterisk fa-1x">
+</i>
+        DOI
+       </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="headingmesaros_annamaria_2019_2598364" class="panel-collapse collapse card p-4 mt-1 mb-2" data-bs-parent="#accordion" id="collapsemesaros_annamaria_2019_2598364" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+      DCASE2017 Challenge Submissions Package
+     </h4>
+<p>
+<strong>
+       DOI:
+      </strong>
+<a href="https://doi.org/10.5281/zenodo.2598364" target="_blank">
+       https://doi.org/10.5281/zenodo.2598364
+      </a>
+</p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtexmesaros_annamaria_2019_2598364" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+       Bibtex
+      </button>
+</div>
+<div class="btn-group">
+<a class="btn btn-sm btn-info btn-btex2 text-white" data-placement="bottom" href="https://doi.org/10.5281/zenodo.2598364" rel="tooltip" title="Toolbox">
+<i class="fa fa-database">
+</i>
+       Download
+      </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtexmesaros_annamaria_2019_2598364label" class="modal fade" id="bibtexmesaros_annamaria_2019_2598364" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true" class="glyphicon glyphicon-remove-sign">
+</span>
+<span class="sr-only">
+        Close
+       </span>
+</button>
+<h4 class="modal-title" id="bibtexmesaros_annamaria_2019_2598364label">
+       DCASE2017 Challenge Submissions Package
+      </h4>
+</div>
+<div class="modal-body">
+<pre>@misc{mesaros_annamaria_2019_2598364,
+    author = "Mesaros, Annamaria and Diment, Aleksandr and Heittola, Toni and Elizalde, Benjamin and Vincent, Emmanuel and Raj, Bhiksha and Virtanen, Tuomas",
+    title = "{DCASE2017 Challenge Submissions Package}",
+    month = "March",
+    year = "2019",
+    doi = "10.5281/zenodo.2598364",
+    url = "https://doi.org/10.5281/zenodo.2598364"
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+       Close
+      </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="heittola_toni_2019_2589332" style="box-shadow: none">
+<div class="panel-heading" id="headingheittola_toni_2019_2589332" role="tab">
+<div class="row pb-2">
+<div class="col-2">
+<span class="label label-success label-block mb-2">
+       DCASE/Dev
+      </span>
+<div class="btn-group mb-2">
+<a class="btn btn-xs btn-default btn-btex" data-placement="bottom" href="https://doi.org/10.5281/zenodo.2589332" rel="tooltip" title="Duration">
+<i class="fa fa-database fa-1x">
+</i>
+        46h
+       </a>
+<a class="btn btn-xs btn-default btn-btex" data-placement="bottom" href="https://doi.org/10.5281/zenodo.2589332" rel="tooltip" title="Downloads">
+<i class="fa fa-download fa-1x">
+</i>
+        5K
+       </a>
+</div>
+</div>
+<div class="col-7">
+<p style="text-align:left">
+       Toni Heittola, Annamaria Mesaros, and Tuomas Virtanen.
+<em>TAU Urban Acoustic Scenes 2019 Mobile, Development dataset.</em>
+March 2019.
+URL: <a href="https://doi.org/10.5281/zenodo.2589332">https://doi.org/10.5281/zenodo.2589332</a>, <a href="https://doi.org/10.5281/zenodo.2589332">doi:10.5281/zenodo.2589332</a>.
+                                
+                                
+      </p>
+<button aria-controls="collapseheittola_toni_2019_2589332" aria-expanded="true" class="btn btn-default btn-xs" data-bs-target="#collapseheittola_toni_2019_2589332" data-bs-toggle="collapse" type="button">
+<i class="fa fa-caret-down">
+</i>
+       Read more...
+      </button>
+</div>
+<div class="col-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-bs-target="#bibtexheittola_toni_2019_2589332" data-bs-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bib
+       </button>
+<a class="btn btn-xs btn-warning btn-btex text-white" data-placement="bottom" href="https://doi.org/10.5281/zenodo.2589332" rel="tooltip" target="_blank" title="DOI">
+<i class="fa fa-asterisk fa-1x">
+</i>
+        DOI
+       </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="headingheittola_toni_2019_2589332" class="panel-collapse collapse card p-4 mt-1 mb-2" data-bs-parent="#accordion" id="collapseheittola_toni_2019_2589332" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+      TAU Urban Acoustic Scenes 2019 Mobile, Development dataset
+     </h4>
+<p>
+<strong>
+       DOI:
+      </strong>
+<a href="https://doi.org/10.5281/zenodo.2589332" target="_blank">
+       https://doi.org/10.5281/zenodo.2589332
+      </a>
+</p>
+<p>
+<strong>
+       Duration:
+      </strong>
+      46h
+     </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtexheittola_toni_2019_2589332" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+       Bibtex
+      </button>
+</div>
+<div class="btn-group">
+<a class="btn btn-sm btn-info btn-btex2 text-white" data-placement="bottom" href="https://doi.org/10.5281/zenodo.2589332" rel="tooltip" title="Toolbox">
+<i class="fa fa-database">
+</i>
+       Download
+      </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtexheittola_toni_2019_2589332label" class="modal fade" id="bibtexheittola_toni_2019_2589332" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true" class="glyphicon glyphicon-remove-sign">
+</span>
+<span class="sr-only">
+        Close
+       </span>
+</button>
+<h4 class="modal-title" id="bibtexheittola_toni_2019_2589332label">
+       TAU Urban Acoustic Scenes 2019 Mobile, Development dataset
+      </h4>
+</div>
+<div class="modal-body">
+<pre>@misc{heittola_toni_2019_2589332,
+    author = "Heittola, Toni and Mesaros, Annamaria and Virtanen, Tuomas",
+    title = "{TAU Urban Acoustic Scenes 2019 Mobile, Development dataset}",
+    month = "March",
+    year = "2019",
+    doi = "10.5281/zenodo.2589332",
+    url = "https://doi.org/10.5281/zenodo.2589332"
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+       Close
+      </button>
+</div>
+</div>
+</div>
+</div>
+<h2 id="2018">
+   2018
+  </h2>
+<div class="panel publication-item" id="heittola_toni_2018_1245184" style="box-shadow: none">
+<div class="panel-heading" id="headingheittola_toni_2018_1245184" role="tab">
+<div class="row pb-2">
+<div class="col-2">
+<span class="label label-default label-block mb-2" style="min-width:100px;">
+       ASC
+      </span>
+<span class="label label-danger label-block mb-2">
+       DCASE/LB
+      </span>
+<div class="btn-group mb-2">
+<a class="btn btn-xs btn-default btn-btex" data-placement="bottom" href="https://doi.org/10.5281/zenodo.1245184" rel="tooltip" title="Duration">
+<i class="fa fa-database fa-1x">
+</i>
+        6:40h
+       </a>
+<a class="btn btn-xs btn-default btn-btex" data-placement="bottom" href="https://doi.org/10.5281/zenodo.1245184" rel="tooltip" title="Downloads">
+<i class="fa fa-download fa-1x">
+</i>
+        366
+       </a>
+</div>
+</div>
+<div class="col-7">
+<p style="text-align:left">
+       Toni Heittola, Annamaria Mesaros, and Tuomas Virtanen.
+<em>TUT Urban Acoustic Scenes 2018 Mobile, Leaderboard dataset.</em>
+May 2018.
+URL: <a href="https://doi.org/10.5281/zenodo.1245184">https://doi.org/10.5281/zenodo.1245184</a>, <a href="https://doi.org/10.5281/zenodo.1245184">doi:10.5281/zenodo.1245184</a>.
+                                
+                                
+      </p>
+<button aria-controls="collapseheittola_toni_2018_1245184" aria-expanded="true" class="btn btn-default btn-xs" data-bs-target="#collapseheittola_toni_2018_1245184" data-bs-toggle="collapse" type="button">
+<i class="fa fa-caret-down">
+</i>
+       Read more...
+      </button>
+</div>
+<div class="col-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-bs-target="#bibtexheittola_toni_2018_1245184" data-bs-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bib
+       </button>
+<a class="btn btn-xs btn-warning btn-btex text-white" data-placement="bottom" href="https://doi.org/10.5281/zenodo.1245184" rel="tooltip" target="_blank" title="DOI">
+<i class="fa fa-asterisk fa-1x">
+</i>
+        DOI
+       </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="headingheittola_toni_2018_1245184" class="panel-collapse collapse card p-4 mt-1 mb-2" data-bs-parent="#accordion" id="collapseheittola_toni_2018_1245184" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+      TUT Urban Acoustic Scenes 2018 Mobile, Leaderboard dataset
+     </h4>
+<p>
+<strong>
+       DOI:
+      </strong>
+<a href="https://doi.org/10.5281/zenodo.1245184" target="_blank">
+       https://doi.org/10.5281/zenodo.1245184
+      </a>
+</p>
+<p>
+<strong>
+       Duration:
+      </strong>
+      6:40h
+     </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtexheittola_toni_2018_1245184" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+       Bibtex
+      </button>
+</div>
+<div class="btn-group">
+<a class="btn btn-sm btn-info btn-btex2 text-white" data-placement="bottom" href="https://doi.org/10.5281/zenodo.1245184" rel="tooltip" title="Toolbox">
+<i class="fa fa-database">
+</i>
+       Download
+      </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtexheittola_toni_2018_1245184label" class="modal fade" id="bibtexheittola_toni_2018_1245184" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true" class="glyphicon glyphicon-remove-sign">
+</span>
+<span class="sr-only">
+        Close
+       </span>
+</button>
+<h4 class="modal-title" id="bibtexheittola_toni_2018_1245184label">
+       TUT Urban Acoustic Scenes 2018 Mobile, Leaderboard dataset
+      </h4>
+</div>
+<div class="modal-body">
+<pre>@misc{heittola_toni_2018_1245184,
+    author = "Heittola, Toni and Mesaros, Annamaria and Virtanen, Tuomas",
+    title = "{TUT Urban Acoustic Scenes 2018 Mobile, Leaderboard dataset}",
+    month = "May",
+    year = "2018",
+    doi = "10.5281/zenodo.1245184",
+    url = "https://doi.org/10.5281/zenodo.1245184"
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+       Close
+      </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="heittola_toni_2018_1245181" style="box-shadow: none">
+<div class="panel-heading" id="headingheittola_toni_2018_1245181" role="tab">
+<div class="row pb-2">
+<div class="col-2">
+<span class="label label-default label-block mb-2" style="min-width:100px;">
+       ASC
+      </span>
+<span class="label label-danger label-block mb-2">
+       DCASE/LB
+      </span>
+<div class="btn-group mb-2">
+<a class="btn btn-xs btn-default btn-btex" data-placement="bottom" href="https://doi.org/10.5281/zenodo.1245181" rel="tooltip" title="Duration">
+<i class="fa fa-database fa-1x">
+</i>
+        3:20h
+       </a>
+<a class="btn btn-xs btn-default btn-btex" data-placement="bottom" href="https://doi.org/10.5281/zenodo.1245181" rel="tooltip" title="Downloads">
+<i class="fa fa-download fa-1x">
+</i>
+        1K
+       </a>
+</div>
+</div>
+<div class="col-7">
+<p style="text-align:left">
+       Toni Heittola, Annamaria Mesaros, and Tuomas Virtanen.
+<em>TUT Urban Acoustic Scenes 2018, Leaderboard dataset.</em>
+May 2018.
+URL: <a href="https://doi.org/10.5281/zenodo.1245181">https://doi.org/10.5281/zenodo.1245181</a>, <a href="https://doi.org/10.5281/zenodo.1245181">doi:10.5281/zenodo.1245181</a>.
+                                
+                                
+      </p>
+<button aria-controls="collapseheittola_toni_2018_1245181" aria-expanded="true" class="btn btn-default btn-xs" data-bs-target="#collapseheittola_toni_2018_1245181" data-bs-toggle="collapse" type="button">
+<i class="fa fa-caret-down">
+</i>
+       Read more...
+      </button>
+</div>
+<div class="col-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-bs-target="#bibtexheittola_toni_2018_1245181" data-bs-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bib
+       </button>
+<a class="btn btn-xs btn-warning btn-btex text-white" data-placement="bottom" href="https://doi.org/10.5281/zenodo.1245181" rel="tooltip" target="_blank" title="DOI">
+<i class="fa fa-asterisk fa-1x">
+</i>
+        DOI
+       </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="headingheittola_toni_2018_1245181" class="panel-collapse collapse card p-4 mt-1 mb-2" data-bs-parent="#accordion" id="collapseheittola_toni_2018_1245181" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+      TUT Urban Acoustic Scenes 2018, Leaderboard dataset
+     </h4>
+<p>
+<strong>
+       DOI:
+      </strong>
+<a href="https://doi.org/10.5281/zenodo.1245181" target="_blank">
+       https://doi.org/10.5281/zenodo.1245181
+      </a>
+</p>
+<p>
+<strong>
+       Duration:
+      </strong>
+      3:20h
+     </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtexheittola_toni_2018_1245181" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+       Bibtex
+      </button>
+</div>
+<div class="btn-group">
+<a class="btn btn-sm btn-info btn-btex2 text-white" data-placement="bottom" href="https://doi.org/10.5281/zenodo.1245181" rel="tooltip" title="Toolbox">
+<i class="fa fa-database">
+</i>
+       Download
+      </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtexheittola_toni_2018_1245181label" class="modal fade" id="bibtexheittola_toni_2018_1245181" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true" class="glyphicon glyphicon-remove-sign">
+</span>
+<span class="sr-only">
+        Close
+       </span>
+</button>
+<h4 class="modal-title" id="bibtexheittola_toni_2018_1245181label">
+       TUT Urban Acoustic Scenes 2018, Leaderboard dataset
+      </h4>
+</div>
+<div class="modal-body">
+<pre>@misc{heittola_toni_2018_1245181,
+    author = "Heittola, Toni and Mesaros, Annamaria and Virtanen, Tuomas",
+    title = "{TUT Urban Acoustic Scenes 2018, Leaderboard dataset}",
+    month = "May",
+    year = "2018",
+    doi = "10.5281/zenodo.1245181",
+    url = "https://doi.org/10.5281/zenodo.1245181"
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+       Close
+      </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="heittola_toni_2018_1324390" style="box-shadow: none">
+<div class="panel-heading" id="headingheittola_toni_2018_1324390" role="tab">
+<div class="row pb-2">
+<div class="col-2">
+<span class="label label-success label-block mb-2">
+       Dev
+      </span>
+<div class="btn-group mb-2">
+<a class="btn btn-xs btn-default btn-btex" data-placement="bottom" href="https://doi.org/10.5281/zenodo.1324390" rel="tooltip" title="Downloads">
+<i class="fa fa-download fa-1x">
+</i>
+        167
+       </a>
+</div>
+</div>
+<div class="col-7">
+<p style="text-align:left">
+       Toni Heittola, Annamaria Mesaros, and Tuomas Virtanen.
+<em>TUT Acoustic Scenes 2017 Features.</em>
+July 2018.
+URL: <a href="https://doi.org/10.5281/zenodo.1324390">https://doi.org/10.5281/zenodo.1324390</a>, <a href="https://doi.org/10.5281/zenodo.1324390">doi:10.5281/zenodo.1324390</a>.
+                                
+                                
+      </p>
+<button aria-controls="collapseheittola_toni_2018_1324390" aria-expanded="true" class="btn btn-default btn-xs" data-bs-target="#collapseheittola_toni_2018_1324390" data-bs-toggle="collapse" type="button">
+<i class="fa fa-caret-down">
+</i>
+       Read more...
+      </button>
+</div>
+<div class="col-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-bs-target="#bibtexheittola_toni_2018_1324390" data-bs-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bib
+       </button>
+<a class="btn btn-xs btn-warning btn-btex text-white" data-placement="bottom" href="https://doi.org/10.5281/zenodo.1324390" rel="tooltip" target="_blank" title="DOI">
+<i class="fa fa-asterisk fa-1x">
+</i>
+        DOI
+       </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="headingheittola_toni_2018_1324390" class="panel-collapse collapse card p-4 mt-1 mb-2" data-bs-parent="#accordion" id="collapseheittola_toni_2018_1324390" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+      TUT Acoustic Scenes 2017 Features
+     </h4>
+<p>
+<strong>
+       DOI:
+      </strong>
+<a href="https://doi.org/10.5281/zenodo.1324390" target="_blank">
+       https://doi.org/10.5281/zenodo.1324390
+      </a>
+</p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtexheittola_toni_2018_1324390" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+       Bibtex
+      </button>
+</div>
+<div class="btn-group">
+<a class="btn btn-sm btn-info btn-btex2 text-white" data-placement="bottom" href="https://doi.org/10.5281/zenodo.1324390" rel="tooltip" title="Toolbox">
+<i class="fa fa-database">
+</i>
+       Download
+      </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtexheittola_toni_2018_1324390label" class="modal fade" id="bibtexheittola_toni_2018_1324390" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true" class="glyphicon glyphicon-remove-sign">
+</span>
+<span class="sr-only">
+        Close
+       </span>
+</button>
+<h4 class="modal-title" id="bibtexheittola_toni_2018_1324390label">
+       TUT Acoustic Scenes 2017 Features
+      </h4>
+</div>
+<div class="modal-body">
+<pre>@misc{heittola_toni_2018_1324390,
+    author = "Heittola, Toni and Mesaros, Annamaria and Virtanen, Tuomas",
+    title = "{TUT Acoustic Scenes 2017 Features}",
+    month = "July",
+    year = "2018",
+    doi = "10.5281/zenodo.1324390",
+    url = "https://doi.org/10.5281/zenodo.1324390"
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+       Close
+      </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="heittola_toni_2018_1293901" style="box-shadow: none">
+<div class="panel-heading" id="headingheittola_toni_2018_1293901" role="tab">
+<div class="row pb-2">
+<div class="col-2">
+<span class="label label-default label-block mb-2" style="min-width:100px;">
+       ASC
+      </span>
+<span class="label label-warning label-block mb-2">
+       DCASE/Eval
+      </span>
+<div class="btn-group mb-2">
+<a class="btn btn-xs btn-default btn-btex" data-placement="bottom" href="https://doi.org/10.5281/zenodo.1293901" rel="tooltip" title="Duration">
+<i class="fa fa-database fa-1x">
+</i>
+        42h
+       </a>
+<a class="btn btn-xs btn-default btn-btex" data-placement="bottom" href="https://doi.org/10.5281/zenodo.1293901" rel="tooltip" title="Downloads">
+<i class="fa fa-download fa-1x">
+</i>
+        3K
+       </a>
+</div>
+</div>
+<div class="col-7">
+<p style="text-align:left">
+       Toni Heittola, Annamaria Mesaros, and Tuomas Virtanen.
+<em>TUT Urban Acoustic Scenes 2018 Mobile, Evaluation dataset.</em>
+June 2018.
+URL: <a href="https://doi.org/10.5281/zenodo.1293901">https://doi.org/10.5281/zenodo.1293901</a>, <a href="https://doi.org/10.5281/zenodo.1293901">doi:10.5281/zenodo.1293901</a>.
+                                
+                                
+      </p>
+<button aria-controls="collapseheittola_toni_2018_1293901" aria-expanded="true" class="btn btn-default btn-xs" data-bs-target="#collapseheittola_toni_2018_1293901" data-bs-toggle="collapse" type="button">
+<i class="fa fa-caret-down">
+</i>
+       Read more...
+      </button>
+</div>
+<div class="col-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-bs-target="#bibtexheittola_toni_2018_1293901" data-bs-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bib
+       </button>
+<a class="btn btn-xs btn-warning btn-btex text-white" data-placement="bottom" href="https://doi.org/10.5281/zenodo.1293901" rel="tooltip" target="_blank" title="DOI">
+<i class="fa fa-asterisk fa-1x">
+</i>
+        DOI
+       </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="headingheittola_toni_2018_1293901" class="panel-collapse collapse card p-4 mt-1 mb-2" data-bs-parent="#accordion" id="collapseheittola_toni_2018_1293901" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+      TUT Urban Acoustic Scenes 2018 Mobile, Evaluation dataset
+     </h4>
+<p>
+<strong>
+       DOI:
+      </strong>
+<a href="https://doi.org/10.5281/zenodo.1293901" target="_blank">
+       https://doi.org/10.5281/zenodo.1293901
+      </a>
+</p>
+<p>
+<strong>
+       Duration:
+      </strong>
+      42h
+     </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtexheittola_toni_2018_1293901" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+       Bibtex
+      </button>
+</div>
+<div class="btn-group">
+<a class="btn btn-sm btn-info btn-btex2 text-white" data-placement="bottom" href="https://doi.org/10.5281/zenodo.1293901" rel="tooltip" title="Toolbox">
+<i class="fa fa-database">
+</i>
+       Download
+      </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtexheittola_toni_2018_1293901label" class="modal fade" id="bibtexheittola_toni_2018_1293901" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true" class="glyphicon glyphicon-remove-sign">
+</span>
+<span class="sr-only">
+        Close
+       </span>
+</button>
+<h4 class="modal-title" id="bibtexheittola_toni_2018_1293901label">
+       TUT Urban Acoustic Scenes 2018 Mobile, Evaluation dataset
+      </h4>
+</div>
+<div class="modal-body">
+<pre>@misc{heittola_toni_2018_1293901,
+    author = "Heittola, Toni and Mesaros, Annamaria and Virtanen, Tuomas",
+    title = "{TUT Urban Acoustic Scenes 2018 Mobile, Evaluation dataset}",
+    month = "June",
+    year = "2018",
+    doi = "10.5281/zenodo.1293901",
+    url = "https://doi.org/10.5281/zenodo.1293901"
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+       Close
+      </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="heittola_toni_2018_1293883" style="box-shadow: none">
+<div class="panel-heading" id="headingheittola_toni_2018_1293883" role="tab">
+<div class="row pb-2">
+<div class="col-2">
+<span class="label label-default label-block mb-2" style="min-width:100px;">
+       ASC
+      </span>
+<span class="label label-warning label-block mb-2">
+       DCASE/Eval
+      </span>
+<div class="btn-group mb-2">
+<a class="btn btn-xs btn-default btn-btex" data-placement="bottom" href="https://doi.org/10.5281/zenodo.1293883" rel="tooltip" title="Duration">
+<i class="fa fa-database fa-1x">
+</i>
+        10h
+       </a>
+<a class="btn btn-xs btn-default btn-btex" data-placement="bottom" href="https://doi.org/10.5281/zenodo.1293883" rel="tooltip" title="Downloads">
+<i class="fa fa-download fa-1x">
+</i>
+        3K
+       </a>
+</div>
+</div>
+<div class="col-7">
+<p style="text-align:left">
+       Toni Heittola, Annamaria Mesaros, and Tuomas Virtanen.
+<em>TUT Urban Acoustic Scenes 2018, Evaluation dataset.</em>
+June 2018.
+URL: <a href="https://doi.org/10.5281/zenodo.1293883">https://doi.org/10.5281/zenodo.1293883</a>, <a href="https://doi.org/10.5281/zenodo.1293883">doi:10.5281/zenodo.1293883</a>.
+                                
+                                
+      </p>
+<button aria-controls="collapseheittola_toni_2018_1293883" aria-expanded="true" class="btn btn-default btn-xs" data-bs-target="#collapseheittola_toni_2018_1293883" data-bs-toggle="collapse" type="button">
+<i class="fa fa-caret-down">
+</i>
+       Read more...
+      </button>
+</div>
+<div class="col-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-bs-target="#bibtexheittola_toni_2018_1293883" data-bs-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bib
+       </button>
+<a class="btn btn-xs btn-warning btn-btex text-white" data-placement="bottom" href="https://doi.org/10.5281/zenodo.1293883" rel="tooltip" target="_blank" title="DOI">
+<i class="fa fa-asterisk fa-1x">
+</i>
+        DOI
+       </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="headingheittola_toni_2018_1293883" class="panel-collapse collapse card p-4 mt-1 mb-2" data-bs-parent="#accordion" id="collapseheittola_toni_2018_1293883" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+      TUT Urban Acoustic Scenes 2018, Evaluation dataset
+     </h4>
+<p>
+<strong>
+       DOI:
+      </strong>
+<a href="https://doi.org/10.5281/zenodo.1293883" target="_blank">
+       https://doi.org/10.5281/zenodo.1293883
+      </a>
+</p>
+<p>
+<strong>
+       Duration:
+      </strong>
+      10h
+     </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtexheittola_toni_2018_1293883" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+       Bibtex
+      </button>
+</div>
+<div class="btn-group">
+<a class="btn btn-sm btn-info btn-btex2 text-white" data-placement="bottom" href="https://doi.org/10.5281/zenodo.1293883" rel="tooltip" title="Toolbox">
+<i class="fa fa-database">
+</i>
+       Download
+      </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtexheittola_toni_2018_1293883label" class="modal fade" id="bibtexheittola_toni_2018_1293883" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true" class="glyphicon glyphicon-remove-sign">
+</span>
+<span class="sr-only">
+        Close
+       </span>
+</button>
+<h4 class="modal-title" id="bibtexheittola_toni_2018_1293883label">
+       TUT Urban Acoustic Scenes 2018, Evaluation dataset
+      </h4>
+</div>
+<div class="modal-body">
+<pre>@misc{heittola_toni_2018_1293883,
+    author = "Heittola, Toni and Mesaros, Annamaria and Virtanen, Tuomas",
+    title = "{TUT Urban Acoustic Scenes 2018, Evaluation dataset}",
+    month = "June",
+    year = "2018",
+    doi = "10.5281/zenodo.1293883",
+    url = "https://doi.org/10.5281/zenodo.1293883"
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+       Close
+      </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="heittola_toni_2018_1228142" style="box-shadow: none">
+<div class="panel-heading" id="headingheittola_toni_2018_1228142" role="tab">
+<div class="row pb-2">
+<div class="col-2">
+<span class="label label-default label-block mb-2" style="min-width:100px;">
+       ASC
+      </span>
+<span class="label label-success label-block mb-2">
+       DCASE/Dev
+      </span>
+<div class="btn-group mb-2">
+<a class="btn btn-xs btn-default btn-btex" data-placement="bottom" href="https://doi.org/10.5281/zenodo.1228142" rel="tooltip" title="Duration">
+<i class="fa fa-database fa-1x">
+</i>
+        24h
+       </a>
+<a class="btn btn-xs btn-default btn-btex" data-placement="bottom" href="https://doi.org/10.5281/zenodo.1228142" rel="tooltip" title="Downloads">
+<i class="fa fa-download fa-1x">
+</i>
+        16K
+       </a>
+</div>
+</div>
+<div class="col-7">
+<p style="text-align:left">
+       Toni Heittola, Annamaria Mesaros, and Tuomas Virtanen.
+<em>TUT Urban Acoustic Scenes 2018, Development dataset.</em>
+April 2018.
+URL: <a href="https://doi.org/10.5281/zenodo.1228142">https://doi.org/10.5281/zenodo.1228142</a>, <a href="https://doi.org/10.5281/zenodo.1228142">doi:10.5281/zenodo.1228142</a>.
+                                
+                                
+      </p>
+<button aria-controls="collapseheittola_toni_2018_1228142" aria-expanded="true" class="btn btn-default btn-xs" data-bs-target="#collapseheittola_toni_2018_1228142" data-bs-toggle="collapse" type="button">
+<i class="fa fa-caret-down">
+</i>
+       Read more...
+      </button>
+</div>
+<div class="col-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-bs-target="#bibtexheittola_toni_2018_1228142" data-bs-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bib
+       </button>
+<a class="btn btn-xs btn-warning btn-btex text-white" data-placement="bottom" href="https://doi.org/10.5281/zenodo.1228142" rel="tooltip" target="_blank" title="DOI">
+<i class="fa fa-asterisk fa-1x">
+</i>
+        DOI
+       </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="headingheittola_toni_2018_1228142" class="panel-collapse collapse card p-4 mt-1 mb-2" data-bs-parent="#accordion" id="collapseheittola_toni_2018_1228142" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+      TUT Urban Acoustic Scenes 2018, Development dataset
+     </h4>
+<p>
+<strong>
+       DOI:
+      </strong>
+<a href="https://doi.org/10.5281/zenodo.1228142" target="_blank">
+       https://doi.org/10.5281/zenodo.1228142
+      </a>
+</p>
+<p>
+<strong>
+       Duration:
+      </strong>
+      24h
+     </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtexheittola_toni_2018_1228142" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+       Bibtex
+      </button>
+</div>
+<div class="btn-group">
+<a class="btn btn-sm btn-info btn-btex2 text-white" data-placement="bottom" href="https://doi.org/10.5281/zenodo.1228142" rel="tooltip" title="Toolbox">
+<i class="fa fa-database">
+</i>
+       Download
+      </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtexheittola_toni_2018_1228142label" class="modal fade" id="bibtexheittola_toni_2018_1228142" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true" class="glyphicon glyphicon-remove-sign">
+</span>
+<span class="sr-only">
+        Close
+       </span>
+</button>
+<h4 class="modal-title" id="bibtexheittola_toni_2018_1228142label">
+       TUT Urban Acoustic Scenes 2018, Development dataset
+      </h4>
+</div>
+<div class="modal-body">
+<pre>@misc{heittola_toni_2018_1228142,
+    author = "Heittola, Toni and Mesaros, Annamaria and Virtanen, Tuomas",
+    title = "{TUT Urban Acoustic Scenes 2018, Development dataset}",
+    month = "April",
+    year = "2018",
+    doi = "10.5281/zenodo.1228142",
+    url = "https://doi.org/10.5281/zenodo.1228142"
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+       Close
+      </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="heittola_toni_2018_1228235" style="box-shadow: none">
+<div class="panel-heading" id="headingheittola_toni_2018_1228235" role="tab">
+<div class="row pb-2">
+<div class="col-2">
+<span class="label label-default label-block mb-2" style="min-width:100px;">
+       ASC
+      </span>
+<span class="label label-success label-block mb-2">
+       DCASE/Dev
+      </span>
+<div class="btn-group mb-2">
+<a class="btn btn-xs btn-default btn-btex" data-placement="bottom" href="https://doi.org/10.5281/zenodo.1228235" rel="tooltip" title="Duration">
+<i class="fa fa-database fa-1x">
+</i>
+        28h
+       </a>
+<a class="btn btn-xs btn-default btn-btex" data-placement="bottom" href="https://doi.org/10.5281/zenodo.1228235" rel="tooltip" title="Downloads">
+<i class="fa fa-download fa-1x">
+</i>
+        4K
+       </a>
+</div>
+</div>
+<div class="col-7">
+<p style="text-align:left">
+       Toni Heittola, Annamaria Mesaros, and Tuomas Virtanen.
+<em>TUT Urban Acoustic Scenes 2018 Mobile, Development dataset.</em>
+April 2018.
+URL: <a href="https://doi.org/10.5281/zenodo.1228235">https://doi.org/10.5281/zenodo.1228235</a>, <a href="https://doi.org/10.5281/zenodo.1228235">doi:10.5281/zenodo.1228235</a>.
+                                
+                                
+      </p>
+<button aria-controls="collapseheittola_toni_2018_1228235" aria-expanded="true" class="btn btn-default btn-xs" data-bs-target="#collapseheittola_toni_2018_1228235" data-bs-toggle="collapse" type="button">
+<i class="fa fa-caret-down">
+</i>
+       Read more...
+      </button>
+</div>
+<div class="col-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-bs-target="#bibtexheittola_toni_2018_1228235" data-bs-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bib
+       </button>
+<a class="btn btn-xs btn-warning btn-btex text-white" data-placement="bottom" href="https://doi.org/10.5281/zenodo.1228235" rel="tooltip" target="_blank" title="DOI">
+<i class="fa fa-asterisk fa-1x">
+</i>
+        DOI
+       </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="headingheittola_toni_2018_1228235" class="panel-collapse collapse card p-4 mt-1 mb-2" data-bs-parent="#accordion" id="collapseheittola_toni_2018_1228235" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+      TUT Urban Acoustic Scenes 2018 Mobile, Development dataset
+     </h4>
+<p>
+<strong>
+       DOI:
+      </strong>
+<a href="https://doi.org/10.5281/zenodo.1228235" target="_blank">
+       https://doi.org/10.5281/zenodo.1228235
+      </a>
+</p>
+<p>
+<strong>
+       Duration:
+      </strong>
+      28h
+     </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtexheittola_toni_2018_1228235" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+       Bibtex
+      </button>
+</div>
+<div class="btn-group">
+<a class="btn btn-sm btn-info btn-btex2 text-white" data-placement="bottom" href="https://doi.org/10.5281/zenodo.1228235" rel="tooltip" title="Toolbox">
+<i class="fa fa-database">
+</i>
+       Download
+      </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtexheittola_toni_2018_1228235label" class="modal fade" id="bibtexheittola_toni_2018_1228235" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true" class="glyphicon glyphicon-remove-sign">
+</span>
+<span class="sr-only">
+        Close
+       </span>
+</button>
+<h4 class="modal-title" id="bibtexheittola_toni_2018_1228235label">
+       TUT Urban Acoustic Scenes 2018 Mobile, Development dataset
+      </h4>
+</div>
+<div class="modal-body">
+<pre>@misc{heittola_toni_2018_1228235,
+    author = "Heittola, Toni and Mesaros, Annamaria and Virtanen, Tuomas",
+    title = "{TUT Urban Acoustic Scenes 2018 Mobile, Development dataset}",
+    month = "April",
+    year = "2018",
+    doi = "10.5281/zenodo.1228235",
+    url = "https://doi.org/10.5281/zenodo.1228235"
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+       Close
+      </button>
+</div>
+</div>
+</div>
+</div>
+<h2 id="2017">
+   2017
+  </h2>
+<div class="panel publication-item" id="mesaros_annamaria_2017_926660" style="box-shadow: none">
+<div class="panel-heading" id="headingmesaros_annamaria_2017_926660" role="tab">
+<div class="row pb-2">
+<div class="col-2">
+<span class="label label-default label-block mb-2">
+       DCASE
+      </span>
+<div class="btn-group mb-2">
+<a class="btn btn-xs btn-default btn-btex" data-placement="bottom" href="https://doi.org/10.5281/zenodo.926660" rel="tooltip" title="Downloads">
+<i class="fa fa-download fa-1x">
+</i>
+        247
+       </a>
+</div>
+</div>
+<div class="col-7">
+<p style="text-align:left">
+       Annamaria Mesaros, Toni Heittola, Tuomas Virtanen, Emmanouil Benetos, Mathieu Lagrange, Grégoire Lafay, Peter Foster, and Mark D. Plumbley.
+<em>DCASE2016 Challenge Submissions Package.</em>
+September 2017.
+URL: <a href="https://doi.org/10.5281/zenodo.926660">https://doi.org/10.5281/zenodo.926660</a>, <a href="https://doi.org/10.5281/zenodo.926660">doi:10.5281/zenodo.926660</a>.
+                                
+                                
+      </p>
+<button aria-controls="collapsemesaros_annamaria_2017_926660" aria-expanded="true" class="btn btn-default btn-xs" data-bs-target="#collapsemesaros_annamaria_2017_926660" data-bs-toggle="collapse" type="button">
+<i class="fa fa-caret-down">
+</i>
+       Read more...
+      </button>
+</div>
+<div class="col-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-bs-target="#bibtexmesaros_annamaria_2017_926660" data-bs-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bib
+       </button>
+<a class="btn btn-xs btn-warning btn-btex text-white" data-placement="bottom" href="https://doi.org/10.5281/zenodo.926660" rel="tooltip" target="_blank" title="DOI">
+<i class="fa fa-asterisk fa-1x">
+</i>
+        DOI
+       </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="headingmesaros_annamaria_2017_926660" class="panel-collapse collapse card p-4 mt-1 mb-2" data-bs-parent="#accordion" id="collapsemesaros_annamaria_2017_926660" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+      DCASE2016 Challenge Submissions Package
+     </h4>
+<p>
+<strong>
+       DOI:
+      </strong>
+<a href="https://doi.org/10.5281/zenodo.926660" target="_blank">
+       https://doi.org/10.5281/zenodo.926660
+      </a>
+</p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtexmesaros_annamaria_2017_926660" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+       Bibtex
+      </button>
+</div>
+<div class="btn-group">
+<a class="btn btn-sm btn-info btn-btex2 text-white" data-placement="bottom" href="https://doi.org/10.5281/zenodo.926660" rel="tooltip" title="Toolbox">
+<i class="fa fa-database">
+</i>
+       Download
+      </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtexmesaros_annamaria_2017_926660label" class="modal fade" id="bibtexmesaros_annamaria_2017_926660" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true" class="glyphicon glyphicon-remove-sign">
+</span>
+<span class="sr-only">
+        Close
+       </span>
+</button>
+<h4 class="modal-title" id="bibtexmesaros_annamaria_2017_926660label">
+       DCASE2016 Challenge Submissions Package
+      </h4>
+</div>
+<div class="modal-body">
+<pre>@misc{mesaros_annamaria_2017_926660,
+    author = "Mesaros, Annamaria and Heittola, Toni and Virtanen, Tuomas and Benetos, Emmanouil and Lagrange, Mathieu and Lafay, Grégoire and Foster, Peter and Plumbley, Mark D.",
+    title = "{DCASE2016 Challenge Submissions Package}",
+    month = "September",
+    year = "2017",
+    doi = "10.5281/zenodo.926660",
+    url = "https://doi.org/10.5281/zenodo.926660"
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+       Close
+      </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="mesaros_annamaria_2017_400515" style="box-shadow: none">
+<div class="panel-heading" id="headingmesaros_annamaria_2017_400515" role="tab">
+<div class="row pb-2">
+<div class="col-2">
+<span class="label label-default label-block mb-2" style="min-width:100px;">
+       ASC
+      </span>
+<span class="label label-success label-block mb-2">
+       DCASE/Dev
+      </span>
+<div class="btn-group mb-2">
+<a class="btn btn-xs btn-default btn-btex" data-placement="bottom" href="https://doi.org/10.5281/zenodo.400515" rel="tooltip" title="Duration">
+<i class="fa fa-database fa-1x">
+</i>
+        8:40h
+       </a>
+<a class="btn btn-xs btn-default btn-btex" data-placement="bottom" href="https://doi.org/10.5281/zenodo.400515" rel="tooltip" title="Downloads">
+<i class="fa fa-download fa-1x">
+</i>
+        30K
+       </a>
+</div>
+</div>
+<div class="col-7">
+<p style="text-align:left">
+       Annamaria Mesaros, Toni Heittola, and Tuomas Virtanen.
+<em>TUT Acoustic scenes 2017, Development dataset.</em>
+March 2017.
+URL: <a href="https://doi.org/10.5281/zenodo.400515">https://doi.org/10.5281/zenodo.400515</a>, <a href="https://doi.org/10.5281/zenodo.400515">doi:10.5281/zenodo.400515</a>.
+                                
+                                
+      </p>
+<button aria-controls="collapsemesaros_annamaria_2017_400515" aria-expanded="true" class="btn btn-default btn-xs" data-bs-target="#collapsemesaros_annamaria_2017_400515" data-bs-toggle="collapse" type="button">
+<i class="fa fa-caret-down">
+</i>
+       Read more...
+      </button>
+</div>
+<div class="col-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-bs-target="#bibtexmesaros_annamaria_2017_400515" data-bs-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bib
+       </button>
+<a class="btn btn-xs btn-warning btn-btex text-white" data-placement="bottom" href="https://doi.org/10.5281/zenodo.400515" rel="tooltip" target="_blank" title="DOI">
+<i class="fa fa-asterisk fa-1x">
+</i>
+        DOI
+       </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="headingmesaros_annamaria_2017_400515" class="panel-collapse collapse card p-4 mt-1 mb-2" data-bs-parent="#accordion" id="collapsemesaros_annamaria_2017_400515" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+      TUT Acoustic scenes 2017, Development dataset
+     </h4>
+<p>
+<strong>
+       DOI:
+      </strong>
+<a href="https://doi.org/10.5281/zenodo.400515" target="_blank">
+       https://doi.org/10.5281/zenodo.400515
+      </a>
+</p>
+<p>
+<strong>
+       Duration:
+      </strong>
+      8:40h
+     </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtexmesaros_annamaria_2017_400515" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+       Bibtex
+      </button>
+</div>
+<div class="btn-group">
+<a class="btn btn-sm btn-info btn-btex2 text-white" data-placement="bottom" href="https://doi.org/10.5281/zenodo.400515" rel="tooltip" title="Toolbox">
+<i class="fa fa-database">
+</i>
+       Download
+      </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtexmesaros_annamaria_2017_400515label" class="modal fade" id="bibtexmesaros_annamaria_2017_400515" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true" class="glyphicon glyphicon-remove-sign">
+</span>
+<span class="sr-only">
+        Close
+       </span>
+</button>
+<h4 class="modal-title" id="bibtexmesaros_annamaria_2017_400515label">
+       TUT Acoustic scenes 2017, Development dataset
+      </h4>
+</div>
+<div class="modal-body">
+<pre>@misc{mesaros_annamaria_2017_400515,
+    author = "Mesaros, Annamaria and Heittola, Toni and Virtanen, Tuomas",
+    title = "{TUT Acoustic scenes 2017, Development dataset}",
+    month = "March",
+    year = "2017",
+    doi = "10.5281/zenodo.400515",
+    url = "https://doi.org/10.5281/zenodo.400515"
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+       Close
+      </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="mesaros_annamaria_2017_996424" style="box-shadow: none">
+<div class="panel-heading" id="headingmesaros_annamaria_2017_996424" role="tab">
+<div class="row pb-2">
+<div class="col-2">
+<span class="label label-default label-block mb-2" style="min-width:100px;">
+       SED
+      </span>
+<span class="label label-warning label-block mb-2">
+       DCASE/Eval
+      </span>
+<div class="btn-group mb-2">
+<a class="btn btn-xs btn-default btn-btex" data-placement="bottom" href="https://doi.org/10.5281/zenodo.996424" rel="tooltip" title="Duration">
+<i class="fa fa-database fa-1x">
+</i>
+        0:34h
+       </a>
+<a class="btn btn-xs btn-default btn-btex" data-placement="bottom" href="https://doi.org/10.5281/zenodo.996424" rel="tooltip" title="Downloads">
+<i class="fa fa-download fa-1x">
+</i>
+        1K
+       </a>
+</div>
+</div>
+<div class="col-7">
+<p style="text-align:left">
+       Annamaria Mesaros, Toni Heittola, and Tuomas Virtanen.
+<em>TUT Sound events 2016, Evaluation dataset.</em>
+September 2017.
+URL: <a href="https://doi.org/10.5281/zenodo.996424">https://doi.org/10.5281/zenodo.996424</a>, <a href="https://doi.org/10.5281/zenodo.996424">doi:10.5281/zenodo.996424</a>.
+                                
+                                
+      </p>
+<button aria-controls="collapsemesaros_annamaria_2017_996424" aria-expanded="true" class="btn btn-default btn-xs" data-bs-target="#collapsemesaros_annamaria_2017_996424" data-bs-toggle="collapse" type="button">
+<i class="fa fa-caret-down">
+</i>
+       Read more...
+      </button>
+</div>
+<div class="col-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-bs-target="#bibtexmesaros_annamaria_2017_996424" data-bs-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bib
+       </button>
+<a class="btn btn-xs btn-warning btn-btex text-white" data-placement="bottom" href="https://doi.org/10.5281/zenodo.996424" rel="tooltip" target="_blank" title="DOI">
+<i class="fa fa-asterisk fa-1x">
+</i>
+        DOI
+       </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="headingmesaros_annamaria_2017_996424" class="panel-collapse collapse card p-4 mt-1 mb-2" data-bs-parent="#accordion" id="collapsemesaros_annamaria_2017_996424" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+      TUT Sound events 2016, Evaluation dataset
+     </h4>
+<p>
+<strong>
+       DOI:
+      </strong>
+<a href="https://doi.org/10.5281/zenodo.996424" target="_blank">
+       https://doi.org/10.5281/zenodo.996424
+      </a>
+</p>
+<p>
+<strong>
+       Duration:
+      </strong>
+      0:34h
+     </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtexmesaros_annamaria_2017_996424" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+       Bibtex
+      </button>
+</div>
+<div class="btn-group">
+<a class="btn btn-sm btn-info btn-btex2 text-white" data-placement="bottom" href="https://doi.org/10.5281/zenodo.996424" rel="tooltip" title="Toolbox">
+<i class="fa fa-database">
+</i>
+       Download
+      </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtexmesaros_annamaria_2017_996424label" class="modal fade" id="bibtexmesaros_annamaria_2017_996424" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true" class="glyphicon glyphicon-remove-sign">
+</span>
+<span class="sr-only">
+        Close
+       </span>
+</button>
+<h4 class="modal-title" id="bibtexmesaros_annamaria_2017_996424label">
+       TUT Sound events 2016, Evaluation dataset
+      </h4>
+</div>
+<div class="modal-body">
+<pre>@misc{mesaros_annamaria_2017_996424,
+    author = "Mesaros, Annamaria and Heittola, Toni and Virtanen, Tuomas",
+    title = "{TUT Sound events 2016, Evaluation dataset}",
+    month = "September",
+    year = "2017",
+    doi = "10.5281/zenodo.996424",
+    url = "https://doi.org/10.5281/zenodo.996424"
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+       Close
+      </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="mesaros_annamaria_2017_814831" style="box-shadow: none">
+<div class="panel-heading" id="headingmesaros_annamaria_2017_814831" role="tab">
+<div class="row pb-2">
+<div class="col-2">
+<span class="label label-default label-block mb-2" style="min-width:100px;">
+       SED
+      </span>
+<span class="label label-success label-block mb-2">
+       DCASE/Dev
+      </span>
+<div class="btn-group mb-2">
+<a class="btn btn-xs btn-default btn-btex" data-placement="bottom" href="https://doi.org/10.5281/zenodo.814831" rel="tooltip" title="Duration">
+<i class="fa fa-database fa-1x">
+</i>
+        1:32h
+       </a>
+<a class="btn btn-xs btn-default btn-btex" data-placement="bottom" href="https://doi.org/10.5281/zenodo.814831" rel="tooltip" title="Downloads">
+<i class="fa fa-download fa-1x">
+</i>
+        9K
+       </a>
+</div>
+</div>
+<div class="col-7">
+<p style="text-align:left">
+       Annamaria Mesaros, Toni Heittola, and Tuomas Virtanen.
+<em>TUT Sound events 2017, Development dataset.</em>
+March 2017.
+URL: <a href="https://doi.org/10.5281/zenodo.814831">https://doi.org/10.5281/zenodo.814831</a>, <a href="https://doi.org/10.5281/zenodo.814831">doi:10.5281/zenodo.814831</a>.
+                                
+                                
+      </p>
+<button aria-controls="collapsemesaros_annamaria_2017_814831" aria-expanded="true" class="btn btn-default btn-xs" data-bs-target="#collapsemesaros_annamaria_2017_814831" data-bs-toggle="collapse" type="button">
+<i class="fa fa-caret-down">
+</i>
+       Read more...
+      </button>
+</div>
+<div class="col-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-bs-target="#bibtexmesaros_annamaria_2017_814831" data-bs-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bib
+       </button>
+<a class="btn btn-xs btn-warning btn-btex text-white" data-placement="bottom" href="https://doi.org/10.5281/zenodo.814831" rel="tooltip" target="_blank" title="DOI">
+<i class="fa fa-asterisk fa-1x">
+</i>
+        DOI
+       </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="headingmesaros_annamaria_2017_814831" class="panel-collapse collapse card p-4 mt-1 mb-2" data-bs-parent="#accordion" id="collapsemesaros_annamaria_2017_814831" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+      TUT Sound events 2017, Development dataset
+     </h4>
+<p>
+<strong>
+       DOI:
+      </strong>
+<a href="https://doi.org/10.5281/zenodo.814831" target="_blank">
+       https://doi.org/10.5281/zenodo.814831
+      </a>
+</p>
+<p>
+<strong>
+       Duration:
+      </strong>
+      1:32h
+     </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtexmesaros_annamaria_2017_814831" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+       Bibtex
+      </button>
+</div>
+<div class="btn-group">
+<a class="btn btn-sm btn-info btn-btex2 text-white" data-placement="bottom" href="https://doi.org/10.5281/zenodo.814831" rel="tooltip" title="Toolbox">
+<i class="fa fa-database">
+</i>
+       Download
+      </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtexmesaros_annamaria_2017_814831label" class="modal fade" id="bibtexmesaros_annamaria_2017_814831" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true" class="glyphicon glyphicon-remove-sign">
+</span>
+<span class="sr-only">
+        Close
+       </span>
+</button>
+<h4 class="modal-title" id="bibtexmesaros_annamaria_2017_814831label">
+       TUT Sound events 2017, Development dataset
+      </h4>
+</div>
+<div class="modal-body">
+<pre>@misc{mesaros_annamaria_2017_814831,
+    author = "Mesaros, Annamaria and Heittola, Toni and Virtanen, Tuomas",
+    title = "{TUT Sound events 2017, Development dataset}",
+    month = "March",
+    year = "2017",
+    doi = "10.5281/zenodo.814831",
+    url = "https://doi.org/10.5281/zenodo.814831"
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+       Close
+      </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="mesaros_annamaria_2017_1040168" style="box-shadow: none">
+<div class="panel-heading" id="headingmesaros_annamaria_2017_1040168" role="tab">
+<div class="row pb-2">
+<div class="col-2">
+<span class="label label-default label-block mb-2" style="min-width:100px;">
+       ASC
+      </span>
+<span class="label label-warning label-block mb-2">
+       DCASE/Eval
+      </span>
+<div class="btn-group mb-2">
+<a class="btn btn-xs btn-default btn-btex" data-placement="bottom" href="https://doi.org/10.5281/zenodo.1040168" rel="tooltip" title="Duration">
+<i class="fa fa-database fa-1x">
+</i>
+        4:30h
+       </a>
+<a class="btn btn-xs btn-default btn-btex" data-placement="bottom" href="https://doi.org/10.5281/zenodo.1040168" rel="tooltip" title="Downloads">
+<i class="fa fa-download fa-1x">
+</i>
+        7K
+       </a>
+</div>
+</div>
+<div class="col-7">
+<p style="text-align:left">
+       Annamaria Mesaros, Toni Heittola, and Tuomas Virtanen.
+<em>TUT Acoustic scenes 2017, Evaluation dataset.</em>
+November 2017.
+URL: <a href="https://doi.org/10.5281/zenodo.1040168">https://doi.org/10.5281/zenodo.1040168</a>, <a href="https://doi.org/10.5281/zenodo.1040168">doi:10.5281/zenodo.1040168</a>.
+                                
+                                
+      </p>
+<button aria-controls="collapsemesaros_annamaria_2017_1040168" aria-expanded="true" class="btn btn-default btn-xs" data-bs-target="#collapsemesaros_annamaria_2017_1040168" data-bs-toggle="collapse" type="button">
+<i class="fa fa-caret-down">
+</i>
+       Read more...
+      </button>
+</div>
+<div class="col-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-bs-target="#bibtexmesaros_annamaria_2017_1040168" data-bs-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bib
+       </button>
+<a class="btn btn-xs btn-warning btn-btex text-white" data-placement="bottom" href="https://doi.org/10.5281/zenodo.1040168" rel="tooltip" target="_blank" title="DOI">
+<i class="fa fa-asterisk fa-1x">
+</i>
+        DOI
+       </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="headingmesaros_annamaria_2017_1040168" class="panel-collapse collapse card p-4 mt-1 mb-2" data-bs-parent="#accordion" id="collapsemesaros_annamaria_2017_1040168" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+      TUT Acoustic scenes 2017, Evaluation dataset
+     </h4>
+<p>
+<strong>
+       DOI:
+      </strong>
+<a href="https://doi.org/10.5281/zenodo.1040168" target="_blank">
+       https://doi.org/10.5281/zenodo.1040168
+      </a>
+</p>
+<p>
+<strong>
+       Duration:
+      </strong>
+      4:30h
+     </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtexmesaros_annamaria_2017_1040168" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+       Bibtex
+      </button>
+</div>
+<div class="btn-group">
+<a class="btn btn-sm btn-info btn-btex2 text-white" data-placement="bottom" href="https://doi.org/10.5281/zenodo.1040168" rel="tooltip" title="Toolbox">
+<i class="fa fa-database">
+</i>
+       Download
+      </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtexmesaros_annamaria_2017_1040168label" class="modal fade" id="bibtexmesaros_annamaria_2017_1040168" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true" class="glyphicon glyphicon-remove-sign">
+</span>
+<span class="sr-only">
+        Close
+       </span>
+</button>
+<h4 class="modal-title" id="bibtexmesaros_annamaria_2017_1040168label">
+       TUT Acoustic scenes 2017, Evaluation dataset
+      </h4>
+</div>
+<div class="modal-body">
+<pre>@misc{mesaros_annamaria_2017_1040168,
+    author = "Mesaros, Annamaria and Heittola, Toni and Virtanen, Tuomas",
+    title = "{TUT Acoustic scenes 2017, Evaluation dataset}",
+    month = "November",
+    year = "2017",
+    doi = "10.5281/zenodo.1040168",
+    url = "https://doi.org/10.5281/zenodo.1040168"
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+       Close
+      </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="mesaros_annamaria_2017_1040179" style="box-shadow: none">
+<div class="panel-heading" id="headingmesaros_annamaria_2017_1040179" role="tab">
+<div class="row pb-2">
+<div class="col-2">
+<span class="label label-default label-block mb-2" style="min-width:100px;">
+       SED
+      </span>
+<span class="label label-warning label-block mb-2">
+       DCASE/Eval
+      </span>
+<div class="btn-group mb-2">
+<a class="btn btn-xs btn-default btn-btex" data-placement="bottom" href="https://doi.org/10.5281/zenodo.1040179" rel="tooltip" title="Duration">
+<i class="fa fa-database fa-1x">
+</i>
+        0:29h
+       </a>
+<a class="btn btn-xs btn-default btn-btex" data-placement="bottom" href="https://doi.org/10.5281/zenodo.1040179" rel="tooltip" title="Downloads">
+<i class="fa fa-download fa-1x">
+</i>
+        3K
+       </a>
+</div>
+</div>
+<div class="col-7">
+<p style="text-align:left">
+       Annamaria Mesaros, Toni Heittola, and Tuomas Virtanen.
+<em>TUT Sound events 2017, Evaluation dataset.</em>
+November 2017.
+URL: <a href="https://doi.org/10.5281/zenodo.1040179">https://doi.org/10.5281/zenodo.1040179</a>, <a href="https://doi.org/10.5281/zenodo.1040179">doi:10.5281/zenodo.1040179</a>.
+                                
+                                
+      </p>
+<button aria-controls="collapsemesaros_annamaria_2017_1040179" aria-expanded="true" class="btn btn-default btn-xs" data-bs-target="#collapsemesaros_annamaria_2017_1040179" data-bs-toggle="collapse" type="button">
+<i class="fa fa-caret-down">
+</i>
+       Read more...
+      </button>
+</div>
+<div class="col-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-bs-target="#bibtexmesaros_annamaria_2017_1040179" data-bs-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bib
+       </button>
+<a class="btn btn-xs btn-warning btn-btex text-white" data-placement="bottom" href="https://doi.org/10.5281/zenodo.1040179" rel="tooltip" target="_blank" title="DOI">
+<i class="fa fa-asterisk fa-1x">
+</i>
+        DOI
+       </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="headingmesaros_annamaria_2017_1040179" class="panel-collapse collapse card p-4 mt-1 mb-2" data-bs-parent="#accordion" id="collapsemesaros_annamaria_2017_1040179" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+      TUT Sound events 2017, Evaluation dataset
+     </h4>
+<p>
+<strong>
+       DOI:
+      </strong>
+<a href="https://doi.org/10.5281/zenodo.1040179" target="_blank">
+       https://doi.org/10.5281/zenodo.1040179
+      </a>
+</p>
+<p>
+<strong>
+       Duration:
+      </strong>
+      0:29h
+     </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtexmesaros_annamaria_2017_1040179" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+       Bibtex
+      </button>
+</div>
+<div class="btn-group">
+<a class="btn btn-sm btn-info btn-btex2 text-white" data-placement="bottom" href="https://doi.org/10.5281/zenodo.1040179" rel="tooltip" title="Toolbox">
+<i class="fa fa-database">
+</i>
+       Download
+      </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtexmesaros_annamaria_2017_1040179label" class="modal fade" id="bibtexmesaros_annamaria_2017_1040179" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true" class="glyphicon glyphicon-remove-sign">
+</span>
+<span class="sr-only">
+        Close
+       </span>
+</button>
+<h4 class="modal-title" id="bibtexmesaros_annamaria_2017_1040179label">
+       TUT Sound events 2017, Evaluation dataset
+      </h4>
+</div>
+<div class="modal-body">
+<pre>@misc{mesaros_annamaria_2017_1040179,
+    author = "Mesaros, Annamaria and Heittola, Toni and Virtanen, Tuomas",
+    title = "{TUT Sound events 2017, Evaluation dataset}",
+    month = "November",
+    year = "2017",
+    doi = "10.5281/zenodo.1040179",
+    url = "https://doi.org/10.5281/zenodo.1040179"
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+       Close
+      </button>
+</div>
+</div>
+</div>
+</div>
+<h2 id="2016">
+   2016
+  </h2>
+<div class="panel publication-item" id="mesaros_annamaria_2016_45739" style="box-shadow: none">
+<div class="panel-heading" id="headingmesaros_annamaria_2016_45739" role="tab">
+<div class="row pb-2">
+<div class="col-2">
+<span class="label label-default label-block mb-2" style="min-width:100px;">
+       ASC
+      </span>
+<span class="label label-success label-block mb-2">
+       DCASE/Dev
+      </span>
+<div class="btn-group mb-2">
+<a class="btn btn-xs btn-default btn-btex" data-placement="bottom" href="https://doi.org/10.5281/zenodo.45739" rel="tooltip" title="Duration">
+<i class="fa fa-database fa-1x">
+</i>
+        9:45h
+       </a>
+<a class="btn btn-xs btn-default btn-btex" data-placement="bottom" href="https://doi.org/10.5281/zenodo.45739" rel="tooltip" title="Downloads">
+<i class="fa fa-download fa-1x">
+</i>
+        12K
+       </a>
+</div>
+</div>
+<div class="col-7">
+<p style="text-align:left">
+       Annamaria Mesaros, Toni Heittola, and Tuomas Virtanen.
+<em>TUT Acoustic scenes 2016, Development dataset.</em>
+February 2016.
+URL: <a href="https://doi.org/10.5281/zenodo.45739">https://doi.org/10.5281/zenodo.45739</a>, <a href="https://doi.org/10.5281/zenodo.45739">doi:10.5281/zenodo.45739</a>.
+                                
+                                
+      </p>
+<button aria-controls="collapsemesaros_annamaria_2016_45739" aria-expanded="true" class="btn btn-default btn-xs" data-bs-target="#collapsemesaros_annamaria_2016_45739" data-bs-toggle="collapse" type="button">
+<i class="fa fa-caret-down">
+</i>
+       Read more...
+      </button>
+</div>
+<div class="col-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-bs-target="#bibtexmesaros_annamaria_2016_45739" data-bs-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bib
+       </button>
+<a class="btn btn-xs btn-warning btn-btex text-white" data-placement="bottom" href="https://doi.org/10.5281/zenodo.45739" rel="tooltip" target="_blank" title="DOI">
+<i class="fa fa-asterisk fa-1x">
+</i>
+        DOI
+       </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="headingmesaros_annamaria_2016_45739" class="panel-collapse collapse card p-4 mt-1 mb-2" data-bs-parent="#accordion" id="collapsemesaros_annamaria_2016_45739" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+      TUT Acoustic scenes 2016, Development dataset
+     </h4>
+<p>
+<strong>
+       DOI:
+      </strong>
+<a href="https://doi.org/10.5281/zenodo.45739" target="_blank">
+       https://doi.org/10.5281/zenodo.45739
+      </a>
+</p>
+<p>
+<strong>
+       Duration:
+      </strong>
+      9:45h
+     </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtexmesaros_annamaria_2016_45739" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+       Bibtex
+      </button>
+</div>
+<div class="btn-group">
+<a class="btn btn-sm btn-info btn-btex2 text-white" data-placement="bottom" href="https://doi.org/10.5281/zenodo.45739" rel="tooltip" title="Toolbox">
+<i class="fa fa-database">
+</i>
+       Download
+      </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtexmesaros_annamaria_2016_45739label" class="modal fade" id="bibtexmesaros_annamaria_2016_45739" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true" class="glyphicon glyphicon-remove-sign">
+</span>
+<span class="sr-only">
+        Close
+       </span>
+</button>
+<h4 class="modal-title" id="bibtexmesaros_annamaria_2016_45739label">
+       TUT Acoustic scenes 2016, Development dataset
+      </h4>
+</div>
+<div class="modal-body">
+<pre>@misc{mesaros_annamaria_2016_45739,
+    author = "Mesaros, Annamaria and Heittola, Toni and Virtanen, Tuomas",
+    title = "{TUT Acoustic scenes 2016, Development dataset}",
+    month = "February",
+    year = "2016",
+    doi = "10.5281/zenodo.45739",
+    url = "https://doi.org/10.5281/zenodo.45739"
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+       Close
+      </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="mesaros_annamaria_2016_165995" style="box-shadow: none">
+<div class="panel-heading" id="headingmesaros_annamaria_2016_165995" role="tab">
+<div class="row pb-2">
+<div class="col-2">
+<span class="label label-default label-block mb-2" style="min-width:100px;">
+       ASC
+      </span>
+<span class="label label-warning label-block mb-2">
+       DCASE/Eval
+      </span>
+<div class="btn-group mb-2">
+<a class="btn btn-xs btn-default btn-btex" data-placement="bottom" href="https://doi.org/10.5281/zenodo.165995" rel="tooltip" title="Duration">
+<i class="fa fa-database fa-1x">
+</i>
+        3:15h
+       </a>
+<a class="btn btn-xs btn-default btn-btex" data-placement="bottom" href="https://doi.org/10.5281/zenodo.165995" rel="tooltip" title="Downloads">
+<i class="fa fa-download fa-1x">
+</i>
+        4K
+       </a>
+</div>
+</div>
+<div class="col-7">
+<p style="text-align:left">
+       Annamaria Mesaros, Toni Heittola, and Tuomas Virtanen.
+<em>TUT Acoustic scenes 2016, Evaluation dataset.</em>
+November 2016.
+URL: <a href="https://doi.org/10.5281/zenodo.165995">https://doi.org/10.5281/zenodo.165995</a>, <a href="https://doi.org/10.5281/zenodo.165995">doi:10.5281/zenodo.165995</a>.
+                                
+                                
+      </p>
+<button aria-controls="collapsemesaros_annamaria_2016_165995" aria-expanded="true" class="btn btn-default btn-xs" data-bs-target="#collapsemesaros_annamaria_2016_165995" data-bs-toggle="collapse" type="button">
+<i class="fa fa-caret-down">
+</i>
+       Read more...
+      </button>
+</div>
+<div class="col-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-bs-target="#bibtexmesaros_annamaria_2016_165995" data-bs-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bib
+       </button>
+<a class="btn btn-xs btn-warning btn-btex text-white" data-placement="bottom" href="https://doi.org/10.5281/zenodo.165995" rel="tooltip" target="_blank" title="DOI">
+<i class="fa fa-asterisk fa-1x">
+</i>
+        DOI
+       </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="headingmesaros_annamaria_2016_165995" class="panel-collapse collapse card p-4 mt-1 mb-2" data-bs-parent="#accordion" id="collapsemesaros_annamaria_2016_165995" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+      TUT Acoustic scenes 2016, Evaluation dataset
+     </h4>
+<p>
+<strong>
+       DOI:
+      </strong>
+<a href="https://doi.org/10.5281/zenodo.165995" target="_blank">
+       https://doi.org/10.5281/zenodo.165995
+      </a>
+</p>
+<p>
+<strong>
+       Duration:
+      </strong>
+      3:15h
+     </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtexmesaros_annamaria_2016_165995" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+       Bibtex
+      </button>
+</div>
+<div class="btn-group">
+<a class="btn btn-sm btn-info btn-btex2 text-white" data-placement="bottom" href="https://doi.org/10.5281/zenodo.165995" rel="tooltip" title="Toolbox">
+<i class="fa fa-database">
+</i>
+       Download
+      </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtexmesaros_annamaria_2016_165995label" class="modal fade" id="bibtexmesaros_annamaria_2016_165995" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true" class="glyphicon glyphicon-remove-sign">
+</span>
+<span class="sr-only">
+        Close
+       </span>
+</button>
+<h4 class="modal-title" id="bibtexmesaros_annamaria_2016_165995label">
+       TUT Acoustic scenes 2016, Evaluation dataset
+      </h4>
+</div>
+<div class="modal-body">
+<pre>@misc{mesaros_annamaria_2016_165995,
+    author = "Mesaros, Annamaria and Heittola, Toni and Virtanen, Tuomas",
+    title = "{TUT Acoustic scenes 2016, Evaluation dataset}",
+    month = "November",
+    year = "2016",
+    doi = "10.5281/zenodo.165995",
+    url = "https://doi.org/10.5281/zenodo.165995"
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+       Close
+      </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="mesaros_annamaria_2016_45759" style="box-shadow: none">
+<div class="panel-heading" id="headingmesaros_annamaria_2016_45759" role="tab">
+<div class="row pb-2">
+<div class="col-2">
+<span class="label label-default label-block mb-2" style="min-width:100px;">
+       SED
+      </span>
+<span class="label label-success label-block mb-2">
+       DCASE/Dev
+      </span>
+<div class="btn-group mb-2">
+<a class="btn btn-xs btn-default btn-btex" data-placement="bottom" href="https://doi.org/10.5281/zenodo.45759" rel="tooltip" title="Duration">
+<i class="fa fa-database fa-1x">
+</i>
+        1:18h
+       </a>
+<a class="btn btn-xs btn-default btn-btex" data-placement="bottom" href="https://doi.org/10.5281/zenodo.45759" rel="tooltip" title="Downloads">
+<i class="fa fa-download fa-1x">
+</i>
+        3K
+       </a>
+</div>
+</div>
+<div class="col-7">
+<p style="text-align:left">
+       Annamaria Mesaros, Toni Heittola, and Tuomas Virtanen.
+<em>TUT Sound events 2016, Development dataset.</em>
+February 2016.
+URL: <a href="https://doi.org/10.5281/zenodo.45759">https://doi.org/10.5281/zenodo.45759</a>, <a href="https://doi.org/10.5281/zenodo.45759">doi:10.5281/zenodo.45759</a>.
+                                
+                                
+      </p>
+<button aria-controls="collapsemesaros_annamaria_2016_45759" aria-expanded="true" class="btn btn-default btn-xs" data-bs-target="#collapsemesaros_annamaria_2016_45759" data-bs-toggle="collapse" type="button">
+<i class="fa fa-caret-down">
+</i>
+       Read more...
+      </button>
+</div>
+<div class="col-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-bs-target="#bibtexmesaros_annamaria_2016_45759" data-bs-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bib
+       </button>
+<a class="btn btn-xs btn-warning btn-btex text-white" data-placement="bottom" href="https://doi.org/10.5281/zenodo.45759" rel="tooltip" target="_blank" title="DOI">
+<i class="fa fa-asterisk fa-1x">
+</i>
+        DOI
+       </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="headingmesaros_annamaria_2016_45759" class="panel-collapse collapse card p-4 mt-1 mb-2" data-bs-parent="#accordion" id="collapsemesaros_annamaria_2016_45759" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+      TUT Sound events 2016, Development dataset
+     </h4>
+<p>
+<strong>
+       DOI:
+      </strong>
+<a href="https://doi.org/10.5281/zenodo.45759" target="_blank">
+       https://doi.org/10.5281/zenodo.45759
+      </a>
+</p>
+<p>
+<strong>
+       Duration:
+      </strong>
+      1:18h
+     </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtexmesaros_annamaria_2016_45759" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+       Bibtex
+      </button>
+</div>
+<div class="btn-group">
+<a class="btn btn-sm btn-info btn-btex2 text-white" data-placement="bottom" href="https://doi.org/10.5281/zenodo.45759" rel="tooltip" title="Toolbox">
+<i class="fa fa-database">
+</i>
+       Download
+      </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtexmesaros_annamaria_2016_45759label" class="modal fade" id="bibtexmesaros_annamaria_2016_45759" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true" class="glyphicon glyphicon-remove-sign">
+</span>
+<span class="sr-only">
+        Close
+       </span>
+</button>
+<h4 class="modal-title" id="bibtexmesaros_annamaria_2016_45759label">
+       TUT Sound events 2016, Development dataset
+      </h4>
+</div>
+<div class="modal-body">
+<pre>@misc{mesaros_annamaria_2016_45759,
+    author = "Mesaros, Annamaria and Heittola, Toni and Virtanen, Tuomas",
+    title = "{TUT Sound events 2016, Development dataset}",
+    month = "February",
+    year = "2016",
+    doi = "10.5281/zenodo.45759",
+    url = "https://doi.org/10.5281/zenodo.45759"
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+       Close
+      </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p><small class="text-muted pull-right">Updated: {modified::content/data/opendata.bib}</small></p>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>    
+
+<ul class="nav pull-right scroll-top">
+  <li>
+    <a title="Scroll to top" href="#" class="page-scroll-top">
+      <i class="glyphicon glyphicon-chevron-up"></i>
+    </a>
+  </li>
+</ul>
+<script type="text/javascript" src="/theme/assets/jquery/jquery.easing.min.js"></script>
+<script type="text/javascript" src="/theme/assets/bootstrap5/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="/theme/js/theme5.js"></script><script type="text/javascript" src="/theme/assets/scrollreveal/scrollreveal.min.js"></script>
+<script type="text/javascript" src="/theme/js/setup.scrollreveal.js"></script>
+<script type="text/javascript" src="/theme/assets/highlight/highlight.pack.js"></script>
+<script type="text/javascript">
+    document.querySelectorAll('pre code:not([class])').forEach(function($) {$.className = 'no-highlight';});
+    hljs.initHighlightingOnLoad();
+</script>
+<script type="text/javascript" src="/theme/js/respond.min.js"></script>
+<script type="text/javascript" src="/theme/js/btex.min.js"></script>
+<script type="text/javascript" src="/theme/js/tocbot.min.js"></script>
+<script type="text/javascript" src="/theme/js/btoc-bot.min.js"></script>
+</body>
+</html>

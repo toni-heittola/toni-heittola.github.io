@@ -1,0 +1,720 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <title>Sounds in Everyday Environments - Toni Heittola</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <link href="/static/favicon.png" rel="icon">
+<link rel="canonical" href="/thesis/everyday_environments">
+        <meta name="author" content="Toni Heittola" />
+        <meta name="description" content="This page presents a slightly revised version of chapter &#34;Sounds in Everyday Environments&#34;, from my PhD thesis &#34;Computational Audio Content Analysis in Everyday Environments&#34;. The chapter explores the diverse acoustic characteristics of everyday settings and lays the groundwork for understanding how computational methods can be applied to analyze and interpret …" />
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;900&family=Roboto:wght@900&family=Bungee+Spice" rel="stylesheet">
+    <link rel="stylesheet" href="/theme/assets/bootstrap5/css/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/assets/fontawesome6/css/all.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/assets/academicons/css/academicons.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/assets/dcaseicons/css/dcaseicons.css?v=1.1" type="text/css"/>
+<link rel="stylesheet" href="/theme/assets/highlight/styles/atom-one-light.css" type="text/css"/>
+                <link rel="stylesheet" href="/theme/css/btoc-bot.min.css">
+<link rel="stylesheet" href="/theme/css/theme5.css?v=1.1" type="text/css"/><link rel="stylesheet" href="/static/assets/css/icons.css" type="text/css"/><link rel="stylesheet" href="/static/assets/css/extra.css" type="text/css"/><script type="text/javascript" src="/theme/assets/jquery/jquery-3.7.1.min.js"></script>    <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Toni Heittola ATOM Feed"/>
+
+
+</head>
+<body>
+
+
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark pt-0 pb-0 flex-column" role="navigation" data-spy="affix" data-offset-top="195" id="topmenu">
+    <div class="container p-0">
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-main" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar-main">
+            <div class="container-fluid p-0">
+                <div class="row g-0 p-0">
+                    <div class="col-md d-flex">
+                        <a href="/" class="navbar-brand align-self-start" ></a><ul class="navbar-nav flex-sm-row2 flex-lg-grow flex-lg-fill align-self-start" id="menuitem-list-main"><li class="nav-item ">
+        <a href="/"
+        class="nav-link"
+        ><strong>Toni Heittola</strong></a>
+    </li></ul><ul class="navbar-nav flex-lg-nowrap align-self-start" id="menuitem-list"><li class="nav-item " data-bs-toggle="tooltip" data-bs-placement="bottom" title="About me">
+        <a href="/about-me"
+        class="nav-link"
+        ><i class="fa fa-solid fa-user fa-1x fa-fw"></i>&nbsp;About</a>
+    </li><li class="nav-item dropdown  active">
+        <a href="#"
+ class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+        ><i class="fa fa-solid fa-magnifying-glass fa-1x fa-fw text-danger text-dcase-a1"></i>&nbsp;Research&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class=" ">
+        <a href="/research"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-circle-notch fa-circle-o-notch fa-1x fa-fw text-dcase-a1"></i>&nbsp;Overview</a>
+    </li>
+            <li class=" ">
+        <a href="/research-portfolio"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-cog fa-1x fa-fw text-dcase-a2"></i>&nbsp;Portfolio</a>
+    </li>
+            <li class=" ">
+        <a href="/guiding-research"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-users fa-fw text-dcase-a3"></i>&nbsp;Guiding Research</a>
+    </li>
+            <li class="nav-item divider dropdown-divider" role="presentation"></li>
+            <li class=" ">
+        <a href="/publications"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-copy fa-files-o fa-1x fa-fw text-dcase-a4"></i>&nbsp;Publications</a>
+    </li>
+            <li class=" ">
+        <a href="/opendata"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-database fa-fw text-dcase-a5"></i>&nbsp;Open Data</a>
+    </li>
+            <li class="nav-item divider dropdown-divider" role="presentation"></li>
+            <li class=" ">
+        <a href="/academic-illustrations"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-image fa-1x fa-fw text-dcase-a7"></i>&nbsp;Illustrations</a>
+    </li>
+            <li class="nav-item divider dropdown-divider" role="presentation"></li>
+            <li class=" ">
+        <a href="/academic-bio"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-user fa-1x fa-fw text-dcase-a6"></i>&nbsp;Biography</a>
+    </li>
+            <li class="nav-item divider dropdown-divider" role="presentation"></li>
+            <li class=" ">
+        <a href="/glossary"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-list fa-1x fa-fw text-dcase-a7"></i>&nbsp;Glossary</a>
+    </li>
+            <li class="nav-item divider dropdown-divider" role="presentation"></li>
+            <li class="nav-link disabled subheader" >
+       <a><strong><small class="fw-light">Audio Content Analysis <br>in Everyday Environments</small></strong></a>
+    </li>
+            <li class=" ">
+        <a href="/thesis/introduction"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-book-open fa-1x fa-fw text-dcase-a1"></i>&nbsp;Introduction</a>
+    </li>
+            <li class="  active">
+        <a href="/thesis/everyday_environments"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-person-walking fa-1x fa-fw text-dcase-a1"></i>&nbsp;Everyday Environments</a>
+    </li>
+            <li class=" ">
+        <a href="/thesis/content_analysis"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-brain fa-1x fa-fw text-dcase-a1"></i>&nbsp;Audio Content Analysis</a>
+    </li>
+            <li class=" ">
+        <a href="/thesis/sed"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-ear-listen fa-1x fa-fw text-dcase-a1"></i>&nbsp;Sound Event Detection</a>
+    </li>
+            <li class="nav-item divider dropdown-divider" role="presentation"></li>
+            <li class="nav-item dropdown ">
+        <a href="#"
+ class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+        ><i class="fa fa-solid fa-file-alt fa-1x fa-fw"></i>&nbsp;Publication Add-ons&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class=" ">
+        <a href="/audiotexture/index"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-file-alt fa-1x fa-fw"></i>&nbsp;Location-Specific Audio Textures</a>
+    </li>
+            <li class=" ">
+        <a href="/ismir09/index"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-file-alt fa-1x fa-fw"></i>&nbsp;Musical Instrument Recognition</a>
+    </li>
+            <li class=" ">
+        <a href="/musicalgenre/index"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-file-alt fa-1x fa-fw"></i>&nbsp;Musical Genre Classification</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li><li class="nav-item dropdown ">
+        <a href="/development"
+ class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+        ><i class="fa fa-solid fa-code fa-1x fa-fw text-warning text-thesis-a3"></i>&nbsp;Develop&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class=" ">
+        <a href="/development"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-code fa-1x fa-fw text-thesis-a3"></i>&nbsp;Introduction</a>
+    </li>
+            <li class="nav-item divider dropdown-divider" role="presentation"></li>
+            <li class=" ">
+        <a href="/ml-development"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-search fa-1x fa-fw text-thesis-a4"></i>&nbsp;Machine Learning</a>
+    </li>
+            <li class=" ">
+        <a href="/websites"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-desktop fa-1x fa-fw text-thesis-a2"></i>&nbsp;Websites</a>
+    </li>
+            <li class=" ">
+        <a href="/web-development"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-plug fa-1x fa-fw text-thesis-a1"></i>&nbsp;Web Development</a>
+    </li>
+        </ul>
+    </li><li class="nav-item ">
+        <a href="/publications"
+        class="nav-link"
+        ><i class="fa fa-solid fa-copy fa-files-o fa-1x fa-fw text-success text-dcase-a4"></i>&nbsp;Publish</a>
+    </li><li class="nav-item dropdown ">
+        <a href="#"
+ class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+        ><i class="fa fa-solid fa-wave-square fa-fw text-primary text-dcase-a5"></i>&nbsp;Data&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class=" ">
+        <a href="/opendata"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-folder-open fa-fw"></i>&nbsp;Open Data</a>
+    </li>
+            <li class=" ">
+        <a href="/datasets"
+ class="dropdown-item"
+        ><i class="fa fa-list-ul fa-fw"></i>&nbsp;Data & Tools</a>
+    </li>
+            <li class="nav-item divider dropdown-divider" role="presentation"></li>
+            <li class=" " data-bs-toggle="tooltip" data-bs-placement="bottom" title="DCASE Datalist">
+        <a href="https://dcase-repo.github.io/dcase_datalist/"
+ target="_blank"  class="dropdown-item"
+        ><i class="fa fa-database fa-1x fa-fw"></i>&nbsp;DCASE DataList</a>
+    </li>
+        </ul>
+    </li><li class="nav-item " data-bs-toggle="tooltip" data-bs-placement="bottom" title="Glossary">
+        <a href="/glossary"
+        class="nav-link"
+        ><i class="fa fa-solid fa-list fa-1x fa-fw"></i>&nbsp;</a>
+    </li><li class="nav-item " data-bs-toggle="tooltip" data-bs-placement="bottom" title="News articles">
+        <a href="/news"
+        class="nav-link"
+        ><i class="fa fa-solid fa-newspaper fa-newspaper-o fa-fw"></i>&nbsp;</a>
+    </li><li class="nav-item " data-bs-toggle="tooltip" data-bs-placement="bottom" title="Github">
+        <a href="https://github.com/toni-heittola?tab=repositories"
+ target="_blank"         class="nav-link"
+        ><i class="fa fa-brands fa-github fa-1x"></i>&nbsp;</a>
+    </li>                        </ul>                    </div></div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+<header class="page-top" style="background-image: url(../theme/images/everyday-patterns/bricks-toledo-02.jpg);box-shadow: 0px 1000px rgba(0, 0, 0, 0.65) inset;overflow:hidden;position:relative">
+    <div class="container" style="box-shadow: 0px 1000px rgba(255, 255, 255, 0.1) inset;;height:100%;padding-bottom:20px;">
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                <div class="page-heading text-end"><h1 class="toc-skip bold" data-toc-skip>Sounds in Everyday Environments</h1><hr class="small right bold"><span class="subheading">Computational Audio Content Analysis in Everyday Environments</span></div>
+            </div>
+        </div>
+    </div>
+<span class="header-cc-logo" data-bs-toggle="tooltip" data-bs-placement="top" title="Background photo by Toni Heittola / CC BY-NC 4.0"><i class="fa fa-brands fa-creative-commons" aria-hidden="true"></i></span></header><div class="container">
+    <div class="row">
+        <div class="col-sm-3 sidecolumn-left ">
+        <div class="btn-group-vertical pb-4" role="group"><button type="button" class="btn btn-secondary btn-sm text-start" disabled><i class="fa-solid fa-layer-group"></i> Chapters</button><a href="introduction" class="btn btn-outline-secondary btn-sm text-start">Introduction</a><a href="everyday_environments" class="btn btn-dark btn-sm text-start">Sounds in Everyday Environments</a><a href="content_analysis" class="btn btn-outline-secondary btn-sm text-start">Computational Audio Content Analysis</a><a href="sed" class="btn btn-outline-secondary btn-sm text-start">Sound Event Detection in Everyday Environments</a></div>
+ <div class="btoc-container hidden-print sticky-top" role="complementary">
+<div class="btoc-header bg-light text-muted">Content</div>
+<div class="btoc-body">
+<nav class="btoc-nav" data-toc-levels="h1,h2,h3"></nav>
+</div>
+</div>
+
+        </div>
+        <div class="col-sm-9 content">
+            <section id="content" class="body">
+                <div class="entry-content">
+                    <p class="lead">This page presents a slightly revised version of chapter "Sounds in Everyday Environments", from my PhD thesis "Computational Audio Content Analysis in Everyday Environments". The chapter explores the diverse acoustic characteristics of everyday settings and lays the groundwork for understanding how computational methods can be applied to analyze and interpret these complex soundscapes.</p>
+<div class="row bg-light py-2">
+<div class="col-2"><img alt="Thesis cover" class="img-fluid" src="../images/thesis_cover.jpg"/></div>
+<div class="col-10"><div class="btex-item" data-item="phdthesis" data-source="content/data/publications.bib" data-template="default">
+<div class="card mb-3">
+<span class="label label-default" style="width:100px;padding-top:0.4em;margin-left:0em;margin-top:0em;">Publication<a name="phdthesis"></a></span>
+<div class="card-body">
+<div class="row">
+<div class="col-md-9">
+<p style="text-align:left">
+                                Toni Heittola.
+Computational Audio Content Analysis in Everyday Environments.
+PhD thesis, Tampere University, 6 2021.
+                                
+                                
+                                </p>
+</div>
+<div class="col-md-3">
+<div class="btn-group pull-right">
+<button class="btn btn-xs btn-danger" data-bs-target="#bibtexphdthesisb02739f018b5464581965eabb7f80b8e" data-bs-toggle="modal" type="button"><i class="fa fa-solid fa-file-text fa-file-text-o"></i> Bib</button>
+<a class="btn btn-xs btn-warning btn-btex text-white" data-placement="bottom" href="https://trepo.tuni.fi/bitstream/handle/10024/132786/978-952-03-2006-5.pdf?sequence=2&amp;isAllowed=y" rel="tooltip" title="Download pdf"><i class="fa fa-solid fa-file-pdf fa-file-pdf-o fa-1x"></i> PDF</a>
+<button aria-controls="collapsephdthesisb02739f018b5464581965eabb7f80b8e" aria-expanded="true" class="btn btn-default btn-xs" data-bs-parent="#btex-items-accordion" data-bs-target="#collapsephdthesisb02739f018b5464581965eabb7f80b8e" data-bs-toggle="collapse" type="button">
+<i class="fa fa-solid fa-caret-down"></i></button>
+</div>
+</div>
+</div>
+<div aria-labelledby="headingphdthesisb02739f018b5464581965eabb7f80b8e" class="panel-collapse collapse mb-3" id="collapsephdthesisb02739f018b5464581965eabb7f80b8e">
+<h4>Computational Audio Content Analysis in Everyday Environments</h4>
+<h5>Abstract</h5>
+<p class="text-justify">Our everyday environments are full of sounds that have a vital role in providing us information and allowing us to understand what is happening around us. Humans have formed strong associations between physical events in their environment and the sounds that these events produce. Such associations are described using textual labels, sound events, and they allow us to understand, recognize, and interpret the concepts behind sounds. Examples of such sound events are dog barking, person shouting or car passing by. This thesis deals with computational methods for audio content analysis of everyday environments. Along with the increased usage of digital audio in our everyday life, automatic audio content analysis has become a more and more pursued ability. Content analysis enables an in-depth understanding of what was happening in the environment when the audio was captured, and this further facilitates applications that can accurately react to the events in the environment. The methods proposed in this thesis focus on sound event detection, the task of recognizing and temporally locating sound events within an audio signal, and include aspects related to development of methods dealing with a large set of sound classes, detection of multiple sounds, and evaluation of such methods. The work presented in this thesis focuses on developing methods that allow the detection of multiple overlapping sound events and robust acoustic model training based on mixture audio containing overlapping sounds. Starting with an HMM-based approach for prominent sound event detection, the work advanced by extending it into polyphonic detection using multiple Viterbi iterations or sound source separation. These polyphonic sound event detection systems were based on a collection of generative classifiers to produce multiple labels for the same time instance, which doubled or in some cases tripled the detection performance. As an alternative approach, polyphonic detection was implemented using class-wise activity detectors in which the activity of each event class was detected independently and class-wise event sequences were merged to produce the polyphonic system output. The polyphonic detection increased applicability of the methods in everyday environments substantially. For evaluation of methods, the work proposed a new metric for polyphonic sound event detection which takes into account the polyphony. The new metric, a segment-based F-score, provides rigorous definitions for the correct and erroneous detections, besides being more suitable for comparing polyphonic annotation and polyphonic system output than the previously used metrics and has since become one of the standard metrics in the research field. Part of this thesis includes studying sound events as a constituent part of the acoustic scene based on contextual information provided by their co-occurrence. This information was used for both sound event detection and acoustic scene classification. In sound event detection, context information was used to identify the acoustic scene in order to narrow down the selection of possible sound event classes based on this information, which allowed use of context-dependent acoustic models and event priors. This approach provided moderate yet consistent performance increase across all tested acoustic scene types, and enabled the detection system to be easily expanded to new scenes. In acoustic scene classification, the scenes were identified based on the distinctive and scene-specific sound events detected, with performance comparable to traditional approaches, while the fusion of these two approaches showed a significant further increase in the performance. The thesis also includes significant contribution to the development of tools for open research in the field, such as standardized evaluation protocols, and release of open datasets, benchmark systems, and open-source tools.</p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtexphdthesisb02739f018b5464581965eabb7f80b8e" data-toggle="modal" type="button"><i class="fa fa-solid fa-file-text fa-file-text-o"></i> Bibtex</button>
+<a class="btn btn-sm btn-warning text-white btn-btex2" data-placement="bottom" href="https://trepo.tuni.fi/bitstream/handle/10024/132786/978-952-03-2006-5.pdf?sequence=2&amp;isAllowed=y" rel="tooltip" title="Download pdf"><i class="fa fa-solid fa-file-pdf fa-file-pdf-o fa-1x"></i> PDF</a>
+<a class="btn btn-sm btn-info btn-btex2 text-white" href="https://trepo.tuni.fi/handle/10024/136508" title=""><i class="fa fa-solid fa-book"></i> Web publication</a>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtexphdthesisb02739f018b5464581965eabb7f80b8elabel" class="modal fade" id="bibtexphdthesisb02739f018b5464581965eabb7f80b8e" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<h4 class="modal-title" id="bibtexphdthesisb02739f018b5464581965eabb7f80b8elabel">Computational Audio Content Analysis in Everyday Environments</h4>
+<button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+</div>
+<div class="modal-body"><pre>@phdthesis{phdthesis,
+    author = "Heittola, Toni",
+    title = "Computational Audio Content Analysis in Everyday Environments",
+    school = "Tampere University",
+    year = "2021",
+    month = "6",
+    abstract = "Our everyday environments are full of sounds that have a vital role in providing us information and allowing us to understand what is happening around us. Humans have formed strong associations between physical events in their environment and the sounds that these events produce. Such associations are described using textual labels, sound events, and they allow us to understand, recognize, and interpret the concepts behind sounds. Examples of such sound events are dog barking, person shouting or car passing by. This thesis deals with computational methods for audio content analysis of everyday environments. Along with the increased usage of digital audio in our everyday life, automatic audio content analysis has become a more and more pursued ability. Content analysis enables an in-depth understanding of what was happening in the environment when the audio was captured, and this further facilitates applications that can accurately react to the events in the environment. The methods proposed in this thesis focus on sound event detection, the task of recognizing and temporally locating sound events within an audio signal, and include aspects related to development of methods dealing with a large set of sound classes, detection of multiple sounds, and evaluation of such methods. The work presented in this thesis focuses on developing methods that allow the detection of multiple overlapping sound events and robust acoustic model training based on mixture audio containing overlapping sounds. Starting with an HMM-based approach for prominent sound event detection, the work advanced by extending it into polyphonic detection using multiple Viterbi iterations or sound source separation. These polyphonic sound event detection systems were based on a collection of generative classifiers to produce multiple labels for the same time instance, which doubled or in some cases tripled the detection performance. As an alternative approach, polyphonic detection was implemented using class-wise activity detectors in which the activity of each event class was detected independently and class-wise event sequences were merged to produce the polyphonic system output. The polyphonic detection increased applicability of the methods in everyday environments substantially. For evaluation of methods, the work proposed a new metric for polyphonic sound event detection which takes into account the polyphony. The new metric, a segment-based F-score, provides rigorous definitions for the correct and erroneous detections, besides being more suitable for comparing polyphonic annotation and polyphonic system output than the previously used metrics and has since become one of the standard metrics in the research field. Part of this thesis includes studying sound events as a constituent part of the acoustic scene based on contextual information provided by their co-occurrence. This information was used for both sound event detection and acoustic scene classification. In sound event detection, context information was used to identify the acoustic scene in order to narrow down the selection of possible sound event classes based on this information, which allowed use of context-dependent acoustic models and event priors. This approach provided moderate yet consistent performance increase across all tested acoustic scene types, and enabled the detection system to be easily expanded to new scenes. In acoustic scene classification, the scenes were identified based on the distinctive and scene-specific sound events detected, with performance comparable to traditional approaches, while the fusion of these two approaches showed a significant further increase in the performance. The thesis also includes significant contribution to the development of tools for open research in the field, such as standardized evaluation protocols, and release of open datasets, benchmark systems, and open-source tools."
+}
+</pre></div>
+<div class="modal-footer"><button class="btn btn-default" data-bs-dismiss="modal" type="button">Close</button></div>
+</div>
+</div>
+</div>
+</div></div>
+</div><div class="section" id="sounds-in-everyday-environments-1">
+<h2 id="sounds-in-everyday-environments">Sounds in Everyday Environments</h2>
+<p>Our everyday environments are naturally full of sounds. However, not all of them are considered equally relevant to the listener. During evolution, our auditory perception has evolved to capture meaningful sounds as this was necessary for finding food, avoiding hazardous situations, and communicating with other humans <a class="citation-reference" href="#warren1976" id="citation-reference-1">[Warren1976]</a>. The sounds in our everyday environments can be grouped roughly into three perceptual groups: speech, music, and <em>everyday sounds</em> [<a class="reference internal" href="#ballas1993">Ballas1993</a>, <a class="reference internal" href="#gygi2007a">Gygi2007a</a>]. Speech can be almost always considered to refer to sound which is produced by the human speech production system and having linguistic content. It is arguably the most important sound type in our everyday environments for its use in communication and social interaction. Music, on the other hand, is structured sound organized to transmit aesthetic intent. Everyday sounds, the third perceptual group, is the most diverse in terms of sound types and contains all the other sounds from our everyday environments.</p>
+<p>The study of auditory perception has historically mainly focused on speech and music sounds under tightly controlled experimental environments, but in the last few decades, everyday sounds have been increasingly studied. The studies take an ecological approach to auditory perception, studying the auditory perception in natural environments and focusing on events creating the sound rather than specific psychoacoustics of the sound [<a class="reference internal" href="#gaver1993a">Gaver1993a</a>, <a class="reference internal" href="#gaver1993b">Gaver1993b</a>]. Speech and music sounds have a strong temporal, spectral, and semantic structure on which the auditory perception can be based on. In contrast, everyday sounds do not have a predefined or recurring structure like speech and music, and thus audio containing everyday sounds is often referred to as <em>unstructured audio</em>. For everyday sounds, the meaning of the sound is commonly inferred directly based on the auditory properties of the sound (nomic mapping), whereas the perception of speech and music sounds relies more on arbitrary and learned associations (symbolic mapping) <a class="citation-reference" href="#gaver1986" id="citation-reference-2">[Gaver1986]</a>. Sequences of everyday sounds do not follow any syntactic rules like speech or music sounds, although there are some short sequences of sounds that have a meaning <a class="citation-reference" href="#ballas1991" id="citation-reference-3">[Ballas1991]</a>. The main properties of speech, music, and everyday sounds are collected in Table <a class="reference external" href="#ch2-table-structural-features-of-sounds">2.1</a>.</p>
+<div class="docutils container" id="ch2-table-structural-features-of-sounds">
+<table class="table pt-4">
+<caption><strong>Table 2.1</strong> Comparison of spectral, temporal, and semantic structure of speech, music and everyday sounds <a class="reference internal" href="#gygi2001">[Gygi2001]</a>.</caption>
+<thead class="table-light">
+<tr>
+<th class="text-center table-secondary">Speech</th>
+<th class="text-center table-secondary">Music</th>
+<th class="text-center table-success">Everyday sounds</th>
+</tr>
+</thead>
+<tbody>
+<tr><td class="text-center" colspan="3"><strong>General characteristics</strong></td></tr>
+<tr>
+<td>produced by human speech system, analysis typically based on phonemes</td>
+<td>produced by musical instruments, analysis typically based on notes</td>
+<td>produced by any sound-producing events, analysis typically based on events</td>
+</tr>
+<tr><td class="text-center" colspan="3"><strong>Spectral structure</strong></td></tr>
+<tr>
+<td>mostly harmonic, some inharmonic parts</td>
+<td>mostly harmonic, some inharmonic parts</td>
+<td>unknown proportion of harmonic to inharmonic parts</td>
+</tr>
+<tr><td class="text-center" colspan="3"><strong>Temporal structure</strong></td></tr>
+<tr>
+<td>more steady-state than dynamic</td>
+<td>mix of steady-state and transients, strong periodicity</td>
+<td>unknown ratio between steady-state and dynamic, variable periodicity</td>
+</tr>
+<tr><td class="text-center" colspan="3"><strong>Semantic structure</strong></td></tr>
+<tr>
+<td>symbolic mapping, grammatical rules</td>
+<td>symbolic mapping, music theory </td>
+<td>nomic mapping, no structure or rules, some meaningful sequences exist</td>
+</tr>
+</tbody>
+</table></div>
+<p>This page goes through the fundamentals of everyday sound perception and focuses particularly on the aspects applicable in the computational audio content analysis research. This knowledge can be used in various stages of development to make informed design choices, whereas in the final system evaluation it provides insights on which sounds are meaningful in the context and which confusions are more acceptable than others. Furthermore, knowledge about the human categorization of everyday sounds and how sounds are organized in taxonomies can be used when designing and collecting audio datasets and creating reference annotations for audio content analysis research. For a comprehensive introduction to everyday sound perception see [<a class="reference internal" href="#lemaitre2018">Lemaitre2018</a>, <a class="reference internal" href="#guastavino2018">Guastavino2018</a>].</p>
+</div>
+<div class="section" id="perception-of-auditory-scenes">
+<h2 id="perception-of-auditory-scenes">Perception of Auditory Scenes</h2>
+<p>A sound is produced when an object vibrates and causes the air pressure to oscillate. The vibration is usually triggered by some physical action applied to the object. In the case of multiple simultaneously active sound sources, the air pressure variations caused by these sources are summed up and form an additive mixture signal. The term <em>auditory scene</em> is used when referring to complex auditory environments where sounds are overlapping in time and frequency.</p>
+<div class="section" id="auditory-system">
+<h3 id="auditory-system">Auditory System</h3>
+<p>The variations of the air pressure reaching the ear are converted into nerve impulses inside the ear and these impulses are analyzed in the auditory cortex of the brain. To create the nerve impulses, the sound is first converted into mechanical energy by the eardrum and then in the cochlea this mechanical energy is transformed into nerve impulses. The cochlea breaks sound into logarithmic frequency bands and each frequency band produces its own neural response, essentially producing a spectral decomposition of the sound <a class="citation-reference" href="#pickles2012" id="citation-reference-4">[Pickles2012]</a>.</p>
+<div class="section" id="psychoacoustics">
+<h4>Psychoacoustics</h4>
+<p>Psychoacoustics, a research field combining acoustics and psychology, has established connections between the acoustic characteristics of the input signal and subjective properties of the sound perceived in the auditory system. The most common properties are <em>pitch</em>, <em>loudness</em>, and <em>timbre</em> of the sound. Pitch is related to the fundamental frequency of the sound, whereas loudness is related to the perceived intensity of the sound. Timbre is a multidimensional property of the sound related to the spectro-temporal content of the sound allowing sounds to be distinguished from each other. The main dimensions identified for timbre are related to the balance of energy in the spectrum (sharpness and brightness), the perception of amplitude modulation in the signal (fluctuation strength and roughness), and characteristics of sound start (onset). Timbre is an important sound property when identifying the sound sources.</p>
+</div>
+<div class="section" id="acoustic-features">
+<h4>Acoustic Features</h4>
+<p>The auditory processing stages in the human ear and the psychoacoustical studies on timbre perception have inspired the design of state-of-the-art acoustic features. These features are discussed in <a class="reference external" href="content_analysis#acoustic-feature-extraction">Computational Audio Content Analysis page</a> and used in [<a class="reference internal" href="#heittola2011">Heittola2011</a>, <a class="reference internal" href="#heittola2013a">Heittola2013a</a>, <a class="reference internal" href="#heittola2011">Heittola2011</a>, <a class="reference internal" href="#heittola2013b">Heittola2013b</a>, <a class="reference internal" href="#heittola2010">Heittola2010</a>, <a class="reference internal" href="#mesaros2016">Mesaros2016</a>, <a class="reference internal" href="#mesaros2018">Mesaros2018</a>].</p>
+</div>
+</div>
+<div class="section" id="auditory-scene-analysis">
+<h3 id="auditory-scene-analysis">Auditory Scene Analysis</h3>
+<p>Auditory perception organizes acoustic stimuli from the auditory scene into <em>auditory objects</em> and identifies the corresponding <em>sound events</em> for them. The auditory object is a fundamental and stable unit of perception, acquired through grouping and segregation of spectro-temporal regularities in the auditory scene [<a class="reference internal" href="#bregman1990">Bregman1990</a>, <a class="reference internal" href="#bizley2013">Bizley2013</a>]. An overview of this process is illustrated in Figure <a class="reference external" href="#fig-perception-of-auditory-scenes">2.1</a> with two overlapping sound sources.</p>
+<div class="section" id="organizing-acoustic-stimuli">
+<h4>Organizing Acoustic Stimuli</h4>
+<p>A widely accepted theory for auditory perceptual organization, <em>auditory scene analysis</em> (ASA) <a class="citation-reference" href="#bregman1990" id="citation-reference-5">[Bregman1990]</a>, suggests that auditory perception organizes acoustic stimuli based on rules originating from Gestalt psychology. Auditory objects are perceived as sensory entities, which are formed following primitive grouping principles based on similarity, continuity, proximity, common fate, closure, and disjoint allocation. The similarity principle groups together components sharing perceptual properties (e.g pitch, loudness, or timbre). Continuity and common fate are related to the temporal coherence across or within the perceptual properties. The continuity principle assumes sound to have only smooth variations in its perceptual properties across time; abrupt changes in these properties are considered as cues for grouping. The proximity principle groups together components close by either in frequency or time. The common fate principle looks into correlated changes in the perceptual properties, for example, grouping components having common onset or frequency modulation. Based on prior knowledge of the sound, the closure principle assumes sound to continue, even if there is another sound masking the original sound temporally, until there is perceptual evidence that the sound has stopped. Lastly, disjoint allocation refers to the principle of associating a component only into a single auditory object at a time. This primitive grouping works in a data-driven bottom-up manner. In addition, a schema-based grouping that works in a top-down manner is also proposed in ASA. The schema-based grouping utilizes the learned patterns and is commonly used with speech and music sounds. Both grouping types associate a group of sequential and overlapping components of sounds into an auditory object, and when these auditory objects are linked in time they form an auditory stream. This allows the listener to follow a particular sound source in the complex auditory scene, a feature traditionally called in the scientific literature as <em>cocktail party effect</em>.</p>
+<p>
+<div class="figure text-center">
+<img alt="An example showing auditory perception in auditory scene with two overlapping sounds." class="img-fluid text-center" id="fig-perception-of-auditory-scenes" src="/images/thesis_fig21.png" title="An example showing auditory perception in auditory scene with two overlapping sounds."/>
+<p class="caption">
+<strong>Figure 2.1</strong> 
+                An example showing auditory perception in auditory scene with two overlapping sounds.
+            </p>
+<div class="d-flex justify-content-end">
+<div class="license text-start w-100 small text-muted">
+<a class="text" href="https://creativecommons.org">Auditory perception</a> © 2021 by <a class="text" href="https://creativecommons.org">Toni Heittola</a> is licensed under <a class="text" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a><img alt="" src="/images/cc/cc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/><img alt="" src="/images/cc/by.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/><img alt="" src="/images/cc/nc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/><img alt="" src="/images/cc/nd.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/>
+</div>
+</div>
+</div>
+</p>
+</div>
+<div class="section" id="computational-methods">
+<h4>Computational Methods</h4>
+<p>Computational methods inspired by the auditory scene analysis and human auditory perception are studied under the research field called Computational Auditory Scene Analysis (CASA) [<a class="reference internal" href="#cooke2001">Cooke2001</a>, <a class="reference internal" href="#wang2006">Wang2006</a>, <a class="reference internal" href="#szabo2016">Szabo2016</a>]. These methods aim to derive properties of individual sound sources from a mixture signal, and approaches used are perceptually motivated. Most studies related to CASA deal with speech and music sounds, and they usually make strong assumptions about the characteristics of the input signal. In addition, the target sound source is often assumed to be in the foreground of the auditory scene, and the task is to separate it from the background. Computational methods targeting everyday sounds cannot make such assumptions about the input signal, as the sounds are diverse in characteristics and they can be either in the foreground or background in the auditory scene. Similarly to the auditory perceptual organization, sound source separation aims to decompose a mixture signal into individual sound sources, which can be then recognized with sound event detection methods. Sound source separation will be discussed in <a class="reference external" href="content_analysis#pre-processing">page about Computational Audio Content Analysis</a>; the technique was applied in [<a class="reference internal" href="#heittola2011">Heittola2011</a>, <a class="reference internal" href="#heittola2013a">Heittola2013a</a>].</p>
+</div>
+</div>
+</div>
+<div class="section" id="perception-of-everyday-sounds">
+<h2 id="perception-of-everyday-sounds">Perception of Everyday Sounds</h2>
+<p>Everyday sound perception, <em>everyday listening</em>, does not focus directly on the properties of sound itself. Instead, the focus is on the event which is producing the sound, and on the sound source, in order to understand what is happening in the surrounding environment. At the same time, everyday sounds are not listened to actively all the time; they are passively listened to until a sound of interest occurs, after which the auditory perception switches into active listening mode to identify the sound event. Everyday listening then segregates the perceived auditory scene into distinct sound sources and identifies corresponding sound events to these sound sources <a class="citation-reference" href="#gaver1993b" id="citation-reference-6">[Gaver1993b]</a>. For example, when a car is driving on the road and passes the listener, first it catches the listener’s attention and perception enters into active listening mode; after this, perception identifies the sound source (car) and the physical action causing the sound (driving), and associates the sound with the sound event “car passing by”.</p>
+<p>For everyday listening, identification of the sound event is essential to gain an understanding of the environment, while for the perception of speech or music the sound source is usually known already or identification has lower importance <a class="citation-reference" href="#gaver1993b" id="citation-reference-7">[Gaver1993b]</a>.
+Sound <em>identification</em> can be seen as the cognitive act of sound <em>categorization</em>. Through categorization, humans are making sense of the environment by organizing it into meaningful categories, essentially grouping similar entities. This way, humans can handle the variability and complexity of everyday sounds and reduce the perceived complexity of the environment <a class="citation-reference" href="#guastavino2018" id="citation-reference-8">[Guastavino2018]</a>. Categorization allows humans to hypothesize the event which produced the sound even if they have not heard the sound before.</p>
+<div class="section" id="properties-of-everyday-sounds">
+<h3 id="properties-of-everyday-sounds">Properties of Everyday Sounds</h3>
+<p>Humans can perceive properties of the sound-producing object as well as properties of the sound-producing action. In psychomechanics, a variety of experimental studies have focused on the perception of isolated physical properties of sound sources such as material <a class="citation-reference" href="#mcadams2000" id="citation-reference-9">[McAdams2000]</a>, shape <a class="citation-reference" href="#kunkler2000" id="citation-reference-10">[Kunkler2000]</a>, and size <a class="citation-reference" href="#grassi2013" id="citation-reference-11">[Grassi2013]</a>, and parameters of sound-producing actions <a class="citation-reference" href="#lemaitre2012" id="citation-reference-12">[Lemaitre2012]</a>.</p>
+<div class="section" id="perceptual-cues">
+<h4>Perceptual Cues</h4>
+<p>A deeper understanding of properties necessary for sound source identification can be acquired by degrading signals deliberately in various ways and studying test subjects’ identification abilities with these signals. Experiments in <a class="citation-reference" href="#gygi2004" id="citation-reference-13">[Gygi2004]</a> showed a reasonable ability to identify everyday sounds even when signals were filtered with low-pass, high-pass, or band-pass filters with varying filter cutoff or center frequencies, or when fine-grained spectral information was removed from the signals. On average, everyday sounds were found to contain more information in higher frequencies than speech. The most important frequency region for the identification was found to be 1.2-2.4 kHz, which is comparable to similar studies on speech signals. However, at the sound class level, there were large variations in the identification performance. When fine-grained spectral information was removed, the identification was mainly based on temporal information, and analysis showed that test subjects used envelope shape, periodicity, and consistency of temporal changes across frequency as cues for the identification. Again there was a large variation on the identification performance per sound class, half of the sound classes were identified correctly but some classes were not identified at all. It is worth noting that under similar conditions humans achieve near-perfect speech recognition performance <a class="citation-reference" href="#shannon1995" id="citation-reference-14">[Shannon1995]</a>. These experiments highlight the diversity of everyday sounds and that identification of a wide range of different everyday sounds requires essentially full frequency information to work robustly.</p>
+</div>
+<div class="section" id="context">
+<h4>Context</h4>
+<p>Events in everyday environments do not occur in isolation, instead, they are usually happening in relation to other events and certain environments <a class="citation-reference" href="#oliva2007" id="citation-reference-15">[Oliva2007]</a>. This contextual information enables humans to accurately identify acoustically similar sounding sounds. For example, in some conditions car engine noise and purring sound of a cat can be ambiguous, and contextual information helps disambiguate between them [<a class="reference internal" href="#ballas1991">Ballas1991</a>, <a class="reference internal" href="#niessen2008">Niessen2008</a>].</p>
+<p>The observations about the significance of full frequency information should be taken into account when designing an audio content analysis system for a diverse set of sound classes, and favor full-band audio. Contextual information can be used in automatic sound event detection systems to narrow down the selection of possible sound events and enable more robust detection similarly to human perception. These aspects will be discussed in Section~ref{ch4:sec:contextual-information}; contextual information was used in <a class="citation-reference" href="#heittola2013a" id="citation-reference-16">[Heittola2013a]</a>.</p>
+</div>
+</div>
+<div class="section" id="categorization-of-everyday-sounds">
+<h3 id="categorization-of-everyday-sounds">Categorization of Everyday Sounds</h3>
+<div class="section" id="isolated-environmental-sounds">
+<h4>Isolated Environmental Sounds</h4>
+<p>Humans categorize everyday sound events mostly based on the sound source (e.g. door slam) or action which generated the sound (e.g. squeaking), and only if the sound is unknown they fall back to describing the sound based on its acoustic characteristics [<a class="reference internal" href="#vanderveer1979">Vanderveer1979</a>, <a class="reference internal" href="#ballas1993">Ballas1993</a>]. In addition, the location (e.g. shop) or context (e.g. cooking) in which the sound was heard and the person’s emotional responses about the sound (e.g. pleasantness) have been found to affect the categorization <a class="citation-reference" href="#gygi2007b" id="citation-reference-17">[Gygi2007b]</a>. Similarity has an important role in categorization, and various types of similarity have been found to be used in sound categorization: the similarity in acoustic properties (e.g timbre, duration), the similarity in the sound-producing events, and the similarity in the meaning attributed to the sound events <a class="citation-reference" href="#lemaitre2010" id="citation-reference-18">[Lemaitre2010]</a>.</p>
+</div>
+<div class="section" id="categorization">
+<h4>Categorization</h4>
+<p>Various categorization principles operate together, and they flexibly form varying types of categories related to the sound source, the action causing the sound, or context where the sound is heard. Early theories about the human categorization process proposed that categorization is based on the similarity between internal category representations and a new entity to be categorized. Depending on the situation, the category is represented either with a prototypical example that best represents the whole category <a class="citation-reference" href="#rosch1978" id="citation-reference-19">[Rosch1978]</a>, or with a set of examples for the category previously stored in the memory <a class="citation-reference" href="#smith1981" id="citation-reference-20">[Smith1981]</a>. Categorization is done by inferring the category to a new entity from the most similar example. This results in a flexible categorization process with smooth boundaries between categories. These theories work in a bottom-up manner by processing low-level acoustic properties such as similarity, towards higher cognitive levels. Later theories extended this with a mixture of bottom-up and top-down processing where the data-driven bottom-up processing interacts with the hypothesis-driven top-down process that relies on expectations, prior knowledge, and contextual factors <a class="citation-reference" href="#humphreys1997" id="citation-reference-21">[Humphreys1997]</a>. This type of processing is well suited for everyday sound perception: a person’s prior knowledge about the categories and situational factors are used while doing the identification; however if there is no established prior knowledge about the categories, the identification is done in a data-driven manner by processing acoustic properties.</p>
+</div>
+<div class="section" id="computational-sound-classification">
+<h4>Computational Sound Classification</h4>
+<p>The knowledge about the categorization principles can be utilized when designing computational sound classification systems. The acoustic model in these systems acts as a set of internal category representations in human categorization, and classification is done by matching the unknown sound to this representation. Most computational sound classification systems can be seen to work in a bottom-up manner: acoustic features extracted from an unknown sound are used to infer the class label. However, some systems are also using top-down elements, for example, the contextual information to guide their classification process. Machine learning will be discussed
+<a class="reference external" href="content_analysis#supervised-learning-and-recognition">in Computational Audio Content Analysis page</a>. The contextual information usage will be discussed in Section~ref{ch4:sec:contextual-information} and was used in <a class="citation-reference" href="#heittola2013a" id="citation-reference-22">[Heittola2013a]</a>.</p>
+</div>
+</div>
+<div class="section" id="organization-of-everyday-sounds">
+<h3 id="organization-of-everyday-sounds">Organization of Everyday Sounds</h3>
+<p>Everyday sounds can be organized into <em>taxonomies</em> to assist the categorization process. In these taxonomies, the sounds are organized in a hierarchical structure according to sound sources <a class="citation-reference" href="#guastavino2007" id="citation-reference-23">[Guastavino2007]</a>, actions producing the sound <a class="citation-reference" href="#houix2012" id="citation-reference-24">[Houix2012]</a>, contexts where the sound can be heard <a class="citation-reference" href="#brown2011" id="citation-reference-25">[Brown2011]</a>, or combinations of these [<a class="reference internal" href="#gaver1993b">Gaver1993b</a>, <a class="reference internal" href="#salamon2014">Salamon2014</a>]. The taxonomy proposed in <a class="citation-reference" href="#gaver1993b" id="citation-reference-26">[Gaver1993b]</a> is based on the physical description of the sound production: at the highest level sounds are organized based on materials (vibrating solids, gasses, and liquids), under which sounds are organized based on actions producing the sound (e.g. impacts, explosion, or splash), and at the lower level sounds are organized based on interactions producing the sound (e.g. bouncing and waves). The taxonomy proposed in <a class="citation-reference" href="#salamon2014" id="citation-reference-27">[Salamon2014]</a> for urban sounds starts with four categories (human, nature, mechanical, and music), and leaf nodes under them are related to either sound sources (e.g. laughter and wind) or sound-producing events (e.g. construction and engine passing).</p>
+<div class="section" id="ontologies">
+<h4>Ontologies</h4>
+<p>Everyday sounds can be organized into <em>ontologies</em> in which unlike taxonomies, entities can have multiple relationships within the structure. The ontology proposed in <a class="citation-reference" href="#gemmeke2017" id="citation-reference-28">[Gemmeke2017]</a>, Audio Set Ontology, contains 632 sound events in a hierarchy with six categories at the top: human sounds, animal sounds, music, sounds of things, source-ambiguous sounds, and general environment sounds. Authors have published also a large dataset (4971 hours of audio) organized using this ontology.</p>
+</div>
+<div class="section" id="labeling">
+<h4>Labeling</h4>
+<p>The spontaneous creation of a textual label for a sound event is two-fold: if the listener recognizes the sound event, it is described by the event producing the sound and properties of this event; if the listener cannot identify the sound event, the description is based on acoustic properties of the signal <a class="citation-reference" href="#dubois2000" id="citation-reference-29">[Dubois2000]</a>. In perceptual experiments, the process of selecting a label is often simplified by asking the listener to indicate the object (a noun) and action (a verb) causing the sound [<a class="reference internal" href="#ballas1993">Ballas1993</a>, <a class="reference internal" href="#lemaitre2010">Lemaitre2010</a>].</p>
+</div>
+<div class="section" id="computational-sound-classification-1">
+<h4>Computational Sound Classification</h4>
+<p>Automatic sound classification systems can use the relationships in the hierarchical structures such as taxonomy or ontology in two ways: confusions could be allowed under the parent node during the learning process, and the parent-child relationships can be used in the classification stage by outputting a common parent node when encountering ambiguous sounds. Taxonomies or ontologies can be used to increase the consistency of the set of sound classes used in the audio content analysis system by enforcing the classes to be from the same level of the hierarchy. When annotating sound events for datasets for audio content analysis research, labels are often chosen based on the object-plus-action scheme, as will be discussed <a class="reference external" href="thesis_content_analysis#annotations">in detail here</a> and was used [<a class="reference internal" href="#mesaros2016">Mesaros2016</a>, <a class="reference internal" href="#mesaros2018">Mesaros2018</a>].</p>
+</div>
+</div>
+</div>
+<div class="section" id="references">
+<h2 id="references">References</h2>
+<table class="docutils citation" frame="void" id="ballas1991" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-3">[Ballas1991]</a></td><td>Ballas, James A, and Timothy Mullins. 1991. “Effects of Context on the Identification of Everyday Sounds.” <em>Human Performance</em> 4 (3): 199–219.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="ballas1993" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Ballas1993]</td><td>Ballas, James A. 1993. “Common Factors in the Identification of an Assortment of Brief Everyday Sounds.” <em>Journal of Experimental Psychology: Human Perception and Performance</em> 19 (2): 250.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="bizley2013" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Bizley2013]</td><td>Bizley, Jennifer K, and Yale E Cohen. 2013. “The What, Where and How of Auditory-Object Perception.” <em>Nature Reviews. Neuroscience</em> 14 (10): 693—707.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="bregman1990" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-5">[Bregman1990]</a></td><td>Bregman, Albert S. 1990. <em>Auditory Scene Analysis</em>. Cambridge, MA, USA: The MIT Press.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="brown2011" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-25">[Brown2011]</a></td><td>Brown, AL, Jian Kang, and Truls Gjestland. 2011. “Towards Standardization in Soundscape Preference Assessment.” <em>Applied Acoustics</em> 72 (6): 387–92.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="cooke2001" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Cooke2001]</td><td>Cooke, M. P., and D. P. W. Ellis. 2001. “The Auditory Organization of Speech and Other Sources in Listeners and Computational Models.” <em>Speech Communication</em> 35 (3-4): 141–77.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="dubois2000" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-29">[Dubois2000]</a></td><td>Dubois, Danièle. 2000. “Categories as Acts of Meaning: The Case of Categories in Olfaction and Audition.” <em>Cognitive Science Quaterly</em> 1 (1): 35–68.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="gaver1986" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-2">[Gaver1986]</a></td><td>Gaver, William W. 1986. “Auditory Icons: Using Sound in Computer Interfaces.” <em>Human-Computer Interaction</em> 2 (2): 167–77.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="gaver1993a" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Gaver1993a]</td><td>Gaver, William W. 1993. “How Do We Hear in the World? Explorations in Ecological Acoustics.” <em>Ecological Psychology</em> 5 (4): 285–313.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="gaver1993b" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Gaver1993b]</td><td><em>(<a class="fn-backref" href="#citation-reference-6">1</a>, <a class="fn-backref" href="#citation-reference-7">2</a>, <a class="fn-backref" href="#citation-reference-26">3</a>)</em> Gaver, William W. 1993. “What in the World Do We Hear? An Ecological Approach to Auditory Event Perception.” <em>Ecological Psychology</em> 5 (1): 1–29.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="gemmeke2017" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-28">[Gemmeke2017]</a></td><td>Gemmeke, Jort F, Daniel PW Ellis, Dylan Freedman, Aren Jansen, Wade Lawrence, R Channing Moore, Manoj Plakal, and Marvin Ritter. 2017. “Audio Set: An Ontology and Human-Labeled Dataset for Audio Events.” In <em>2017 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)</em>, 776–80.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="grassi2013" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-11">[Grassi2013]</a></td><td>Grassi, Massimo, Massimiliano Pastore, and Guillaume Lemaitre. 2013. “Looking at the World with Your Ears: How Do We Get the Size of an Object from Its Sound?” <em>Acta Psychologica</em> 143 (1): 96–104.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="guastavino2007" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-23">[Guastavino2007]</a></td><td>Guastavino, Catherine. 2007. “Categorization of Environmental Sounds.” <em>Canadian Journal of Experimental Psychology</em> 61 (1): 54–63.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="guastavino2018" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-8">[Guastavino2018]</a></td><td>Guastavino, Catherine. 2018. “Everyday Sound Categorization.” In <em>Computational Analysis of Sound Scenes and Events</em>, edited by Tuomas Virtanen, Mark D. Plumbley, and Dan Ellis, 183–213. Cham, Switzerland: Springer Verlag.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="gygi2001" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Gygi2001]</td><td>Gygi, Brian. 2001. “Factors in the Identification of Environmental Sounds.” PhD thesis, Indiana University.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="gygi2004" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-13">[Gygi2004]</a></td><td>Gygi, Brian, Gary R Kidd, and Charles S Watson. 2004. “Spectral-Temporal Factors in the Identification of Environmental Sounds.” <em>The Journal of the Acoustical Society of America</em> 115 (3): 1252–65.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="gygi2007a" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Gygi2007a]</td><td>Gygi, Brian, and Valeriy Shafiro. 2007. “Environmental Sound Research as It Stands Today.” <em>Proceedings of Meetings on Acoustics</em> 1 (1).</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="gygi2007b" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-17">[Gygi2007b]</a></td><td>Gygi, Brian, Gary R Kidd, and Charles S Watson. 2007. “Similarity and Categorization of Environmental Sounds.” <em>Perception &amp; Psychophysics</em> 69 (6): 839–55.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="heittola2010" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Heittola2010]</td><td>Heittola Toni, Annamaria Mesaros, Antti Eronen, and Tuomas Virtanen, “Audio Context Recognition Using Audio Event Histograms,” in Proceedings of 2010 European Signal Processing Conference, (Aalborg, Denmark), pp. 1272–1276, 2010.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="heittola2011" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Heittola2011]</td><td>Heittola Toni, Annamaria Mesaros, Tuomas Virtanen, and Antti Eronen, “Sound Event Detection in Multisource Environments Using Source Separation,” in Workshop on Machine Listening in Multisource Environments, (Florence, Italy), pp. 36–40, 2011.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="heittola2013a" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Heittola2013a]</td><td><em>(<a class="fn-backref" href="#citation-reference-16">1</a>, <a class="fn-backref" href="#citation-reference-22">2</a>)</em> Heittola Toni, Annamaria Mesaros,Antti Eronen, and Tuomas Virtanen, “Context-Dependent Sound Event Detection,” in EURASIP Journal on Audio, Speech and Music Processing, Vol. 2013, No. 1, 13 pages, 2013.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="heittola2013b" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Heittola2013b]</td><td>Heittola Toni, Annamaria Mesaros, Tuomas Virtanen, and Moncef Gabbouj, “Supervised Model Training for Overlapping Sound Events Based on Unsupervised Source Separation,” in Proceedings of the 35th International Conference on Acoustics, Speech, and Signal Processing, (Vancouver, Canada), pp. 8677–8681, 2013.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="houix2012" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-24">[Houix2012]</a></td><td>Houix, Olivier, Guillaume Lemaitre, Nicolas Misdariis, Patrick Susini, and Isabel Urdapilleta. 2012. “A Lexical Analysis of Environmental Sound Categories.” <em>Journal of Experimental Psychology: Applied</em> 18 (1): 52.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="humphreys1997" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-21">[Humphreys1997]</a></td><td>Humphreys, Glyn W., M. Jane Riddoch, and Cathy J. Price. 1997. “Top-down Processes in Object Identification: Evidence from Experimental Psychology, Neuropsychology and Functional Anatomy.” <em>Philosophical Transactions: Biological Sciences</em> 352 (1358): 1275–82.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="kunkler2000" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-10">[Kunkler2000]</a></td><td>Kunkler-Peck, Andrew J, and MT Turvey. 2000. “Hearing Shape.” <em>Journal of Experimental Psychology: Human Perception and Performance</em> 26 (1): 279.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="lemaitre2010" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-18">[Lemaitre2010]</a></td><td>Lemaitre, Guillaume, Olivier Houix, Nicolas Misdariis, and Patrick Susini. 2010. “Listener Expertise and Sound Identification Influence the Categorization of Environmental Sounds.” <em>Journal of Experimental Psychology: Applied</em> 16 (1): 16.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="lemaitre2012" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-12">[Lemaitre2012]</a></td><td>Lemaitre, Guillaume, and Laurie M Heller. 2012. “Auditory Perception of Material Is Fragile While Action Is Strikingly Robust.” <em>The Journal of the Acoustical Society of America</em> 131 (2): 1337–48.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="lemaitre2018" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Lemaitre2018]</td><td>Lemaitre, Guillaume, Nicolas Grimault, and Clara Suied. 2018. “Acoustics and Psychoacoustics of Sound Scenes and Events.” In <em>Computational Analysis of Sound Scenes and Events</em>, edited by Tuomas Virtanen, Mark D. Plumbley, and Dan Ellis, 41–67. Cham, Switzerland: Springer Verlag.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="mcadams2000" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-9">[McAdams2000]</a></td><td>McAdams, Stephen. 2000. “The Psychomechanics of Real and Simulated Sound Sources.” <em>The Journal of the Acoustical Society of America</em> 107 (5): 2792–92.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="mesaros2010" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Mesaros2010]</td><td>Mesaros Annamaria, Toni Heittola, Antti Eronen, and Tuomas Virtanen, “Acoustic Event Detection in Real Life Recordings,” in Proceedings of 2010 European Signal Processing Conference, Aalborg, Denmark), pp. 1267–1271, 2010</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="mesaros2016" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Mesaros2016]</td><td>Mesaros Annamaria, Toni Heittola, and Tuomas Virtanen, “TUT Database for Acoustic Scene Classification and Sound Event Detection,” In 24th European Signal Processing Conference 2016 (EUSIPCO 2016), pp. 1128–1132, 2016.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="mesaros2018" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Mesaros2018]</td><td>Mesaros Annamaria, Toni Heittola, Emmanouil Benetos, Peter Foster, Mathieu Lagrange, Tuomas Virtanen, and Mark D. Plumbley, “Detection and Classification of Acoustic Scenes and Events: Outcome of the DCASE 2016 Challenge,” IEEE/ACM Transactions on Audio, Speech, and Language Processing, 26(2):379–393, Feb 2018.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="niessen2008" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Niessen2008]</td><td>Niessen, M. E., L. van Maanen, and T. C. Andringa. 2008. “Disambiguating Sounds Through Context.” In <em>2008 IEEE International Conference on Semantic Computing</em>, 88–95.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="oliva2007" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-15">[Oliva2007]</a></td><td>Oliva, Aude, and Antonio Torralba. 2007. “The Role of Context in Object Recognition.” <em>Trends in Cognitive Sciences</em> 11 (12): 520–27.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="pickles2012" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-4">[Pickles2012]</a></td><td>Pickles, J. O. 2012. <em>An Introduction to the Physiology of Hearing</em>. 4th ed. Bingley, UK: Emerald.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="rosch1978" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-19">[Rosch1978]</a></td><td>Rosch, Eleanor. 1978. “Principles of Categorization.” In <em>Cognition and Categorization</em>, edited by Eleanor Rosch and B. B. Lloyd, 27–48. Hillsdale, NJ: Erlbaum.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="salamon2014" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-27">[Salamon2014]</a></td><td>Salamon, Justin, Christopher Jacoby, and Juan Pablo Bello. 2014. “A Dataset and Taxonomy for Urban Sound Research.” In <em>Proceedings of the 22nd ACM International Conference on Multimedia</em>, 1041–44.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="shannon1995" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-14">[Shannon1995]</a></td><td>Shannon, Robert V, Fan-Gang Zeng, Vivek Kamath, John Wygonski, and Michael Ekelid. 1995. “Speech Recognition with Primarily Temporal Cues.” <em>Science</em> 270 (5234): 303–4.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="smith1981" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-20">[Smith1981]</a></td><td>Smith, Edward E, and Douglas L Medin. 1981. <em>Categories and Concepts</em>. Vol. 9. Cambridge, MA, USA: Harvard University Press.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="szabo2016" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Szabo2016]</td><td>Szabó, Beáta T., Susan L. Denham, and István Winkler. 2016. “Computational Models of Auditory Scene Analysis: A Review.” <em>Frontiers in Neuroscience</em> 10: 524.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="vanderveer1979" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Vanderveer1979]</td><td>Vanderveer, Nancy J. 1979. “Ecological Acoustics: Human Perception of Environmental Sounds.” PhD thesis, Cornell University.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="wang2006" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Wang2006]</td><td>Wang, D., and G. J. Brown. 2006. <em>Computational Auditory Scene Analysis: Principles, Algorithms, and Applications</em>. New York, NY, USA: Wiley-IEEE Press.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="warren1976" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-1">[Warren1976]</a></td><td>Warren, Richard M. 1976. “Auditory Perception and Speech Evolution.” <em>Annals of the New York Academy of Sciences</em> 280 (1): 708–17.</td></tr>
+</tbody>
+</table>
+<br/><br/><br/></div>
+
+                </div>
+            </section>
+        </div>
+    </div>
+</div>    
+
+<ul class="nav pull-right scroll-top">
+  <li>
+    <a title="Scroll to top" href="#" class="page-scroll-top">
+      <i class="glyphicon glyphicon-chevron-up"></i>
+    </a>
+  </li>
+</ul>
+<script type="text/javascript" src="/theme/assets/jquery/jquery.easing.min.js"></script>
+<script type="text/javascript" src="/theme/assets/bootstrap5/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="/theme/js/theme5.js"></script><script type="text/javascript" src="/theme/assets/scrollreveal/scrollreveal.min.js"></script>
+<script type="text/javascript" src="/theme/js/setup.scrollreveal.js"></script>
+<script type="text/javascript" src="/theme/assets/highlight/highlight.pack.js"></script>
+<script type="text/javascript">
+    document.querySelectorAll('pre code:not([class])').forEach(function($) {$.className = 'no-highlight';});
+    hljs.initHighlightingOnLoad();
+</script>
+<script type="text/javascript" src="/theme/js/respond.min.js"></script>
+<script type="text/javascript" src="/theme/js/tocbot.min.js"></script>
+<script type="text/javascript" src="/theme/js/btoc-bot.min.js"></script>
+</body>
+</html>

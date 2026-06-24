@@ -1,0 +1,524 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <title>Introduction - Toni Heittola</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <link href="/static/favicon.png" rel="icon">
+<link rel="canonical" href="/thesis/introduction">
+        <meta name="author" content="Toni Heittola" />
+        <meta name="description" content="This page features a slightly revised version of the Introduction chapter from my PhD thesis, titled Computational Audio Content Analysis in Everyday Environments. The chapter provides an overview of the research motivation and outlines the key challenges in analyzing audio content from real-world settings. Publication Toni Heittola. Computational Audio Content …" />
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;900&family=Roboto:wght@900&family=Bungee+Spice" rel="stylesheet">
+    <link rel="stylesheet" href="/theme/assets/bootstrap5/css/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/assets/fontawesome6/css/all.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/assets/academicons/css/academicons.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/assets/dcaseicons/css/dcaseicons.css?v=1.1" type="text/css"/>
+<link rel="stylesheet" href="/theme/assets/highlight/styles/atom-one-light.css" type="text/css"/>
+                <link rel="stylesheet" href="/theme/css/btoc-bot.min.css">
+<link rel="stylesheet" href="/theme/css/theme5.css?v=1.1" type="text/css"/><link rel="stylesheet" href="/static/assets/css/icons.css" type="text/css"/><link rel="stylesheet" href="/static/assets/css/extra.css" type="text/css"/><script type="text/javascript" src="/theme/assets/jquery/jquery-3.7.1.min.js"></script>    <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Toni Heittola ATOM Feed"/>
+
+
+</head>
+<body>
+
+
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark pt-0 pb-0 flex-column" role="navigation" data-spy="affix" data-offset-top="195" id="topmenu">
+    <div class="container p-0">
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-main" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar-main">
+            <div class="container-fluid p-0">
+                <div class="row g-0 p-0">
+                    <div class="col-md d-flex">
+                        <a href="/" class="navbar-brand align-self-start" ></a><ul class="navbar-nav flex-sm-row2 flex-lg-grow flex-lg-fill align-self-start" id="menuitem-list-main"><li class="nav-item ">
+        <a href="/"
+        class="nav-link"
+        ><strong>Toni Heittola</strong></a>
+    </li></ul><ul class="navbar-nav flex-lg-nowrap align-self-start" id="menuitem-list"><li class="nav-item " data-bs-toggle="tooltip" data-bs-placement="bottom" title="About me">
+        <a href="/about-me"
+        class="nav-link"
+        ><i class="fa fa-solid fa-user fa-1x fa-fw"></i>&nbsp;About</a>
+    </li><li class="nav-item dropdown  active">
+        <a href="#"
+ class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+        ><i class="fa fa-solid fa-magnifying-glass fa-1x fa-fw text-danger text-dcase-a1"></i>&nbsp;Research&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class=" ">
+        <a href="/research"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-circle-notch fa-circle-o-notch fa-1x fa-fw text-dcase-a1"></i>&nbsp;Overview</a>
+    </li>
+            <li class=" ">
+        <a href="/research-portfolio"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-cog fa-1x fa-fw text-dcase-a2"></i>&nbsp;Portfolio</a>
+    </li>
+            <li class=" ">
+        <a href="/guiding-research"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-users fa-fw text-dcase-a3"></i>&nbsp;Guiding Research</a>
+    </li>
+            <li class="nav-item divider dropdown-divider" role="presentation"></li>
+            <li class=" ">
+        <a href="/publications"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-copy fa-files-o fa-1x fa-fw text-dcase-a4"></i>&nbsp;Publications</a>
+    </li>
+            <li class=" ">
+        <a href="/opendata"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-database fa-fw text-dcase-a5"></i>&nbsp;Open Data</a>
+    </li>
+            <li class="nav-item divider dropdown-divider" role="presentation"></li>
+            <li class=" ">
+        <a href="/academic-illustrations"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-image fa-1x fa-fw text-dcase-a7"></i>&nbsp;Illustrations</a>
+    </li>
+            <li class="nav-item divider dropdown-divider" role="presentation"></li>
+            <li class=" ">
+        <a href="/academic-bio"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-user fa-1x fa-fw text-dcase-a6"></i>&nbsp;Biography</a>
+    </li>
+            <li class="nav-item divider dropdown-divider" role="presentation"></li>
+            <li class=" ">
+        <a href="/glossary"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-list fa-1x fa-fw text-dcase-a7"></i>&nbsp;Glossary</a>
+    </li>
+            <li class="nav-item divider dropdown-divider" role="presentation"></li>
+            <li class="nav-link disabled subheader" >
+       <a><strong><small class="fw-light">Audio Content Analysis <br>in Everyday Environments</small></strong></a>
+    </li>
+            <li class="  active">
+        <a href="/thesis/introduction"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-book-open fa-1x fa-fw text-dcase-a1"></i>&nbsp;Introduction</a>
+    </li>
+            <li class=" ">
+        <a href="/thesis/everyday_environments"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-person-walking fa-1x fa-fw text-dcase-a1"></i>&nbsp;Everyday Environments</a>
+    </li>
+            <li class=" ">
+        <a href="/thesis/content_analysis"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-brain fa-1x fa-fw text-dcase-a1"></i>&nbsp;Audio Content Analysis</a>
+    </li>
+            <li class=" ">
+        <a href="/thesis/sed"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-ear-listen fa-1x fa-fw text-dcase-a1"></i>&nbsp;Sound Event Detection</a>
+    </li>
+            <li class="nav-item divider dropdown-divider" role="presentation"></li>
+            <li class="nav-item dropdown ">
+        <a href="#"
+ class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+        ><i class="fa fa-solid fa-file-alt fa-1x fa-fw"></i>&nbsp;Publication Add-ons&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class=" ">
+        <a href="/audiotexture/index"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-file-alt fa-1x fa-fw"></i>&nbsp;Location-Specific Audio Textures</a>
+    </li>
+            <li class=" ">
+        <a href="/ismir09/index"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-file-alt fa-1x fa-fw"></i>&nbsp;Musical Instrument Recognition</a>
+    </li>
+            <li class=" ">
+        <a href="/musicalgenre/index"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-file-alt fa-1x fa-fw"></i>&nbsp;Musical Genre Classification</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li><li class="nav-item dropdown ">
+        <a href="/development"
+ class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+        ><i class="fa fa-solid fa-code fa-1x fa-fw text-warning text-thesis-a3"></i>&nbsp;Develop&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class=" ">
+        <a href="/development"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-code fa-1x fa-fw text-thesis-a3"></i>&nbsp;Introduction</a>
+    </li>
+            <li class="nav-item divider dropdown-divider" role="presentation"></li>
+            <li class=" ">
+        <a href="/ml-development"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-search fa-1x fa-fw text-thesis-a4"></i>&nbsp;Machine Learning</a>
+    </li>
+            <li class=" ">
+        <a href="/websites"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-desktop fa-1x fa-fw text-thesis-a2"></i>&nbsp;Websites</a>
+    </li>
+            <li class=" ">
+        <a href="/web-development"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-plug fa-1x fa-fw text-thesis-a1"></i>&nbsp;Web Development</a>
+    </li>
+        </ul>
+    </li><li class="nav-item ">
+        <a href="/publications"
+        class="nav-link"
+        ><i class="fa fa-solid fa-copy fa-files-o fa-1x fa-fw text-success text-dcase-a4"></i>&nbsp;Publish</a>
+    </li><li class="nav-item dropdown ">
+        <a href="#"
+ class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+        ><i class="fa fa-solid fa-wave-square fa-fw text-primary text-dcase-a5"></i>&nbsp;Data&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class=" ">
+        <a href="/opendata"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-folder-open fa-fw"></i>&nbsp;Open Data</a>
+    </li>
+            <li class=" ">
+        <a href="/datasets"
+ class="dropdown-item"
+        ><i class="fa fa-list-ul fa-fw"></i>&nbsp;Data & Tools</a>
+    </li>
+            <li class="nav-item divider dropdown-divider" role="presentation"></li>
+            <li class=" " data-bs-toggle="tooltip" data-bs-placement="bottom" title="DCASE Datalist">
+        <a href="https://dcase-repo.github.io/dcase_datalist/"
+ target="_blank"  class="dropdown-item"
+        ><i class="fa fa-database fa-1x fa-fw"></i>&nbsp;DCASE DataList</a>
+    </li>
+        </ul>
+    </li><li class="nav-item " data-bs-toggle="tooltip" data-bs-placement="bottom" title="Glossary">
+        <a href="/glossary"
+        class="nav-link"
+        ><i class="fa fa-solid fa-list fa-1x fa-fw"></i>&nbsp;</a>
+    </li><li class="nav-item " data-bs-toggle="tooltip" data-bs-placement="bottom" title="News articles">
+        <a href="/news"
+        class="nav-link"
+        ><i class="fa fa-solid fa-newspaper fa-newspaper-o fa-fw"></i>&nbsp;</a>
+    </li><li class="nav-item " data-bs-toggle="tooltip" data-bs-placement="bottom" title="Github">
+        <a href="https://github.com/toni-heittola?tab=repositories"
+ target="_blank"         class="nav-link"
+        ><i class="fa fa-brands fa-github fa-1x"></i>&nbsp;</a>
+    </li>                        </ul>                    </div></div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+<header class="page-top" style="background-image: url(../theme/images/everyday-patterns/bricks-toledo-02.jpg);box-shadow: 0px 1000px rgba(0, 0, 0, 0.65) inset;overflow:hidden;position:relative">
+    <div class="container" style="box-shadow: 0px 1000px rgba(255, 255, 255, 0.1) inset;;height:100%;padding-bottom:20px;">
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                <div class="page-heading text-end"><h1 class="toc-skip bold" data-toc-skip>Introduction</h1><hr class="small right bold"><span class="subheading">Computational Audio Content Analysis in Everyday Environments</span></div>
+            </div>
+        </div>
+    </div>
+<span class="header-cc-logo" data-bs-toggle="tooltip" data-bs-placement="top" title="Background photo by Toni Heittola / CC BY-NC 4.0"><i class="fa fa-brands fa-creative-commons" aria-hidden="true"></i></span></header><div class="container">
+    <div class="row">
+        <div class="col-sm-3 sidecolumn-left ">
+        <div class="btn-group-vertical pb-4" role="group"><button type="button" class="btn btn-secondary btn-sm text-start" disabled><i class="fa-solid fa-layer-group"></i> Chapters</button><a href="introduction" class="btn btn-dark btn-sm text-start">Introduction</a><a href="everyday_environments" class="btn btn-outline-secondary btn-sm text-start">Sounds in Everyday Environments</a><a href="content_analysis" class="btn btn-outline-secondary btn-sm text-start">Computational Audio Content Analysis</a><a href="sed" class="btn btn-outline-secondary btn-sm text-start">Sound Event Detection in Everyday Environments</a></div>
+ <div class="btoc-container hidden-print sticky-top" role="complementary">
+<div class="btoc-header bg-light text-muted">Content</div>
+<div class="btoc-body">
+<nav class="btoc-nav" data-toc-levels="h1,h2,h3"></nav>
+</div>
+</div>
+
+        </div>
+        <div class="col-sm-9 content">
+            <section id="content" class="body">
+                <div class="entry-content">
+                    <p class="lead">This page features a slightly revised version of the Introduction chapter from my PhD thesis, titled Computational Audio Content Analysis in Everyday Environments. The chapter provides an overview of the research motivation and outlines the key challenges in analyzing audio content from real-world settings.</p>
+<div class="row bg-light py-2">
+<div class="col-2"><img alt="Thesis cover" class="img-fluid" src="../images/thesis_cover.jpg"/></div>
+<div class="col-10"><div class="btex-item" data-item="phdthesis" data-source="content/data/publications.bib" data-template="default">
+<div class="card mb-3">
+<span class="label label-default" style="width:100px;padding-top:0.4em;margin-left:0em;margin-top:0em;">Publication<a name="phdthesis"></a></span>
+<div class="card-body">
+<div class="row">
+<div class="col-md-9">
+<p style="text-align:left">
+                                Toni Heittola.
+Computational Audio Content Analysis in Everyday Environments.
+PhD thesis, Tampere University, 6 2021.
+                                
+                                
+                                </p>
+</div>
+<div class="col-md-3">
+<div class="btn-group pull-right">
+<button class="btn btn-xs btn-danger" data-bs-target="#bibtexphdthesiscc8690c3547047af95761f4e5c688f19" data-bs-toggle="modal" type="button"><i class="fa fa-solid fa-file-text fa-file-text-o"></i> Bib</button>
+<a class="btn btn-xs btn-warning btn-btex text-white" data-placement="bottom" href="https://trepo.tuni.fi/bitstream/handle/10024/132786/978-952-03-2006-5.pdf?sequence=2&amp;isAllowed=y" rel="tooltip" title="Download pdf"><i class="fa fa-solid fa-file-pdf fa-file-pdf-o fa-1x"></i> PDF</a>
+<button aria-controls="collapsephdthesiscc8690c3547047af95761f4e5c688f19" aria-expanded="true" class="btn btn-default btn-xs" data-bs-parent="#btex-items-accordion" data-bs-target="#collapsephdthesiscc8690c3547047af95761f4e5c688f19" data-bs-toggle="collapse" type="button">
+<i class="fa fa-solid fa-caret-down"></i></button>
+</div>
+</div>
+</div>
+<div aria-labelledby="headingphdthesiscc8690c3547047af95761f4e5c688f19" class="panel-collapse collapse mb-3" id="collapsephdthesiscc8690c3547047af95761f4e5c688f19">
+<h4>Computational Audio Content Analysis in Everyday Environments</h4>
+<h5>Abstract</h5>
+<p class="text-justify">Our everyday environments are full of sounds that have a vital role in providing us information and allowing us to understand what is happening around us. Humans have formed strong associations between physical events in their environment and the sounds that these events produce. Such associations are described using textual labels, sound events, and they allow us to understand, recognize, and interpret the concepts behind sounds. Examples of such sound events are dog barking, person shouting or car passing by. This thesis deals with computational methods for audio content analysis of everyday environments. Along with the increased usage of digital audio in our everyday life, automatic audio content analysis has become a more and more pursued ability. Content analysis enables an in-depth understanding of what was happening in the environment when the audio was captured, and this further facilitates applications that can accurately react to the events in the environment. The methods proposed in this thesis focus on sound event detection, the task of recognizing and temporally locating sound events within an audio signal, and include aspects related to development of methods dealing with a large set of sound classes, detection of multiple sounds, and evaluation of such methods. The work presented in this thesis focuses on developing methods that allow the detection of multiple overlapping sound events and robust acoustic model training based on mixture audio containing overlapping sounds. Starting with an HMM-based approach for prominent sound event detection, the work advanced by extending it into polyphonic detection using multiple Viterbi iterations or sound source separation. These polyphonic sound event detection systems were based on a collection of generative classifiers to produce multiple labels for the same time instance, which doubled or in some cases tripled the detection performance. As an alternative approach, polyphonic detection was implemented using class-wise activity detectors in which the activity of each event class was detected independently and class-wise event sequences were merged to produce the polyphonic system output. The polyphonic detection increased applicability of the methods in everyday environments substantially. For evaluation of methods, the work proposed a new metric for polyphonic sound event detection which takes into account the polyphony. The new metric, a segment-based F-score, provides rigorous definitions for the correct and erroneous detections, besides being more suitable for comparing polyphonic annotation and polyphonic system output than the previously used metrics and has since become one of the standard metrics in the research field. Part of this thesis includes studying sound events as a constituent part of the acoustic scene based on contextual information provided by their co-occurrence. This information was used for both sound event detection and acoustic scene classification. In sound event detection, context information was used to identify the acoustic scene in order to narrow down the selection of possible sound event classes based on this information, which allowed use of context-dependent acoustic models and event priors. This approach provided moderate yet consistent performance increase across all tested acoustic scene types, and enabled the detection system to be easily expanded to new scenes. In acoustic scene classification, the scenes were identified based on the distinctive and scene-specific sound events detected, with performance comparable to traditional approaches, while the fusion of these two approaches showed a significant further increase in the performance. The thesis also includes significant contribution to the development of tools for open research in the field, such as standardized evaluation protocols, and release of open datasets, benchmark systems, and open-source tools.</p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtexphdthesiscc8690c3547047af95761f4e5c688f19" data-toggle="modal" type="button"><i class="fa fa-solid fa-file-text fa-file-text-o"></i> Bibtex</button>
+<a class="btn btn-sm btn-warning text-white btn-btex2" data-placement="bottom" href="https://trepo.tuni.fi/bitstream/handle/10024/132786/978-952-03-2006-5.pdf?sequence=2&amp;isAllowed=y" rel="tooltip" title="Download pdf"><i class="fa fa-solid fa-file-pdf fa-file-pdf-o fa-1x"></i> PDF</a>
+<a class="btn btn-sm btn-info btn-btex2 text-white" href="https://trepo.tuni.fi/handle/10024/136508" title=""><i class="fa fa-solid fa-book"></i> Web publication</a>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtexphdthesiscc8690c3547047af95761f4e5c688f19label" class="modal fade" id="bibtexphdthesiscc8690c3547047af95761f4e5c688f19" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<h4 class="modal-title" id="bibtexphdthesiscc8690c3547047af95761f4e5c688f19label">Computational Audio Content Analysis in Everyday Environments</h4>
+<button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+</div>
+<div class="modal-body"><pre>@phdthesis{phdthesis,
+    author = "Heittola, Toni",
+    title = "Computational Audio Content Analysis in Everyday Environments",
+    school = "Tampere University",
+    year = "2021",
+    month = "6",
+    abstract = "Our everyday environments are full of sounds that have a vital role in providing us information and allowing us to understand what is happening around us. Humans have formed strong associations between physical events in their environment and the sounds that these events produce. Such associations are described using textual labels, sound events, and they allow us to understand, recognize, and interpret the concepts behind sounds. Examples of such sound events are dog barking, person shouting or car passing by. This thesis deals with computational methods for audio content analysis of everyday environments. Along with the increased usage of digital audio in our everyday life, automatic audio content analysis has become a more and more pursued ability. Content analysis enables an in-depth understanding of what was happening in the environment when the audio was captured, and this further facilitates applications that can accurately react to the events in the environment. The methods proposed in this thesis focus on sound event detection, the task of recognizing and temporally locating sound events within an audio signal, and include aspects related to development of methods dealing with a large set of sound classes, detection of multiple sounds, and evaluation of such methods. The work presented in this thesis focuses on developing methods that allow the detection of multiple overlapping sound events and robust acoustic model training based on mixture audio containing overlapping sounds. Starting with an HMM-based approach for prominent sound event detection, the work advanced by extending it into polyphonic detection using multiple Viterbi iterations or sound source separation. These polyphonic sound event detection systems were based on a collection of generative classifiers to produce multiple labels for the same time instance, which doubled or in some cases tripled the detection performance. As an alternative approach, polyphonic detection was implemented using class-wise activity detectors in which the activity of each event class was detected independently and class-wise event sequences were merged to produce the polyphonic system output. The polyphonic detection increased applicability of the methods in everyday environments substantially. For evaluation of methods, the work proposed a new metric for polyphonic sound event detection which takes into account the polyphony. The new metric, a segment-based F-score, provides rigorous definitions for the correct and erroneous detections, besides being more suitable for comparing polyphonic annotation and polyphonic system output than the previously used metrics and has since become one of the standard metrics in the research field. Part of this thesis includes studying sound events as a constituent part of the acoustic scene based on contextual information provided by their co-occurrence. This information was used for both sound event detection and acoustic scene classification. In sound event detection, context information was used to identify the acoustic scene in order to narrow down the selection of possible sound event classes based on this information, which allowed use of context-dependent acoustic models and event priors. This approach provided moderate yet consistent performance increase across all tested acoustic scene types, and enabled the detection system to be easily expanded to new scenes. In acoustic scene classification, the scenes were identified based on the distinctive and scene-specific sound events detected, with performance comparable to traditional approaches, while the fusion of these two approaches showed a significant further increase in the performance. The thesis also includes significant contribution to the development of tools for open research in the field, such as standardized evaluation protocols, and release of open datasets, benchmark systems, and open-source tools."
+}
+</pre></div>
+<div class="modal-footer"><button class="btn btn-default" data-bs-dismiss="modal" type="button">Close</button></div>
+</div>
+</div>
+</div>
+</div></div>
+</div><div class="section" id="introduction-1">
+<h2 id="introduction">Introduction</h2>
+<p>Acoustic environments surrounding us in our everyday life are full of sounds which provide us important information for understanding what is happening around us. Humans have formed tight associations between events happening around them and the sounds they produce. These associations can be represented as a textual label, to label the individual sound instances as <em>sound events</em>. This thesis deals with computational methods for the analysis of everyday environments. The core methods proposed in the thesis involve detecting large sets of sound events in real-life environments. In natural environments, sound events often appear simultaneously, increasing the complexity of acoustic modeling of sound events and making the detection difficult due to interfering sound sources. Furthermore, acoustic modeling cannot make strong assumptions about the sound or its structure since generally sound instances of the same sound event class can have large inter-class variability.</p>
+<p>Along with the increased usage of digital audio in our everyday life, automatic audio content analysis has become a more and more pursued ability. Content analysis enables an in-depth understanding of what was happening in the environment when the audio was captured, and this further facilitates applications that can accurately react to the events in the environment. When work for this thesis started, there was very little prior work on computational audio content analysis directed to everyday environments. The research had been focused on tightly controlled indoor environments, such as office or meeting rooms, with a limited set of sound classes. Furthermore, the existing systems were able to detect only the most prominent sound event at each time instance. The use cases for such systems are rather limited, as most of our everyday environments are much more diverse than these works were focusing on, and being able to detect only the most prominent event limits the performance substantially.</p>
+</div>
+<div class="section" id="audio-content-analysis-in-everyday-environments">
+<h2 id="audio-content-analysis-in-everyday-environments">Audio Content Analysis in Everyday Environments</h2>
+<p>Acoustic environments surrounding us in our daily life represent different <em>acoustic scenes</em> defined by physical and social situations. Examples of acoustic scenes include office, home, busy street, and urban park. <em>Everyday sound</em> is a term used to describe a naturally occurring non-speech and non-music sound that occurs in the acoustic environment <a class="citation-reference" href="#gygi2001" id="citation-reference-1">[Gygi2001]</a>. The terms everyday sounds and environmental sounds are commonly used interchangeably in the literature. A <em>sound source</em> is an object or being that produces a sound through its own action or an action directed to it. A <em>sound event</em> is a textual label that people would use to describe this sound producing event, and these labels allow people to understand the concepts behind them and associate them with other known events. An example of an acoustic scene is shown in Figure <a class="reference external" href="#fig-everyday-environment">1.1</a>, along with active sound sources and sound events associated with them.</p>
+<p>
+<div class="figure text-center">
+<img alt="Examples of sound sources and corresponding sound events in an urban park acoustic scene." class="img-fluid text-center" id="fig-everyday-environment" src="/images/thesis_fig11.png" title="Examples of sound sources and corresponding sound events in an urban park acoustic scene."/>
+<p class="caption">
+<strong>Figure 1.1</strong> 
+                Examples of sound sources and corresponding sound events in an urban park acoustic scene.
+            </p>
+<div class="d-flex justify-content-end">
+<div class="license text-start w-100 small text-muted">
+<a class="text" href="https://creativecommons.org">Sound sources and sound events</a> © 2021 by <a class="text" href="https://creativecommons.org">Toni Heittola</a> is licensed under <a class="text" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a><img alt="" src="/images/cc/cc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/><img alt="" src="/images/cc/by.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/><img alt="" src="/images/cc/nc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/><img alt="" src="/images/cc/nd.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/>
+</div>
+</div>
+</div>
+</p>
+<p><em>Machine listening</em> is a research field studying computational analysis and understanding of audio <a class="citation-reference" href="#wang2010" id="citation-reference-2">[Wang2010]</a>. In this thesis, the term <em>audio content analysis</em> is used for approaches especially focusing on recognition of the sounds in the audio signal. Possible sounds in the audio signal include speech, music, and everyday sounds, however, this thesis focuses only on everyday sounds. The analysis system is said to do <em>sound event detection</em> (SED) if it provides a textual label and a start and end time to each sound event instance it recognizes. Sound event detection systems are categorized based on their ability to handle simultaneous sound events; if the system is able to output only a single sound event at time, often the most prominent, the system is said to do <em>monophonic</em> sound event detection, whereas the system capable of outputting multiple simultaneous sound events is said to do <em>polyphonic</em> sound event detection. In practice, current polyphonic state-of-the-art systems are not modeling or outputting multiple sound event instances from the same event class which are active at the same time, therefore the polyphony is defined in terms of distinct event classes. The content analysis systems which are only outputting sound class labels without temporal activity are said to do either <em>tagging</em> or <em>classification</em>, depending on whether the system is able to output multiple classes at a time or only a single class. These systems are closely related to detection, as they can be easily extended to output temporal activity with sufficient time resolution by applying classification in overlapping and consecutive short time segments. Even though SED is defined as detecting sound event instances, current modeling and algorithmic solutions treat the problem as audio tagging with fine temporal resolution and added temporal modeling of consecutive frames. This makes the distinction between detection and tagging dependent on the application. <em>Acoustic scene classification</em> (ASC) is a term used for systems classifying an entire recording into one of the predefined scene classes while in sound event detection or audio tagging the predefined classes are sound classes.</p>
+</div>
+<div class="section" id="applications">
+<h2 id="applications">Applications</h2>
+<p>Audio content analysis is applied in a variety of applications to gain an understanding of the actions happening in the environment. It can be used, for example, in acoustic monitoring applications, in indexing and searching multimedia data, in analyzing human activity, and it is supporting research in neighboring research fields such as bioacoustics and robotics.</p>
+<div class="section" id="acoustic-monitoring">
+<h3 id="acoustic-monitoring">Acoustic Monitoring</h3>
+<p>For monitoring applications, audio has many benefits over video capture: audio is often considered less intrusive than video, works equally well in all lighting conditions, does not require direct line-of-sight as video capture, and audio capture can cover large areas easily. Furthermore, computational requirements to handle audio in the analysis are far lower than for video, enabling the large-scale deployment of the monitoring applications. In surveillance and security applications, sound recognition and sound event detection can be used to monitor the environment for specific sounds, and once the sound has been detected trigger an alarm [<a class="reference internal" href="#foggia2016">Foggia2016</a>, <a class="reference internal" href="#crocco2016">Crocco2016</a>]. Sounds of interest for these applications include, for example, glass breaking, sirens, gunshots, door slams, and screams. In healthcare applications, the same methods can be used, for example, to analyze cough patterns [<a class="reference internal" href="#peng2009">Peng2009</a>, <a class="reference internal" href="#goetze2012">Goetze2012</a>] or to analyze epileptic seizures <a class="citation-reference" href="#ahsan2019" id="citation-reference-3">[Ahsan2019]</a> over long periods to assist medical care personnel. In urban monitoring, audio content analysis methods can be used to identify sounds such as sirens, drills, and street music in urban environments and analyze their correlation to the noise complaints <a class="citation-reference" href="#bello2019" id="citation-reference-4">[Bello2019]</a>. Sound recognition methods can be used also to assign noise level measurements to the actual sound sources in the environment, enabling more accurate noise measurements <a class="citation-reference" href="#maijala2018" id="citation-reference-5">[Maijala2018]</a>.</p>
+</div>
+<div class="section" id="smart-sound-sensors">
+<h3 id="smart-sound-sensors">Smart Sound Sensors</h3>
+<p>Many monitoring applications use small wireless devices, sensors, to capture audio. In case the sensor also has in-built audio content analysis capabilities, these sensors are referred to as <em>smart sound sensors</em>. These types of sensors are used when the overall system has to easily scale up from the computational resources and the wireless communication point of view. Instead of streaming captured audio or acoustic features extracted from it to the analysis service, the smart sensors are transmitting only information about the content of the captures audio, lowering the data transmission requirements substantially. Smart sensors are commonly used in smart homes <a class="citation-reference" href="#krstulovic2018" id="citation-reference-6">[Krstulovic2018]</a> and smart city [<a class="reference internal" href="#bello2018">Bello2018</a>, <a class="reference internal" href="#bello2019">Bello2019</a>] applications. In smart home applications, sensors are used to collect data from a home for security purposes or to assist home automation systems. Audio can be used to detect, for example, glass breaking or dog barking to trigger an alarm. In smart city applications, sensors are collecting a variety of sensory data to help manage resources in the cities, and audio can be included by using sound recognition approaches [<a class="reference internal" href="#mydlarz2017">Mydlarz2017</a>, <a class="reference internal" href="#maijala2018">Maijala2018</a>].</p>
+</div>
+<div class="section" id="content-based-retrieval">
+<h3 id="content-based-retrieval">Content-Based Retrieval</h3>
+<p>Content-based analysis and search functionality is an important step on the way to fully utilize online services having large repositories of audio and video content. Audio content analysis approaches can be used in these services to enable content-based retrieval of multimedia recordings [<a class="reference internal" href="#xu2008">Xu2008</a>, <a class="reference internal" href="#takahashi2018">Takahashi2018</a>]. In addition to search functionality, content analysis methods can be used to automatically moderate the content.</p>
+</div>
+<div class="section" id="human-activity-analysis">
+<h3 id="human-activity-analysis">Human Activity Analysis</h3>
+<p>Human activity is often the main source of sounds in everyday environments, and this is valuable information in many applications. Activities are usually broader concepts than sound events, for example, brewing coffee, cleaning, cooking, eating, or taking a shower. Audio content analysis can be used to identify and detect these activities, either by detecting individual sound events associated with the activity <a class="citation-reference" href="#chahuara2016" id="citation-reference-7">[Chahuara2016]</a> or directly detecting activity concepts <a class="citation-reference" href="#ntalampiras2018" id="citation-reference-8">[Ntalampiras2018]</a>.</p>
+</div>
+<div class="section" id="other-research-fields">
+<h3 id="other-research-fields">Other Research Fields</h3>
+<p>Audio content analysis can be used in other research fields to facilitate analysis of the environment or interaction with the environment. Bioacoustic research is nowadays utilizing more and more audio content analysis methods <a class="citation-reference" href="#stowell2018" id="citation-reference-9">[Stowell2018]</a>. Methods can be used in wildlife population monitoring <a class="citation-reference" href="#stowell2017" id="citation-reference-10">[Stowell2017]</a>, animal species identification based on their vocalizations, and these analysis results can be further utilized in biodiversity assessment of the environments <a class="citation-reference" href="#gasc2013" id="citation-reference-11">[Gasc2013]</a>. In monitoring applications for farming, audio content analysis can be used for assessing the animal stress levels [<a class="reference internal" href="#lee2015">Lee2015</a>, <a class="reference internal" href="#du2020">Du2020</a>] and detecting symptoms of diseases <a class="citation-reference" href="#carroll2014" id="citation-reference-12">[Carroll2014]</a>. In robotics, audio content analysis methods provide important information about the acoustic environment and actions in it. Social robots, such as home service robots can use sound event recognition to facilitate enhanced human-robot interaction [<a class="reference internal" href="#stiefelhagen2007">Stiefelhagen2007</a>, <a class="reference internal" href="#janvier2012">Janvier2012</a>, <a class="reference internal" href="#do2016">Do2016</a>].</p>
+</div>
+</div>
+<div class="section" id="references">
+<h2 id="references">References</h2>
+<table class="docutils citation" frame="void" id="ahsan2019" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-3">[Ahsan2019]</a></td><td>Ahsan, Istiaq M. N., C. Kertesz, A. Mesaros, T. Heittola, A. Knight, and T. Virtanen. 2019. “Audio-Based Epileptic Seizure Detection.” In <em>27th European Signal Processing Conference (EUSIPCO)</em>, 1–5.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="bello2018" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Bello2018]</td><td>Bello, Juan Pablo, Charlie Mydlarz, and Justin Salamon. 2018. “Sound Analysis in Smart Cities.” In <em>Computational Analysis of Sound Scenes and Events</em>, edited by Tuomas Virtanen, Mark D. Plumbley, and Dan Ellis, 373–97. Cham, Switzerland: Springer Verlag.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="bello2019" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-4">[Bello2019]</a></td><td>Bello, Juan P., Claudio Silva, Oded Nov, R. Luke Dubois, Anish Arora, Justin Salamon, Charles Mydlarz, and Harish Doraiswamy. 2019. “SONYC: A System for Monitoring, Analyzing, and Mitigating Urban Noise Pollution.” <em>Communications of the ACM</em> 62 (2): 68–77.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="carroll2014" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-12">[Carroll2014]</a></td><td>Carroll, B. T., D. V. Anderson, W. Daley, S. Harbert, D. F. Britton, and M. W. Jackwood. 2014. “Detecting Symptoms of Diseases in Poultry Through Audio Signal Processing.” In <em>2014 IEEE Global Conference on Signal and Information Processing (GlobalSIP)</em>, 1132–35.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="chahuara2016" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-7">[Chahuara2016]</a></td><td>Chahuara, Pedro, Anthony Fleury, François Portet, and Michel Vacher. 2016. “On-Line Human Activity Recognition from Audio and Home Automation Sensors: Comparison of Sequential and Non-Sequential Models in Realistic Smart Homes 1.” <em>Journal of Ambient Intelligence and Smart Environments</em> 8 (4): 399–422.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="crocco2016" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Crocco2016]</td><td>Crocco, Marco, Marco Cristani, Andrea Trucco, and Vittorio Murino. 2016. “Audio Surveillance: A Systematic Review.” <em>ACM Computing Surveys</em> 48 (4).</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="do2016" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Do2016]</td><td>Do, H. M., W. Sheng, M. Liu, and Senlin Zhang. 2016. “Context-Aware Sound Event Recognition for Home Service Robots.” In <em>2016 IEEE International Conference on Automation Science and Engineering (CASE)</em>, 739–44.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="du2020" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Du2020]</td><td>Du, Xiaodong, Lenn Carpentier, Guanghui Teng, Mulin Liu, Chaoyuan Wang, and Tomas Norton. 2020. “Assessment of Laying Hens’ Thermal Comfort Using Sound Technology.” <em>Sensors</em> 20 (2): 473.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="foggia2016" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Foggia2016]</td><td>Foggia, P., N. Petkov, A. Saggese, N. Strisciuglio, and M. Vento. 2016. “Audio Surveillance of Roads: A System for Detecting Anomalous Sounds.” <em>IEEE Transactions on Intelligent Transportation Systems</em> 17 (1): 279–88.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="gasc2013" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-11">[Gasc2013]</a></td><td>Gasc, A., J. Sueur, F. Jiguet, V. Devictor, P. Grandcolas, C. Burrow, M. Depraetere, and S. Pavoine. 2013. “Assessing Biodiversity with Sound: Do Acoustic Diversity Indices Reflect Phylogenetic and Functional Diversities of Bird Communities?” <em>Ecological Indicators</em> 25: 279–87.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="goetze2012" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Goetze2012]</td><td>Goetze, Stefan, Jens Schroder, Stephan Gerlach, Danilo Hollosi, Jens-E Appell, and Frank Wallhoff. 2012. “Acoustic Monitoring and Localization for Social Care.” <em>Journal of Computing Science and Engineering</em> 6 (1): 40–50.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="gygi2001" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-1">[Gygi2001]</a></td><td>Gygi, Brian. 2001. “Factors in the Identification of Environmental Sounds.” PhD thesis, Indiana University.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="janvier2012" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Janvier2012]</td><td>Janvier, M., X. Alameda-Pineda, L. Girinz, and R. Horaud. 2012. “Sound-Event Recognition with a Companion Humanoid.” In <em>2012 12th IEEE-RAS International Conference on Humanoid Robots (Humanoids 2012)</em>, 104–11.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="krstulovic2018" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-6">[Krstulovic2018]</a></td><td>Krstulović, Sacha. 2018. “Audio Event Recognition in the Smart Home.” In <em>Computational Analysis of Sound Scenes and Events</em>, edited by Tuomas Virtanen, Mark D. Plumbley, and Dan Ellis, 335–71. Cham, Switzerland: Springer Verlag.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="lee2015" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Lee2015]</td><td>Lee, Jonguk, Byeongjoon Noh, Suin Jang, Daihee Park, Yongwha Chung, and Hong-Hee Chang. 2015. “Stress Detection and Classification of Laying Hens by Sound Analysis.” <em>Asian-Australasian Journal of Animal Sciences</em> 28 (4): 592.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="maijala2018" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-5">[Maijala2018]</a></td><td>Maijala, Panu, Shuyang Zhao, Toni Heittola, and Tuomas Virtanen. 2018. “Environmental Noise Monitoring Using Source Classification in Sensors.” <em>Applied Acoustics</em> 129 (6): 258–67.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="mydlarz2017" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Mydlarz2017]</td><td>Mydlarz, Charlie, Justin Salamon, and Juan Pablo Bello. 2017. “The Implementation of Low-Cost Urban Acoustic Monitoring Devices.” <em>Applied Acoustics</em> 117 (February): 207–18.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="ntalampiras2018" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-8">[Ntalampiras2018]</a></td><td>Ntalampiras, Stavros, and Ilyas Potamitis. 2018. “Transfer Learning for Improved Audio-Based Human Activity Recognition.” <em>Biosensors</em> 8 (3): 60.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="peng2009" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Peng2009]</td><td>Ya-Ti Peng, Ching-Yung Lin, Ming-Ting Sun, and Kun-Cheng Tsai. 2009. “Healthcare Audio Event Classification Using Hidden Markov Models and Hierarchical Hidden Markov Models.” In <em>2009 IEEE International Conference on Multimedia and Expo</em>, 1218–21.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="stiefelhagen2007" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Stiefelhagen2007]</td><td>Stiefelhagen, Rainer, Keni Bernardin, Rachel Bowers, R. Travis Rose, Martial Michel, and John S. Garofolo. 2007. “The CLEAR 2007 Evaluation.” In <em>Multimodal Technologies for Perception of Humans, International Evaluation Workshops CLEAR 2007 and RT 2007</em>, edited by Rainer Stiefelhagen, Rachel Bowers, and Jonathan G. Fiscus, 4625:3–34. Lecture Notes in Computer Science. Cham, Switzerland: Springer Verlag.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="stowell2017" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-10">[Stowell2017]</a></td><td>Stowell, D., E. Benetos, and L. F. Gill. 2017. “On-Bird Sound Recordings: Automatic Acoustic Recognition of Activities and Contexts.” <em>IEEE/ACM Transactions on Audio, Speech, and Language Processing</em> 25 (6): 1193–1206.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="stowell2018" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-9">[Stowell2018]</a></td><td>Stowell, Dan. 2018. “Computational Bioacoustic Scene Analysis.” In <em>Computational Analysis of Sound Scenes and Events</em>, edited by Tuomas Virtanen, Mark D. Plumbley, and Dan Ellis, 303–33. Cham, Switzerland: Springer Verlag.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="takahashi2018" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Takahashi2018]</td><td>Takahashi, N., M. Gygli, and L. Van Gool. 2018. “AENet: Learning Deep Audio Features for Video Analysis.” <em>IEEE Transactions on Multimedia</em> 20 (3): 513–24.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="wang2010" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-2">[Wang2010]</a></td><td>Wang, Wenwu. 2010. <em>Machine Audition: Principles, Algorithms and Systems</em>. Hershey, PA, USA: IGI Global.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="xu2008" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Xu2008]</td><td>Xu, Min, Changsheng Xu, Lingyu Duan, Jesse S. Jin, and Suhuai Luo. 2008. “Audio Keywords Generation for Sports Video Analysis.” <em>ACM Trans. Multimedia Comput. Commun. Appl.</em> 4 (2).</td></tr>
+</tbody>
+</table>
+<br/><br/><br/></div>
+
+                </div>
+            </section>
+        </div>
+    </div>
+</div>    
+
+<ul class="nav pull-right scroll-top">
+  <li>
+    <a title="Scroll to top" href="#" class="page-scroll-top">
+      <i class="glyphicon glyphicon-chevron-up"></i>
+    </a>
+  </li>
+</ul>
+<script type="text/javascript" src="/theme/assets/jquery/jquery.easing.min.js"></script>
+<script type="text/javascript" src="/theme/assets/bootstrap5/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="/theme/js/theme5.js"></script><script type="text/javascript" src="/theme/assets/scrollreveal/scrollreveal.min.js"></script>
+<script type="text/javascript" src="/theme/js/setup.scrollreveal.js"></script>
+<script type="text/javascript" src="/theme/assets/highlight/highlight.pack.js"></script>
+<script type="text/javascript">
+    document.querySelectorAll('pre code:not([class])').forEach(function($) {$.className = 'no-highlight';});
+    hljs.initHighlightingOnLoad();
+</script>
+<script type="text/javascript" src="/theme/js/respond.min.js"></script>
+<script type="text/javascript" src="/theme/js/tocbot.min.js"></script>
+<script type="text/javascript" src="/theme/js/btoc-bot.min.js"></script>
+</body>
+</html>

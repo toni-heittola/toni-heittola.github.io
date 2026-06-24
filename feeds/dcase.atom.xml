@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Toni Heittola - DCASE</title><link href="/" rel="alternate"></link><link href="/feeds/dcase.atom.xml" rel="self"></link><id>/</id><updated>2023-06-12T12:00:00+03:00</updated><entry><title>DCASE2023 Workshop</title><link href="/articles/dcase2023-workshop" rel="alternate"></link><published>2023-06-12T12:00:00+03:00</published><updated>2023-06-12T12:00:00+03:00</updated><author><name>Toni Heittola</name></author><id>tag:None,2023-06-12:/articles/dcase2023-workshop</id><summary type="html">&lt;p&gt;DCASE2023 Workshop will be organized in Tampere.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Our research group is organizing &lt;a href="http://dcase.community/workshop2023/"&gt;DCASE 2023 Workshop&lt;/a&gt;, and it will be held in Tampere on 20-22 September 2023. This is 8th Workshop on Detection and Classification of Acoustic Scenes and Events. I will be part of organizing team. Welcome to Tampere! &lt;/p&gt;
+&lt;p&gt;&lt;br/&gt;
+&lt;a class="link-icon" href="http://dcase.community/workshop2023/" target="_blank"&gt;
+&lt;img src="/images/logos/dcase/dcase2023_workshop.png"/&gt;
+&lt;/a&gt;&lt;/p&gt;</content><category term="DCASE"></category></entry><entry><title>DCASE2023 Challenge</title><link href="/articles/dcase2023-challenge" rel="alternate"></link><published>2023-03-12T12:00:00+02:00</published><updated>2023-03-12T12:00:00+02:00</updated><author><name>Toni Heittola</name></author><id>tag:None,2023-03-12:/articles/dcase2023-challenge</id><summary type="html">&lt;p&gt;Our research group is once again one of the organizing teams of the DCASE2023 challenge, and I am acting as the task coordinator for low-complexity acoustic scene classification challenge task.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Our research group is once again one of the organizing teams of the &lt;a href="http://dcase.community/challenge2023/"&gt;DCASE 2023 challenge&lt;/a&gt;, I am acting as the task coordinator for &lt;a href="https://dcase.community/challenge2023/task-low-complexity-acoustic-scene-classification"&gt;low-complexity acoustic scene classification challenge task&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;&lt;br/&gt;
+&lt;a class="link-icon" href="http://dcase.community/challenge2023/" target="_blank"&gt;
+&lt;img src="/images/logos/dcase/dcase2023_challenge.png"/&gt;
+&lt;/a&gt;&lt;/p&gt;</content><category term="DCASE"></category></entry><entry><title>DCASE2022 Challenge</title><link href="/articles/dcase2022-challenge" rel="alternate"></link><published>2022-03-12T12:00:00+02:00</published><updated>2022-03-12T12:00:00+02:00</updated><author><name>Toni Heittola</name></author><id>tag:None,2022-03-12:/articles/dcase2022-challenge</id><summary type="html">&lt;p&gt;Our research group is once again one of the organizing teams of the DCASE2022 challenge, and I am acting as the task coordinator for low-complexity acoustic scene classification challenge task.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Our research group is once again one of the organizing teams of the &lt;a href="http://dcase.community/challenge2022/"&gt;DCASE 2022 challenge&lt;/a&gt;, I am acting as the task coordinator for &lt;a href="https://dcase.community/challenge2022/task-low-complexity-acoustic-scene-classification"&gt;low-complexity acoustic scene classification challenge task&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;&lt;br/&gt;
+&lt;a class="link-icon" href="http://dcase.community/challenge2022/" target="_blank"&gt;
+&lt;img src="/images/logos/dcase/dcase2022_challenge.png"/&gt;
+&lt;/a&gt;&lt;/p&gt;</content><category term="DCASE"></category></entry><entry><title>Curated list of open datasets launched</title><link href="/articles/curated-list-of-open-datasets-launched" rel="alternate"></link><published>2021-09-08T12:00:00+03:00</published><updated>2021-09-08T12:00:00+03:00</updated><author><name>Toni Heittola</name></author><id>tag:None,2021-09-08:/articles/curated-list-of-open-datasets-launched</id><summary type="html">&lt;p&gt;DCASE Datalist launched as DCASE Community effort to collect curated meta-information about DCASE related datasets into a uniform structure.&lt;/p&gt;</summary><content type="html">&lt;p&gt;I maintained a listing of audio datasets suitable for research related to environmental audio under my homepage over 8 years. Recently, I helped to launch better structured dataset listing as community project under DCASE Community. &lt;/p&gt;
+&lt;p&gt;The DCASE Datalist is a DCASE Community effort to collect curated meta-information about DCASE related datasets into a uniform structure. The list focuses specifically on pre-packaged datasets rather than online data repositories. Datasets included in the list are well documented, packaged for easy usage, and have a free or open license. Datasets are placed roughly into a couple of data collections at the high level based on the audio content analysis type they are mainly focusing on. &lt;/p&gt;
+&lt;p&gt;The data listing is maintained through a &lt;a href="https://github.com/DCASE-REPO/dcase_datalist"&gt;Github repository&lt;/a&gt;. In case you notice datasets missing, errors, or you want to contribute otherwise to the data listings, you can raise issues in the repository or fork it and make a pull request with your edits. Proposals for new data collections are welcomed as well.&lt;/p&gt;
+&lt;p&gt;&lt;a class="icon-link" href="https://dcase-repo.github.io/dcase_datalist/" target="_blank"&gt;&lt;img src="https://dcase-repo.github.io/dcase_datalist/assets/dcase_datalist_logo.png"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://dcase-repo.github.io/dcase_datalist/"&gt;A curated list of open datasets for DCASE related research has been launched!!&lt;/a&gt;&lt;/p&gt;</content><category term="DCASE"></category></entry><entry><title>DCASE2021 Challenge</title><link href="/articles/dcase2021-challenge" rel="alternate"></link><published>2021-03-12T12:00:00+02:00</published><updated>2021-03-12T12:00:00+02:00</updated><author><name>Toni Heittola</name></author><id>tag:None,2021-03-12:/articles/dcase2021-challenge</id><summary type="html">&lt;p&gt;Our research group is once again one of the organizing teams of the DCASE2021 challenge, and I am acting as the task coordinator for acoustic scene classification challenge task.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Our research group is once again one of the organizing teams of the &lt;a href="http://dcase.community/challenge2021/"&gt;DCASE 2021 challenge&lt;/a&gt;, I am acting as the task coordinator for &lt;a href="http://dcase.community/challenge2021/task-acoustic-scene-classification"&gt;acoustic scene classification challenge task&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;&lt;br/&gt;
+&lt;a class="link-icon" href="http://dcase.community/challenge2021/" target="_blank"&gt;
+&lt;img src="/images/logos/dcase/dcase2021_challenge.png"/&gt;
+&lt;/a&gt;&lt;/p&gt;</content><category term="DCASE"></category></entry><entry><title>DCASE2020 Challenge</title><link href="/articles/dcase2020-challenge" rel="alternate"></link><published>2020-03-12T12:00:00+02:00</published><updated>2020-03-12T12:00:00+02:00</updated><author><name>Toni Heittola</name></author><id>tag:None,2020-03-12:/articles/dcase2020-challenge</id><summary type="html">&lt;p&gt;Our research group is once again one of the organizing teams of the DCASE2020 challenge, and I am acting as the task coordinator for acoustic scene classification challenge task.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Our research group is once again one of the organizing teams of the &lt;a href="http://dcase.community/challenge2020/"&gt;DCASE 2020 challenge&lt;/a&gt;, I am acting as the task coordinator for &lt;a href="http://dcase.community/challenge2020/task-acoustic-scene-classification"&gt;acoustic scene classification challenge task&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;&lt;br/&gt;
+&lt;a class="link-icon" href="http://dcase.community/challenge2020/" target="_blank"&gt;
+&lt;img src="/images/logos/dcase/dcase2020_challenge.png"/&gt;
+&lt;/a&gt;&lt;/p&gt;</content><category term="DCASE"></category></entry><entry><title>DCASE2019 Challenge</title><link href="/articles/dcase2019-challenge" rel="alternate"></link><published>2019-03-12T12:00:00+02:00</published><updated>2019-03-12T12:00:00+02:00</updated><author><name>Toni Heittola</name></author><id>tag:None,2019-03-12:/articles/dcase2019-challenge</id><summary type="html">&lt;p&gt;Our research group is once again one of the organizing teams of the DCASE2019 challenge, and I am acting as the task coordinator for acoustic scene classification challenge task.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Our research group is once again one of the organizing teams of the &lt;a href="http://dcase.community/challenge2019/"&gt;DCASE 2019 challenge&lt;/a&gt;, I am acting as the task coordinator for &lt;a href="http://dcase.community/challenge2019/task-acoustic-scene-classification"&gt;acoustic scene classification challenge task&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;&lt;br/&gt;
+&lt;a class="link-icon" href="http://dcase.community/challenge2019/" target="_blank"&gt;
+&lt;img src="/images/logos/dcase/dcase2019_challenge.png"/&gt;
+&lt;/a&gt;&lt;/p&gt;</content><category term="DCASE"></category></entry><entry><title>DCASE2018 Challenge</title><link href="/articles/dcase2018-challenge" rel="alternate"></link><published>2018-05-01T12:00:00+03:00</published><updated>2018-05-01T12:00:00+03:00</updated><author><name>Toni Heittola</name></author><id>tag:None,2018-05-01:/articles/dcase2018-challenge</id><summary type="html">&lt;p&gt;Our research group is once again one of the organizing teams of the DCASE 2018 challenge, and I am acting as the task coordinator for acoustic scene classification challenge task.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Our research group is once again one of the organizing teams of the &lt;a href="http://dcase.community/challenge2018/"&gt;DCASE 2018 challenge&lt;/a&gt;, I am acting as the task coordinator for &lt;a href="http://dcase.community/challenge2018/task-acoustic-scene-classification"&gt;acoustic scene classification challenge task&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;&lt;br/&gt;
+&lt;a class="link-icon" href="http://dcase.community/challenge2018/" target="_blank"&gt;
+&lt;img src="/images/logos/dcase/dcase2018_challenge.png"/&gt;
+&lt;/a&gt;&lt;/p&gt;</content><category term="DCASE"></category></entry><entry><title>Kaggle In-Class competition on acoustic scene classification</title><link href="/articles/kaggle-in-class-competition-on-acoustic-scene-classification" rel="alternate"></link><published>2018-01-10T18:00:00+02:00</published><updated>2018-01-10T18:00:00+02:00</updated><author><name>Toni Heittola</name></author><id>tag:None,2018-01-10:/articles/kaggle-in-class-competition-on-acoustic-scene-classification</id><summary type="html">&lt;p&gt;We have launched a Kaggle in Class competition on acoustic scene classification as part of TUT course. Competition is open for everybody whether you are participating the TUT course or not.&lt;/p&gt;</summary><content type="html">&lt;p&gt;We have launched a &lt;a href="https://www.kaggle.com/c/acoustic-scene-2018"&gt;Kaggle in Class competition on acoustic scene classification&lt;/a&gt; as part of TUT course (&lt;a href="http://www.cs.tut.fi/courses/SGN-41007/"&gt;SGN-41007 Pattern Recognition and Machine Learning&lt;/a&gt;). Competition is open for everybody whether you are participating the TUT course or not. &lt;/p&gt;
+&lt;p&gt;The competition data is similar to DCASE2017 Task 1 data, audio material from 15 scene classes split into 10-second segments. Contrary to DCASE2017, where audio signals were released, only acoustic feature matrices (mel-energies) extracted for the audio signals are released. This shifts the research focus more on the machine learning side of the problem and makes the problem more approachable to the Kaggle community.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The results from the competition will be published in International Workshop on Machine Learning for Signal Processing 2018 (MLSP2018):&lt;/p&gt;
+&lt;div class="btex-item" data-item="Gharib2018_MLSP" data-source="content/data/publications.bib"&gt;
+&lt;div class="card mb-3"&gt;
+&lt;span class="label label-default" style="width:100px;padding-top:0.4em;margin-left:0em;margin-top:0em;"&gt;Publication&lt;a name="Gharib2018_MLSP"&gt;&lt;/a&gt;&lt;/span&gt;
+&lt;div class="card-body"&gt;
+&lt;div class="row"&gt;
+&lt;div class="col-md-9"&gt;
+&lt;p style="text-align:left"&gt;
+                                Shayan Gharib, Honain Derrar, Daisuke Niizumi, Tuukka Senttula, Janne Tommola, Toni Heittola, Tuomas Virtanen, and Heikki Huttunen.
+&lt;em&gt;Acoustic scene classification: a competition review.&lt;/em&gt;
+In 2018 IEEE 28th International Workshop on Machine Learning for Signal Processing (MLSP), 1–6. September 2018.
+&lt;a href="https://doi.org/10.1109/MLSP.2018.8517000"&gt;doi:10.1109/MLSP.2018.8517000&lt;/a&gt;.
+                                
+                                
+                                &lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="col-md-3"&gt;
+&lt;div class="btn-group pull-right"&gt;
+&lt;button class="btn btn-xs btn-danger" data-bs-target="#bibtexGharib2018_MLSPb8d0d014c01643ffb15e322c5b940d11" data-bs-toggle="modal" type="button"&gt;&lt;i class="fa fa-solid fa-file-text fa-file-text-o"&gt;&lt;/i&gt; Bib&lt;/button&gt;
+&lt;a class="btn btn-xs btn-warning btn-btex text-white" data-placement="bottom" href="https://arxiv.org/pdf/1808.02357" rel="tooltip" title="Download pdf"&gt;&lt;i class="fa fa-solid fa-file-pdf fa-file-pdf-o fa-1x"&gt;&lt;/i&gt; PDF&lt;/a&gt;
+&lt;a class="btn btn-xs btn-info btn-btex text-white" data-placement="bottom" href="https://zenodo.org/record/1324390" rel="tooltip" title="TUT Acoustic Scenes 2017 Features"&gt;&lt;i class="fa fa-solid fa-database"&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;button aria-controls="collapseGharib2018_MLSPb8d0d014c01643ffb15e322c5b940d11" aria-expanded="true" class="btn btn-default btn-xs" data-bs-parent="#btex-items-accordion" data-bs-target="#collapseGharib2018_MLSPb8d0d014c01643ffb15e322c5b940d11" data-bs-toggle="collapse" type="button"&gt;
+&lt;i class="fa fa-solid fa-caret-down"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div aria-labelledby="headingGharib2018_MLSPb8d0d014c01643ffb15e322c5b940d11" class="panel-collapse collapse mb-3" id="collapseGharib2018_MLSPb8d0d014c01643ffb15e322c5b940d11"&gt;
+&lt;h4&gt;Acoustic Scene Classification: a competition review&lt;/h4&gt;
+&lt;h5&gt;Abstract&lt;/h5&gt;
+&lt;p class="text-justify"&gt;In this paper we study the problem of acoustic scene classification, i.e., categorization of audio sequences into mutually exclusive classes based on their spectral content. We describe the methods and results discovered during a competition organized in the context of a graduate machine learning course; both by the students and external participants. We identify the most suitable methods and study the impact of each by performing an ablation study of the mixture of approaches. We also compare the results with a neural network baseline, and show the improvement over that. Finally, we discuss the impact of using a competition as a part of a university course, and justify its importance in the curriculum based on student feedback.&lt;/p&gt;
+&lt;h5&gt;Keywords&lt;/h5&gt;
+&lt;p class="text-justify"&gt;Acoustic Scene Classification, Data Augmentation, Kaggle, DCASE&lt;/p&gt;
+&lt;div class="btn-group"&gt;
+&lt;button class="btn btn-sm btn-danger" data-target="#bibtexGharib2018_MLSPb8d0d014c01643ffb15e322c5b940d11" data-toggle="modal" type="button"&gt;&lt;i class="fa fa-solid fa-file-text fa-file-text-o"&gt;&lt;/i&gt; Bibtex&lt;/button&gt;
+&lt;a class="btn btn-sm btn-warning text-white btn-btex2" data-placement="bottom" href="https://arxiv.org/pdf/1808.02357" rel="tooltip" title="Download pdf"&gt;&lt;i class="fa fa-solid fa-file-pdf fa-file-pdf-o fa-1x"&gt;&lt;/i&gt; PDF&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class="btn-group"&gt;
+&lt;a class="btn btn-sm btn-info btn-btex2 text-white" data-placement="bottom" href="https://zenodo.org/record/1324390" rel="tooltip" title="Toolbox"&gt;&lt;i class="fa fa-solid fa-database"&gt;&lt;/i&gt; TUT Acoustic Scenes 2017 Features&lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- Modal --&gt;
+&lt;div aria-hidden="true" aria-labelledby="bibtexGharib2018_MLSPb8d0d014c01643ffb15e322c5b940d11label" class="modal fade" id="bibtexGharib2018_MLSPb8d0d014c01643ffb15e322c5b940d11" role="dialog" tabindex="-1"&gt;
+&lt;div class="modal-dialog"&gt;
+&lt;div class="modal-content"&gt;
+&lt;div class="modal-header"&gt;
+&lt;h4 class="modal-title" id="bibtexGharib2018_MLSPb8d0d014c01643ffb15e322c5b940d11label"&gt;Acoustic Scene Classification: a competition review&lt;/h4&gt;
+&lt;button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"&gt;&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class="modal-body"&gt;&lt;pre&gt;@inproceedings{Gharib2018_MLSP,
+    author = "Gharib, Shayan and Derrar, Honain and Niizumi, Daisuke and Senttula, Tuukka and Tommola, Janne and Heittola, Toni and Virtanen, Tuomas and Huttunen, Heikki",
+    title = "Acoustic Scene Classification: a competition review",
+    booktitle = "2018 IEEE 28th International Workshop on Machine Learning for Signal Processing (MLSP)",
+    month = "September",
+    year = "2018",
+    pages = "1--6",
+    keywords = "Acoustic Scene Classification, Data Augmentation, Kaggle, DCASE",
+    abstract = "In this paper we study the problem of acoustic scene classification, i.e., categorization of audio sequences into mutually exclusive classes based on their spectral content. We describe the methods and results discovered during a competition organized in the context of a graduate machine learning course; both by the students and external participants. We identify the most suitable methods and study the impact of each by performing an ablation study of the mixture of approaches. We also compare the results with a neural network baseline, and show the improvement over that. Finally, we discuss the impact of using a competition as a part of a university course, and justify its importance in the curriculum based on student feedback.",
+    doi = "10.1109/MLSP.2018.8517000",
+    issn = "1551-2541"
+}
+&lt;/pre&gt;&lt;/div&gt;
+&lt;div class="modal-footer"&gt;&lt;button class="btn btn-default" data-bs-dismiss="modal" type="button"&gt;Close&lt;/button&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Dataset used in this work has been published as open dataset:&lt;/p&gt;
+&lt;div class="d-inline-flex align-items-center mb-4"&gt;
+&lt;div class="p-1"&gt;
+&lt;a class="icon" href="https://zenodo.org/record/1324390" target="_blank"&gt;
+&lt;span class="fa-stack fa-2x"&gt;
+&lt;i class="fa fa-square fa-stack-2x text-success"&gt;&lt;/i&gt;
+&lt;i class="fa fa-solid fa-file-audio fa-file-audio-o fa-stack-1x fa-inverse"&gt;&lt;/i&gt;
+&lt;/span&gt;
+&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class="p-1"&gt;
+&lt;a href="https://zenodo.org/record/1324390" target="_blank"&gt;
+&lt;span style="font-size:20px;"&gt;TUT Sound events 2017, &lt;strong&gt;Features dataset&lt;/strong&gt; &lt;i class="fa fa-solid fa-download"&gt;&lt;/i&gt;&lt;/span&gt;
+&lt;/a&gt;
+&lt;span class="text-muted"&gt;(0.9 GB)&lt;/span&gt;
+&lt;br/&gt;
+&lt;a href="http://dx.doi.org/10.5281/zenodo.1324390"&gt;
+&lt;img alt="10.5281/zenodo.1324390" src="https://zenodo.org/badge/doi/10.5281/zenodo.1324390.svg"/&gt;
+&lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content><category term="DCASE"></category></entry><entry><title>Python library for DCASE research released</title><link href="/articles/python-library-for-dcase-research-released" rel="alternate"></link><published>2017-11-10T18:00:00+02:00</published><updated>2017-11-10T18:00:00+02:00</updated><author><name>Toni Heittola</name></author><id>tag:None,2017-11-10:/articles/python-library-for-dcase-research-released</id><summary type="html">&lt;p&gt;dcase_util, a python library for DCASE researcher to streamline the research code, make it a bit more readable and easier to maintain, has been released.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a class="icon-link" href="https://dcase-repo.github.io/dcase_util/" target="_blank"&gt;
+&lt;img src="https://dcase-repo.github.io/dcase_util/_images/dcase_util.png"/&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;dcase_util&lt;/code&gt;, a python library for DCASE researcher, has been published. The library is a collection of utilities 
+created for Detection and Classification of Acoustic Scenes and Events (DCASE). These utilities were originally 
+created for the DCASE challenge baseline systems (2016 &amp;amp; 2017) and are bundled now into a standalone 
+library to allow their re-usage in other research projects. At the same time, 
+the code has been polished and some inconsistencies have been smoothed out.&lt;/p&gt;
+&lt;p&gt;The main goal of these utilities is to streamline the research code, make it a bit more readable, and easier to maintain. 
+Most of the currently implemented utilities are related to audio datasets: handling meta data and various forms of 
+other structured data, and provide standardized usage API to audio datasets from various sources. 
+In addition to this, there is large amount of general utilities to help handling files, printing and logging 
+information while application is running, and streamlining the acoustic feature extraction. More detailed information
+about the library and tutorials how to use it can be found in 
+the &lt;a href="https://dcase-repo.github.io/dcase_util/"&gt;documentation&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I hope researchers in the DCASE community find the utilities helpful, and contribute ideas of other useful utilities 
+back to community through &lt;code&gt;dcase_util&lt;/code&gt;. &lt;/p&gt;
+&lt;div class="d-inline-flex align-items-center mb-4"&gt;
+&lt;div class="p-1"&gt;
+&lt;a class="icon" href="https://github.com/DCASE-REPO/dcase_util" target="_blank"&gt;
+&lt;span class="fa-stack fa-2x"&gt;
+&lt;i class="fa fa-square fa-stack-2x text-success"&gt;&lt;/i&gt;
+&lt;i class="fa icon-python fa-stack-1x fa-inverse"&gt;&lt;/i&gt;
+&lt;/span&gt;
+&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class="p-1"&gt;
+&lt;a href="https://github.com/DCASE-REPO/dcase_util" target="_blank"&gt;
+&lt;span style="font-size:20px;"&gt;dcase_util - Utilities for Detection and Classification of Acoustic Scenes &lt;i class="fa fa-solid fa-download"&gt;&lt;/i&gt;&lt;/span&gt;
+&lt;/a&gt;
+&lt;br/&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content><category term="DCASE"></category></entry><entry><title>DCASE2017 Workshop</title><link href="/articles/dcase2017-workshop" rel="alternate"></link><published>2017-11-02T13:00:00+02:00</published><updated>2017-11-02T13:00:00+02:00</updated><author><name>Toni Heittola</name></author><id>tag:None,2017-11-02:/articles/dcase2017-workshop</id><summary type="html">&lt;p&gt;Second DCASE2017 workshop was held 16 - 17 November 2017, Munich, Germany. The workshop collected many international researchers working on computational analysis of sound events and scene analysis from both academia and industry. Proceedings of the presented works are now published.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a class="link-icon" href="https://dcase.community/workshop2017/" target="_blank"&gt;
+&lt;img src="/images/logos/dcase/dcase2017_workshop_header_text.png"/&gt;
+&lt;/a&gt;
+&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;Second &lt;a href="https://dcase.community/workshop2017/"&gt;DCASE2017 workshop&lt;/a&gt; was held 16 - 17 November 2017, Munich, Germany. The workshop collected many international researchers working on computational analysis of sound events and scene analysis from both academia and industry. Proceedings of the presented works are now published.&lt;/p&gt;
+&lt;div class="btex-item" data-item="DCASE2017" data-source="content/data/publications.bib"&gt;
+&lt;div class="card mb-3"&gt;
+&lt;span class="label label-default" style="width:100px;padding-top:0.4em;margin-left:0em;margin-top:0em;"&gt;Publication&lt;a name="DCASE2017"&gt;&lt;/a&gt;&lt;/span&gt;
+&lt;div class="card-body"&gt;
+&lt;div class="row"&gt;
+&lt;div class="col-md-9"&gt;
+&lt;p style="text-align:left"&gt;
+                                Tuomas Virtanen, Annamaria Mesaros, Toni Heittola, Aleksandr Diment, Emmanuel Vincent, Emmanouil Benetos, and Benjamin Martinez Elizalde.
+Proceedings of the Detection and Classification of Acoustic Scenes and Events 2017 Workshop (&lt;span class="bibtex-protected"&gt;DCASE2017&lt;/span&gt;).
+Tampere University of Technology. Laboratory of Signal Processing, 2017.
+ISBN 978-952-15-4042-4.
+&lt;span class="bibtex-protected"&gt;ISBN (Electronic):&lt;/span&gt; 978-952-15-4042-4.
+                                
+                                
+                                &lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="col-md-3"&gt;
+&lt;div class="btn-group pull-right"&gt;
+&lt;button class="btn btn-xs btn-danger" data-bs-target="#bibtexDCASE201760dd764527df42b29629963a6198d144" data-bs-toggle="modal" type="button"&gt;&lt;i class="fa fa-solid fa-file-text fa-file-text-o"&gt;&lt;/i&gt; Bib&lt;/button&gt;
+&lt;a class="btn btn-xs btn-warning btn-btex text-white" data-placement="bottom" href="https://trepo.tuni.fi/bitstream/handle/10024/116766/DCASE_2017.pdf" rel="tooltip" title="Download pdf"&gt;&lt;i class="fa fa-solid fa-file-pdf fa-file-pdf-o fa-1x"&gt;&lt;/i&gt; PDF&lt;/a&gt;
+&lt;button aria-controls="collapseDCASE201760dd764527df42b29629963a6198d144" aria-expanded="true" class="btn btn-default btn-xs" data-bs-parent="#btex-items-accordion" data-bs-target="#collapseDCASE201760dd764527df42b29629963a6198d144" data-bs-toggle="collapse" type="button"&gt;
+&lt;i class="fa fa-solid fa-caret-down"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div aria-labelledby="headingDCASE201760dd764527df42b29629963a6198d144" class="panel-collapse collapse mb-3" id="collapseDCASE201760dd764527df42b29629963a6198d144"&gt;
+&lt;h4&gt;Proceedings of the Detection and Classification of Acoustic Scenes and Events 2017 Workshop (DCASE2017)&lt;/h4&gt;
+&lt;div class="btn-group"&gt;
+&lt;button class="btn btn-sm btn-danger" data-target="#bibtexDCASE201760dd764527df42b29629963a6198d144" data-toggle="modal" type="button"&gt;&lt;i class="fa fa-solid fa-file-text fa-file-text-o"&gt;&lt;/i&gt; Bibtex&lt;/button&gt;
+&lt;a class="btn btn-sm btn-warning text-white btn-btex2" data-placement="bottom" href="https://trepo.tuni.fi/bitstream/handle/10024/116766/DCASE_2017.pdf" rel="tooltip" title="Download pdf"&gt;&lt;i class="fa fa-solid fa-file-pdf fa-file-pdf-o fa-1x"&gt;&lt;/i&gt; PDF&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class="btn-group"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- Modal --&gt;
+&lt;div aria-hidden="true" aria-labelledby="bibtexDCASE201760dd764527df42b29629963a6198d144label" class="modal fade" id="bibtexDCASE201760dd764527df42b29629963a6198d144" role="dialog" tabindex="-1"&gt;
+&lt;div class="modal-dialog"&gt;
+&lt;div class="modal-content"&gt;
+&lt;div class="modal-header"&gt;
+&lt;h4 class="modal-title" id="bibtexDCASE201760dd764527df42b29629963a6198d144label"&gt;Proceedings of the Detection and Classification of Acoustic Scenes and Events 2017 Workshop (DCASE2017)&lt;/h4&gt;
+&lt;button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"&gt;&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class="modal-body"&gt;&lt;pre&gt;@book{DCASE2017,
+    author = "Virtanen, Tuomas and Mesaros, Annamaria and Heittola, Toni and Diment, Aleksandr and Vincent, Emmanuel and Benetos, Emmanouil and Elizalde, Benjamin Martinez",
+    title = "Proceedings of the Detection and Classification of Acoustic Scenes and Events 2017 Workshop ({DCASE2017})",
+    publisher = "Tampere University of Technology. Laboratory of Signal Processing",
+    year = "2017",
+    note = "{ISBN (Electronic):} 978-952-15-4042-4",
+    isbn = "978-952-15-4042-4"
+}
+&lt;/pre&gt;&lt;/div&gt;
+&lt;div class="modal-footer"&gt;&lt;button class="btn btn-default" data-bs-dismiss="modal" type="button"&gt;Close&lt;/button&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</content><category term="DCASE"></category></entry><entry><title>DCASE2017 Challenge</title><link href="/articles/dcase2017-challenge" rel="alternate"></link><published>2017-03-03T12:00:00+02:00</published><updated>2017-03-03T12:00:00+02:00</updated><author><name>Toni Heittola</name></author><id>tag:None,2017-03-03:/articles/dcase2017-challenge</id><summary type="html">&lt;p&gt;Our research group is again one of the organizing team of the DCASE 2017 challenge, and I am acting as the task coordinator for three challenge tasks: Acoustic scene classification, Detection of rare sound events, and Sound event detection in real life audio.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Our research group is again one of the organizing team of the &lt;a href="http://www.cs.tut.fi/sgn/arg/dcase2017/challenge"&gt;DCASE 2017 challenge&lt;/a&gt;, and I am acting as the task coordinator for three challenge tasks: &lt;a href="http://www.cs.tut.fi/sgn/arg/dcase2017/challenge/task-acoustic-scene-classification"&gt;Acoustic scene classification&lt;/a&gt;, &lt;a href="http://www.cs.tut.fi/sgn/arg/dcase2017/challenge/task-rare-sound-event-detection"&gt;Detection of rare sound events&lt;/a&gt;, and &lt;a href="http://www.cs.tut.fi/sgn/arg/dcase2017/challenge/task-sound-event-detection-in-real-life-audio"&gt;Sound event detection in real life audio&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;&lt;br/&gt;
+&lt;a class="link-icon" href="https://dcase.community/challenge2017/" target="_blank"&gt;
+&lt;img src="/images/logos/dcase/dcase2017_challenge_header_text.png"/&gt;
+&lt;/a&gt;&lt;/p&gt;</content><category term="DCASE"></category></entry><entry><title>DCASE2016 Workshop</title><link href="/articles/dcase2016-workshop" rel="alternate"></link><published>2016-09-09T12:00:00+03:00</published><updated>2016-09-09T12:00:00+03:00</updated><author><name>Toni Heittola</name></author><id>tag:None,2016-09-09:/articles/dcase2016-workshop</id><summary type="html">&lt;p&gt;First DCASE2016 workshop was held on 3rd September 2016 at Budapest, Hungary. The workshop collected many international researchers working on computational analysis of sound events and scene analysis from both academia and industry. Proceedings of the presented works are now published.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a class="link-icon" href="https://dcase.community/workshop2016/" target="_blank"&gt;
+&lt;img src="/images/logos/dcase/dcase2016_workshop_header_text.png"/&gt;
+&lt;/a&gt;
+&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;The first &lt;a href="http://www.cs.tut.fi/sgn/arg/dcase2016/workshop"&gt;DCASE2016 workshop&lt;/a&gt; was held on 3rd September 2016 at Budapest, Hungary. The workshop collected many international researchers working on computational analysis of sound events and scene analysis from both academia and industry. Proceedings of the presented works are now published.&lt;/p&gt;
+&lt;div class="btex-item" data-item="DCASE2016" data-source="content/data/publications.bib"&gt;
+&lt;div class="card mb-3"&gt;
+&lt;span class="label label-default" style="width:100px;padding-top:0.4em;margin-left:0em;margin-top:0em;"&gt;Publication&lt;a name="DCASE2016"&gt;&lt;/a&gt;&lt;/span&gt;
+&lt;div class="card-body"&gt;
+&lt;div class="row"&gt;
+&lt;div class="col-md-9"&gt;
+&lt;p style="text-align:left"&gt;
+                                Tuomas Virtanen, Annamaria Mesaros, Toni Heittola, Mark D. Plumbley, Peter Foster, Emmanouil Benetos, and Mathieu Lagrange.
+Proceedings of the Detection and Classification of Acoustic Scenes and Events 2016 Workshop (&lt;span class="bibtex-protected"&gt;DCASE2016&lt;/span&gt;).
+Tampere University of Technology. Department of Signal Processing, 2016.
+ISBN 978-952-15-3807-0.
+&lt;span class="bibtex-protected"&gt;ISBN (Electronic):&lt;/span&gt; 978-952-15-3807-0.
+                                
+                                
+                                &lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="col-md-3"&gt;
+&lt;div class="btn-group pull-right"&gt;
+&lt;button class="btn btn-xs btn-danger" data-bs-target="#bibtexDCASE20162bb0645bb6da48d7b6545a2985a7072e" data-bs-toggle="modal" type="button"&gt;&lt;i class="fa fa-solid fa-file-text fa-file-text-o"&gt;&lt;/i&gt; Bib&lt;/button&gt;
+&lt;a class="btn btn-xs btn-warning btn-btex text-white" data-placement="bottom" href="https://tutcris.tut.fi/portal/files/8087101/DCASE_2016_proceedings.pdf" rel="tooltip" title="Download pdf"&gt;&lt;i class="fa fa-solid fa-file-pdf fa-file-pdf-o fa-1x"&gt;&lt;/i&gt; PDF&lt;/a&gt;
+&lt;button aria-controls="collapseDCASE20162bb0645bb6da48d7b6545a2985a7072e" aria-expanded="true" class="btn btn-default btn-xs" data-bs-parent="#btex-items-accordion" data-bs-target="#collapseDCASE20162bb0645bb6da48d7b6545a2985a7072e" data-bs-toggle="collapse" type="button"&gt;
+&lt;i class="fa fa-solid fa-caret-down"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div aria-labelledby="headingDCASE20162bb0645bb6da48d7b6545a2985a7072e" class="panel-collapse collapse mb-3" id="collapseDCASE20162bb0645bb6da48d7b6545a2985a7072e"&gt;
+&lt;h4&gt;Proceedings of the Detection and Classification of Acoustic Scenes and Events 2016 Workshop (DCASE2016)&lt;/h4&gt;
+&lt;div class="btn-group"&gt;
+&lt;button class="btn btn-sm btn-danger" data-target="#bibtexDCASE20162bb0645bb6da48d7b6545a2985a7072e" data-toggle="modal" type="button"&gt;&lt;i class="fa fa-solid fa-file-text fa-file-text-o"&gt;&lt;/i&gt; Bibtex&lt;/button&gt;
+&lt;a class="btn btn-sm btn-warning text-white btn-btex2" data-placement="bottom" href="https://tutcris.tut.fi/portal/files/8087101/DCASE_2016_proceedings.pdf" rel="tooltip" title="Download pdf"&gt;&lt;i class="fa fa-solid fa-file-pdf fa-file-pdf-o fa-1x"&gt;&lt;/i&gt; PDF&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class="btn-group"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- Modal --&gt;
+&lt;div aria-hidden="true" aria-labelledby="bibtexDCASE20162bb0645bb6da48d7b6545a2985a7072elabel" class="modal fade" id="bibtexDCASE20162bb0645bb6da48d7b6545a2985a7072e" role="dialog" tabindex="-1"&gt;
+&lt;div class="modal-dialog"&gt;
+&lt;div class="modal-content"&gt;
+&lt;div class="modal-header"&gt;
+&lt;h4 class="modal-title" id="bibtexDCASE20162bb0645bb6da48d7b6545a2985a7072elabel"&gt;Proceedings of the Detection and Classification of Acoustic Scenes and Events 2016 Workshop (DCASE2016)&lt;/h4&gt;
+&lt;button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"&gt;&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class="modal-body"&gt;&lt;pre&gt;@book{DCASE2016,
+    author = "Virtanen, Tuomas and Mesaros, Annamaria and Heittola, Toni and Plumbley, Mark D. and Foster, Peter and Benetos, Emmanouil and Lagrange, Mathieu",
+    title = "Proceedings of the Detection and Classification of Acoustic Scenes and Events 2016 Workshop ({DCASE2016})",
+    publisher = "Tampere University of Technology. Department of Signal Processing",
+    year = "2016",
+    note = "{ISBN (Electronic):} 978-952-15-3807-0",
+    isbn = "978-952-15-3807-0"
+}
+&lt;/pre&gt;&lt;/div&gt;
+&lt;div class="modal-footer"&gt;&lt;button class="btn btn-default" data-bs-dismiss="modal" type="button"&gt;Close&lt;/button&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</content><category term="DCASE"></category></entry><entry><title>DCASE2016 Challenge</title><link href="/articles/dcase2016-challenge" rel="alternate"></link><published>2016-08-15T12:00:00+03:00</published><updated>2016-08-15T12:00:00+03:00</updated><author><name>Toni Heittola</name></author><id>tag:None,2016-08-15:/articles/dcase2016-challenge</id><summary type="html">&lt;p&gt;Our research group was part of an organizing team of the DCASE (Detection and Classification of Acoustic Scenes and Events) 2016 challenge, and I acted as one of the task coordinators for two challenge tasks: Acoustic scene classification and Sound event detection in real life audio.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Our research group was part of an organizing team of the &lt;a href="http://www.cs.tut.fi/sgn/arg/dcase2016/challenge"&gt;DCASE (Detection and Classification of Acoustic Scenes and Events) 2016 challenge&lt;/a&gt;, and I acted as one of the task coordinators for two challenge tasks: &lt;a href="http://www.cs.tut.fi/sgn/arg/dcase2016/task-acoustic-scene-classification"&gt;Acoustic scene classification&lt;/a&gt; and &lt;a href="http://www.cs.tut.fi/sgn/arg/dcase2016/task-sound-event-detection-in-real-life-audio"&gt;Sound event detection in real life audio&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;br/&gt;
+&lt;a class="link-icon" href="https://dcase.community/challenge2016/" target="_blank"&gt;
+&lt;img src="/images/logos/dcase/dcase2016_challenge_header_text.png"/&gt;
+&lt;/a&gt;&lt;/p&gt;</content><category term="DCASE"></category></entry></feed>

@@ -1,0 +1,348 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <title>Kaggle In-Class competition on acoustic scene classification - Toni Heittola</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <link href="/static/favicon.png" rel="icon">
+<link rel="canonical" href="/articles/kaggle-in-class-competition-on-acoustic-scene-classification">
+        <meta name="author" content="Toni Heittola" />
+        <meta name="description" content="We have launched a Kaggle in Class competition on acoustic scene classification as part of TUT course. Competition is open for everybody whether you are participating the TUT course or not." />
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;900&family=Roboto:wght@900&family=Bungee+Spice" rel="stylesheet">
+    <link rel="stylesheet" href="/theme/assets/bootstrap5/css/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/assets/fontawesome6/css/all.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/assets/academicons/css/academicons.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/assets/dcaseicons/css/dcaseicons.css?v=1.1" type="text/css"/>
+<link rel="stylesheet" href="/theme/assets/highlight/styles/atom-one-light.css" type="text/css"/>
+                <link rel="stylesheet" href="/theme/css/font-mfizz.min.css">
+<link rel="stylesheet" href="/theme/css/theme5.css?v=1.1" type="text/css"/><link rel="stylesheet" href="/static/assets/css/icons.css" type="text/css"/><link rel="stylesheet" href="/static/assets/css/extra.css" type="text/css"/><script type="text/javascript" src="/theme/assets/jquery/jquery-3.7.1.min.js"></script>    <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Toni Heittola ATOM Feed"/>
+
+
+</head>
+<body>
+
+
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark pt-0 pb-0 flex-column" role="navigation" data-spy="affix" data-offset-top="195" id="topmenu">
+    <div class="container p-0">
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-main" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar-main">
+            <div class="container-fluid p-0">
+                <div class="row g-0 p-0">
+                    <div class="col-md d-flex">
+                        <a href="/" class="navbar-brand align-self-start" ></a><ul class="navbar-nav flex-sm-row2 flex-lg-grow flex-lg-fill align-self-start" id="menuitem-list-main"><li class="nav-item ">
+        <a href="/"
+        class="nav-link"
+        ><strong>Toni Heittola</strong></a>
+    </li></ul><ul class="navbar-nav flex-lg-nowrap align-self-start" id="menuitem-list"><li class="nav-item " data-bs-toggle="tooltip" data-bs-placement="bottom" title="About me">
+        <a href="/about-me"
+        class="nav-link"
+        ><i class="fa fa-solid fa-user fa-1x fa-fw"></i>&nbsp;About</a>
+    </li><li class="nav-item dropdown ">
+        <a href="#"
+ class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+        ><i class="fa fa-solid fa-magnifying-glass fa-1x fa-fw text-danger text-dcase-a1"></i>&nbsp;Research&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class=" ">
+        <a href="/research"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-circle-notch fa-circle-o-notch fa-1x fa-fw text-dcase-a1"></i>&nbsp;Overview</a>
+    </li>
+            <li class=" ">
+        <a href="/research-portfolio"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-cog fa-1x fa-fw text-dcase-a2"></i>&nbsp;Portfolio</a>
+    </li>
+            <li class=" ">
+        <a href="/guiding-research"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-users fa-fw text-dcase-a3"></i>&nbsp;Guiding Research</a>
+    </li>
+            <li class="nav-item divider dropdown-divider" role="presentation"></li>
+            <li class=" ">
+        <a href="/publications"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-copy fa-files-o fa-1x fa-fw text-dcase-a4"></i>&nbsp;Publications</a>
+    </li>
+            <li class=" ">
+        <a href="/opendata"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-database fa-fw text-dcase-a5"></i>&nbsp;Open Data</a>
+    </li>
+            <li class="nav-item divider dropdown-divider" role="presentation"></li>
+            <li class=" ">
+        <a href="/academic-illustrations"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-image fa-1x fa-fw text-dcase-a7"></i>&nbsp;Illustrations</a>
+    </li>
+            <li class="nav-item divider dropdown-divider" role="presentation"></li>
+            <li class=" ">
+        <a href="/academic-bio"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-user fa-1x fa-fw text-dcase-a6"></i>&nbsp;Biography</a>
+    </li>
+            <li class="nav-item divider dropdown-divider" role="presentation"></li>
+            <li class=" ">
+        <a href="/glossary"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-list fa-1x fa-fw text-dcase-a7"></i>&nbsp;Glossary</a>
+    </li>
+            <li class="nav-item divider dropdown-divider" role="presentation"></li>
+            <li class="nav-link disabled subheader" >
+       <a><strong><small class="fw-light">Audio Content Analysis <br>in Everyday Environments</small></strong></a>
+    </li>
+            <li class=" ">
+        <a href="/thesis/introduction"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-book-open fa-1x fa-fw text-dcase-a1"></i>&nbsp;Introduction</a>
+    </li>
+            <li class=" ">
+        <a href="/thesis/everyday_environments"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-person-walking fa-1x fa-fw text-dcase-a1"></i>&nbsp;Everyday Environments</a>
+    </li>
+            <li class=" ">
+        <a href="/thesis/content_analysis"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-brain fa-1x fa-fw text-dcase-a1"></i>&nbsp;Audio Content Analysis</a>
+    </li>
+            <li class=" ">
+        <a href="/thesis/sed"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-ear-listen fa-1x fa-fw text-dcase-a1"></i>&nbsp;Sound Event Detection</a>
+    </li>
+            <li class="nav-item divider dropdown-divider" role="presentation"></li>
+            <li class="nav-item dropdown ">
+        <a href="#"
+ class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+        ><i class="fa fa-solid fa-file-alt fa-1x fa-fw"></i>&nbsp;Publication Add-ons&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class=" ">
+        <a href="/audiotexture/index"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-file-alt fa-1x fa-fw"></i>&nbsp;Location-Specific Audio Textures</a>
+    </li>
+            <li class=" ">
+        <a href="/ismir09/index"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-file-alt fa-1x fa-fw"></i>&nbsp;Musical Instrument Recognition</a>
+    </li>
+            <li class=" ">
+        <a href="/musicalgenre/index"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-file-alt fa-1x fa-fw"></i>&nbsp;Musical Genre Classification</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li><li class="nav-item dropdown ">
+        <a href="/development"
+ class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+        ><i class="fa fa-solid fa-code fa-1x fa-fw text-warning text-thesis-a3"></i>&nbsp;Develop&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class=" ">
+        <a href="/development"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-code fa-1x fa-fw text-thesis-a3"></i>&nbsp;Introduction</a>
+    </li>
+            <li class="nav-item divider dropdown-divider" role="presentation"></li>
+            <li class=" ">
+        <a href="/ml-development"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-search fa-1x fa-fw text-thesis-a4"></i>&nbsp;Machine Learning</a>
+    </li>
+            <li class=" ">
+        <a href="/websites"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-desktop fa-1x fa-fw text-thesis-a2"></i>&nbsp;Websites</a>
+    </li>
+            <li class=" ">
+        <a href="/web-development"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-plug fa-1x fa-fw text-thesis-a1"></i>&nbsp;Web Development</a>
+    </li>
+        </ul>
+    </li><li class="nav-item ">
+        <a href="/publications"
+        class="nav-link"
+        ><i class="fa fa-solid fa-copy fa-files-o fa-1x fa-fw text-success text-dcase-a4"></i>&nbsp;Publish</a>
+    </li><li class="nav-item dropdown ">
+        <a href="#"
+ class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+        ><i class="fa fa-solid fa-wave-square fa-fw text-primary text-dcase-a5"></i>&nbsp;Data&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class=" ">
+        <a href="/opendata"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-folder-open fa-fw"></i>&nbsp;Open Data</a>
+    </li>
+            <li class=" ">
+        <a href="/datasets"
+ class="dropdown-item"
+        ><i class="fa fa-list-ul fa-fw"></i>&nbsp;Data & Tools</a>
+    </li>
+            <li class="nav-item divider dropdown-divider" role="presentation"></li>
+            <li class=" " data-bs-toggle="tooltip" data-bs-placement="bottom" title="DCASE Datalist">
+        <a href="https://dcase-repo.github.io/dcase_datalist/"
+ target="_blank"  class="dropdown-item"
+        ><i class="fa fa-database fa-1x fa-fw"></i>&nbsp;DCASE DataList</a>
+    </li>
+        </ul>
+    </li><li class="nav-item " data-bs-toggle="tooltip" data-bs-placement="bottom" title="Glossary">
+        <a href="/glossary"
+        class="nav-link"
+        ><i class="fa fa-solid fa-list fa-1x fa-fw"></i>&nbsp;</a>
+    </li><li class="nav-item " data-bs-toggle="tooltip" data-bs-placement="bottom" title="News articles">
+        <a href="/news"
+        class="nav-link"
+        ><i class="fa fa-solid fa-newspaper fa-newspaper-o fa-fw"></i>&nbsp;</a>
+    </li><li class="nav-item " data-bs-toggle="tooltip" data-bs-placement="bottom" title="Github">
+        <a href="https://github.com/toni-heittola?tab=repositories"
+ target="_blank"         class="nav-link"
+        ><i class="fa fa-brands fa-github fa-1x"></i>&nbsp;</a>
+    </li>                        </ul>                    </div></div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+<header class="article-top" style="background-image: url(../theme/images/everyday-patterns/ceil-01.jpg);box-shadow: 0px 1000px rgba(0, 0, 0, 0.65) inset;overflow:hidden;position:relative">
+    <div class="container" style="height:100%;">
+        <div class="row" style="height:100%;">
+            <div class="offset-md-2 col-md-8 b20" style="height:100%;box-shadow: 0px 1000px rgba(255, 255, 255, 0.1) inset;">
+                <div class="page-heading  text-end" style="height:100%;"><h2 class="bold">Kaggle In-Class competition on acoustic scene classification</h2>                    <div class="text-muted2 float-start">
+                        <small>
+                            <time datetime="2018-01-10T18:00:00+02:00"> Wed 10 January 2018</time>, <em><strong>Toni Heittola</strong></em></small>
+                    </div><div class="text-muted2 float-end">
+                        <small><span class="badge bg-secondary">DCASE
+                        </span>
+                        </small>
+                    </div></div>
+            </div>
+        </div>
+    </div>
+<span class="header-cc-logo" data-toggle="tooltip" data-placement="top" title="Background photo by Toni Heittola / CC BY-NC 4.0"><i class="fa fa-brands fa-creative-commons" aria-hidden="true"></i></span></header>    <section id="content" class="article-rest">
+        <article style="height:100%;">
+            <div class="container" style="height:100%;">
+                <div class="row" style="height:100%;">
+                    <div class="offset-md-2 col-md-8 gradient1r entry-content" style="min-height:100%;padding-top:10px;">
+                        <p>We have launched a <a href="https://www.kaggle.com/c/acoustic-scene-2018">Kaggle in Class competition on acoustic scene classification</a> as part of TUT course (<a href="http://www.cs.tut.fi/courses/SGN-41007/">SGN-41007 Pattern Recognition and Machine Learning</a>). Competition is open for everybody whether you are participating the TUT course or not. </p>
+<p>The competition data is similar to DCASE2017 Task 1 data, audio material from 15 scene classes split into 10-second segments. Contrary to DCASE2017, where audio signals were released, only acoustic feature matrices (mel-energies) extracted for the audio signals are released. This shifts the research focus more on the machine learning side of the problem and makes the problem more approachable to the Kaggle community.</p>
+<p><strong>Update:</strong></p>
+<p>The results from the competition will be published in International Workshop on Machine Learning for Signal Processing 2018 (MLSP2018):</p>
+<div class="btex-item" data-item="Gharib2018_MLSP" data-source="content/data/publications.bib">
+<div class="card mb-3">
+<span class="label label-default" style="width:100px;padding-top:0.4em;margin-left:0em;margin-top:0em;">Publication<a name="Gharib2018_MLSP"></a></span>
+<div class="card-body">
+<div class="row">
+<div class="col-md-9">
+<p style="text-align:left">
+                                Shayan Gharib, Honain Derrar, Daisuke Niizumi, Tuukka Senttula, Janne Tommola, Toni Heittola, Tuomas Virtanen, and Heikki Huttunen.
+<em>Acoustic scene classification: a competition review.</em>
+In 2018 IEEE 28th International Workshop on Machine Learning for Signal Processing (MLSP), 1–6. September 2018.
+<a href="https://doi.org/10.1109/MLSP.2018.8517000">doi:10.1109/MLSP.2018.8517000</a>.
+                                
+                                
+                                </p>
+</div>
+<div class="col-md-3">
+<div class="btn-group pull-right">
+<button class="btn btn-xs btn-danger" data-bs-target="#bibtexGharib2018_MLSPb8d0d014c01643ffb15e322c5b940d11" data-bs-toggle="modal" type="button"><i class="fa fa-solid fa-file-text fa-file-text-o"></i> Bib</button>
+<a class="btn btn-xs btn-warning btn-btex text-white" data-placement="bottom" href="https://arxiv.org/pdf/1808.02357" rel="tooltip" title="Download pdf"><i class="fa fa-solid fa-file-pdf fa-file-pdf-o fa-1x"></i> PDF</a>
+<a class="btn btn-xs btn-info btn-btex text-white" data-placement="bottom" href="https://zenodo.org/record/1324390" rel="tooltip" title="TUT Acoustic Scenes 2017 Features"><i class="fa fa-solid fa-database"></i></a>
+<button aria-controls="collapseGharib2018_MLSPb8d0d014c01643ffb15e322c5b940d11" aria-expanded="true" class="btn btn-default btn-xs" data-bs-parent="#btex-items-accordion" data-bs-target="#collapseGharib2018_MLSPb8d0d014c01643ffb15e322c5b940d11" data-bs-toggle="collapse" type="button">
+<i class="fa fa-solid fa-caret-down"></i></button>
+</div>
+</div>
+</div>
+<div aria-labelledby="headingGharib2018_MLSPb8d0d014c01643ffb15e322c5b940d11" class="panel-collapse collapse mb-3" id="collapseGharib2018_MLSPb8d0d014c01643ffb15e322c5b940d11">
+<h4>Acoustic Scene Classification: a competition review</h4>
+<h5>Abstract</h5>
+<p class="text-justify">In this paper we study the problem of acoustic scene classification, i.e., categorization of audio sequences into mutually exclusive classes based on their spectral content. We describe the methods and results discovered during a competition organized in the context of a graduate machine learning course; both by the students and external participants. We identify the most suitable methods and study the impact of each by performing an ablation study of the mixture of approaches. We also compare the results with a neural network baseline, and show the improvement over that. Finally, we discuss the impact of using a competition as a part of a university course, and justify its importance in the curriculum based on student feedback.</p>
+<h5>Keywords</h5>
+<p class="text-justify">Acoustic Scene Classification, Data Augmentation, Kaggle, DCASE</p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtexGharib2018_MLSPb8d0d014c01643ffb15e322c5b940d11" data-toggle="modal" type="button"><i class="fa fa-solid fa-file-text fa-file-text-o"></i> Bibtex</button>
+<a class="btn btn-sm btn-warning text-white btn-btex2" data-placement="bottom" href="https://arxiv.org/pdf/1808.02357" rel="tooltip" title="Download pdf"><i class="fa fa-solid fa-file-pdf fa-file-pdf-o fa-1x"></i> PDF</a>
+</div>
+<div class="btn-group">
+<a class="btn btn-sm btn-info btn-btex2 text-white" data-placement="bottom" href="https://zenodo.org/record/1324390" rel="tooltip" title="Toolbox"><i class="fa fa-solid fa-database"></i> TUT Acoustic Scenes 2017 Features</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtexGharib2018_MLSPb8d0d014c01643ffb15e322c5b940d11label" class="modal fade" id="bibtexGharib2018_MLSPb8d0d014c01643ffb15e322c5b940d11" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<h4 class="modal-title" id="bibtexGharib2018_MLSPb8d0d014c01643ffb15e322c5b940d11label">Acoustic Scene Classification: a competition review</h4>
+<button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+</div>
+<div class="modal-body"><pre>@inproceedings{Gharib2018_MLSP,
+    author = "Gharib, Shayan and Derrar, Honain and Niizumi, Daisuke and Senttula, Tuukka and Tommola, Janne and Heittola, Toni and Virtanen, Tuomas and Huttunen, Heikki",
+    title = "Acoustic Scene Classification: a competition review",
+    booktitle = "2018 IEEE 28th International Workshop on Machine Learning for Signal Processing (MLSP)",
+    month = "September",
+    year = "2018",
+    pages = "1--6",
+    keywords = "Acoustic Scene Classification, Data Augmentation, Kaggle, DCASE",
+    abstract = "In this paper we study the problem of acoustic scene classification, i.e., categorization of audio sequences into mutually exclusive classes based on their spectral content. We describe the methods and results discovered during a competition organized in the context of a graduate machine learning course; both by the students and external participants. We identify the most suitable methods and study the impact of each by performing an ablation study of the mixture of approaches. We also compare the results with a neural network baseline, and show the improvement over that. Finally, we discuss the impact of using a competition as a part of a university course, and justify its importance in the curriculum based on student feedback.",
+    doi = "10.1109/MLSP.2018.8517000",
+    issn = "1551-2541"
+}
+</pre></div>
+<div class="modal-footer"><button class="btn btn-default" data-bs-dismiss="modal" type="button">Close</button></div>
+</div>
+</div>
+</div>
+</div>
+<p>Dataset used in this work has been published as open dataset:</p>
+<div class="d-inline-flex align-items-center mb-4">
+<div class="p-1">
+<a class="icon" href="https://zenodo.org/record/1324390" target="_blank">
+<span class="fa-stack fa-2x">
+<i class="fa fa-square fa-stack-2x text-success"></i>
+<i class="fa fa-solid fa-file-audio fa-file-audio-o fa-stack-1x fa-inverse"></i>
+</span>
+</a>
+</div>
+<div class="p-1">
+<a href="https://zenodo.org/record/1324390" target="_blank">
+<span style="font-size:20px;">TUT Sound events 2017, <strong>Features dataset</strong> <i class="fa fa-solid fa-download"></i></span>
+</a>
+<span class="text-muted">(0.9 GB)</span>
+<br/>
+<a href="http://dx.doi.org/10.5281/zenodo.1324390">
+<img alt="10.5281/zenodo.1324390" src="https://zenodo.org/badge/doi/10.5281/zenodo.1324390.svg"/>
+</a>
+</div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
+
+<ul class="nav pull-right scroll-top">
+  <li>
+    <a title="Scroll to top" href="#" class="page-scroll-top">
+      <i class="glyphicon glyphicon-chevron-up"></i>
+    </a>
+  </li>
+</ul>
+<script type="text/javascript" src="/theme/assets/jquery/jquery.easing.min.js"></script>
+<script type="text/javascript" src="/theme/assets/bootstrap5/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="/theme/js/theme5.js"></script><script type="text/javascript" src="/theme/assets/scrollreveal/scrollreveal.min.js"></script>
+<script type="text/javascript" src="/theme/js/setup.scrollreveal.js"></script>
+<script type="text/javascript" src="/theme/assets/highlight/highlight.pack.js"></script>
+<script type="text/javascript">
+    document.querySelectorAll('pre code:not([class])').forEach(function($) {$.className = 'no-highlight';});
+    hljs.initHighlightingOnLoad();
+</script>
+<script type="text/javascript" src="/theme/js/respond.min.js"></script>
+</body>
+</html>

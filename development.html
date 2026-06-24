@@ -1,0 +1,318 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <title>Research-Driven Development - Toni Heittola</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <link href="/static/favicon.png" rel="icon">
+<link rel="canonical" href="/development">
+        <meta name="author" content="Toni Heittola" />
+        <meta name="description" content="Over the years, I&#39;ve contributed to a wide range of academic and industrial projects analyzing audio signals, resulting in benchmark systems and open-source tools for sound classification, event detection, and acoustic scene analysis. Much of this work happened within the DCASE (Detection and Classification of Acoustic Scenes and Events) community …" />
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;900&family=Roboto:wght@900&family=Bungee+Spice" rel="stylesheet">
+    <link rel="stylesheet" href="/theme/assets/bootstrap5/css/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/assets/fontawesome6/css/all.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/assets/academicons/css/academicons.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/assets/dcaseicons/css/dcaseicons.css?v=1.1" type="text/css"/>
+<link rel="stylesheet" href="/theme/assets/highlight/styles/atom-one-light.css" type="text/css"/>
+                <link rel="stylesheet" href="/theme/css/font-mfizz.min.css">
+                <link rel="stylesheet" href="/theme/css/btoc-bot.min.css">
+<link rel="stylesheet" href="/theme/css/theme5.css?v=1.1" type="text/css"/><link rel="stylesheet" href="/static/assets/css/icons.css" type="text/css"/><link rel="stylesheet" href="/static/assets/css/extra.css" type="text/css"/><script type="text/javascript" src="/theme/assets/jquery/jquery-3.7.1.min.js"></script>    <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Toni Heittola ATOM Feed"/>
+
+
+    <style>            .card{margin:5% 0%;}
+</style>
+</head>
+<body>
+
+
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark pt-0 pb-0 flex-column" role="navigation" data-spy="affix" data-offset-top="195" id="topmenu">
+    <div class="container p-0">
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-main" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar-main">
+            <div class="container-fluid p-0">
+                <div class="row g-0 p-0">
+                    <div class="col-md d-flex">
+                        <a href="/" class="navbar-brand align-self-start" ></a><ul class="navbar-nav flex-sm-row2 flex-lg-grow flex-lg-fill align-self-start" id="menuitem-list-main"><li class="nav-item ">
+        <a href="/"
+        class="nav-link"
+        ><strong>Toni Heittola</strong></a>
+    </li></ul><ul class="navbar-nav flex-lg-nowrap align-self-start" id="menuitem-list"><li class="nav-item " data-bs-toggle="tooltip" data-bs-placement="bottom" title="About me">
+        <a href="/about-me"
+        class="nav-link"
+        ><i class="fa fa-solid fa-user fa-1x fa-fw"></i>&nbsp;About</a>
+    </li><li class="nav-item dropdown ">
+        <a href="#"
+ class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+        ><i class="fa fa-solid fa-magnifying-glass fa-1x fa-fw text-danger text-dcase-a1"></i>&nbsp;Research&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class=" ">
+        <a href="/research"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-circle-notch fa-circle-o-notch fa-1x fa-fw text-dcase-a1"></i>&nbsp;Overview</a>
+    </li>
+            <li class=" ">
+        <a href="/research-portfolio"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-cog fa-1x fa-fw text-dcase-a2"></i>&nbsp;Portfolio</a>
+    </li>
+            <li class=" ">
+        <a href="/guiding-research"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-users fa-fw text-dcase-a3"></i>&nbsp;Guiding Research</a>
+    </li>
+            <li class="nav-item divider dropdown-divider" role="presentation"></li>
+            <li class=" ">
+        <a href="/publications"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-copy fa-files-o fa-1x fa-fw text-dcase-a4"></i>&nbsp;Publications</a>
+    </li>
+            <li class=" ">
+        <a href="/opendata"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-database fa-fw text-dcase-a5"></i>&nbsp;Open Data</a>
+    </li>
+            <li class="nav-item divider dropdown-divider" role="presentation"></li>
+            <li class=" ">
+        <a href="/academic-illustrations"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-image fa-1x fa-fw text-dcase-a7"></i>&nbsp;Illustrations</a>
+    </li>
+            <li class="nav-item divider dropdown-divider" role="presentation"></li>
+            <li class=" ">
+        <a href="/academic-bio"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-user fa-1x fa-fw text-dcase-a6"></i>&nbsp;Biography</a>
+    </li>
+            <li class="nav-item divider dropdown-divider" role="presentation"></li>
+            <li class=" ">
+        <a href="/glossary"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-list fa-1x fa-fw text-dcase-a7"></i>&nbsp;Glossary</a>
+    </li>
+            <li class="nav-item divider dropdown-divider" role="presentation"></li>
+            <li class="nav-link disabled subheader" >
+       <a><strong><small class="fw-light">Audio Content Analysis <br>in Everyday Environments</small></strong></a>
+    </li>
+            <li class=" ">
+        <a href="/thesis/introduction"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-book-open fa-1x fa-fw text-dcase-a1"></i>&nbsp;Introduction</a>
+    </li>
+            <li class=" ">
+        <a href="/thesis/everyday_environments"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-person-walking fa-1x fa-fw text-dcase-a1"></i>&nbsp;Everyday Environments</a>
+    </li>
+            <li class=" ">
+        <a href="/thesis/content_analysis"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-brain fa-1x fa-fw text-dcase-a1"></i>&nbsp;Audio Content Analysis</a>
+    </li>
+            <li class=" ">
+        <a href="/thesis/sed"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-ear-listen fa-1x fa-fw text-dcase-a1"></i>&nbsp;Sound Event Detection</a>
+    </li>
+            <li class="nav-item divider dropdown-divider" role="presentation"></li>
+            <li class="nav-item dropdown ">
+        <a href="#"
+ class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+        ><i class="fa fa-solid fa-file-alt fa-1x fa-fw"></i>&nbsp;Publication Add-ons&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class=" ">
+        <a href="/audiotexture/index"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-file-alt fa-1x fa-fw"></i>&nbsp;Location-Specific Audio Textures</a>
+    </li>
+            <li class=" ">
+        <a href="/ismir09/index"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-file-alt fa-1x fa-fw"></i>&nbsp;Musical Instrument Recognition</a>
+    </li>
+            <li class=" ">
+        <a href="/musicalgenre/index"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-file-alt fa-1x fa-fw"></i>&nbsp;Musical Genre Classification</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li><li class="nav-item dropdown  active">
+        <a href="/development"
+ class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+        ><i class="fa fa-solid fa-code fa-1x fa-fw text-warning text-thesis-a3"></i>&nbsp;Develop&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="  active">
+        <a href="/development"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-code fa-1x fa-fw text-thesis-a3"></i>&nbsp;Introduction</a>
+    </li>
+            <li class="nav-item divider dropdown-divider" role="presentation"></li>
+            <li class=" ">
+        <a href="/ml-development"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-search fa-1x fa-fw text-thesis-a4"></i>&nbsp;Machine Learning</a>
+    </li>
+            <li class=" ">
+        <a href="/websites"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-desktop fa-1x fa-fw text-thesis-a2"></i>&nbsp;Websites</a>
+    </li>
+            <li class=" ">
+        <a href="/web-development"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-plug fa-1x fa-fw text-thesis-a1"></i>&nbsp;Web Development</a>
+    </li>
+        </ul>
+    </li><li class="nav-item ">
+        <a href="/publications"
+        class="nav-link"
+        ><i class="fa fa-solid fa-copy fa-files-o fa-1x fa-fw text-success text-dcase-a4"></i>&nbsp;Publish</a>
+    </li><li class="nav-item dropdown ">
+        <a href="#"
+ class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+        ><i class="fa fa-solid fa-wave-square fa-fw text-primary text-dcase-a5"></i>&nbsp;Data&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class=" ">
+        <a href="/opendata"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-folder-open fa-fw"></i>&nbsp;Open Data</a>
+    </li>
+            <li class=" ">
+        <a href="/datasets"
+ class="dropdown-item"
+        ><i class="fa fa-list-ul fa-fw"></i>&nbsp;Data & Tools</a>
+    </li>
+            <li class="nav-item divider dropdown-divider" role="presentation"></li>
+            <li class=" " data-bs-toggle="tooltip" data-bs-placement="bottom" title="DCASE Datalist">
+        <a href="https://dcase-repo.github.io/dcase_datalist/"
+ target="_blank"  class="dropdown-item"
+        ><i class="fa fa-database fa-1x fa-fw"></i>&nbsp;DCASE DataList</a>
+    </li>
+        </ul>
+    </li><li class="nav-item " data-bs-toggle="tooltip" data-bs-placement="bottom" title="Glossary">
+        <a href="/glossary"
+        class="nav-link"
+        ><i class="fa fa-solid fa-list fa-1x fa-fw"></i>&nbsp;</a>
+    </li><li class="nav-item " data-bs-toggle="tooltip" data-bs-placement="bottom" title="News articles">
+        <a href="/news"
+        class="nav-link"
+        ><i class="fa fa-solid fa-newspaper fa-newspaper-o fa-fw"></i>&nbsp;</a>
+    </li><li class="nav-item " data-bs-toggle="tooltip" data-bs-placement="bottom" title="Github">
+        <a href="https://github.com/toni-heittola?tab=repositories"
+ target="_blank"         class="nav-link"
+        ><i class="fa fa-brands fa-github fa-1x"></i>&nbsp;</a>
+    </li>                        </ul>                    </div></div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+<header class="page-top" style="background-image: url(theme/images/everyday-patterns/tiles-01.jpg);box-shadow: 0px 1000px rgba(0, 0, 0, 0.85) inset;overflow:hidden;position:relative">
+    <div class="container" style="box-shadow: 0px 1000px rgba(255, 255, 255, 0.1) inset;;height:100%;padding-bottom:20px;">
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                <div class="page-heading text-end"><h1 class="toc-skip bold" data-toc-skip>Research-Driven Development</h1><hr class="small right bold"><span class="subheading">Machine Learning Systems and Web Utilities Supporting Audio Research and Community Platforms</span></div>
+            </div>
+        </div>
+    </div>
+<span class="header-cc-logo" data-bs-toggle="tooltip" data-bs-placement="top" title="Background photo by Toni Heittola / CC BY-NC 4.0"><i class="fa fa-brands fa-creative-commons" aria-hidden="true"></i></span></header><div class="container">
+    <div class="row">
+        <div class="col-sm-3 sidecolumn-left ">
+ <div class="btoc-container hidden-print sticky-top" role="complementary">
+<div class="btoc-header bg-light text-muted">Content</div>
+<div class="btoc-body">
+<nav class="btoc-nav" data-toc-levels="h1,h2,h3"></nav>
+</div>
+</div>
+
+        </div>
+        <div class="col-sm-9 content">
+            <section id="content" class="body">
+                <div class="entry-content">
+                    <p class="lead">
+Over the years, I've contributed to a wide range of academic and industrial projects analyzing audio signals, resulting in benchmark systems and open-source tools for sound classification, event detection, and acoustic scene analysis.
+</p>
+<p>Much of this work happened within the <a href="https://dcase.community/">DCASE (Detection and Classification of Acoustic Scenes and Events)</a> community, where I helped organize challenges and workshops. My contributions include benchmark systems, evaluation toolboxes, data visualization tools, and a suite of custom plugins for the Pelican static site generator that powers the DCASE websites.</p>
+<p>Beyond DCASE, these tools have found use in broader research and development — supporting reproducibility, benchmarking, and rapid prototyping in machine learning for audio. This page is a catalog of the tools, systems, and web development projects I've made publicly available.</p>
+<p>Most of the tools are open source and available on GitHub, where you can explore the repositories, contribute to ongoing development, or adapt them for your own research. </p>
+<h2 id="machine-learning"><a class="text" href="/ml-development"><i class="fa fa-solid fa-wave-square fa-fw"></i> Machine Learning</a></h2>
+<p>This section features a collection of machine learning systems and tools developed for audio analysis tasks such as <strong>acoustic scene classification</strong>, <strong>sound event detection</strong>, and <strong>audio tagging</strong>. It includes:</p>
+<ul>
+<li><strong>Evaluation and Data Handling Tools:</strong> Standardized Python libraries such as <code>sed_eval</code> and <code>dcase_util</code> for evaluating system performance and managing audio datasets.</li>
+<li><strong>Visualization Tools</strong>: Interactive and video-based visualizations using <code>sed_vis</code> for presenting system outputs and annotations, and dynamic data tables and visualizations with <code>js-datatable</code>.</li>
+<li><strong>Machine Learning Tutorials</strong>: Hands-on code examples from workshops and tutorials (ICASSP 2019 Tutorial about deep learning for acoustic scenes and events, Practical tools for sound classification and speech AI presented in AI Hub Audio and Speech Technology Workshop 2022).</li>
+<li><strong>Example Systems from Research</strong>: Implementations from the book <em>Computational Analysis of Sound Scenes and Events</em> demonstrating single-label and multi-label classification tasks as well as sound event detection task.</li>
+<li><strong>DCASE Challenge Baselines</strong>: Reference systems for acoustic scene classification and sound event detection, implemented in Python and MATLAB.</li>
+</ul>
+<p>Useful starting point if you want to explore or build on proven machine learning techniques in the audio domain.</p>
+<p><a class="btn btn-success" href="/ml-development">Read more...</a>
+<br/><br/></p>
+<h2 id="website-development"><a class="text" href="/websites"><i class="fa fa-solid fa-globe fa-fw"></i> Website Development</a></h2>
+<p>This section showcases complete websites developed to support academic and community initiatives:</p>
+<ul>
+<li><strong>DCASE Community Website</strong>: A central hub for the international DCASE research community, built with Pelican and enhanced with custom plugins for managing citations, personnel, datasets, and events.</li>
+<li><strong>bbStat</strong>: A grassroots basketball statistics platform for regional leagues in Finland. It features a custom-built Joomla component for managing game data, player stats, and league standings, serving thousands of users annually.</li>
+</ul>
+<p>Two very different domains, same underlying focus: structured data and user engagement.</p>
+<p><a class="btn btn-success" href="/websites">Read more...</a>
+<br/><br/></p>
+<h2 id="web-development-&amp;-utilities"><a class="text" href="/web-development"><i class="fa fa-solid fa-cogs fa-fw"></i> Web Development &amp; Utilities</a></h2>
+<p>This section contains a suite of <strong>Pelican plugins and themes</strong> developed to streamline the creation of academic websites. These tools are designed to be modular, reusable, and easy to integrate into static site workflows.</p>
+<ul>
+<li><strong>Pelican Plugins for Structured Content</strong>: Tools for generating publication lists, personnel directories, file repositories, sponsor listings, and more, all from structured YAML or BibTeX data.</li>
+<li><strong>General Content Enhancements</strong>: Plugins for generating tables of contents, listing recent articles, and tracking file modification times.</li>
+<li><strong>Themes for Academic Sites</strong>: Custom Bootstrap-based themes designed for academic communities and personal research websites.</li>
+</ul>
+<p>These utilities are actively used in the DCASE website and other academic platforms, and are freely available for integration into your own Pelican-based projects.</p>
+<p><a class="btn btn-success" href="/web-development">Read more...</a>
+<br/><br/></p>
+<h2 id="github-repository"><i class="fa fa-brands fa-github fa-fw"></i> GitHub repository</h2>
+<p>Most of the created toolboxes, libraries, and plugins are open source and maintained on GitHub. You can explore the repositories, contribute to ongoing development, or adapt the tools for your own research and applications.</p>
+<div class="d-inline-flex align-items-center mb-4">
+<div class="p-1">
+<a class="icon" href="https://github.com/toni-heittola" target="_blank">
+<span class="fa-stack fa-2x">
+<i class="fa fa-square fa-stack-2x text-muted"></i>
+<i class="fa fa-solid fa-file-text fa-file-text-o fa-stack-1x fa-inverse"></i>
+</span>
+</a>
+</div>
+<div class="p-1">
+<a href="https://github.com/toni-heittola" target="_blank">
+<span style="font-size:20px;">Github <i class="fa fa-solid fa-download"></i></span>
+</a>
+<br/>
+</div>
+</div>
+<p><a href="https://github.com/toni-heittola/github-readme-stats"><img alt="GitHub stats" src="https://github-readme-stats.vercel.app/api?username=toni-heittola&amp;theme=dark"/></a></p>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>    
+
+<ul class="nav pull-right scroll-top">
+  <li>
+    <a title="Scroll to top" href="#" class="page-scroll-top">
+      <i class="glyphicon glyphicon-chevron-up"></i>
+    </a>
+  </li>
+</ul>
+<script type="text/javascript" src="/theme/assets/jquery/jquery.easing.min.js"></script>
+<script type="text/javascript" src="/theme/assets/bootstrap5/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="/theme/js/theme5.js"></script><script type="text/javascript" src="/theme/assets/scrollreveal/scrollreveal.min.js"></script>
+<script type="text/javascript" src="/theme/js/setup.scrollreveal.js"></script>
+<script type="text/javascript" src="/theme/assets/highlight/highlight.pack.js"></script>
+<script type="text/javascript">
+    document.querySelectorAll('pre code:not([class])').forEach(function($) {$.className = 'no-highlight';});
+    hljs.initHighlightingOnLoad();
+</script>
+<script type="text/javascript" src="/theme/js/respond.min.js"></script>
+<script type="text/javascript" src="/theme/js/tocbot.min.js"></script>
+<script type="text/javascript" src="/theme/js/btoc-bot.min.js"></script>
+</body>
+</html>

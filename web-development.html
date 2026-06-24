@@ -1,0 +1,518 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <title>Web Development Projects & Utilities - Toni Heittola</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <link href="/static/favicon.png" rel="icon">
+<link rel="canonical" href="/web-development">
+        <meta name="author" content="Toni Heittola" />
+        <meta name="description" content="This page showcases web development tools, plugins, and themes for designing and maintaining content-rich academic websites. Built primarily around the Pelican static site generator, they&#39;re aimed at researchers and developers who deal with structured data and want their site content automated and easy to maintain. What’s Included Pelican Plugins …" />
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;900&family=Roboto:wght@900&family=Bungee+Spice" rel="stylesheet">
+    <link rel="stylesheet" href="/theme/assets/bootstrap5/css/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/assets/fontawesome6/css/all.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/assets/academicons/css/academicons.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/assets/dcaseicons/css/dcaseicons.css?v=1.1" type="text/css"/>
+<link rel="stylesheet" href="/theme/assets/highlight/styles/atom-one-light.css" type="text/css"/>
+                <link rel="stylesheet" href="/theme/css/btoc-bot.min.css">
+<link rel="stylesheet" href="/theme/css/theme5.css?v=1.1" type="text/css"/><link rel="stylesheet" href="/static/assets/css/icons.css" type="text/css"/><link rel="stylesheet" href="/static/assets/css/extra.css" type="text/css"/><script type="text/javascript" src="/theme/assets/jquery/jquery-3.7.1.min.js"></script>    <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Toni Heittola ATOM Feed"/>
+
+
+    <style>            .card{margin:5% 0%;}
+</style>
+</head>
+<body>
+
+
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark pt-0 pb-0 flex-column" role="navigation" data-spy="affix" data-offset-top="195" id="topmenu">
+    <div class="container p-0">
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-main" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar-main">
+            <div class="container-fluid p-0">
+                <div class="row g-0 p-0">
+                    <div class="col-md d-flex">
+                        <a href="/" class="navbar-brand align-self-start" ></a><ul class="navbar-nav flex-sm-row2 flex-lg-grow flex-lg-fill align-self-start" id="menuitem-list-main"><li class="nav-item ">
+        <a href="/"
+        class="nav-link"
+        ><strong>Toni Heittola</strong></a>
+    </li></ul><ul class="navbar-nav flex-lg-nowrap align-self-start" id="menuitem-list"><li class="nav-item " data-bs-toggle="tooltip" data-bs-placement="bottom" title="About me">
+        <a href="/about-me"
+        class="nav-link"
+        ><i class="fa fa-solid fa-user fa-1x fa-fw"></i>&nbsp;About</a>
+    </li><li class="nav-item dropdown ">
+        <a href="#"
+ class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+        ><i class="fa fa-solid fa-magnifying-glass fa-1x fa-fw text-danger text-dcase-a1"></i>&nbsp;Research&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class=" ">
+        <a href="/research"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-circle-notch fa-circle-o-notch fa-1x fa-fw text-dcase-a1"></i>&nbsp;Overview</a>
+    </li>
+            <li class=" ">
+        <a href="/research-portfolio"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-cog fa-1x fa-fw text-dcase-a2"></i>&nbsp;Portfolio</a>
+    </li>
+            <li class=" ">
+        <a href="/guiding-research"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-users fa-fw text-dcase-a3"></i>&nbsp;Guiding Research</a>
+    </li>
+            <li class="nav-item divider dropdown-divider" role="presentation"></li>
+            <li class=" ">
+        <a href="/publications"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-copy fa-files-o fa-1x fa-fw text-dcase-a4"></i>&nbsp;Publications</a>
+    </li>
+            <li class=" ">
+        <a href="/opendata"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-database fa-fw text-dcase-a5"></i>&nbsp;Open Data</a>
+    </li>
+            <li class="nav-item divider dropdown-divider" role="presentation"></li>
+            <li class=" ">
+        <a href="/academic-illustrations"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-image fa-1x fa-fw text-dcase-a7"></i>&nbsp;Illustrations</a>
+    </li>
+            <li class="nav-item divider dropdown-divider" role="presentation"></li>
+            <li class=" ">
+        <a href="/academic-bio"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-user fa-1x fa-fw text-dcase-a6"></i>&nbsp;Biography</a>
+    </li>
+            <li class="nav-item divider dropdown-divider" role="presentation"></li>
+            <li class=" ">
+        <a href="/glossary"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-list fa-1x fa-fw text-dcase-a7"></i>&nbsp;Glossary</a>
+    </li>
+            <li class="nav-item divider dropdown-divider" role="presentation"></li>
+            <li class="nav-link disabled subheader" >
+       <a><strong><small class="fw-light">Audio Content Analysis <br>in Everyday Environments</small></strong></a>
+    </li>
+            <li class=" ">
+        <a href="/thesis/introduction"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-book-open fa-1x fa-fw text-dcase-a1"></i>&nbsp;Introduction</a>
+    </li>
+            <li class=" ">
+        <a href="/thesis/everyday_environments"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-person-walking fa-1x fa-fw text-dcase-a1"></i>&nbsp;Everyday Environments</a>
+    </li>
+            <li class=" ">
+        <a href="/thesis/content_analysis"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-brain fa-1x fa-fw text-dcase-a1"></i>&nbsp;Audio Content Analysis</a>
+    </li>
+            <li class=" ">
+        <a href="/thesis/sed"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-ear-listen fa-1x fa-fw text-dcase-a1"></i>&nbsp;Sound Event Detection</a>
+    </li>
+            <li class="nav-item divider dropdown-divider" role="presentation"></li>
+            <li class="nav-item dropdown ">
+        <a href="#"
+ class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+        ><i class="fa fa-solid fa-file-alt fa-1x fa-fw"></i>&nbsp;Publication Add-ons&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class=" ">
+        <a href="/audiotexture/index"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-file-alt fa-1x fa-fw"></i>&nbsp;Location-Specific Audio Textures</a>
+    </li>
+            <li class=" ">
+        <a href="/ismir09/index"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-file-alt fa-1x fa-fw"></i>&nbsp;Musical Instrument Recognition</a>
+    </li>
+            <li class=" ">
+        <a href="/musicalgenre/index"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-file-alt fa-1x fa-fw"></i>&nbsp;Musical Genre Classification</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li><li class="nav-item dropdown  active">
+        <a href="/development"
+ class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+        ><i class="fa fa-solid fa-code fa-1x fa-fw text-warning text-thesis-a3"></i>&nbsp;Develop&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class=" ">
+        <a href="/development"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-code fa-1x fa-fw text-thesis-a3"></i>&nbsp;Introduction</a>
+    </li>
+            <li class="nav-item divider dropdown-divider" role="presentation"></li>
+            <li class=" ">
+        <a href="/ml-development"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-search fa-1x fa-fw text-thesis-a4"></i>&nbsp;Machine Learning</a>
+    </li>
+            <li class=" ">
+        <a href="/websites"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-desktop fa-1x fa-fw text-thesis-a2"></i>&nbsp;Websites</a>
+    </li>
+            <li class="  active">
+        <a href="/web-development"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-plug fa-1x fa-fw text-thesis-a1"></i>&nbsp;Web Development</a>
+    </li>
+        </ul>
+    </li><li class="nav-item ">
+        <a href="/publications"
+        class="nav-link"
+        ><i class="fa fa-solid fa-copy fa-files-o fa-1x fa-fw text-success text-dcase-a4"></i>&nbsp;Publish</a>
+    </li><li class="nav-item dropdown ">
+        <a href="#"
+ class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+        ><i class="fa fa-solid fa-wave-square fa-fw text-primary text-dcase-a5"></i>&nbsp;Data&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class=" ">
+        <a href="/opendata"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-folder-open fa-fw"></i>&nbsp;Open Data</a>
+    </li>
+            <li class=" ">
+        <a href="/datasets"
+ class="dropdown-item"
+        ><i class="fa fa-list-ul fa-fw"></i>&nbsp;Data & Tools</a>
+    </li>
+            <li class="nav-item divider dropdown-divider" role="presentation"></li>
+            <li class=" " data-bs-toggle="tooltip" data-bs-placement="bottom" title="DCASE Datalist">
+        <a href="https://dcase-repo.github.io/dcase_datalist/"
+ target="_blank"  class="dropdown-item"
+        ><i class="fa fa-database fa-1x fa-fw"></i>&nbsp;DCASE DataList</a>
+    </li>
+        </ul>
+    </li><li class="nav-item " data-bs-toggle="tooltip" data-bs-placement="bottom" title="Glossary">
+        <a href="/glossary"
+        class="nav-link"
+        ><i class="fa fa-solid fa-list fa-1x fa-fw"></i>&nbsp;</a>
+    </li><li class="nav-item " data-bs-toggle="tooltip" data-bs-placement="bottom" title="News articles">
+        <a href="/news"
+        class="nav-link"
+        ><i class="fa fa-solid fa-newspaper fa-newspaper-o fa-fw"></i>&nbsp;</a>
+    </li><li class="nav-item " data-bs-toggle="tooltip" data-bs-placement="bottom" title="Github">
+        <a href="https://github.com/toni-heittola?tab=repositories"
+ target="_blank"         class="nav-link"
+        ><i class="fa fa-brands fa-github fa-1x"></i>&nbsp;</a>
+    </li>                        </ul>                    </div></div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+<header class="page-top" style="background-image: url(theme/images/everyday-patterns/wall-08.jpg);box-shadow: 0px 1000px rgba(0, 0, 0, 0.85) inset;overflow:hidden;position:relative">
+    <div class="container" style="box-shadow: 0px 1000px rgba(255, 255, 255, 0.1) inset;;height:100%;padding-bottom:20px;">
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                <div class="page-heading text-end"><h1 class="toc-skip bold" data-toc-skip>Web Development Projects & Utilities</h1><hr class="small right bold"><span class="subheading">From static site generators to interactive visualizations—tools for modern web development</span></div>
+            </div>
+        </div>
+    </div>
+<span class="header-cc-logo" data-bs-toggle="tooltip" data-bs-placement="top" title="Background photo by Toni Heittola / CC BY-NC 4.0"><i class="fa fa-brands fa-creative-commons" aria-hidden="true"></i></span></header><div class="container">
+    <div class="row">
+        <div class="col-sm-3 sidecolumn-left ">
+ <div class="btoc-container hidden-print sticky-top" role="complementary">
+<div class="btoc-header bg-light text-muted">Content</div>
+<div class="btoc-body">
+<nav class="btoc-nav" data-toc-levels="h1,h2,h3"></nav>
+</div>
+</div>
+
+        </div>
+        <div class="col-sm-9 content">
+            <section id="content" class="body">
+                <div class="entry-content">
+                    <p class="lead">
+This page showcases web development tools, plugins, and themes for designing and maintaining content-rich academic websites. Built primarily around the Pelican static site generator, they're aimed at researchers and developers who deal with structured data and want their site content automated and easy to maintain.
+</p>
+<h4><i class="fa fa-solid fa-cogs fa-fw"></i> What’s Included</h4>
+<ul>
+<li>
+<p><strong>Pelican Plugins for Structured Content</strong><br/>
+  Tools for generating publication lists, personnel directories, file repositories, sponsor listings, and more, all from structured YAML or BibTeX data.</p>
+</li>
+<li>
+<p><strong>General Content Enhancements</strong><br/>
+  Plugins for generating tables of contents, listing recent articles, and tracking file modification times.</p>
+</li>
+<li>
+<p><strong>Themes for Academic Sites</strong><br/>
+  Custom Bootstrap-based themes (<code>bootcase</code> and <code>bootcase5</code>) designed for academic communities and personal research websites.</p>
+</li>
+</ul>
+<p>These tools are actively used in projects like the <strong>DCASE Community website</strong> and are freely available for integration into your own Pelican-based sites. </p>
+<h1 id="pelican">Pelican</h1>
+<p><a href="http://docs.getpelican.com/en/stable/">Pelican</a> is a static site generator written in Python that makes easily maintainable websites. It converts Markdown content into static HTML, supports themes and plugins, and integrates with tools like Jinja2 for templating. It's particularly well-suited for machine learning and academic websites, since most researchers already know Python well enough to write their own plugins.</p>
+<p>I've developed many plugins and themes over the years for academic community websites — in action on the <a href="http://dcase.community">DCASE Community</a> website and on this one. Feel free to use them in your own projects.</p>
+<h3 id="structured-content-creation-plugins">Structured Content Creation Plugins</h3>
+<div class="container">
+<div class="card-deck row">
+<div class="col-xs-12 col-sm-6 col-md-6 py-2">
+<div class="card h-100">
+<a class="darken2" href="https://github.com/toni-heittola/pelican-btex"><img alt="pelican-btex" class="card-img-top" src="images/screen/pelican/btex.png"/>
+</a>
+<div class="card-body">
+<h4 class="card-title">Publication lists</h4>
+<h5 class="card-subtitle mb-2 text-body-secondary">pelican-btex</h5>
+<p class="card-text">A simple Pelican plugin to produce publication lists from BibTex files. Designed for use with Markdown content and compatible with Bootstrap 3 and 5-based templates.</p>
+</div>
+<div class="card-footer d-grid">
+<a class="card-link btn btn-default" href="https://github.com/toni-heittola/pelican-btex"><i class="fa fa-brands fa-github"></i> Git repository</a>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6 col-md-6 py-2">
+<div class="card h-100">
+<a class="darken2" href="https://github.com/toni-heittola/pelican-bpersonnel"><img alt="pelican-bpersonnel" class="card-img-top" src="images/screen/pelican/bpersonnel.png"/>
+</a>
+<div class="card-body">
+<h4 class="card-title">Personnel Listings</h4>
+<h5 class="card-subtitle mb-2 text-body-secondary">pelican-bpersonnel</h5>
+<p class="card-text">A simple Pelican plugin to produce personnel listings from yaml data structures. Designed for use with Markdown content and compatible with Bootstrap 3 and 5-based templates.</p>
+</div>
+<div class="card-footer d-grid">
+<a class="card-link btn btn-default" href="https://github.com/toni-heittola/pelican-bpersonnel"><i class="fa fa-brands fa-github"></i> Git repository</a>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6 col-md-6 py-2">
+<div class="card h-100">
+<a class="darken2" href="https://github.com/toni-heittola/pelican-brepository"><img alt="pelican-brepository" class="card-img-top" src="images/screen/pelican/brepository.png"/>
+</a>
+<div class="card-body">
+<h4 class="card-title">File Repository Listings and Items</h4>
+<h5 class="card-subtitle mb-2 text-body-secondary">pelican-brepository</h5>
+<p class="card-text">A simple Pelican plugin to produce file listings and single items from yaml data structures. Designed for use with Markdown content and compatible with Bootstrap 3 and 5-based templates.</p>
+</div>
+<div class="card-footer d-grid">
+<a class="card-link btn btn-default" href="https://github.com/toni-heittola/pelican-brepository"><i class="fa fa-brands fa-github"></i> Git repository</a>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6 col-md-6 py-2">
+<div class="card h-100">
+<a class="darken2" href="https://github.com/toni-heittola/pelican-bsponsors"><img alt="pelican-bsponsors" class="card-img-top" src="images/screen/pelican/bsponsors.png"/>
+</a>
+<div class="card-body">
+<h4 class="card-title">Sponsor Listings</h4>
+<h5 class="card-subtitle mb-2 text-body-secondary">pelican-bsponsors</h5>
+<p class="card-text">A simple Pelican plugin to produce sponsor listings from yaml data structures. Designed for use with Markdown content and compatible with Bootstrap 3 and 5-based templates.</p>
+</div>
+<div class="card-footer d-grid">
+<a class="card-link btn btn-default" href="https://github.com/toni-heittola/pelican-bsponsors"><i class="fa fa-brands fa-github"></i> Git repository</a>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6 col-md-6 py-2">
+<div class="card h-100">
+<a class="darken2" href="https://github.com/toni-heittola/pelican-datatable"><img alt="pelican-datatable" class="card-img-top" src="images/screen/pelican/datatable.png"/>
+</a>
+<div class="card-body">
+<h4 class="card-title">Dynamic Tables with Data Visualization</h4>
+<h5 class="card-subtitle mb-2 text-body-secondary">pelican-datatable</h5>
+<p class="card-text">A simple Pelican plugin to produce table of content for content pages. Designed for use with Markdown content and compatible with Bootstrap 3 and 5-based templates.</p>
+</div>
+<div class="card-footer d-grid">
+<a class="card-link btn btn-default" href="https://github.com/toni-heittola/pelican-datatable"><i class="fa fa-brands fa-github"></i> Git repository</a>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6 col-md-6 py-2">
+<div class="card h-100">
+<a class="darken2" href="https://github.com/toni-heittola/pelican-bglossary"><img alt="pelican-bglossary" class="card-img-top" src="images/screen/pelican/bglossary.png"/>
+</a>
+<div class="card-body">
+<h4 class="card-title">Glossary</h4>
+<h5 class="card-subtitle mb-2 text-body-secondary">pelican-bglossary</h5>
+<p class="card-text">A simple Pelican plugin to produce table of content for content pages. Designed for use with Markdown content and compatible with Bootstrap 3 and 5-based templates.</p>
+</div>
+<div class="card-footer d-grid">
+<a class="card-link btn btn-default" href="https://github.com/toni-heittola/pelican-bglossary"><i class="fa fa-brands fa-github"></i> Git repository</a>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6 col-md-6 py-2">
+<div class="card h-100">
+<a class="darken2" href="https://github.com/toni-heittola/pelican-bdates"><img alt="pelican-bdates" class="card-img-top" src="images/screen/pelican/bdates.png"/>
+</a>
+<div class="card-body">
+<h4 class="card-title">Important Dates</h4>
+<h5 class="card-subtitle mb-2 text-body-secondary">pelican-bdates</h5>
+<p class="card-text">A lightweight Pelican plugin for generating important date listings from YAML data structures. Designed for use with Markdown content and compatible with Bootstrap 3 and 5-based templates.</p>
+</div>
+<div class="card-footer d-grid">
+<a class="card-link btn btn-default" href="https://github.com/toni-heittola/pelican-bdates"><i class="fa fa-brands fa-github"></i> Git repository</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p><br/></p>
+<h3 id="general-content-plugins">General Content Plugins</h3>
+<div class="container">
+<div class="card-deck row">
+<div class="col-xs-12 col-sm-6 col-md-6 py-2">
+<div class="card h-100">
+<a class="darken2" href="https://github.com/toni-heittola/pelican-btoc"><img alt="pelican-btoc" class="card-img-top" src="images/screen/pelican/btoc.png"/>
+</a>
+<div class="card-body">
+<h4 class="card-title">Table of Content</h4>
+<h5 class="card-subtitle mb-2 text-body-secondary">pelican-btoc</h5>
+<p class="card-text">A simple Pelican plugin to produce table of content for content pages. Designed for use with Markdown content and compatible with Bootstrap 3 and 5-based templates.</p>
+</div>
+<div class="card-footer d-grid">
+<a class="card-link btn btn-default" href="https://github.com/toni-heittola/pelican-btoc"><i class="fa fa-brands fa-github"></i> Git repository</a>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6 col-md-6 py-2">
+<div class="card h-100">
+<a class="darken2" href="https://github.com/toni-heittola/pelican-bnews"><img alt="pelican-bnews" class="card-img-top" src="images/screen/pelican/bnews.png"/>
+</a>
+<div class="card-body">
+<h4 class="card-title">Most Recent Articles</h4>
+<h5 class="card-subtitle mb-2 text-body-secondary">pelican-bnews</h5>
+<p class="card-text">A simple Pelican plugin for generating a list of the most recent articles on a content page. Designed for use with Markdown content and compatible with Bootstrap 3 and 5-based templates.</p>
+</div>
+<div class="card-footer d-grid">
+<a class="card-link btn btn-default" href="https://github.com/toni-heittola/pelican-bnews"><i class="fa fa-brands fa-github"></i> Git repository</a>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6 col-md-6 py-2">
+<div class="card h-100">
+<a class="darken2" href="https://github.com/toni-heittola/pelican-modified"><img alt="pelican-modified" class="card-img-top" src="images/screen/pelican/modified.png"/>
+</a>
+<div class="card-body">
+<h4 class="card-title">Fetch File Modification Time</h4>
+<h5 class="card-subtitle mb-2 text-body-secondary">pelican-modified</h5>
+<p class="card-text">A simple Pelican plugin to produce table of content for content pages. Designed for use with Markdown content and compatible with Bootstrap 3 and 5-based templates.</p>
+</div>
+<div class="card-footer d-grid">
+<a class="card-link btn btn-default" href="https://github.com/toni-heittola/pelican-modified"><i class="fa fa-brands fa-github"></i> Git repository</a>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6 col-md-6 py-2">
+<div class="card h-100">
+<a class="darken2" href="https://github.com/toni-heittola/pelican-include"><img alt="pelican-include" class="card-img-top" src="images/screen/pelican/include.png"/>
+</a>
+<div class="card-body">
+<h4 class="card-title">Fetch File Content</h4>
+<h5 class="card-subtitle mb-2 text-body-secondary">pelican-include</h5>
+<p class="card-text">A simple Pelican plugin to produce table of content for content pages. Designed for use with Markdown content and compatible with Bootstrap 3 and 5-based templates.</p>
+</div>
+<div class="card-footer d-grid">
+<a class="card-link btn btn-default" href="https://github.com/toni-heittola/pelican-include"><i class="fa fa-brands fa-github"></i> Git repository</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p><br/></p>
+<h3 id="themes">Themes</h3>
+<div class="container">
+<div class="card-deck row">
+<div class="col-xs-12 col-sm-6 col-md-6 py-2">
+<div class="card h-100">
+<div class="card-body">
+<a class="text" href="https://github.com/toni-heittola/bootcase">
+<h4 class="card-title">BS3 Theme for Academic Sites</h4>
+</a>
+<h5 class="card-subtitle mb-2 text-body-secondary">bootcase</h5>
+<p class="card-text">Bootstrap v3 based theme designed for academic community sites and academic personal sites. Theme is used for example in <a href="https://dcase.community/">DCASE</a> and <a href="https://biodcase.github.io/">BioDCASE</a> academic community websites</p>
+</div>
+<div class="card-footer d-grid">
+<a class="card-link btn btn-default" href="https://github.com/toni-heittola/bootcase"><i class="fa fa-brands fa-github"></i> Git repository</a>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6 col-md-6 py-2">
+<div class="card h-100">
+<div class="card-body">
+<h4 class="card-title">B5 Theme for Academic Sites</h4>
+<h5 class="card-subtitle mb-2 text-body-secondary">bootcase5</h5>
+<p class="card-text">Bootstrap v5 based theme designed for academic community sites and academic personal sites.</p>
+</div>
+<div class="card-footer d-grid">
+<a class="card-link btn btn-default" href="https://github.com/toni-heittola/bootcase5"><i class="fa fa-brands fa-github"></i> Git Repository</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p><br/></p>
+<h1 id="general">General</h1>
+<div class="container">
+<div class="card-deck row">
+<div class="col-xs-12 col-sm-6 col-md-6 py-2">
+<div class="card h-100">
+<a href="https://github.com/toni-heittola/js-datatable"><img alt="js-datatable" class="card-img-top" src="images/screen/js_datatable.png" style="filter: brightness(80%) contrast(114%)"/>
+</a>
+<div class="card-body">
+<h4 class="card-title">Dynamic HTML tables with data visualization</h4>
+<h5 class="card-subtitle mb-2 text-body-secondary">js-datatable</h5>
+<p class="card-text">An open-source jQuery plugin for creating dynamic HTML tables with built-in data visualization capabilities. This plugin was originally developed to support academic data visualization, and specifically for presenting results from the DCASE2016 evaluation campaign. The plugin was designed to integrate seamlessly with the Pelican static site generator. The project later evolved into js-datatable, a standalone jQuery plugin that encapsulates the core functionality. For Pelican integration, refer to the companion project: pelican-datatable.</p>
+</div>
+<div class="card-footer d-grid">
+<div class="btn-group">
+<a class="card-link btn btn-default" href="https://github.com/toni-heittola/js-datatable"><i class="fa fa-brands fa-github"></i> Git repository</a>
+<a class="card-link btn btn-default" href="https://toni-heittola.github.io/js-datatable/"><i class="fa fa-solid fa-file"></i> Documentation</a>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6 col-md-6 py-2">
+<div class="card h-100">
+<a class="darken2" href="https://github.com/toni-heittola/everyday-patterns"><img alt="everyday-patterns" class="card-img-top" src="images/screen/everyday_patterns.png"/>
+</a>
+<div class="card-body">
+<h4 class="card-title">Header images</h4>
+<h5 class="card-subtitle mb-2 text-body-secondary">everyday-patterns  </h5>
+<p class="card-text">Everyday Patterns is a small collection of images with various patterns found from our everyday environments licensed under CC. Images have been cropped from various personal photographs taken by me. Images are formatted to be used as wide header images in web-pages (size approximately 1900 px x 400 px).</p>
+</div>
+<div class="card-footer d-grid">
+<a class="card-link btn btn-default" href="https://github.com/toni-heittola/everyday-patterns"><i class="fa fa-brands fa-github"></i> Git repository</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p><br/><br/><br/><br/><br/></p>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>    
+
+<ul class="nav pull-right scroll-top">
+  <li>
+    <a title="Scroll to top" href="#" class="page-scroll-top">
+      <i class="glyphicon glyphicon-chevron-up"></i>
+    </a>
+  </li>
+</ul>
+<script type="text/javascript" src="/theme/assets/jquery/jquery.easing.min.js"></script>
+<script type="text/javascript" src="/theme/assets/bootstrap5/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="/theme/js/theme5.js"></script><script type="text/javascript" src="/theme/assets/scrollreveal/scrollreveal.min.js"></script>
+<script type="text/javascript" src="/theme/js/setup.scrollreveal.js"></script>
+<script type="text/javascript" src="/theme/assets/highlight/highlight.pack.js"></script>
+<script type="text/javascript">
+    document.querySelectorAll('pre code:not([class])').forEach(function($) {$.className = 'no-highlight';});
+    hljs.initHighlightingOnLoad();
+</script>
+<script type="text/javascript" src="/theme/js/respond.min.js"></script>
+<script type="text/javascript" src="/theme/js/tocbot.min.js"></script>
+<script type="text/javascript" src="/theme/js/btoc-bot.min.js"></script>
+</body>
+</html>

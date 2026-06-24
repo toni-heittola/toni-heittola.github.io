@@ -1,0 +1,1292 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <title>Computational Audio Content Analysis - Toni Heittola</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <link href="/static/favicon.png" rel="icon">
+<link rel="canonical" href="/thesis/content_analysis">
+        <meta name="author" content="Toni Heittola" />
+        <meta name="description" content="This page presents a slightly revised version of chapter &#34;Computational Audio Content Analysis&#34;, from my PhD thesis &#34;Computational Audio Content Analysis in Everyday Environments&#34;. Publication Toni Heittola. Computational Audio Content Analysis in Everyday Environments. PhD thesis, Tampere University, 6 2021. Bib PDF Computational Audio Content Analysis in Everyday Environments Abstract …" />
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;900&family=Roboto:wght@900&family=Bungee+Spice" rel="stylesheet">
+    <link rel="stylesheet" href="/theme/assets/bootstrap5/css/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/assets/fontawesome6/css/all.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/assets/academicons/css/academicons.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/assets/dcaseicons/css/dcaseicons.css?v=1.1" type="text/css"/>
+<link rel="stylesheet" href="/theme/assets/highlight/styles/atom-one-light.css" type="text/css"/>
+                <link rel="stylesheet" href="/theme/css/btoc-bot.min.css">
+<link rel="stylesheet" href="/theme/css/theme5.css?v=1.1" type="text/css"/><link rel="stylesheet" href="/static/assets/css/icons.css" type="text/css"/><link rel="stylesheet" href="/static/assets/css/extra.css" type="text/css"/><script type="text/javascript" src="/theme/assets/jquery/jquery-3.7.1.min.js"></script>    <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Toni Heittola ATOM Feed"/>
+
+
+</head>
+<body>
+
+
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark pt-0 pb-0 flex-column" role="navigation" data-spy="affix" data-offset-top="195" id="topmenu">
+    <div class="container p-0">
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-main" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar-main">
+            <div class="container-fluid p-0">
+                <div class="row g-0 p-0">
+                    <div class="col-md d-flex">
+                        <a href="/" class="navbar-brand align-self-start" ></a><ul class="navbar-nav flex-sm-row2 flex-lg-grow flex-lg-fill align-self-start" id="menuitem-list-main"><li class="nav-item ">
+        <a href="/"
+        class="nav-link"
+        ><strong>Toni Heittola</strong></a>
+    </li></ul><ul class="navbar-nav flex-lg-nowrap align-self-start" id="menuitem-list"><li class="nav-item " data-bs-toggle="tooltip" data-bs-placement="bottom" title="About me">
+        <a href="/about-me"
+        class="nav-link"
+        ><i class="fa fa-solid fa-user fa-1x fa-fw"></i>&nbsp;About</a>
+    </li><li class="nav-item dropdown  active">
+        <a href="#"
+ class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+        ><i class="fa fa-solid fa-magnifying-glass fa-1x fa-fw text-danger text-dcase-a1"></i>&nbsp;Research&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class=" ">
+        <a href="/research"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-circle-notch fa-circle-o-notch fa-1x fa-fw text-dcase-a1"></i>&nbsp;Overview</a>
+    </li>
+            <li class=" ">
+        <a href="/research-portfolio"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-cog fa-1x fa-fw text-dcase-a2"></i>&nbsp;Portfolio</a>
+    </li>
+            <li class=" ">
+        <a href="/guiding-research"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-users fa-fw text-dcase-a3"></i>&nbsp;Guiding Research</a>
+    </li>
+            <li class="nav-item divider dropdown-divider" role="presentation"></li>
+            <li class=" ">
+        <a href="/publications"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-copy fa-files-o fa-1x fa-fw text-dcase-a4"></i>&nbsp;Publications</a>
+    </li>
+            <li class=" ">
+        <a href="/opendata"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-database fa-fw text-dcase-a5"></i>&nbsp;Open Data</a>
+    </li>
+            <li class="nav-item divider dropdown-divider" role="presentation"></li>
+            <li class=" ">
+        <a href="/academic-illustrations"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-image fa-1x fa-fw text-dcase-a7"></i>&nbsp;Illustrations</a>
+    </li>
+            <li class="nav-item divider dropdown-divider" role="presentation"></li>
+            <li class=" ">
+        <a href="/academic-bio"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-user fa-1x fa-fw text-dcase-a6"></i>&nbsp;Biography</a>
+    </li>
+            <li class="nav-item divider dropdown-divider" role="presentation"></li>
+            <li class=" ">
+        <a href="/glossary"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-list fa-1x fa-fw text-dcase-a7"></i>&nbsp;Glossary</a>
+    </li>
+            <li class="nav-item divider dropdown-divider" role="presentation"></li>
+            <li class="nav-link disabled subheader" >
+       <a><strong><small class="fw-light">Audio Content Analysis <br>in Everyday Environments</small></strong></a>
+    </li>
+            <li class=" ">
+        <a href="/thesis/introduction"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-book-open fa-1x fa-fw text-dcase-a1"></i>&nbsp;Introduction</a>
+    </li>
+            <li class=" ">
+        <a href="/thesis/everyday_environments"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-person-walking fa-1x fa-fw text-dcase-a1"></i>&nbsp;Everyday Environments</a>
+    </li>
+            <li class="  active">
+        <a href="/thesis/content_analysis"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-brain fa-1x fa-fw text-dcase-a1"></i>&nbsp;Audio Content Analysis</a>
+    </li>
+            <li class=" ">
+        <a href="/thesis/sed"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-ear-listen fa-1x fa-fw text-dcase-a1"></i>&nbsp;Sound Event Detection</a>
+    </li>
+            <li class="nav-item divider dropdown-divider" role="presentation"></li>
+            <li class="nav-item dropdown ">
+        <a href="#"
+ class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+        ><i class="fa fa-solid fa-file-alt fa-1x fa-fw"></i>&nbsp;Publication Add-ons&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class=" ">
+        <a href="/audiotexture/index"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-file-alt fa-1x fa-fw"></i>&nbsp;Location-Specific Audio Textures</a>
+    </li>
+            <li class=" ">
+        <a href="/ismir09/index"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-file-alt fa-1x fa-fw"></i>&nbsp;Musical Instrument Recognition</a>
+    </li>
+            <li class=" ">
+        <a href="/musicalgenre/index"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-file-alt fa-1x fa-fw"></i>&nbsp;Musical Genre Classification</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li><li class="nav-item dropdown ">
+        <a href="/development"
+ class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+        ><i class="fa fa-solid fa-code fa-1x fa-fw text-warning text-thesis-a3"></i>&nbsp;Develop&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class=" ">
+        <a href="/development"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-code fa-1x fa-fw text-thesis-a3"></i>&nbsp;Introduction</a>
+    </li>
+            <li class="nav-item divider dropdown-divider" role="presentation"></li>
+            <li class=" ">
+        <a href="/ml-development"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-search fa-1x fa-fw text-thesis-a4"></i>&nbsp;Machine Learning</a>
+    </li>
+            <li class=" ">
+        <a href="/websites"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-desktop fa-1x fa-fw text-thesis-a2"></i>&nbsp;Websites</a>
+    </li>
+            <li class=" ">
+        <a href="/web-development"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-plug fa-1x fa-fw text-thesis-a1"></i>&nbsp;Web Development</a>
+    </li>
+        </ul>
+    </li><li class="nav-item ">
+        <a href="/publications"
+        class="nav-link"
+        ><i class="fa fa-solid fa-copy fa-files-o fa-1x fa-fw text-success text-dcase-a4"></i>&nbsp;Publish</a>
+    </li><li class="nav-item dropdown ">
+        <a href="#"
+ class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+        ><i class="fa fa-solid fa-wave-square fa-fw text-primary text-dcase-a5"></i>&nbsp;Data&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class=" ">
+        <a href="/opendata"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-folder-open fa-fw"></i>&nbsp;Open Data</a>
+    </li>
+            <li class=" ">
+        <a href="/datasets"
+ class="dropdown-item"
+        ><i class="fa fa-list-ul fa-fw"></i>&nbsp;Data & Tools</a>
+    </li>
+            <li class="nav-item divider dropdown-divider" role="presentation"></li>
+            <li class=" " data-bs-toggle="tooltip" data-bs-placement="bottom" title="DCASE Datalist">
+        <a href="https://dcase-repo.github.io/dcase_datalist/"
+ target="_blank"  class="dropdown-item"
+        ><i class="fa fa-database fa-1x fa-fw"></i>&nbsp;DCASE DataList</a>
+    </li>
+        </ul>
+    </li><li class="nav-item " data-bs-toggle="tooltip" data-bs-placement="bottom" title="Glossary">
+        <a href="/glossary"
+        class="nav-link"
+        ><i class="fa fa-solid fa-list fa-1x fa-fw"></i>&nbsp;</a>
+    </li><li class="nav-item " data-bs-toggle="tooltip" data-bs-placement="bottom" title="News articles">
+        <a href="/news"
+        class="nav-link"
+        ><i class="fa fa-solid fa-newspaper fa-newspaper-o fa-fw"></i>&nbsp;</a>
+    </li><li class="nav-item " data-bs-toggle="tooltip" data-bs-placement="bottom" title="Github">
+        <a href="https://github.com/toni-heittola?tab=repositories"
+ target="_blank"         class="nav-link"
+        ><i class="fa fa-brands fa-github fa-1x"></i>&nbsp;</a>
+    </li>                        </ul>                    </div></div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+<header class="page-top" style="background-image: url(../theme/images/everyday-patterns/bricks-toledo-02.jpg);box-shadow: 0px 1000px rgba(0, 0, 0, 0.65) inset;overflow:hidden;position:relative">
+    <div class="container" style="box-shadow: 0px 1000px rgba(255, 255, 255, 0.1) inset;;height:100%;padding-bottom:20px;">
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                <div class="page-heading text-end"><h1 class="toc-skip bold" data-toc-skip>Computational Audio Content Analysis</h1><hr class="small right bold"><span class="subheading">Computational Audio Content Analysis in Everyday Environments</span></div>
+            </div>
+        </div>
+    </div>
+<span class="header-cc-logo" data-bs-toggle="tooltip" data-bs-placement="top" title="Background photo by Toni Heittola / CC BY-NC 4.0"><i class="fa fa-brands fa-creative-commons" aria-hidden="true"></i></span></header><div class="container">
+    <div class="row">
+        <div class="col-sm-3 sidecolumn-left ">
+        <div class="btn-group-vertical pb-4" role="group"><button type="button" class="btn btn-secondary btn-sm text-start" disabled><i class="fa-solid fa-layer-group"></i> Chapters</button><a href="introduction" class="btn btn-outline-secondary btn-sm text-start">Introduction</a><a href="everyday_environments" class="btn btn-outline-secondary btn-sm text-start">Sounds in Everyday Environments</a><a href="content_analysis" class="btn btn-dark btn-sm text-start">Computational Audio Content Analysis</a><a href="sed" class="btn btn-outline-secondary btn-sm text-start">Sound Event Detection in Everyday Environments</a></div>
+ <div class="btoc-container hidden-print sticky-top" role="complementary">
+<div class="btoc-header bg-light text-muted">Content</div>
+<div class="btoc-body">
+<nav class="btoc-nav" data-toc-levels="h1,h2,h3"></nav>
+</div>
+</div>
+
+        </div>
+        <div class="col-sm-9 content">
+            <section id="content" class="body">
+                <div class="entry-content">
+                    <p class="lead">This page presents a slightly revised version of chapter "Computational Audio Content Analysis", from my PhD thesis "Computational Audio Content Analysis in Everyday Environments".</p>
+<div class="row bg-light py-2">
+<div class="col-2"><img alt="Thesis cover" class="img-fluid" src="../images/thesis_cover.jpg"/></div>
+<div class="col-10"><div class="btex-item" data-item="phdthesis" data-source="content/data/publications.bib" data-template="default">
+<div class="card mb-3">
+<span class="label label-default" style="width:100px;padding-top:0.4em;margin-left:0em;margin-top:0em;">Publication<a name="phdthesis"></a></span>
+<div class="card-body">
+<div class="row">
+<div class="col-md-9">
+<p style="text-align:left">
+                                Toni Heittola.
+Computational Audio Content Analysis in Everyday Environments.
+PhD thesis, Tampere University, 6 2021.
+                                
+                                
+                                </p>
+</div>
+<div class="col-md-3">
+<div class="btn-group pull-right">
+<button class="btn btn-xs btn-danger" data-bs-target="#bibtexphdthesisae1c828b89da4ac88ca82fb3aa6df45f" data-bs-toggle="modal" type="button"><i class="fa fa-solid fa-file-text fa-file-text-o"></i> Bib</button>
+<a class="btn btn-xs btn-warning btn-btex text-white" data-placement="bottom" href="https://trepo.tuni.fi/bitstream/handle/10024/132786/978-952-03-2006-5.pdf?sequence=2&amp;isAllowed=y" rel="tooltip" title="Download pdf"><i class="fa fa-solid fa-file-pdf fa-file-pdf-o fa-1x"></i> PDF</a>
+<button aria-controls="collapsephdthesisae1c828b89da4ac88ca82fb3aa6df45f" aria-expanded="true" class="btn btn-default btn-xs" data-bs-parent="#btex-items-accordion" data-bs-target="#collapsephdthesisae1c828b89da4ac88ca82fb3aa6df45f" data-bs-toggle="collapse" type="button">
+<i class="fa fa-solid fa-caret-down"></i></button>
+</div>
+</div>
+</div>
+<div aria-labelledby="headingphdthesisae1c828b89da4ac88ca82fb3aa6df45f" class="panel-collapse collapse mb-3" id="collapsephdthesisae1c828b89da4ac88ca82fb3aa6df45f">
+<h4>Computational Audio Content Analysis in Everyday Environments</h4>
+<h5>Abstract</h5>
+<p class="text-justify">Our everyday environments are full of sounds that have a vital role in providing us information and allowing us to understand what is happening around us. Humans have formed strong associations between physical events in their environment and the sounds that these events produce. Such associations are described using textual labels, sound events, and they allow us to understand, recognize, and interpret the concepts behind sounds. Examples of such sound events are dog barking, person shouting or car passing by. This thesis deals with computational methods for audio content analysis of everyday environments. Along with the increased usage of digital audio in our everyday life, automatic audio content analysis has become a more and more pursued ability. Content analysis enables an in-depth understanding of what was happening in the environment when the audio was captured, and this further facilitates applications that can accurately react to the events in the environment. The methods proposed in this thesis focus on sound event detection, the task of recognizing and temporally locating sound events within an audio signal, and include aspects related to development of methods dealing with a large set of sound classes, detection of multiple sounds, and evaluation of such methods. The work presented in this thesis focuses on developing methods that allow the detection of multiple overlapping sound events and robust acoustic model training based on mixture audio containing overlapping sounds. Starting with an HMM-based approach for prominent sound event detection, the work advanced by extending it into polyphonic detection using multiple Viterbi iterations or sound source separation. These polyphonic sound event detection systems were based on a collection of generative classifiers to produce multiple labels for the same time instance, which doubled or in some cases tripled the detection performance. As an alternative approach, polyphonic detection was implemented using class-wise activity detectors in which the activity of each event class was detected independently and class-wise event sequences were merged to produce the polyphonic system output. The polyphonic detection increased applicability of the methods in everyday environments substantially. For evaluation of methods, the work proposed a new metric for polyphonic sound event detection which takes into account the polyphony. The new metric, a segment-based F-score, provides rigorous definitions for the correct and erroneous detections, besides being more suitable for comparing polyphonic annotation and polyphonic system output than the previously used metrics and has since become one of the standard metrics in the research field. Part of this thesis includes studying sound events as a constituent part of the acoustic scene based on contextual information provided by their co-occurrence. This information was used for both sound event detection and acoustic scene classification. In sound event detection, context information was used to identify the acoustic scene in order to narrow down the selection of possible sound event classes based on this information, which allowed use of context-dependent acoustic models and event priors. This approach provided moderate yet consistent performance increase across all tested acoustic scene types, and enabled the detection system to be easily expanded to new scenes. In acoustic scene classification, the scenes were identified based on the distinctive and scene-specific sound events detected, with performance comparable to traditional approaches, while the fusion of these two approaches showed a significant further increase in the performance. The thesis also includes significant contribution to the development of tools for open research in the field, such as standardized evaluation protocols, and release of open datasets, benchmark systems, and open-source tools.</p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtexphdthesisae1c828b89da4ac88ca82fb3aa6df45f" data-toggle="modal" type="button"><i class="fa fa-solid fa-file-text fa-file-text-o"></i> Bibtex</button>
+<a class="btn btn-sm btn-warning text-white btn-btex2" data-placement="bottom" href="https://trepo.tuni.fi/bitstream/handle/10024/132786/978-952-03-2006-5.pdf?sequence=2&amp;isAllowed=y" rel="tooltip" title="Download pdf"><i class="fa fa-solid fa-file-pdf fa-file-pdf-o fa-1x"></i> PDF</a>
+<a class="btn btn-sm btn-info btn-btex2 text-white" href="https://trepo.tuni.fi/handle/10024/136508" title=""><i class="fa fa-solid fa-book"></i> Web publication</a>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtexphdthesisae1c828b89da4ac88ca82fb3aa6df45flabel" class="modal fade" id="bibtexphdthesisae1c828b89da4ac88ca82fb3aa6df45f" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<h4 class="modal-title" id="bibtexphdthesisae1c828b89da4ac88ca82fb3aa6df45flabel">Computational Audio Content Analysis in Everyday Environments</h4>
+<button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+</div>
+<div class="modal-body"><pre>@phdthesis{phdthesis,
+    author = "Heittola, Toni",
+    title = "Computational Audio Content Analysis in Everyday Environments",
+    school = "Tampere University",
+    year = "2021",
+    month = "6",
+    abstract = "Our everyday environments are full of sounds that have a vital role in providing us information and allowing us to understand what is happening around us. Humans have formed strong associations between physical events in their environment and the sounds that these events produce. Such associations are described using textual labels, sound events, and they allow us to understand, recognize, and interpret the concepts behind sounds. Examples of such sound events are dog barking, person shouting or car passing by. This thesis deals with computational methods for audio content analysis of everyday environments. Along with the increased usage of digital audio in our everyday life, automatic audio content analysis has become a more and more pursued ability. Content analysis enables an in-depth understanding of what was happening in the environment when the audio was captured, and this further facilitates applications that can accurately react to the events in the environment. The methods proposed in this thesis focus on sound event detection, the task of recognizing and temporally locating sound events within an audio signal, and include aspects related to development of methods dealing with a large set of sound classes, detection of multiple sounds, and evaluation of such methods. The work presented in this thesis focuses on developing methods that allow the detection of multiple overlapping sound events and robust acoustic model training based on mixture audio containing overlapping sounds. Starting with an HMM-based approach for prominent sound event detection, the work advanced by extending it into polyphonic detection using multiple Viterbi iterations or sound source separation. These polyphonic sound event detection systems were based on a collection of generative classifiers to produce multiple labels for the same time instance, which doubled or in some cases tripled the detection performance. As an alternative approach, polyphonic detection was implemented using class-wise activity detectors in which the activity of each event class was detected independently and class-wise event sequences were merged to produce the polyphonic system output. The polyphonic detection increased applicability of the methods in everyday environments substantially. For evaluation of methods, the work proposed a new metric for polyphonic sound event detection which takes into account the polyphony. The new metric, a segment-based F-score, provides rigorous definitions for the correct and erroneous detections, besides being more suitable for comparing polyphonic annotation and polyphonic system output than the previously used metrics and has since become one of the standard metrics in the research field. Part of this thesis includes studying sound events as a constituent part of the acoustic scene based on contextual information provided by their co-occurrence. This information was used for both sound event detection and acoustic scene classification. In sound event detection, context information was used to identify the acoustic scene in order to narrow down the selection of possible sound event classes based on this information, which allowed use of context-dependent acoustic models and event priors. This approach provided moderate yet consistent performance increase across all tested acoustic scene types, and enabled the detection system to be easily expanded to new scenes. In acoustic scene classification, the scenes were identified based on the distinctive and scene-specific sound events detected, with performance comparable to traditional approaches, while the fusion of these two approaches showed a significant further increase in the performance. The thesis also includes significant contribution to the development of tools for open research in the field, such as standardized evaluation protocols, and release of open datasets, benchmark systems, and open-source tools."
+}
+</pre></div>
+<div class="modal-footer"><button class="btn btn-default" data-bs-dismiss="modal" type="button">Close</button></div>
+</div>
+</div>
+</div>
+</div></div>
+</div><div class="section" id="computational-audio-content-analysis-1">
+<h2 id="computational-audio-content-analysis">Computational Audio Content Analysis</h2>
+<p>Natural sounds present in environmental audio have diverse acoustic characteristics due to a wide range of possible sound-producing mechanisms, and thus it is common that sounds categorized semantically into the same group have largely varying acoustic characteristics. Natural sounds such as animal vocalizations or footsteps have larger diversity than electronically produced sounds such as alarms and sirens. For general audio content analysis where a wide range of natural sounds is targeted, this poses major difficulty when developing the analysis system.</p>
+<p>In a well-defined analysis case with a target sound category having a low-level of variation in its acoustic characteristics, one can manually develop a sound detector based on distinguishing characteristics such as sound activity on a specific frequency range (e.g. detecting fire alarms). However, in most practical use cases the analysis system is targeting a larger set of sounds having wider variations in their acoustic characteristics, making manual system development an impractical method. Computational analysis in this case calls for an extensive set of parameters, <em>acoustic features</em>, to be calculated from an audio signal and use of automatic methods such as <em>machine learning</em> [<a class="reference internal" href="#bishop2006">Bishop2006</a>, <a class="reference internal" href="#murphy2012">Murphy2012</a>, <a class="reference internal" href="#du2013">Du2013</a>, <a class="reference internal" href="#goodfellow2016">Goodfellow2016</a>] to learn to differentiate the sound categories based on the calculated parameters. Most of the computational analysis systems presented in the literature use a <em>supervised learning</em> approach where manually labeled sound examples are used to teach the machine learning algorithm to differentiate unknown sounds into target sound categories. The system developer defines sound categories beforehand and collects a sufficient amount of labeled examples from each target sound category to develop and evaluate the system.</p>
+<p>Labeling a sufficient amount of examples for supervised learning can sometimes be a laborious process. <em>Active learning</em> approaches can be used to minimize the amount of manual labeling work by letting the learning algorithm select examples for labeling. In this iterative process, the learner selects the best candidates for manual labeling, and these manually labeled examples are then used to improve the learner [<a class="reference internal" href="#zhao2017">Zhao2017</a>, <a class="reference internal" href="#zhao2018">Zhao2018</a>, <a class="reference internal" href="#zhao2020">Zhao2020</a>]. To avoid manual labeling altogether, one can use techniques such as <em>unsupervised learning</em> [<a class="reference internal" href="#du2013">Du2013</a>, p. 17] and <em>semi-supervised learning</em> [<a class="reference internal" href="#du2013">Du2013</a>, p. 18]. In unsupervised learning, groups of similar examples within the data are discovered and used as training examples for supervised learning. In semi-supervised learning, a small set of manually labeled examples is used to identify similar examples from a larger dataset with unlabeled examples, essentially increasing the amount of usable training material for supervised learning [<a class="reference internal" href="#zhang2012">Zhang2012</a>, <a class="reference internal" href="#diment2013">Diment2013</a>]. This text concentrates on the supervised machine learning approach and how this approach can be applied to computational audio content analysis.</p>
+</div>
+<div class="section" id="content-analysis-systems">
+<h2 id="content-analysis-systems">Content Analysis Systems</h2>
+<p>In principle, content analysis systems categorize the input audio into predefined sound categories, target sound classes. In the case of multiple target sound classes, the analysis systems can be divided into two groups; systems able to recognize only one sound class at a time and systems able to recognize multiple sound classes at the same time. In literature these are referred to <em>multi-class single-label</em> and <em>multi-class multi-label</em> approaches. The number of target sound classes in the analysis systems can vary widely based on application area from systems concentrating only on two classes (target sound class versus all the other sounds) to systems recognizing tens of classes. Often the number of classes is limited by the available development data, achievable accuracy, and possible computational requirements.</p>
+<div class="section" id="classification-versus-detection">
+<h3 id="classification-versus-detection">Classification Versus Detection</h3>
+<p>In case the analysis system outputs information about the temporal activity of the target sounds, the system is said to perform <em>detection</em>, whereas in case the analysis system only indicates whether the target sound is present within the analyzed signal, the system is said to perform <em>classification</em> or <em>tagging</em>, depending whether the system outputs one or multiple classes at the same time. Temporal information contains timestamps for when the sound instance starts, and for when it has ended. In literature, these timestamps are often referred to as <em>onset</em> and <em>offset</em> times.</p>
+</div>
+<div class="section" id="applications">
+<h3 id="applications">Applications</h3>
+<p>From the application perspective, acoustic scene classification (ASC) is commonly seen as multi-class single-label classification and audio tagging (AT) as multi-class multi-label classification. In sound event detection (SED) applications, multi-class single-label classification is often referred to as <em>monophonic</em> sound event detection and multi-class multi-label classification as <em>polyphonic</em> sound event detection. These application types are illustrated in Figure <a class="reference external" href="#fig-system-types">3.1</a>.</p>
+<p>
+<div class="figure text-center">
+<img alt="System input and output characteristics for three analysis systems: acoustic scene classification, audio tagging, and sound event detection." class="img-fluid text-center" id="fig-system-types" src="/images/thesis_fig31.png" title="System input and output characteristics for three analysis systems: acoustic scene classification, audio tagging, and sound event detection."/>
+<p class="caption">
+<strong>Figure 3.1</strong> 
+                System input and output characteristics for three analysis systems: acoustic scene classification, audio tagging, and sound event detection.
+            </p>
+<div class="d-flex justify-content-end">
+<div class="license text-start w-100 small text-muted">
+<a class="text" href="https://creativecommons.org">System input and output characteristics</a> © 2021 by <a class="text" href="https://creativecommons.org">Toni Heittola</a> is licensed under <a class="text" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a><img alt="" src="/images/cc/cc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/><img alt="" src="/images/cc/by.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/><img alt="" src="/images/cc/nc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/><img alt="" src="/images/cc/nd.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/>
+</div>
+</div>
+</div>
+</p>
+</div>
+<div class="section" id="processing-blocks">
+<h3 id="processing-blocks">Processing Blocks</h3>
+<p>The processing blocks of a typical content analysis system are presented in Figure <a class="reference external" href="#fig-audio-content-analysis-system">3.2</a>.</p>
+<p>
+<div class="figure text-center">
+<img alt="The basic structure of an audio content analysis system." class="img-fluid text-center" id="fig-audio-content-analysis-system" src="/images/thesis_fig32.png" title="The basic structure of an audio content analysis system."/>
+<p class="caption">
+<strong>Figure 3.2</strong> 
+                The basic structure of an audio content analysis system.
+            </p>
+<div class="d-flex justify-content-end">
+<div class="license text-start w-100 small text-muted">
+<a class="text" href="https://creativecommons.org">Basic structure of an audio content analysis system</a> © 2021 by <a class="text" href="https://creativecommons.org">Toni Heittola</a> is licensed under <a class="text" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a><img alt="" src="/images/cc/cc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/><img alt="" src="/images/cc/by.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/><img alt="" src="/images/cc/nc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/><img alt="" src="/images/cc/nd.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/>
+</div>
+</div>
+</div>
+</p>
+<p><strong>Input</strong></p>
+<p>The input to the system is an audio signal which is captured with a microphone in real-time or read from a stored audio recording.</p>
+<p><strong>Audio Processing</strong></p>
+<p>The <em>audio processing</em> block performs <em>pre-processing</em> and <em>acoustic feature extraction</em>. Pre-processing is used to enhance characteristics of the audio signal which are essential for robust content analysis or separate target sounds from the background. In the acoustic feature extraction, the signal is represented in a compact form by extracting information sufficient for classifying or detecting target sounds. This usually makes the subsequent data modeling in the learning stage easier with the limited amount of development examples available. Furthermore, the compact feature representation makes the data modeling computationally cheaper.</p>
+<p><strong>Reference Annotations</strong></p>
+<p>During the system training stage, the acoustic features extracted in the audio processing block are used along with <em>reference annotations</em>. For the sound classification task, the reference annotations contain only information about the presence of target sound classes in each learning example, whereas for the sound event detection task onsets and offsets of these sounds may also be available.</p>
+<p><strong>Learning</strong></p>
+<p>In the <em>learning</em> block, machine learning techniques are used to automatically learn the mapping between acoustic features and class labels defined in the reference annotations. In literature, the learned mapping is referred to as an <em>acoustic model</em>.</p>
+<p><strong>Recognition</strong></p>
+<p>In the <em>recognition</em> block, the previously learned acoustic models are used to predict class labels for new and previously unseen input audio signal. Depending on the application type, the system is doing either classification, tagging, or detection.</p>
+<p>In the following sections, the data acquisition for the system development, and the techniques used in the processing blocks are described in detail. These sections are partly based on the introductory book chapter <a class="citation-reference" href="#heittola2018" id="citation-reference-1">[Heittola2018]</a> about machine learning approaches for analysis of sound scenes and events published in <a class="citation-reference" href="#virtanen2018" id="citation-reference-2">[Virtanen2018]</a>.</p>
+</div>
+</div>
+<div class="section" id="data-acquisition">
+<span id="sec-data-acquisition"></span><h2 id="data-acquisition">Data Acquisition</h2>
+<p>Audio data and annotations describing the content of this audio data form together an <em>audio dataset</em> suitable for the development of the content analysis system. Data has a critical role in the development of systems based on machine learning techniques, as the performance level of such systems is strongly dependent on the quality and quantity of the data available during the development. Machine learning techniques used in the analysis rely on labeled data to learn parameters of the acoustic models and to evaluate the performance of these acoustic models for the given analysis problem. Acquiring suitable training and testing data is generally the most time-consuming stage of system development.</p>
+<p>The target application defines the type of data needed for system development. Generally the aim is to collect acoustic material in conditions which are as close as possible to the envisioned use case of the analysis system. The collected material should contain a selection of representative examples of all sound classes targeted in the system. For example, a good material to develop a robust dog barking detector targeted for home surveillance applications use should contain material recorded in various environments related to home (indoor and outdoor, and varying room size, etc.), with a wide selection of dogs from different dog breeds (from small to large-sized) barking in as natural as possible setting with varying dynamics.</p>
+<div class="section" id="audio">
+<h3 id="audio">Audio</h3>
+<p>Most sound sources present in everyday environments have internal variations in their sound-producing mechanism which can be perceived as differences in the produced sound. This leads to high intra-class variability which has to be taken into account when collecting the audio material. The audio examples should be selected to provide good <em>coverage</em> and <em>variability</em> in sufficient <em>quantity</em> [<a class="reference internal" href="#mesaros2018">Mesaros2018</a>, p. 149]. Coverage ensures that the material contains examples from all relevant sound classes to the target application, whereas variability ensures that for each class there are examples captured in variable conditions with various sound-producing instances. Sufficient quantity of examples fulfilling the coverage and variability criteria enables the machine learning techniques to learn robust acoustic models that <em>generalize</em>, i.e., perform well on sound examples that were not encountered in the learning [<a class="reference internal" href="#goodfellow2016">Goodfellow2016</a>, p. 107]. More specifically, audio material for the development of an acoustic scene classification system should contain recordings from many locations belonging to the same scene classes, whereas material for the development of a sound event detection system should contain multiple sound instances from the same sound event class, recorded in variable conditions.</p>
+<div class="section" id="variability">
+<h4>Variability</h4>
+<p>The variable conditions are characterized by the properties of acoustic environment (e.g. size and the shape of acoustic space, type of reflective surfaces), the capturing microphone and device, the relative placement of the sound source and the microphone, and interfering noise sources present. In realistic usage scenarios, all of the condition variations cannot be taken into account explicitly in the data collection. If the collected material represents only a subset of the possible conditions, this can cause a mismatch between the material used to develop the system and the material encountered in the real usage stage, which eventually leads to poor performance. Hence in the data collection it is advisable to make extra effort to minimize this data mismatch by capturing as representative set of data as possible, under all identified conditions. When material captured under variable conditions is used in the learning stage, the system is said to use a <em>multi-condition training</em> approach [<a class="reference internal" href="#li2016">Li2016</a>, p. 116]. Collected audio data can be diversified for the multi-condition training by adding artificially different impulse responses to it in the training stage <a class="citation-reference" href="#zhao2014" id="citation-reference-3">[Zhao2014]</a>, since many of the variable conditions are reflected in the <em>impulse response</em> which characterizes the overall acoustic characteristics of the captured audio signal [<a class="reference internal" href="#li2016">Li2016</a>, p. 206]. This approach requires obtaining recordings of the target source with as little external effects as possible and then convolving the audio signals with measured impulse responses from various real acoustic environments. The room impulse responses can be generated also with room simulation techniques [<a class="reference internal" href="#zolzer2008">Zolzer2008</a>, p. 191].</p>
+</div>
+<div class="section" id="interfering-noise-sources">
+<h4>Interfering Noise Sources</h4>
+<p>Interfering noise sources can be handled similarly to acoustic conditions. In usage cases where potential noise sources are known and stationary, the data can be easily collected under similar conditions. However, in cases where the types of noise sources are varying or the relative position of the noise source with respect to the capturing microphone varies, data collection under all matched conditions is impractical. Depending on the level of variability, one can be still successful by collecting material as diversely as possible and using a multi-condition training approach. Another feasible approach is to obtain recordings of target sound sources without any interfering noise and recordings with the noise sources alone, and simulate noisy signals by artificially mixing these with various signal-to-noise ratios (SNR) <a class="citation-reference" href="#mesaros2019a" id="citation-reference-4">[Mesaros2019a]</a>. The artificial mixing approach can potentially produce larger quantities of relevant training material than a direct recording approach. On the other hand, the diversity of the available recordings influences and limits the variability of the artificially produced material.</p>
+</div>
+</div>
+<div class="section" id="annotations">
+<h3 id="annotations">Annotations</h3>
+<p>Supervised machine learning approaches require labeled sound examples, i.e., audio data with <em>reference annotations</em>. In the annotation procedure, portions of the acoustic signal containing target sound categories are indicated and stored in some machine-readable format. Manual annotation is done through audition, having persons carefully listening to the audio and indicating the activity of each class; because of this, the manual annotation process is one of the most time-consuming stages of the system development. Before the data collection process, the sound categories are selected based on the target application, and the textual labels assigned to these categories are defined to guide the selection of recording locations and situations. Selected textual labels should be representative and non-ambiguous, i.e., a label should allow understanding the sound properties based on the label alone in an explicit way [<a class="reference internal" href="#mesaros2018">Mesaros2018</a>, p. 152].</p>
+<p>Audio content can be annotated at a fixed temporal grid, by annotating sound activity inside equal-sized and non-overlapping segments <a class="citation-reference" href="#foster2015" id="citation-reference-5">[Foster2015]</a>, or with detailed temporal information, by annotating the exact start and end times for the sound activity [<a class="reference internal" href="#mesaros2010">Mesaros2010</a>, <a class="reference internal" href="#heittola2013a">Heittola2013a</a>, <a class="reference internal" href="#mesaros2016">Mesaros2016</a>]. The annotations are <em>strong</em> when they have start and end times for the sound activity and <em>weak</em> when the temporal information is approximated at a coarse level (up to signal length). The most complex form of annotation for environmental audio is <em>polyphonic</em> sound event annotation, where multiple, overlapping sound events are annotated with strong labels <a class="citation-reference" href="#mesaros2016" id="citation-reference-6">[Mesaros2016]</a>. The different annotation types are illustrated in Figure <a class="reference external" href="#fig-audio-annotation">3.3</a>.</p>
+<p>
+<div class="figure text-center">
+<img alt="Annotation with segment-level temporal information and with detailed temporal information." class="img-fluid text-center" id="fig-audio-annotation" src="/images/thesis_fig33.png" title="Annotation with segment-level temporal information and with detailed temporal information."/>
+<p class="caption">
+<strong>Figure 3.3</strong> 
+                Annotation with segment-level temporal information and with detailed temporal information.
+            </p>
+<div class="d-flex justify-content-end">
+<div class="license text-start w-100 small text-muted">
+<a class="text" href="https://creativecommons.org">Annotation with temporal information</a> © 2021 by <a class="text" href="https://creativecommons.org">Toni Heittola</a> is licensed under <a class="text" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a><img alt="" src="/images/cc/cc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/><img alt="" src="/images/cc/by.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/><img alt="" src="/images/cc/nc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/><img alt="" src="/images/cc/nd.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/>
+</div>
+</div>
+</div>
+</p>
+<p>Depending on the content analysis application type, reference annotations have different requirements as listed in Table <a class="reference external" href="#table-annotation-types">3.1</a>.</p>
+<div class="docutils container" id="table-annotation-types">
+<table class="table pt-4">
+<caption><strong>Table 3.1</strong> Annotation requirements for three main content analysis types.</caption>
+<thead>
+<tr>
+<th></th>
+<th colspan="2">Annotation unit</th>
+<th colspan="2">Temporal information</th>
+</tr>
+<tr>
+<th>Analysis type</th>
+<th>Size</th>
+<th>Overlap</th>
+<th>Type</th>
+<th>Typical resolution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Classification (ASC)</td>
+<td>fixed</td>
+<td>no</td>
+<td>weak</td>
+<td>≥ 1s</td>
+</tr>
+<tr>
+<td>Tagging (AT)</td>
+<td>fixed</td>
+<td>yes</td>
+<td>weak</td>
+<td>≥ 1s</td>
+</tr>
+<tr>
+<td>Detection (SED)</td>
+<td>varying</td>
+<td>yes</td>
+<td>strong</td>
+<td>≤ 1s</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section" id="acoustic-scenes">
+<h4>Acoustic Scenes</h4>
+<p>Audio material for acoustic scene classification is often captured in a fixed position to ensure that the scene category stays the same throughout the recording [<a class="reference internal" href="#mesaros2016">Mesaros2016</a>, <a class="reference internal" href="#mesaros2018b">Mesaros2018b</a>]. This simplifies the annotation process, as the category labels can be assigned for full signals or very long time-segments in it. Category labels should be clearly defined to minimize the subjectivity of the label selection in the annotation process. Examples of scene labels are <em>busy street</em>, <em>office</em>, and <em>traveling by bus</em>.</p>
+</div>
+<div class="section" id="sound-events">
+<h4>Sound events</h4>
+<p>Labeling sound events is a highly subjective process where perception and personal life experience of the annotator have an important role <a class="citation-reference" href="#gygi2007" id="citation-reference-7">[Gygi2007]</a>. Subjectivity can be controlled to some extent by defining the textual labels for the sound categories before the annotation process and forcing the label selection among these pre-defined labels. This is advisable in applications where the number of target sound categories is low and they are well-defined. In research where the aim is to recognize all sounds in the acoustic scene, or the target application is not defined before the data collection, the labels cannot be defined before actually annotating the audio material. In these cases, the most advisable approach is to allow free label selection during the annotation, i.e., each sound instance will be annotated with a descriptive and possibly a new label, based on the annotator‘s opinion; afterwards labels describing the same sound category can be manually grouped after all material is annotated [<a class="reference internal" href="#mesaros2010">Mesaros2010</a>, <a class="reference internal" href="#heittola2013a">Heittola2013a</a>, <a class="reference internal" href="#mesaros2016">Mesaros2016</a>, <a class="reference internal" href="#fonseca2018">Fonseca2018</a>]. The label post-processing stage is essential to make the material usable for supervised machine learning, as freely selected labels often contain typos, different wording (<em>people talking</em> versus <em>people speaking</em>, or synonyms (<em>car</em> versus <em>automobile</em>) for sounds clearly belonging to the same category.</p>
+</div>
+<div class="section" id="temporal-segmentation-process">
+<h4>Temporal Segmentation Process</h4>
+<p>Annotating sound events with full temporal information requires marking the time instance when the sound event is first perceived, and the time instance when the sound event is not anymore perceived. This temporal segmentation process will introduce a varying level of subjectivity to the annotations, depending on the sound event type [<a class="reference internal" href="#mesaros2018">Mesaros2018</a>, p. 157]. For sound events which have rapidly increasing and decreasing amplitude envelope, such as car horn, onsets and offsets can be pinpointed reliably with acceptable time resolution (e.g. 100 ms). On the other hand, for sound events which have slowly increasing and decreasing amplitude envelope, onsets and offsets can be sometimes very difficult to pinpoint reliably, especially when interfering background noise is present in the acoustic signal. Two such examples are illustrated in Figure <a class="reference external" href="#fig-temporal_subjectivity">3.4</a>.</p>
+<p>
+<div class="figure text-center">
+<img alt="Annotating onset and offset of different sounds: boundaries of the sound event are not always obvious." class="img-fluid text-center" id="fig-temporal_subjectivity" src="/images/thesis_fig34.png" title="Annotating onset and offset of different sounds: boundaries of the sound event are not always obvious."/>
+<p class="caption">
+<strong>Figure 3.4</strong> 
+                Annotating onset and offset of different sounds: boundaries of the sound event are not always obvious.
+            </p>
+<div class="d-flex justify-content-end">
+<div class="license text-start w-100 small text-muted">
+<a class="text" href="https://creativecommons.org">Annotating onset and offset</a> © 2021 by <a class="text" href="https://creativecommons.org">Toni Heittola</a> is licensed under <a class="text" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a><img alt="" src="/images/cc/cc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/><img alt="" src="/images/cc/by.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/><img alt="" src="/images/cc/nc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/><img alt="" src="/images/cc/nd.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/>
+</div>
+</div>
+</div>
+</p>
+</div>
+</div>
+<div class="section" id="datasets">
+<h3 id="datasets">Datasets</h3>
+<p>Once the audio material is packed together with annotations, it forms an <em>audio dataset</em> usable for the content analysis development. It is useful if the dataset has additional metadata describing the recording equipment (e.g. microphone model, capturing device), recording time and location (e.g. address, GPS coordinates), and properties of the acoustic environment during recording (e.g. weather conditions, room size when indoor). This metadata has an important role in the creation of the cross-validation setup for the development when one creates balanced training, testing, and validation sets with respect to various properties of the data. For example, one should take extra care not to include recordings from the same exact location into training and testing sets, as this will potentially lead to over-optimistic performance estimates. Another example of the usage of the metadata is the creation of a cross-validation setup such that all sets contain a representative selection of recordings from different weather conditions.</p>
+<p>For published datasets, it is good to follow a consistent file naming convention for a clear correspondence between audio recordings, related annotations, and metadata, to use easily accessible machine-readable file formats, and to include a cross-validation setup. A cross-validation setup supports a direct comparison of studies using the dataset, which is important for its usability and for reproducible science. More information about reference datasets for sound event detection can be found in Section <a class="reference external" href="#ch4:sec:audio-datasets">4.2</a></p>
+</div>
+</div>
+<div class="section" id="audio-processing">
+<h2 id="audio-processing">Audio Processing</h2>
+<p>In the audio processing stage of the content analysis system (see Figure <a class="reference external" href="#fig-audio-content-analysis-system">3.2</a>), the audio signal is prepared and processed for the subsequent machine learning stage. The audio processing stage consists of <em>pre-processing</em> and <em>acoustic feature extraction</em>. In pre-processing, the audio signal is processed to reduce the effects of interfering noises or to emphasize the target sounds. In acoustic feature extraction, the audio signal is transformed into a compact representation suitable for machine learning algorithms.</p>
+<div class="section" id="pre-processing">
+<h3 id="pre-processing">Pre-processing</h3>
+<p>The aim of pre-processing is to enhance the characteristics of the audio signal that are essential for robust content analysis. The requirements for this processing block depend on the characteristics of the acoustic environment and the target sound categories, as well as the type of acoustic feature extraction and machine learning methods used. Pre-processing is generally applied to the audio signal before acoustic feature extraction, and prior knowledge about the usage environment and the distinctive characteristics of the target sound categories is utilized when designing or selecting the pre-processing algorithm. For example, if stationary noise is present in the operation environment, noise suppression techniques can be used to reduce the interference of noise to the analysis <a class="citation-reference" href="#schroder2013" id="citation-reference-8">[Schroder2013]</a>.</p>
+<p>Everyday environments usually have multiple overlapping sound events active at the same time. The recognition of overlapping sounds can be addressed at different stages of the analysis system: at the signal pre-processing stage by using sound source separation <a class="citation-reference" href="#heittola2013b" id="citation-reference-9">[Heittola2013b]</a>, at acoustic modeling level by modeling all sound combinations [<a class="reference internal" href="#butko2011a">Butko2011a</a>, <a class="reference internal" href="#temko2009">Temko2009</a>], at detection level by using multiple iterative detection passes <a class="citation-reference" href="#heittola2013a" id="citation-reference-10">[Heittola2013a]</a>. Recently introduced deep neural network based approaches use large amounts of data to learn and recognize sounds regardless of the interference introduced by the overlapping sounds at the acoustic model level <a class="citation-reference" href="#cakir2017" id="citation-reference-11">[Cakir2017]</a>.</p>
+<div class="section" id="sound-source-separation">
+<h4>Sound Source Separation</h4>
+<p>Audio captured in our everyday environments consists of sounds produced by various sound sources having distinctive structure in time and frequency. Sound sources can be considered to correspond to sound events in the acoustic scene, sometimes multiple sound sources belonging to the same event. The aim of sound source separation is ideally to decompose a given audio signal, <em>mixture signal</em>, with multiple simultaneous active sound sources into individual sound sources.</p>
+</div>
+<div class="section" id="non-negative-matrix-factorization">
+<h4>Non-Negative Matrix Factorization</h4>
+<p>One commonly used method for sound source separation is based on non-negative matrix factorization (NMF) <a class="citation-reference" href="#virtanen2007" id="citation-reference-12">[Virtanen2007]</a>. NMF models the structure of the sound by representing the spectra of the mixture signal as a sum of <em>components</em>, each having a fixed magnitude spectrum and a time-varying gain. The assumption in NMF-based source separation is that each sound source has a characteristic spectral structure that differs from other sources present in the mixture signal, and ideally each source can be modeled using a distinct set of fixed magnitude spectra. In the signal model, the magnitude spectrum vector <span class="math">\(\boldsymbol{x}_{t}\)</span> in frame <span class="math">\(t\)</span> is defined as a linear combination of basis spectra <span class="math">\(\boldsymbol{b}_{k}\)</span> (fixed spectrum) and corresponding <span class="math">\(h_{k,t}\)</span> activation coefficients (gain). This can be expressed as:</p>
+$$ \boldsymbol{x}_{t}\approx\sum_{k=1}^{K}\boldsymbol{b}_{k}{h}_{k,t} \tag{3.1} $$<p>where <span class="math">\(K\)</span> is the number of components, and <span class="math">\(h_{k,t}\)</span> is the activation coefficient of the <span class="math">\(k\)</span> th basis spectrum in frame <span class="math">\(t\)</span>. One basis spectrum and its activation coefficients are referred to as a component. Often NMF is used in an unsupervised manner without any prior knowledge of which components represent the given sound source. Ideally sound sources in the mixture signal become represented as a sum of one or more components, however, it is possible that the resulting components contain parts from multiple sound sources. This is considered as learning-free sound separation, and it gives a good separation performance in cases where the characteristics of the sound sources are distinctive. Figure <a class="reference external" href="#fig-sound-source-separation">3.5</a> shows the spectrogram of an audio signal captured during a basketball game and the results of factorization into four components. In this example, the first component captures the squeaking sounds of basketball players’ shoes and residual audience sounds, the second component captures shouting from the audience, the third component captures applause, and the fourth component captures the whistle sound of the basketball referee.</p>
+<p>
+<div class="figure text-center">
+<img alt="Sound source separation with NMF into four components applied to a recording captured in a basketball game." class="img-fluid text-center" id="fig-temporal_subjectivity" src="/images/thesis_fig35.png" title="Sound source separation with NMF into four components applied to a recording captured in a basketball game."/>
+<p class="caption">
+<strong>Figure 3.5</strong> 
+                Sound source separation with NMF into four components applied to a recording captured in a basketball game.
+            </p>
+<div class="d-flex justify-content-end">
+<div class="license text-start w-100 small text-muted">
+<a class="text" href="https://creativecommons.org">Sound source separation with NMF</a> © 2021 by <a class="text" href="https://creativecommons.org">Toni Heittola</a> is licensed under <a class="text" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a><img alt="" src="/images/cc/cc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/><img alt="" src="/images/cc/by.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/><img alt="" src="/images/cc/nc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/><img alt="" src="/images/cc/nd.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/>
+</div>
+</div>
+</div>
+</p>
+<p>The component-wise audio streams can be reconstructed by generating a time-frequency mask <span class="math">\(\boldsymbol{w}_{k}\)</span> from basis spectra and activation coefficients, and filtering the mixture signal with it. The time-frequency soft mask for component :<span class="math">\(j\)</span> is defined as</p>
+$$ \boldsymbol{w}_{j}=\frac{\boldsymbol{b}_{j}\boldsymbol{h}_{j,t}}{\sum_{k=1}^{K}\boldsymbol{b}_{k}\boldsymbol{h}_{k,t}}. \tag{3.2} $$<p>The mask can be considered as a time-varying Wiener filter which separates the signal into a stream containing approximately homogeneous spectral content that differs significantly from the other streams. The outputted streams do not represent individual sound sources, but they are a combination of the sources present in the original mixture signal.</p>
+</div>
+</div>
+<div class="section" id="acoustic-feature-extraction">
+<h3 id="acoustic-feature-extraction">Acoustic feature extraction</h3>
+<p>The main purpose of feature extraction is to transform the acoustic signal into a compact numerical representation of the content in a way that is relevant to machine learning and maximizes the recognition performance of the sound analysis. Important information for the content analysis of audio signals is mainly contained in the relative distribution of energy in frequency. For this reason, regularly used acoustic features in audio content analysis are based on the <em>time-frequency representation</em> of the signal. The discrete Fourier transform (DFT) is the most commonly used transformation for audio signals. It represents the signal using sinusoidal base functions, each being defined by magnitude and phase <a class="citation-reference" href="#oppenheim1999" id="citation-reference-13">[Oppenheim1999]</a>. Other transformations used for audio signals include constant-Q transform (CQT) <a class="citation-reference" href="#brown1991" id="citation-reference-14">[Brown1991]</a> and discrete wavelet transform (DWT) <a class="citation-reference" href="#tzanetakis2001" id="citation-reference-15">[Tzanetakis2001]</a>.</p>
+<div class="section" id="processing-stages">
+<h4>Processing stages</h4>
+<p>Audio signals can generally be assumed to be non-stationary because of their rapidly changing signal statistics (e.g. magnitudes of the frequency components). This requires acoustic feature extraction in short time segments, <em>analysis frames</em>, which contain signal in a quasi-stationary state. The basic stages in acoustic feature extraction are <em>frame blocking</em>, <em>windowing</em>, <em>spectrum</em> calculation, and subsequent analysis, as illustrated in Figure <a class="reference external" href="#fig-frame-blocking">3.6</a>.</p>
+<p>
+<div class="figure text-center">
+<img alt="The processing pipeline of acoustic feature extraction." class="img-fluid text-center" id="fig-frame-blocking" src="/images/thesis_fig36.png" title="The processing pipeline of acoustic feature extraction."/>
+<p class="caption">
+<strong>Figure 3.6</strong> 
+                The processing pipeline of acoustic feature extraction.
+            </p>
+<div class="d-flex justify-content-end">
+<div class="license text-start w-100 small text-muted">
+<a class="text" href="https://creativecommons.org">Processing pipeline of acoustic feature extraction.</a> © 2021 by <a class="text" href="https://creativecommons.org">Toni Heittola</a> is licensed under <a class="text" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a><img alt="" src="/images/cc/cc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/><img alt="" src="/images/cc/by.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/><img alt="" src="/images/cc/nc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/><img alt="" src="/images/cc/nd.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/>
+</div>
+</div>
+</div>
+</p>
+<p>In the frame blocking stage the audio signal is split into fixed-length analysis frames, which are shifted with a fixed time step (<em>feature hop length</em>). When using Fourier transform, the length of the analysis frame is related to frequency resolution: longer frames will give better frequency resolution than shorter frames, but at the same time the temporal resolution of the analysis is lower with longer frames. Usually for environmental audio analysis, the frame length is set between 20 and 100 ms with 25 - 50% overlapping frames. Sound event detection systems use shorter analysis frames (e.g. 20 ms in ) than acoustic scene classification systems, as spectral characteristics of sound events are changing more rapidly than the general characteristics of acoustic scenes, and good time resolution is required for detecting event onsets and offsets accurately. In order to avoid abrupt changes at the frame boundaries causing distortions in the spectrum, the analysis frames are smoothed with a <em>windowing function</em> such as Hamming or Hann function. The windowed analysis frames are transformed into a spectrum, forming a time-frequency representation, and acoustic features are extracted from it.</p>
+<p>Until recently, the most common approach to develop acoustic features have been carefully engineering features from the time-frequency representation and using expert knowledge about acoustics, sound perception, sound classes, and their differences while developing features. These types of features are often called <em>hand-crafted features</em>. Recently, automatic <em>feature learning</em> techniques have also been used with increased dataset sizes [<a class="reference internal" href="#salamon2015">Salamon2015</a>, <a class="reference internal" href="#cakir2018">Cakir2018</a>]. These techniques produce high-level feature representations given the data and specified task, and have shown impressive performance compared to hand-crafted features. The main advantage of feature learning over feature engineering is that no specific knowledge about the target task is required. This thesis only discusses hand-crafted acoustic features, and the most common hand-crafted features extracted from the spectrum, mel-band energies and decorrelated mel-band energies called mel-frequency cepstral coefficients (MFCCs) <a class="citation-reference" href="#davis1980" id="citation-reference-16">[Davis1980]</a>. These features are illustrated in Figure <a class="reference external" href="#fig-acoustic_features">3.7</a> for an audio example.</p>
+<p>
+<div class="figure text-center">
+<img alt="Acoustic feature representations." class="img-fluid text-center" id="fig-acoustic_features" src="/images/thesis_fig37.png" title="Acoustic feature representations."/>
+<p class="caption">
+<strong>Figure 3.7</strong> 
+                Acoustic feature representations.
+            </p>
+<div class="d-flex justify-content-end">
+<div class="license text-start w-100 small text-muted">
+<a class="text" href="https://creativecommons.org">Acoustic feature representations</a> © 2021 by <a class="text" href="https://creativecommons.org">Toni Heittola</a> is licensed under <a class="text" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a><img alt="" src="/images/cc/cc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/><img alt="" src="/images/cc/by.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/><img alt="" src="/images/cc/nc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/><img alt="" src="/images/cc/nd.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/>
+</div>
+</div>
+</div>
+</p>
+</div>
+<div class="section" id="mel-band-energies">
+<h4>Mel-band energies</h4>
+<p>Mel-band energies are a perceptually motivated representation based on mel-scaled frequency bands. The aim of the mel-scale is to mimic the non-linearity of human auditory perception, by having narrower bands at lower frequencies than at higher frequencies. The scale has been created through listening experiments, having listeners listen to two alternating sinusoids and adjusting one of them to have a perceived pitch half to the other one <a class="citation-reference" href="#stevens1937" id="citation-reference-17">[Stevens1937]</a>. The resulting mel-scale is approximately linear up to 1 kHz, after which it is approximately logarithmic. The relation between mel and linear frequency can be approximated as [<a class="reference internal" href="#oshaughnessy2000">OShaughnessy2000</a>, p. 128]</p>
+$$ F_{mel}=2595log_{10}(1+\frac{F_{Hz}}{700}). \tag{3.3} $$<p>A mel-scale <em>filterbank</em> consists of overlapping band-pass filters (typically 20, 40, 64, or 128 filters in total) having triangular frequency response and with filters’ center frequencies linearly spaced on the mel scale. Figure <a class="reference external" href="#fig-mel-scale">3.8</a> illustrates the process of constructing such a filterbank; the relation between center frequencies of the filters in hertz and mels is shown in the top panel, and the triangular filters are shown in the bottom panel. Many alternative filterbank implementations have been proposed in the literature throughout the years, mostly varying in how the nonlinear pitch perception of humans is approximated in the filterbank design [<a class="reference internal" href="#davis1980">Davis1980</a>, <a class="reference internal" href="#slaney1998">Slaney1998</a>, <a class="reference internal" href="#young2006">Young2006</a>].</p>
+<p>
+<div class="figure text-center">
+<img alt="Mel-scaling (top panel) and mel-scale filterbank with 20 triangular filters (bottom panel)." class="img-fluid text-center" id="fig-mel-scale" src="/images/thesis_fig38.png" title="Mel-scaling (top panel) and mel-scale filterbank with 20 triangular filters (bottom panel)."/>
+<p class="caption">
+<strong>Figure 3.8</strong> 
+                Mel-scaling (top panel) and mel-scale filterbank with 20 triangular filters (bottom panel).
+            </p>
+<div class="d-flex justify-content-end">
+<div class="license text-start w-100 small text-muted">
+<a class="text" href="https://creativecommons.org">Mel-scaling</a> © 2021 by <a class="text" href="https://creativecommons.org">Toni Heittola</a> is licensed under <a class="text" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a><img alt="" src="/images/cc/cc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/><img alt="" src="/images/cc/by.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/><img alt="" src="/images/cc/nc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/><img alt="" src="/images/cc/nd.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/>
+</div>
+</div>
+</div>
+</p>
+<p>The mel-scale filterbank is applied on the spectrum (either magnitude or power spectrum) to obtain energy per <em>mel-band</em>. The resulting representation is called a <em>mel spectrogram</em>. Following humans’ logarithmic perception of sound loudness, the dynamic range of the energy values per band is compressed by taking the logarithm of these values. The resulting features are called <em>log mel energies</em> in the literature. This acoustic representation retains the coarse shape of the spectrum, while the fine structure related to the harmonic structure of the signal is smoothed out. This is beneficial because the identity of everyday sounds is not determined based on the exact perceived pitch, and some of the sources do not even have any harmonic structure. The process is shown in Figure <a class="reference external" href="#fig-acoustic_features">3.7</a>; panel b shows the spectrogram of the signal, and panel c shows corresponding mel-band energies.</p>
+<p>The mel-scale filterbank was originally designed for speech analysis, and to be used as a processing block for MFCCs features. Later, as MFCCs were shown to perform robustly in more general sound classification tasks such as speaker recognition <a class="citation-reference" href="#reynolds1995" id="citation-reference-18">[Reynolds1995]</a>, music genre recognition <a class="citation-reference" href="#tzanetakis2002" id="citation-reference-19">[Tzanetakis2002]</a>, and musical instrument classification <a class="citation-reference" href="#heittola2009" id="citation-reference-20">[Heittola2009]</a>, they gained popularity also as a standard feature for acoustic scene classification and sound event detection tasks. MFCCs are calculated by decorrelating the outputs of the mel-scale filterbank with a linear transform, the discrete cosine transform (DCT) to allow efficient data modeling in Gaussian mixture models and hidden Markov models by enabling the usage of a diagonal covariance matrix in Gaussian distributions. Along with the emergence of deep learning based approaches the decorrelation step has been dropped out because modern deep learning techniques can efficiently take advantage of correlated information in the data during the learning process. Currently, log mel energies are the most commonly used acoustic features in deep learning based approaches for the content analysis of environmental audio [<a class="reference internal" href="#cakir2017">Cakir2017</a>, <a class="reference internal" href="#mesaros2018b">Mesaros2018b</a>, <a class="reference internal" href="#mesaros2019a">Mesaros2019a</a>].</p>
+</div>
+<div class="section" id="mel-frequency-cepstral-coefficients">
+<h4>Mel-frequency cepstral coefficients</h4>
+<p>Mel-frequency cepstral coefficients (MFCC) represent the output of the mel-scale filterbank in the <em>cepstral domain</em>. MFCCs are obtained from the previously described log mel energies by computing type-II discrete cosine transform (DCT). An example of MFCCs is shown in Figure <a class="reference external" href="#fig-acoustic_features">3.7</a>, panel c.</p>
+<p>The role of this added processing step is two-fold. Firstly, the DCT is used to decorrelate feature values, since the filterbank outputs are heavily correlated due to neighboring filters overlapping in frequency. Decorrelated values enable usage of a diagonal covariance matrix in Gaussian distribution based acoustic models. Secondly, by keeping only the first few values of DCT (coefficients), the spectral representation is smoothed and the dimension of the feature vector is reduced. The first coefficients contain information about the overall shape of the spectrum, while higher coefficients contain information about the fine structure of the spectrum. The amount of coefficients retained for analysis varies between 12-20 depending on the target application requirements; in speech recognition 8-12 coefficients are sufficient to represent the coarse shape of the spectrum; in musical instrument recognition usually a higher number of coefficients (e.g. 20) are used to capture fine details of the spectrum <a class="citation-reference" href="#heittola2009" id="citation-reference-21">[Heittola2009]</a>, while in environmental audio usually 16-20 coefficients are used . The first MFCC (zeroth coefficient) is related to signal energy (log energy), and depending on the application this information is either retained or omitted from the feature vector. Signal energy is closely related to acoustic scene class, e.g. park is quieter than a street with cars, and because of this, the signal energy information is retained in acoustic scene classification applications. Sound events can be regarded as having the same source regardless of loudness, and thus the zeroth coefficient is often omitted from the feature vector in sound event detection applications.</p>
+</div>
+<div class="section" id="dynamic-features">
+<span id="sec-dynamic-features"></span><h4>Dynamic features</h4>
+<p>The audio is a time-variant signal and one of the main characteristics for sound identification is its dynamic change over time. However, many acoustic features such as mel energies and MFCCs, estimate only the instantaneous spectral shape. The temporal evolution of the acoustic features can be dealt at the feature level by adding dynamic features to the final feature vector  or by modeling the temporal aspect in the acoustic modeling stage (e.g. using recurrent layers in neural networks) <a class="citation-reference" href="#cakir2017" id="citation-reference-22">[Cakir2017]</a>.</p>
+<p>To incorporate the temporal evolution of the features into the acoustic feature vector, one can use estimates of the local time derivatives of the features by approximating with a first-order orthogonal polynomial fit <a class="citation-reference" href="#furui1981" id="citation-reference-23">[Furui1981]</a> as</p>
+$$ \Delta c\left(i,u\right)=\frac{\sum_{k=-K}^{K}k\cdot c\left(i,u+k\right)}{\sum_{k=-K}^{K}k^{2}} \tag{3.4} $$<p>where <span class="math">\(c\left(i,u\right)\)</span> denotes the <span class="math">\(i^{th}\)</span> feature value in a time frame <span class="math">\(u\)</span> [<a class="reference internal" href="#rabiner1993">Rabiner1993</a>, p. 116–117]. Computation is performed over <span class="math">\((2K+1)\)</span> frames, and <span class="math">\(K\)</span> is typically set to either three or four. The resulting dynamic features are commonly referred to as <em>delta</em> features, opposite to the <em>static</em> features. In addition to the delta features, the second derivatives can be computed by applying the same polynomial fit to the already computed delta features, resulting in a parabolic fit. These features are referred to as delta-delta or <em>acceleration</em> features. Delta and acceleration features are used together with static features to integrate the dynamic aspect of the spectrum to the feature set . An example of the static and dynamic features is shown in Figure <a class="reference external" href="#fig-static_delta_acceleration">3.9</a>.</p>
+<p>
+<div class="figure text-center">
+<img alt="Static and dynamic feature representations." class="img-fluid text-center" id="fig-mel-scale" src="/images/thesis_fig39.png" title="Static and dynamic feature representations."/>
+<p class="caption">
+<strong>Figure 3.9</strong> 
+                Static and dynamic feature representations.
+            </p>
+<div class="d-flex justify-content-end">
+<div class="license text-start w-100 small text-muted">
+<a class="text" href="https://creativecommons.org">Static and dynamic feature representations</a> © 2021 by <a class="text" href="https://creativecommons.org">Toni Heittola</a> is licensed under <a class="text" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a><img alt="" src="/images/cc/cc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/><img alt="" src="/images/cc/by.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/><img alt="" src="/images/cc/nc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/><img alt="" src="/images/cc/nd.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/>
+</div>
+</div>
+</div>
+</p>
+<p>Another method to incorporate temporal information into the feature vector is to concatenate consecutive frames within a window into a single vector, a supervector, [<a class="reference internal" href="#gencoglu2014">Gencoglu2014</a>, <a class="reference internal" href="#cakir2015a">Cakir2015a</a>, <a class="reference internal" href="#mesaros2019a">Mesaros2019a</a>]. The idea is to provide contextual information by stacking together <span class="math">\(N_{win}\)</span> frames before and after the current frame. The length of the newly constructed feature vector is defined as <span class="math">\((2\times N_{win} + 1) \times N_{feat}\)</span>, where <span class="math">\(N_{feat}\)</span> denotes the length of the original feature vector. This method is often used together with fully connected feed-forward neural networks.</p>
+</div>
+<div class="section" id="other-features">
+<h4>Other features</h4>
+<p>In addition to the previously discussed features, numerous other features derived from the time-frequency representation of a signal have been proposed for computational audio content analysis.</p>
+<p><em>Low-level features</em> describing specific aspects of the spectral shape of a signal are traditionally used as part of a larger feature set together with MFCCs as they are not powerful enough to be used alone. Common low-level features that describe spectral shape include signal energy, spectral envelope, spectral moments (e.g. spectral centroid and flatness), spectral slope, spectral roll-off, spectral flux, and spectral irregularity [<a class="reference internal" href="#eronen2006">Eronen2006</a>, <a class="reference internal" href="#geiger2013">Geiger2013</a>].</p>
+<p>Spectral descriptors adapted from image processing have shown competitive performance compared with traditional features, especially in the case of acoustic scene classification. These descriptors are treating the spectrogram as an image and use techniques adapted from computer vision to characterize the shape, texture, and evolution of the content in it. To detect different shapes in the spectrogram, one can use a histogram of oriented gradients (HOG) features <a class="citation-reference" href="#rakotomamonjy2015" id="citation-reference-24">[Rakotomamonjy2015]</a>, and to characterize textures in the spectrogram one can use local binary pattern (LBP) features [<a class="reference internal" href="#kobayashi2014">Kobayashi2014</a>, <a class="reference internal" href="#battaglino2015">Battaglino2015</a>]. Subband power distribution (SPD) transforms the spectrogram into representation characterizing the spectral power distribution over time at frequency subbands <a class="citation-reference" href="#dennis2013" id="citation-reference-25">[Dennis2013]</a>.</p>
+<p>Automatic representation and <em>feature learning</em> techniques have become recently increasingly popular for acoustic scene classification and sound event detection facilitated by the availability of larger high-quality datasets. Sounds occurring in everyday environments have substantial diversity and this results in a widely varying set of time-frequency structures, however, only a subset of the information in the spectrogram is relevant for actual classification. The aim of feature learning is to learn a representation that reflects this relevant information, and is accomplished using different techniques, including deep learning <a class="citation-reference" href="#hershey2017" id="citation-reference-26">[Hershey2017]</a>. Features created through this process are commonly referred to as <em>embeddings</em>. The input for the feature learning network can be some established time-frequency representation or even raw acoustic waveform <a class="citation-reference" href="#kim2019" id="citation-reference-27">[Kim2019]</a>.</p>
+</div>
+</div>
+</div>
+<div class="section" id="supervised-learning-and-recognition">
+<h2 id="supervised-learning-and-recognition">Supervised Learning and Recognition</h2>
+<p>Machine learning techniques used in audio content analysis rely on data to learn the parameters of the acoustic models. In a <em>supervised learning</em> approach, manually labeled sound examples are used to teach a <em>classifier</em> the mapping between the extracted acoustic features and given sound categories. The learned acoustic model is then used to assign category labels to acoustic features of the test data. The difficulty of the classification task depends on the inter-class and intra-class variability of sound categories. When doing sound classification or detection of everyday sounds, the used learning algorithm has to cope with overlapping sounds and take into account the temporal structure of sounds. Depending on the target task, the classification can be formulated as a multi-class single-label or a multi-class multi-label problem. In the multi-class single-label problem, only one category out of many possible categories is active at a given time instance, whereas in the multi-class multi-label problem multiple categories can be active simultaneously at a given time instance.</p>
+<div class="section" id="learning">
+<h3 id="learning">Learning</h3>
+<p>In the learning stage, the aim is to learn an optimal model to classify sound examples into one of the predefined sound categories in a given feature space. The learning examples are pairs of inputs to the system, acoustic features <span class="math">\(\mathbf{x}_t\)</span> extracted in time instances <span class="math">\(t=1,2,...T\)</span>, and desired target outputs <span class="math">\(\mathbf{y}_t\)</span> for those particular inputs. The target output contains the information about the sound class assigned to the input data, one of possible <span class="math">\(C\)</span> classes, <span class="math">\(c_i,i=1,2,...C\)</span>. An overview of the learning process is illustrated in Figure <a class="reference external" href="#fig-learning-overview">3.10</a>.</p>
+<p>
+<div class="figure text-center">
+<img alt="Overview of the supervised learning process for audio content analysis. The system implements a multi-class multi-label classification approach for sound event detection task." class="img-fluid text-center" id="fig-learning-overview" src="/images/thesis_fig310.png" title="Overview of the supervised learning process for audio content analysis. The system implements a multi-class multi-label classification approach for sound event detection task."/>
+<p class="caption">
+<strong>Figure 3.10</strong> 
+                Overview of the supervised learning process for audio content analysis. The system implements a multi-class multi-label classification approach for sound event detection task.
+            </p>
+<div class="d-flex justify-content-end">
+<div class="license text-start w-100 small text-muted">
+<a class="text" href="https://creativecommons.org">Supervised learning process</a> © 2021 by <a class="text" href="https://creativecommons.org">Toni Heittola</a> is licensed under <a class="text" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a><img alt="" src="/images/cc/cc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/><img alt="" src="/images/cc/by.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/><img alt="" src="/images/cc/nc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/><img alt="" src="/images/cc/nd.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/>
+</div>
+</div>
+</div>
+</p>
+<p>The acoustic model partitions the acoustic feature space with a <em>decision rule</em> into regions with an assigned class label, and one class label can have multiple disjoint regions associated with it. Recognition is done based on these regions: the observed acoustic features are classified based on which region they fall into. The boundary between regions is called <em>decision boundary</em>, and generally most of the misclassifications happen near this boundary. Model learning is guided by the errors or <em>loss</em> between the target outputs and estimated outputs from the training examples, and the model parameters are updated through optimization techniques to decrease this error.</p>
+<p>The basic assumption behind the learning process is that the test examples will be similar to the training examples, i.e., test example are coming from the same distribution as training examples. The model should be able to robustly estimate the correct output in this situation based on the learned decision rules. In practice, it is very hard to collect a representative set of training examples to cover all potential variability of test data. The <em>generalization</em> to unseen examples is the main property of a good classifier, and failing in this is caused by model <em>overfitting</em> or <em>underfitting</em>. Everyday sounds mostly appear in noisy multi-source situations and have large intra-class variability that leads to high variations in acoustic characteristics (see Section <a class="reference external" href="#sec-data-acquisition">Data Acquisition</a>). Therefore it is challenging to achieve good generalization based on a limited set of training examples. When overfitting, the model has learned peculiarities of the training examples rather than general acoustic characteristics which would generalize well on unseen test examples. This can be caused by a limited set of training examples, or having a too expressive model, e.g. too many parameters given the training material size. When underfitting, the model was not complex enough or not trained sufficiently to be able to robustly classify unseen test examples.</p>
+<p>Generally, supervised learning approaches can be categorized into two main types: <em>generative</em> and <em>discriminative</em>. In generative learning, the underlying class-conditional probability density is estimated explicitly based on learning examples. For each sound class the joint distribution <span class="math">\(p(x,y)\)</span> is modeled separately, and the Bayes’ rule is used to find the most probable class from which the input was generated by finding the maximum posterior probability <span class="math">\(p(y|x)\)</span>. Commonly used classifiers for audio content analysis that follow the generative learning approach include Gaussian mixture models (GMM), and hidden Markov models (HMM). In discriminative learning, the modeling concentrates on the boundaries between classes instead of the classes themselves. Data examples are used directly for defining the decision boundaries and finding a direct mapping between inputs to the system and the target outputs <a class="citation-reference" href="#ng2001" id="citation-reference-28">[Ng2001]</a>. Examples of discriminative learning approaches used for audio content analysis include decision trees, support vector machines (SVM), and neural networks. The work in this thesis concentrates on approaches based on generative learning . Recently, the discriminative learning approaches have gained popularity in audio content analysis primarily because of advancements of deep learning and neural networks, and increased size of available datasets for learning [<a class="reference internal" href="#cakir2017">Cakir2017</a>, <a class="reference internal" href="#mesaros2019a">Mesaros2019a</a>].</p>
+</div>
+<div class="section" id="recognition">
+<h3 id="recognition">Recognition</h3>
+<p>Once the acoustic model is learned, it can be used for classifying sounds into predefined sound classes. An overview of the recognition process is illustrated in Figure <a class="reference external" href="#fig-recognition-overview">3.11</a>. In the audio processing stage, the acoustic features are extracted for the test audio. The acoustic features are fed as input to the recognition stage, which uses the learned acoustic models to get class-presence information (probabilities or likelihoods depending on the method) for each input feature frame. In the post-processing stage, the class-presence probabilities are converted into class activity, a binary indication of a class being present or not within the current analysis frame. Depending on the target recognition task, the output format of the post-processing will be different. Classification methods can be used for detection by doing classification in short time segments (e.g. one second). The detection task aims to produce classification results in a sufficiently high time resolution which can be processed into onset and offset timestamps describing sound event activity, i.e., sound event.</p>
+<p>
+<div class="figure text-center">
+<img alt="Overview of the recognition process for audio content analysis." class="img-fluid text-center" id="fig-recognition-overview" src="/images/thesis_fig311.png" title="Overview of the recognition process for audio content analysis."/>
+<p class="caption">
+<strong>Figure 3.11</strong> 
+                Overview of the recognition process for audio content analysis.
+            </p>
+<div class="d-flex justify-content-end">
+<div class="license text-start w-100 small text-muted">
+<a class="text" href="https://creativecommons.org">Recognition process</a> © 2021 by <a class="text" href="https://creativecommons.org">Toni Heittola</a> is licensed under <a class="text" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a><img alt="" src="/images/cc/cc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/><img alt="" src="/images/cc/by.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/><img alt="" src="/images/cc/nc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/><img alt="" src="/images/cc/nd.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/>
+</div>
+</div>
+</div>
+</p>
+<div class="section" id="classification">
+<h4>Classification</h4>
+<p>In sound classification, class-presence information of multiple short analysis frames from an audio segment to be classified are combined into a single classification output. In a single-label classification task, a single class label is assigned to an item, whereas in multi-label classification, multiple category labels are assigned to a single item.</p>
+<p>Frame-level class-presence probabilities can be processed into a single-label classification output either by taking classification decisions at frame-level and combining decisions (<em>hard voting</em>) or by combining probabilities and making the decision at segment-level (<em>soft voting</em>). In the first approach, classification decisions are done at the frame-level by selecting the class with the highest probability, and performing majority voting over these frame-level estimates to get the class with the highest number of occurrences <a class="citation-reference" href="#mesaros2019a" id="citation-reference-29">[Mesaros2019a]</a>. In the latter approach, the class-presence probabilities are combined either by summing or by averaging, then the class with the highest probability is selected as the classification result <a class="citation-reference" href="#mesaros2018c" id="citation-reference-30">[Mesaros2018c]</a>. This approach often results in a higher classification accuracy than hard voting at frame-level, because it gives more weight to more confident estimates.</p>
+<p>In multi-label classification, the number of active classes is usually unknown, and one cannot do classification just by selecting the class with the highest probability. The single-label classification scheme can be extended into a multi-label classification either by modifying how the system output is interpreted into activity or by adding extra classes to capture cases when target sound classes are not active. In the first approach, class presence probabilities from frames are summed or averaged similarly to the soft voting scheme, and a probability threshold is used to select the active classes. Probability thresholding to get activity estimates is called <em>binarization</em> and it is a common procedure with neural networks [<a class="reference internal" href="#cakir2017">Cakir2017</a>, <a class="reference internal" href="#mesaros2019a">Mesaros2019a</a>]. In the second approach, the non-activity of the class is explicitly modeled by introducing extra classes. One extra class, <em>universal background model</em> (UBM), can be added to represent the case when no target sound is active <a class="citation-reference" href="#heittola2013a" id="citation-reference-31">[Heittola2013a]</a>. Another way to model non-activity with extra classes is to create class-wise classifiers such that each of these classifiers is able to recognize only the activity of that particular sound class <a class="citation-reference" href="#cakir2015b" id="citation-reference-32">[Cakir2015b]</a>. Binary classifiers are trained with two classes: a positive class, when the specified sound is active, and a negative class when the specified sound is not active.</p>
+</div>
+<div class="section" id="detection">
+<h4>Detection</h4>
+<p>In sound event detection, class presence probabilities of consecutive analysis frames are converted into sound activity information, onset and offset timestamps of the active sound events. The process is a multi-class multi-label classification task at frame-level, and the aim is to process the classification output into estimates of sound event activity. The process is illustrated in Figure <a class="reference external" href="#fig-binarization">3.12</a>.</p>
+<p>
+<div class="figure text-center">
+<img alt="Converting class presence probability (middle panel) into sound class activity estimation with onset and offset timestamps (bottom panel)." class="img-fluid text-center" id="fig-recognition-overview" src="/images/thesis_fig312.png" title="Converting class presence probability (middle panel) into sound class activity estimation with onset and offset timestamps (bottom panel)."/>
+<p class="caption">
+<strong>Figure 3.12</strong> 
+                Converting class presence probability (middle panel) into sound class activity estimation with onset and offset timestamps (bottom panel).
+            </p>
+<div class="d-flex justify-content-end">
+<div class="license text-start w-100 small text-muted">
+<a class="text" href="https://creativecommons.org">Class presence probability into sound class activity</a> © 2021 by <a class="text" href="https://creativecommons.org">Toni Heittola</a> is licensed under <a class="text" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a><img alt="" src="/images/cc/cc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/><img alt="" src="/images/cc/by.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/><img alt="" src="/images/cc/nc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/><img alt="" src="/images/cc/nd.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/>
+</div>
+</div>
+</div>
+</p>
+<p>Generally, sound events are much longer than the used analysis window (typical length 20-100 ms) making classification outputs of consecutive analysis frames correlated. Furthermore, everyday sounds have a characteristic temporal structure which is important for the recognition, and this structure spans several analysis frames. The temporal structure is taken into account in the detection stage by using <em>temporal post-processing</em> applied to the frame-wise class presence probabilities or the binary class presence estimates. The classification at frame level produces noisy results because feature distributions of sound classes overlap each other and short frames do not have enough information for robust classification. <em>Median filtering</em> using a sliding window can be used to filter out this classification noise and to smooth the results from consecutive frames [<a class="reference internal" href="#mesaros2018c">Mesaros2018c</a>, <a class="reference internal" href="#mesaros2019a">Mesaros2019a</a>]. In this process, the median of binary sound activity estimates within the processing window (e.g. one second worth of analysis frames) is outputted, and the window is shifted one frame forward. The temporal structure of a sound can be addressed in the acoustic model as well by incorporating contextual information in the classification, e.g. using recurrent layers in neural networks <a class="citation-reference" href="#cakir2017" id="citation-reference-33">[Cakir2017]</a>, which makes post-processing in such approaches less important.</p>
+</div>
+</div>
+<div class="section" id="methods">
+<h3 id="methods">Methods</h3>
+<p>This section introduces two classification techniques used in this thesis for audio content analysis: Gaussian mixture models, and hidden Markov models. In addition, state-of-the-art classifier techniques based deep learning and specifically deep neural networks are briefly introduced.</p>
+<div class="section" id="gaussian-mixture-model">
+<h4>Gaussian Mixture Model</h4>
+<p>The <em>Gaussian mixture model</em> is a probabilistic model that can be used to estimate normally distributed sub-populations within the training data in an unsupervised manner. It can be extended into a multi-class supervised classifier by fitting a separate GMM model for training data coming from a specific sound category. In the test stage, class-wise likelihoods (posterior probability <span class="math">\(p(y|x)\)</span> are evaluated for an observation, and the class giving maximum likelihood is selected. In sound classification, sub-populations modeled with the mixture model can be seen as variations in acoustic characteristics within a sound category. For example, in the case of a dog barking sound class, the sub-populations can be produced by small, medium, and large dogs with various types of barking as well as different portions of the barking sequence itself.</p>
+<p>Before the recent emergence of deep learning, GMM was one of the most commonly used classification methods in sound classification tasks because of its good generalization properties. In automatic speech recognition, it has been used to model individual phonemes, while the transitions from one phoneme to another were modeled with hidden Markov models <a class="citation-reference" href="#rabiner1993" id="citation-reference-34">[Rabiner1993]</a>. In speaker verification, a GMM representing all speakers, a universal background model, was adapted to model the target speaker, with the actual speaker verification done based on the likelihood ratio between the target model and UBM <a class="citation-reference" href="#reynolds1995" id="citation-reference-35">[Reynolds1995]</a>. In music information retrieval, GMMs have been used to classify, for example, musical genre <a class="citation-reference" href="#tzanetakis2002" id="citation-reference-36">[Tzanetakis2002]</a> and musical instruments <a class="citation-reference" href="#heittola2009" id="citation-reference-37">[Heittola2009]</a>.</p>
+<p>A GMM estimates the underlying probability density function (pdf) of the observations (acoustic features), and it is capable of representing arbitrarily shaped densities through a weighted mixture of <span class="math">\(N\)</span> multivariate Gaussian distributions (also called normal distributions) [<a class="reference internal" href="#pearson1893">Pearson1893</a>, <a class="reference internal" href="#duda1973">Duda1973</a>]. The model sums together multiple Gaussian distributions (components), and the whole model is parameterized by the mixture component weights, and the mean and variance of the individual component distributions. The model can be seen as a clustering algorithm with soft assignments, where each modeled data point could have been generated by any of the component distributions used in the model with a corresponding probability, i.e., each mixture component has some <em>responsibility</em> for generating a data point. The probability density for an observation <span class="math">\(\boldsymbol{x}\)</span> from a class <span class="math">\(k\)</span> is computed as</p>
+$$ \label{ch3:eq:GMM:mixture} p_{k}(\boldsymbol{x}) =  \sum_{n=1}^{N}\omega_{n}\mathcal{N}(\boldsymbol{x} ; \boldsymbol{\mu}_{n},\boldsymbol{\Sigma}_{n}) \tag{3.5} $$<p>where <span class="math">\(\omega_{n}\)</span> is the positive weight of the component <span class="math">\(n\)</span> and the normal distribution <span class="math">\(\mathcal{N}(\boldsymbol{x} | \boldsymbol{\mu}_{n},\boldsymbol{\Sigma}_{n})\)</span> is defined by the the mean vector <span class="math">\(\boldsymbol{\mu}_{n}\)</span> and the covariance matrix <span class="math">\(\boldsymbol{\Sigma}_{n}\)</span>. Component weights <span class="math">\(\omega_{n}\)</span> sum to unity. Figure <a class="reference external" href="#fig-gmm-mixture">3.13</a> illustrates the basic principle of the mixture model in the one-variate case. The multivariate Gaussian density function is defined as</p>
+$$ %\mathcal{N}(\vect{x} | \mu_{n},\Sigma_{n})
+%= \frac{1}{\sqrt{(2\pi)^{d}|\Sigma_{n}}|}e^{-\frac{1}{2}(\vect{x}-\mu_{n})^{T}\sum_{n}^{-1}(\vect{x}-\mu_{n})}
+\mathcal{N}(\boldsymbol{x} ; \boldsymbol{\mu},\boldsymbol{\Sigma})
+= \frac{1}{\sqrt{(2\pi)^{d}|\boldsymbol{\Sigma}}|}e^{-\frac{1}{2}(\boldsymbol{x}-\boldsymbol{\mu})^{T}\sum^{-1}(\boldsymbol{x}-\boldsymbol{\mu})} \tag{3.6} $$<p>where <span class="math">\(d\)</span> corresponds to the length of the feature vector.</p>
+<p>
+<div class="figure text-center">
+<img alt="Example of one-variate Gaussian distribution with four components." class="img-fluid text-center" id="fig-gmm-mixture" src="/images/thesis_fig313.png" title="Example of one-variate Gaussian distribution with four components."/>
+<p class="caption">
+<strong>Figure 3.13</strong> 
+                Example of one-variate Gaussian distribution with four components.
+            </p>
+<div class="d-flex justify-content-end">
+<div class="license text-start w-100 small text-muted">
+<a class="text" href="https://creativecommons.org">Gaussian distribution</a> © 2021 by <a class="text" href="https://creativecommons.org">Toni Heittola</a> is licensed under <a class="text" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a><img alt="" src="/images/cc/cc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/><img alt="" src="/images/cc/by.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/><img alt="" src="/images/cc/nc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/><img alt="" src="/images/cc/nd.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/>
+</div>
+</div>
+</div>
+</p>
+<p>Model parameters <span class="math">\(\omega_{n}\)</span>, <span class="math">\(\boldsymbol{\mu}_{n}\)</span>, <span class="math">\(\boldsymbol{\Sigma}_{n}\)</span> in Eq 3.5 are learned based on the training material for each class separately to allow multi-class classification. The training is implemented using the expectation-maximization (EM) algorithm where optimal model parameters are iteratively estimated [<a class="reference internal" href="#dempster1977">Dempster1977</a>, <a class="reference internal" href="#mclachlan2008">McLachlan2008</a>]. A latent variable <span class="math">\(\gamma\)</span> is introduced for each data point to indicate the responsibility of each mixture component for generating a particular data point. The EM algorithm alternates between an expectation step and a maximization step: the first estimating the latent variable, the second updating the model parameters to maximize the likelihood based on the estimated latent variable. The process is often initialized by clustering the data with the k-means algorithm. The number of mixture components <span class="math">\(N\)</span> can be optimized as a hyper-parameter using cross-validation, or it can be optimized during the training process as one of the model parameters using information criteria [<a class="reference internal" href="#figueiredo1999">Figueiredo1999</a>, <a class="reference internal" href="#heittola2014">Heittola2014</a>]. Depending on the level of intra-class variation and the amount of training data, the best performing <span class="math">\(N\)</span> can also vary across classes.</p>
+<p>The parameter optimization process is commonly simplified by using diagonal covariance matrices <span class="math">\(\boldsymbol{\Sigma}_{n}\)</span> to restrict the parameter space. This simplifies the calculations, but at the same time prevents the model from capturing correlations between variables. However, the models trained on decorrelated features perform well in practice. One can use decorrelated acoustic features such as MFCC  or use e.g. principal component analysis to decorrelate other acoustic features before using them with a classifier.</p>
+<p>In the inference stage, the likelihood of an observation to be generated from each class-wise model is estimated using Eq 3.5. The predicted class is selected based on the maximum likelihood classification principle. As discussed earlier, one can use either hard voting or soft voting to get a single-label classification output for an audio segment containing many analysis frames. With GMMs the usual approach is based on the soft voting scheme, where frame-level likelihoods are accumulated class-wise over the whole segment and the predicted class is selected based on these accumulated likelihoods. The aim is to find class <span class="raw-latex">\(k\)</span> which has highest likelihood <span class="math">\(L\)</span> for the set of observations <span class="math">\(X=\boldsymbol{x_1},\boldsymbol{x_2},\cdots,\boldsymbol{x_M}\)</span>:</p>
+$$ \label{ch3:eq:GMM:classification}
+L(X;\lambda_{k})=\prod_{m=1}^{M}p_{k}(\boldsymbol{x_{m}}) \tag{3.7} $$<p>where <span class="math">\(\lambda_{k}\)</span> denotes GMM for class <span class="math">\(k\)</span> and <span class="math">\(p_{k}(\boldsymbol{x_{m}})\)</span> is the probability density function value for observation <span class="math">\(\boldsymbol{x_{m}}\)</span>. The general assumption in this approach is that consecutive analysis frames are statistically independent.</p>
+</div>
+<div class="section" id="hidden-markov-model">
+<h4>Hidden Markov Model</h4>
+<p>The <em>hidden Markov model</em> is a probabilistic temporal model used to model sequential data such as a sequence of acoustic features [<a class="reference internal" href="#rabiner1993">Rabiner1993</a>, p. 321]. HMM relies on a few assumptions: data can be divided into a sequence of stationary time segments called <em>states</em>, transitions between the states depend only on the origin and destination (Markov property), and the probability of an observation to be produced by a state does not depend on previous observations.</p>
+<p>An HMM is composed of states that respect the previous assumptions. Information on which state produced the output is not observable directly, i.e., the state information is <em>hidden</em>. The HMM is defined by the initial state probability distribution <span class="math">\(\Pi\)</span>, state transition probabilities, and output distributions of the states. The probability of being in state <span class="raw-latex">\(i\)</span> at the beginning of the process is defined by the initial state probability distribution, <span class="math">\(\boldsymbol{\Pi}=\left [ \pi_1, \dotsc, \pi_i,  \dotsc, \pi_N \right ]\)</span>. Transition probability from state :<span class="math">\(i\)</span> to state <span class="math">\(j\)</span> is defined by <span class="math">\(a_{ij}\)</span>, where <span class="math">\(i,j=1,\dotsc,N\)</span> and <span class="math">\(N\)</span> is the number of states in the HMM. Transition probabilities are presented as <span class="math">\(N \times N\)</span> matrix <span class="math">\(\boldsymbol{A}\)</span>. The observations are the outputs of the states, and the probability of observation <span class="math">\(x\)</span> in state <span class="math">\(j\)</span> is defined by <span class="math">\(b_j\left ( x \right )\)</span>, with parameters of the state distributions collected in <span class="math">\(N \times M\)</span> matrix <span class="math">\(\boldsymbol{B}\)</span>, where <span class="math">\(M\)</span> is the number of possible observation symbols. The state output probabilities are based on GMMs, and determined by static and dynamic features <a class="citation-reference" href="#rabiner1993" id="citation-reference-38">[Rabiner1993]</a>. Dynamic features are used to represent the short-time context in HMM, and this can be seen as a heuristic approach to compensate for the assumption of observations being independent <a class="citation-reference" href="#gales2008" id="citation-reference-39">[Gales2008]</a>.</p>
+<p>Before the era of deep learning, the standard approach for automatic speech recognition was to model individual acoustic units in speech (phones) with GMMs and the temporal sequence of these units with HMMs <a class="citation-reference" href="#rabiner1993" id="citation-reference-40">[Rabiner1993]</a>. Following the success with speech recognition, HMMs have been successfully applied to many classification and detection tasks in the field of music information retrieval <a class="citation-reference" href="#casey2008" id="citation-reference-41">[Casey2008]</a> and content analysis of everyday environments. As the time-varying properties of sound are important information for sound identification, the HMMs with temporal modeling abilities have produced good results in many works related to general sound recognition [<a class="reference internal" href="#casey2001">Casey2001</a>, <a class="reference internal" href="#eronen2006">Eronen2006</a>, <a class="reference internal" href="#weninger2011">Weninger2011</a>, <a class="reference internal" href="#butko2011b">Butko2011b</a>] and sound event detection [<a class="reference internal" href="#mesaros2010">Mesaros2010</a>, <a class="reference internal" href="#heittola2013a">Heittola2013a</a>, <a class="reference internal" href="#heittola2011">Heittola2011</a>, <a class="reference internal" href="#heittola2013b">Heittola2013b</a>].</p>
+<p>The topology of the HMM model is defined by the non-zero values in the state transition probability matrix <span class="math">\(\boldsymbol{A}\)</span> and it can be represented as a graph having connections <span class="math">\(a_{ij}\)</span>. The default topology, a <em>fully-connected topology</em>, has all transitions enabled, however, domain knowledge can be used to select the optimal topology for a task by setting some state transitions to zero before model training. The often-used <em>left-to-right topology</em> allows only transitions from one state to itself or the next state, the topology being well-suited to model sequential processes that have a clear start, steady part, and end. Such topology is used to model acoustic units in speech, notes played with musical instruments, and everyday sounds. In the case of everyday sounds, hidden states can be seen as modeling different stages of an individual sound event. For example, the sound of a glass cup smashing onto the floor and breaking could be divided into the following three parts suitable for a left-to-right model topology: transient-like sound from the impact, sound produced by a high amount of debris moving on the floor for a short distance, and lastly sound produced by a lower amount of debris moving longer distances on the floor surface. An example of the HMM model represented as a graph can be seen in Figure <a class="reference external" href="#fig-hmm-model-overview">3.14</a>.</p>
+<p>
+<div class="figure text-center">
+<img alt="Example of a hidden Markov model. The state transition matrix is represented as a graph: nodes represent the states and weighted edges indicate the transition probabilities. Two model topologies are presented in the figure: fully-connected and left-to-right. The dotted transitions have zero-probability in the left-to-right topology." class="img-fluid text-center" id="fig-hmm-model-overview" src="/images/thesis_fig314.png" title="Example of a hidden Markov model. The state transition matrix is represented as a graph: nodes represent the states and weighted edges indicate the transition probabilities. Two model topologies are presented in the figure: fully-connected and left-to-right. The dotted transitions have zero-probability in the left-to-right topology."/>
+<p class="caption">
+<strong>Figure 3.14</strong> 
+                Example of a hidden Markov model. The state transition matrix is represented as a graph: nodes represent the states and weighted edges indicate the transition probabilities. Two model topologies are presented in the figure: fully-connected and left-to-right. The dotted transitions have zero-probability in the left-to-right topology.
+            </p>
+<div class="d-flex justify-content-end">
+<div class="license text-start w-100 small text-muted">
+<a class="text" href="https://creativecommons.org">Example of a hidden Markov model</a> © 2021 by <a class="text" href="https://creativecommons.org">Toni Heittola</a> is licensed under <a class="text" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a><img alt="" src="/images/cc/cc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/><img alt="" src="/images/cc/by.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/><img alt="" src="/images/cc/nc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/><img alt="" src="/images/cc/nd.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/>
+</div>
+</div>
+</div>
+</p>
+<p>The HMM model is trained using a special case of the EM algorithm, the Baum-Welch re-estimation algorithm <a class="citation-reference" href="#rabiner1989" id="citation-reference-42">[Rabiner1989]</a>. During the training procedure, the model parameters are iteratively re-estimated while computing the probability that the observed sequence (training data) was produced by the current model. When using HMM for a classification task, each class is represented by a separate HMM, and classification is done with the maximum-likelihood method by finding the model having maximum aposteriori probability for the given observation sequence. Aposteriori probability can be computed using the Viterbi algorithm to find the optimal state sequence, a single best path through the model which provides the highest total likelihood of specific observation sequence being produced by this particular state sequence <a class="citation-reference" href="#viterbi1967" id="citation-reference-43">[Viterbi1967]</a>. In the case of a detection task, like sound event detection, transitions between classes are also important for robust detection. In order to do detection, class-wise HMM models can be merged into a single large HMM and allowing transitions between classes only from certain states. Viterbi algorithm is then used to find the optimal path through this large HMM, and the detection output is produced based on the found optimal state sequence and the sequence of classes these states belong to.</p>
+</div>
+<div class="section" id="deep-learning">
+<h4>Deep learning</h4>
+<p>The state-of-the-art computational audio content analysis systems are nowadays almost without exception based on deep learning approaches, and they are showing exceptional performance over classical machine learning approaches. The work included in this thesis was carried out before the era of deep learning and does not utilize any deep learning. However, a brief introduction to deep learning is given here to provide the reader with a modern perspective.</p>
+<p>The data processing in deep learning is inspired by information processing in the human brain during the process of acquiring new knowledge and the process of recalling stored knowledge. The main idea of the data processing in deep learning is to model complex concepts, such as sound event classes, by combining simpler and more abstract concepts learned automatically from data. The modeling is done using an artificial neural network, a deep multilayered structure, where each layer is constructed from multiple artificial neurons, and neurons between layers are connected. Deep learning is used for classification as a discriminative learning approach, and robust modelling is ensured by using a large amount of learning examples.</p>
+<p>An artificial neuron is an elementary unit of artificial neural networks. A neuron has <span class="math">\(n\)</span> inputs and each input has a weight parameter <span class="math">\(w_i\)</span>. The weighted sum of the inputs summed with a constant bias factor <span class="math">\(b\)</span> is passed through an activation function to produce the neuron’s output. By using a non-linear activation function, the neural network can model highly complex relationships in the data. A classical example of an artificial neural network is the <em>feedforward neural network</em> (FNN) where information between layers flows only from the input towards the output without feedback connections <a class="citation-reference" href="#goodfellow2016" id="citation-reference-44">[Goodfellow2016]</a>. The basic inner-structure of an artificial neuron and the feedforward network structure is shown in Figure <a class="reference external" href="#fig-fnn-overview">3.15</a>.</p>
+<p>
+<div class="figure text-center">
+<img alt="Overview of an artificial neuron (left panel) and the basic structure of a feedforward neural network (right panel)." class="img-fluid text-center" id="fig-fnn-overview" src="/images/thesis_fig315.png" title="Overview of an artificial neuron (left panel) and the basic structure of a feedforward neural network (right panel)."/>
+<p class="caption">
+<strong>Figure 3.15</strong> 
+                Overview of an artificial neuron (left panel) and the basic structure of a feedforward neural network (right panel).
+            </p>
+<div class="d-flex justify-content-end">
+<div class="license text-start w-100 small text-muted">
+<a class="text" href="https://creativecommons.org">Overview of an artificial neuron</a> © 2021 by <a class="text" href="https://creativecommons.org">Toni Heittola</a> is licensed under <a class="text" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a><img alt="" src="/images/cc/cc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/><img alt="" src="/images/cc/by.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/><img alt="" src="/images/cc/nc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/><img alt="" src="/images/cc/nd.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"/>
+</div>
+</div>
+</div>
+</p>
+<p>A network consists of an <em>input layer</em>, an <em>output layer</em>, and a number of intermediate layers called <em>hidden layers</em> for which the training data does not provide desired outputs. During the learning process, parameters <span class="math">\(w_i\)</span> and <span class="math">\(b\)</span> for each neuron in the network are iteratively optimized to produce the desired target outputs (reference labels) at the output layer given the input data (acoustic features) to the network. The learning process uses the back-propagation algorithm; at each learning iteration, a loss function is calculated between the output of the network and the target output for the learning examples and this loss is fed back through the network and the network parameters are adjusted to lower the loss for the next iteration. The non-linear optimization method called gradient descent is used to update the network parameters in the opposite direction of the gradient of the loss function after a small set of learning examples (a batch). The activation function for neurons in the output layer is selected based on the classification task; for a single-label classification, softmax activation is commonly used, whereas for a multi-label classification sigmoid activation is used. The hidden layers often use rectified linear units (ReLU) <a class="citation-reference" href="#glorot2011" id="citation-reference-45">[Glorot2011]</a> as activation function.</p>
+<p>The feedforward neural network was the first deep learning approach successfully used for audio content analysis applications, and it showed clear improvement in performance over the established GMM and HMM-based approaches, for example, in acoustic scene classification <a class="citation-reference" href="#mesaros2019b" id="citation-reference-46">[Mesaros2019b]</a> and sound event detection [<a class="reference internal" href="#gencoglu2014">Gencoglu2014</a>, <a class="reference internal" href="#cakir2015a">Cakir2015a</a>, <a class="reference internal" href="#mesaros2019b">Mesaros2019b</a>]. Short temporal context can be taken into account in FNN-based systems by using context windowing at network input (see Section <a class="reference external" href="#sec-dynamic-features">Dynamic Features</a>). Two main problems with FNNs for audio content analysis are their sensitivity to variations in time and frequency due to fixed connections between the input and the hidden layers of the network, and their inability to model long temporal structures essential for the recognition of some sound events.</p>
+<p>Convolutional neural networks (CNN) are nowadays chosen over FNNs as they generally produce more robust models [<a class="reference internal" href="#mesaros2018b">Mesaros2018b</a>, <a class="reference internal" href="#mesaros2019b">Mesaros2019b</a>]. CNN is a time and frequency shift-invariant model designed to take advantage of the 2D structure of the input <a class="citation-reference" href="#lecun1998" id="citation-reference-47">[Lecun1998]</a>. This is achieved by utilizing the local connectivity inside the network to allow parts of the network to specialize in different high-level features of the data during the learning process. The final classification output is produced based on the learned high-level features using a few feedforward layers before the output layer. Convolutional recurrent neural networks (CRNN) are often used for sound event detection [<a class="reference internal" href="#cakir2017">Cakir2017</a>, <a class="reference internal" href="#adavanne2017">Adavanne2017</a>, <a class="reference internal" href="#xu2018">Xu2018</a>]. These networks resemble CNNs, but they add layers containing feedback connections that capture long temporal structures in the data.</p>
+</div>
+</div>
+</div>
+<div class="section" id="references">
+<h2 id="references">References</h2>
+<table class="docutils citation" frame="void" id="adavanne2017" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Adavanne2017]</td><td>Adavanne, S., P. Pertilä, and T. Virtanen. 2017. “Sound Event Detection Using Spatial Features and Convolutional Recurrent Neural Network.” In <em>2017 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)</em>, 771–75.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="battaglino2015" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Battaglino2015]</td><td>Battaglino, D., L. Lepauloux, L. Pilati, and N. Evans. 2015. “Acoustic Context Recognition Using Local Binary Pattern Codebooks.” In <em>2015 IEEE Workshop on Applications of Signal Processing to Audio and Acoustics (WASPAA)</em>, 1–5.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="bishop2006" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Bishop2006]</td><td>Bishop, C. M. 2006. <em>Pattern Recognition and Machine Learning</em>. New York, USA: Springer.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="brown1991" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-14">[Brown1991]</a></td><td>Brown, Judith C. 1991. “Calculation of a Constant Q Spectral Transform.” <em>The Journal of the Acoustical Society of America</em> 89 (1): 425–34.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="butko2011a" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Butko2011a]</td><td>Butko, T., C. Canton-Ferrer, Segura C., Girò X., Nadeu C., Hernando J., and Casas J. 2011. “Two-Source Acoustic Event Detection and Localization: Online Implementation in a Smart-Room.” In <em>19th European Signal Processing Conference (EUSIPCO)</em>, 1317–21.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="butko2011b" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Butko2011b]</td><td>Butko, Taras, Cristian Canton-Ferrer, Carlos Segura, Xavier Giró, Climent Nadeu, Javier Hernando, and Josep R. Casas. 2011. “Acoustic Event Detection Based on Feature-Level Fusion of Audio and Video Modalities.” <em>EURASIP Journal on Advances in Signal Processing</em> 2011 (1).</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="cakir2015a" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Cakir2015a]</td><td>Çakır, Emre, Toni Heittola, Heikki Huttunen, and Tuomas Virtanen. 2015. “Polyphonic Sound Event Detection Using Multi Label Deep Neural Networks.” In <em>The International Joint Conference on Neural Networks 2015 (IJCNN 2015)</em>.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="cakir2015b" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-32">[Cakir2015b]</a></td><td>Çakır, Emre, Toni Heittola, Heikki Huttunen, and Tuomas Virtanen. 2015. “Multi-Label Vs. Combined Single-Label Sound Event Detection with Deep Neural Networks.” In <em>23rd European Signal Processing Conference (EUSIPCO)</em>.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="cakir2017" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Cakir2017]</td><td><em>(<a class="fn-backref" href="#citation-reference-11">1</a>, <a class="fn-backref" href="#citation-reference-22">2</a>, <a class="fn-backref" href="#citation-reference-33">3</a>)</em> Çakır, Emre, Giambattista Parascandolo, Toni Heittola, Heikki Huttunen, and Tuomas Virtanen. 2017. “Convolutional Recurrent Neural Networks for Polyphonic Sound Event Detection.” <em>Transactions on Audio, Speech and Language Processing</em> 25 (6): 1291–1303.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="cakir2018" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Cakir2018]</td><td>Çakir, Emre, and Tuomas Virtanen. 2018. “End-to-End Polyphonic Sound Event Detection Using Convolutional Recurrent Neural Networks with Learned Time-Frequency Representation Input.” In <em>2018 International Joint Conference on Neural Networks (IJCNN)</em>, 1–7.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="casey2001" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Casey2001]</td><td>Casey, Michael. 2001. “General Sound Classification and Similarity in MPEG-7.” <em>Organised Sound</em> 6 (2): 153–64.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="casey2008" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-41">[Casey2008]</a></td><td>Casey, M. A., R. Veltkamp, M. Goto, M. Leman, C. Rhodes, and M. Slaney. 2008. “Content-Based Music Information Retrieval: Current Directions and Future Challenges.” <em>Proceedings of the IEEE</em> 96 (4): 668–96.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="davis1980" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-16">[Davis1980]</a></td><td>Davis, S. B., and P. Mermelstein. 1980. “Comparison of Parametric Representations for Monosyllabic Word Recognition in Continuously Spoken Sentences.” <em>IEEE Transactions on Acoustics, Speech, and Signal Processing</em> 28: 357–66.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="dempster1977" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Dempster1977]</td><td>Dempster, A. P., N. M. Laird, and D. B. Rubin. 1977. “Maximum Likelihood from Incomplete Data via the EM Algorithm.” <em>Journal of the Royal Statistical Society, Series B</em> 39 (1): 1–38.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="dennis2013" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-25">[Dennis2013]</a></td><td>Dennis, J., H. D. Tran, and E. S. Chng. 2013. “Image Feature Representation of the Subband Power Distribution for Robust Sound Event Classification.” <em>IEEE Transactions on Audio, Speech, and Language Processing</em> 21 (2): 367–77.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="diment2013" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Diment2013]</td><td>Diment, Aleksandr, Toni Heittola, and Tuomas Virtanen. 2013. “Semi-Supervised Learning for Musical Instrument Recognition.” In <em>21st European Signal Processing Conference (EUSIPCO)</em>.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="du2013" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Du2013]</td><td>Du, Ke-Lin, and M. N. S. Swamy. 2013. <em>Neural Networks and Statistical Learning</em>. London, UK: Springer-Verlag London.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="duda1973" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Duda1973]</td><td>Duda, Richard O., and Peter E. Hart. 1973. <em>Pattern Classification and Scene Analysis</em>. New York, NY, USA: John Wiley &amp; Sons.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="eronen2006" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Eronen2006]</td><td>Eronen, A. J., V. T. Peltonen, J. T. Tuomi, A. P. Klapuri, S. Fagerlund, T. Sorsa, G. Lorho, and J. Huopaniemi. 2006. “Audio-Based Context Recognition.” <em>IEEE Transactions on Audio, Speech, and Language Processing</em> 14 (1): 321–29.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="figueiredo1999" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Figueiredo1999]</td><td>Figueiredo, Málrio A. T., José M. N. Leitão, and Anil K. Jain. 1999. “On Fitting Mixture Models.” In <em>Energy Minimization Methods in Computer Vision and Pattern Recognition</em>, edited by Edwin R. Hancock and Marcello Pelillo, 54–69. Berlin, Heidelberg: Springer Berlin Heidelberg.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="fonseca2018" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Fonseca2018]</td><td>Fonseca, Eduardo, Manoj Plakal, Frederic Font, Daniel P. W. Ellis, Xavier Favory, Jordi Pons, and Xavier Serra. 2018. “General-Purpose Tagging of Freesound Audio with AudioSet Labels: Task Description, Dataset, and Baseline.” In <em>Proceedings of the Detection and Classification of Acoustic Scenes and Events 2018 Workshop (Dcase2018)</em>, 69–73.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="foster2015" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-5">[Foster2015]</a></td><td>Foster, P., S. Sigtia, S. Krstulovic, J. Barker, and M. D. Plumbley. 2015. “CHiME-Home: A Dataset for Sound Source Recognition in a Domestic Environment.” In <em>2015 IEEE Workshop on Applications of Signal Processing to Audio and Acoustics (WASPAA)</em>, 1–5.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="furui1981" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-23">[Furui1981]</a></td><td>Furui, S. 1981. “Cepstral Analysis Technique for Automatic Speaker Verification.” <em>IEEE Transactions on Acoustics, Speech, and Signal Processing</em> 29 (2): 254–72.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="gales2008" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-39">[Gales2008]</a></td><td>Gales, M. J. F., and Steve Young. 2008. “The Application of Hidden Markov Models in Speech Recognition.” <em>Foundations and Trends in Signal Processing</em> 1 (3): 195–304.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="geiger2013" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Geiger2013]</td><td>Geiger, J. T., B. Schuller, and G. Rigoll. 2013. “Large-Scale Audio Feature Extraction and SVM for Acoustic Scene Classification.” In <em>2013 IEEE Workshop on Applications of Signal Processing to Audio and Acoustics (WASPAA)</em>, 1–4.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="gencoglu2014" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Gencoglu2014]</td><td>Gencoglu, O., T. Virtanen, and H. Huttunen. 2014. “Recognition of Acoustic Events Using Deep Neural Networks.” In <em>22nd European Signal Processing Conference (EUSIPCO)</em>, 506–10.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="glorot2011" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-45">[Glorot2011]</a></td><td>Glorot, Xavier, Antoine Bordes, and Yoshua Bengio. 2011. “Deep Sparse Rectifier Neural Networks.” In <em>Proceedings of the Fourteenth International Conference on Artificial Intelligence and Statistics</em>, edited by Geoffrey Gordon, David Dunson, and Miroslav Dudík, 15:315–23. Proceedings of Machine Learning Research. Fort Lauderdale, FL, USA: PMLR.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="goodfellow2016" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-44">[Goodfellow2016]</a></td><td>Goodfellow, Ian, Yoshua Bengio, and Aaron Courville. 2016. <em>Deep Learning</em>. Cambridge, MA, USA: The MIT Press.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="gygi2007" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-7">[Gygi2007]</a></td><td>Gygi, Brian, and Valeriy Shafiro. 2007. “Environmental Sound Research as It Stands Today.” <em>Proceedings of Meetings on Acoustics</em> 1 (1).</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="heittola2009" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Heittola2009]</td><td><em>(<a class="fn-backref" href="#citation-reference-20">1</a>, <a class="fn-backref" href="#citation-reference-21">2</a>, <a class="fn-backref" href="#citation-reference-37">3</a>)</em> Heittola, T., A. Klapuri, and T. Virtanen. 2009. “Musical Instrument Recognition in Polyphonic Audio Using Source-Filter Model for Sound Separation.” In <em>Proceedings 10th International Society for Music Information Retrieval Conference (ISMIR)</em>, 327–32.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="heittola2010b" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Heittola2010b]</td><td>Heittola Toni, Annamaria Mesaros, Antti Eronen, and Tuomas Virtanen, “Audio Context Recognition Using Audio Event Histograms,” in Proceedings of 2010 European Signal Processing Conference, (Aalborg, Denmark), pp. 1272–1276, 2010.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="heittola2011" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Heittola2011]</td><td>Heittola Toni, Annamaria Mesaros, Tuomas Virtanen, and Antti Eronen, “Sound Event Detection in Multisource Environments Using Source Separation,” in Workshop on Machine Listening in Multisource Environments, (Florence, Italy), pp. 36–40, 2011.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="heittola2013a" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Heittola2013a]</td><td><em>(<a class="fn-backref" href="#citation-reference-10">1</a>, <a class="fn-backref" href="#citation-reference-31">2</a>)</em> Heittola Toni, Annamaria Mesaros,Antti Eronen, and Tuomas Virtanen, “Context-Dependent Sound Event Detection,” in EURASIP Journal on Audio, Speech and Music Processing, Vol. 2013, No. 1, 13 pages, 2013.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="heittola2013b" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-9">[Heittola2013b]</a></td><td>Heittola Toni, Annamaria Mesaros, Tuomas Virtanen, and Moncef Gabbouj, “Supervised Model Training for Overlapping Sound Events Based on Unsupervised Source Separation,” in Proceedings of the 35th International Conference on Acoustics, Speech, and Signal Processing, (Vancouver, Canada), pp. 8677–8681, 2013.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="heittola2014" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Heittola2014]</td><td>Heittola, Toni, Annamaria Mesaros, Dani Korpi, Antti Eronen, and Tuomas Virtanen. 2014. “Method for Creating Location-Specific Audio Textures.” <em>EURASIP Journal on Audio, Speech and Music Processing</em> 1 (9).</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="heittola2018" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-1">[Heittola2018]</a></td><td>Heittola, Toni, Emre Çakır, and Tuomas Virtanen. 2018. “The Machine Learning Approach for Analysis of Sound Scenes and Events.” In <em>Computational Analysis of Sound Scenes and Events</em>, edited by Tuomas Virtanen, Mark D. Plumbley, and Dan Ellis, 13–40. Cham, Switzerland: Springer Verlag.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="hershey2017" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-26">[Hershey2017]</a></td><td>Hershey, S., S. Chaudhuri, D. P. W. Ellis, J. F. Gemmeke, A. Jansen, R. C. Moore, M. Plakal, et al. 2017. “CNN Architectures for Large-Scale Audio Classification.” In <em>2017 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)</em>, 131–35.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="kim2019" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-27">[Kim2019]</a></td><td>Kim, T., J. Lee, and J. Nam. 2019. “Comparison and Analysis of SampleCNN Architectures for Audio Classification.” <em>IEEE Journal of Selected Topics in Signal Processing</em> 13 (2): 285–97.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="kobayashi2014" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Kobayashi2014]</td><td>Kobayashi, T., and J. Ye. 2014. “Acoustic Feature Extraction by Statistics Based Local Binary Pattern for Environmental Sound Classification.” In <em>2014 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)</em>, 3052–56.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="lecun1998" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-47">[Lecun1998]</a></td><td>Lecun, Y., L. Bottou, Y. Bengio, and P. Haffner. 1998. “Gradient-Based Learning Applied to Document Recognition.” <em>Proceedings of the IEEE</em> 86 (11): 2278–2324.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="li2016" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Li2016]</td><td>Li, Jinyu, Li Deng, Reinhold Haeb-Umbach, and Yifan Gong. 2016. <em>Robust Automatic Speech Recognition</em>. Waltham, MA, USA: Academic Press.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="mclachlan2008" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[McLachlan2008]</td><td>McLachlan, Geoffrey J., and Thriyambakam Krishnan. 2008. <em>The EM Algorithm and Extensions</em>. 2nd ed. Vol. 382. Hoboken, NJ, USA: John Wiley &amp; Sons.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="mesaros2010" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Mesaros2010]</td><td>Mesaros Annamaria, Toni Heittola, Antti Eronen, and Tuomas Virtanen, “Acoustic Event Detection in Real Life Recordings,” in Proceedings of 2010 European Signal Processing Conference, Aalborg, Denmark), pp. 1267–1271, 2010</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="mesaros2016" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-6">[Mesaros2016]</a></td><td>Mesaros Annamaria, Toni Heittola, and Tuomas Virtanen, “TUT Database for Acoustic Scene Classification and Sound Event Detection,” In 24th European Signal Processing Conference 2016 (EUSIPCO 2016), pp. 1128–1132, 2016.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="mesaros2018" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Mesaros2018]</td><td>Mesaros, Annamaria, Toni Heittola, and Dan Ellis. 2018. “Datasets and Evaluation.” In <em>Computational Analysis of Sound Scenes and Events</em>, edited by Tuomas Virtanen, Mark D. Plumbley, and Dan Ellis, 147–79. Cham, Switzerland: Springer Verlag.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="mesaros2018b" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Mesaros2018b]</td><td>Mesaros, Annamaria, Toni Heittola, and Tuomas Virtanen. 2018. “A Multi-Device Dataset for Urban Acoustic Scene Classification.” In <em>Proceedings of the Detection and Classification of Acoustic Scenes and Events 2018 Workshop (DCASE2018)</em>, 9–13.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="mesaros2018c" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-30">[Mesaros2018c]</a></td><td>Mesaros Annamaria, Toni Heittola, Emmanouil Benetos, Peter Foster, Mathieu Lagrange, Tuomas Virtanen, and Mark D. Plumbley, “Detection and Classification of Acoustic Scenes and Events: Outcome of the DCASE 2016 Challenge,” IEEE/ACM Transactions on Audio, Speech, and Language Processing, 26(2):379–393, Feb 2018.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="mesaros2019a" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Mesaros2019a]</td><td><em>(<a class="fn-backref" href="#citation-reference-4">1</a>, <a class="fn-backref" href="#citation-reference-29">2</a>)</em> Mesaros, Annamaria, Aleksandr Diment, Benjamin Elizalde, Toni Heittola, Emmanuel Vincent, Bhiksha Raj, and Tuomas Virtanen. 2019. “Sound Event Detection in the DCASE 2017 Challenge.” <em>IEEE/ACM Transactions on Audio, Speech, and Language Processing</em> 27 (6): 992–1006.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="mesaros2019b" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-46">[Mesaros2019b]</a></td><td>Mesaros, Annamaria, Toni Heittola, and Tuomas Virtanen. 2019. “Acoustic Scene Classification in DCASE 2019 Challenge: Closed and Open Set Classification and Data Mismatch Setups.” In <em>Proceedings of the Detection and Classification of Acoustic Scenes and Events 2019 Workshop (Dcase2019)</em>, 164–68.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="murphy2012" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Murphy2012]</td><td>Murphy, Kevin P. 2012. <em>Machine Learning: A Probabilistic Perspective</em>. Cambridge, MA, USA: The MIT Press.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="ng2001" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-28">[Ng2001]</a></td><td>Ng, Andrew Y., and Michael I. Jordan. 2002. “On Discriminative Vs. Generative Classifiers: A Comparison of Logistic Regression and Naive Bayes.” In <em>Advances in Neural Information Processing Systems 14</em>, edited by T. G. Dietterich, S. Becker, and Z. Ghahramani, 841–48. MIT Press.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="oshaughnessy2000" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[OShaughnessy2000]</td><td>O‘Shaughnessy, Douglas. 2000. <em>Speech Communication: Human and Machine</em>. 2nd ed. New York, NY, USA: IEEE Press.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="oppenheim1999" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-13">[Oppenheim1999]</a></td><td>Oppenheim, A. V., R. W. Schafer, and J. R. Buck. 1999. <em>Discrete-Time Signal Processing</em>. Upper Saddle River, NJ, USA: Prentice Hall.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="pearson1893" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Pearson1893]</td><td>Pearson, Karl. 1894. “Contributions to the Mathematical Theory of Evolution.” <em>Philosophical Transactions of the Royal Society of London. A</em> 185: 71–110.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="rabiner1989" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-42">[Rabiner1989]</a></td><td>Rabiner, L. R. 1989. “A Tutorial on Hidden Markov Models and Selected Applications in Speech Recognition.” <em>Proceedings of the IEEE</em> 77 (2): 257–86.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="rabiner1993" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Rabiner1993]</td><td><em>(<a class="fn-backref" href="#citation-reference-34">1</a>, <a class="fn-backref" href="#citation-reference-38">2</a>, <a class="fn-backref" href="#citation-reference-40">3</a>)</em> Rabiner, L., and B.-H Juang. 1993. <em>Fundamentals of Speech Recognition</em>. New Jersey, USA: PTR Prentice-Hall Inc.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="rakotomamonjy2015" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-24">[Rakotomamonjy2015]</a></td><td>Rakotomamonjy, A., and G. Gasso. 2015. “Histogram of Gradients of Time–Frequency Representations for Audio Scene Classification.” <em>IEEE/ACM Transactions on Audio, Speech, and Language Processing</em> 23 (1): 142–53.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="reynolds1995" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Reynolds1995]</td><td><em>(<a class="fn-backref" href="#citation-reference-18">1</a>, <a class="fn-backref" href="#citation-reference-35">2</a>)</em> Reynolds, D., and R. Rose. 1995. “Robust Text-Independent Speaker Identification Using Gaussian Mixture Speaker Models.” <em>IEEE Transactions on Speech and Audio Processing</em> 3 (1): 72–83.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="salamon2015" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Salamon2015]</td><td>Salamon, J., and J. P. Bello. 2015. “Unsupervised Feature Learning for Urban Sound Classification.” In <em>2015 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)</em>, 171–75.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="schroder2013" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-8">[Schroder2013]</a></td><td>Schröder, J., N. Moritz, M. R. Schädler, B. Cauchi, K. Adiloglu, J. Anemüller, S. Doclo, B. Kollmeier, and S. Goetze. 2013. “On the Use of Spectro-Temporal Features for the IEEE AASP Challenge ’Detection and Classification of Acoustic Scenes and Events’.” In <em>2013 IEEE Workshop on Applications of Signal Processing to Audio and Acoustics (WASPAA)</em>, 1–4.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="slaney1998" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Slaney1998]</td><td>Slaney, Malcolm. 1998. “Auditory Toolbox.” Technical Report 1998-010. Interval Research Corporation.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="stevens1937" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-17">[Stevens1937]</a></td><td>Stevens, S. S., J. Volkmann, and E. B. Newman. 1937. “A Scale for the Measurement of the Psychological Magnitude Pitch.” <em>The Journal of the Acoustical Society of America</em> 8 (3): 185–90.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="temko2009" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Temko2009]</td><td>Temko, A., and C. Nadeu. 2009. “Acoustic Event Detection in a Meeting-Room Environment.” <em>Pattern Recognition Letters</em> 30 (14): 1281–88.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="tzanetakis2001" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-15">[Tzanetakis2001]</a></td><td>Tzanetakis, G., G. Essl, and P. R. Cook. 2001. “Audio Analysis Using the Discrete Wavelet Transform.” In <em>Proceedings of the WSES International Conference Acoustics and Music: Theory and Applications (AMTA 2001)</em>, 318–23.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="tzanetakis2002" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Tzanetakis2002]</td><td><em>(<a class="fn-backref" href="#citation-reference-19">1</a>, <a class="fn-backref" href="#citation-reference-36">2</a>)</em> Tzanetakis, G., and P. Cook. 2002. “Musical Genre Classification of Audio Signals.” <em>IEEE Transactions on Speech and Audio Processing</em> 10 (5): 293–302.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="virtanen2007" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-12">[Virtanen2007]</a></td><td>Virtanen, T. 2007. “Monaural Sound Source Separation by Nonnegative Matrix Factorization with Temporal Continuity and Sparseness Criteria.” <em>IEEE Transactions on Audio, Speech, and Language Processing</em> 15 (3): 1066–74.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="virtanen2018" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-2">[Virtanen2018]</a></td><td>Virtanen, Tuomas, Mark D Plumbley, and Dan Ellis. 2018. <em>Computational Analysis of Sound Scenes and Events</em>. Cham, Switzerland: Springer Verlag.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="viterbi1967" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-43">[Viterbi1967]</a></td><td>Viterbi, A. 1967. “Error Bounds for Convolutional Codes and an Asymptotically Optimum Decoding Algorithm.” <em>IEEE Transactions on Information Theory</em> 13 (2): 260–69.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="weninger2011" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Weninger2011]</td><td>Weninger, F., and B. Schuller. 2011. “Audio Recognition in the Wild: Static and Dynamic Classification on a Real-World Database of Animal Vocalizations.” In <em>2011 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)</em>, 337–40.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="xu2018" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Xu2018]</td><td>Xu, Y., Q. Kong, W. Wang, and M. D. Plumbley. 2018. “Large-Scale Weakly Supervised Audio Classification Using Gated Convolutional Neural Network.” In <em>2018 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)</em>, 121–25.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="young2006" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Young2006]</td><td>Young, Steve J., D. Kershaw, J. Odell, D. Ollason, V. Valtchev, and P. Woodland. 2006. <em>The HTK Book Version 3.4</em>. Cambridge, UK: Cambridge University Press.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="zhang2012" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Zhang2012]</td><td>Zhang, Z., and B. Schuller. 2012. “Semi-Supervised Learning Helps in Sound Event Classification.” In <em>2012 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)</em>, 333–36.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="zhao2014" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#citation-reference-3">[Zhao2014]</a></td><td>Zhao, X, Y Wang, and D Wang. 2014. “Robust Speaker Identification in Noisy and Reverberant Conditions.” <em>IEEE/ACM Transactions on Audio, Speech, and Language Processing</em> 22 (4): 836–45.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="zhao2017" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Zhao2017]</td><td>Zhao, Shuyang, Toni Heittola, and Tuomas Virtanen. 2017. “Active Learning for Sound Event Classification by Clustering Unlabeled Data.” In <em>2017 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)</em>, 751–55.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="zhao2018" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Zhao2018]</td><td>Zhao, Shuyang, Toni Heittola, and Tuomas Virtanen. 2018. “An Active Learning Method Using Clustering and Committee-Based Sample Selection for Sound Event Classification.” In <em>2018 16th International Workshop on Acoustic Signal Enhancement (IWAENC)</em>, 116–20.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="zhao2020" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Zhao2020]</td><td>Zhao, Shuyang, Toni Heittola, and Tuomas Virtanen. 2020. “Active Learning for Sound Event Detection.” <em>IEEE/ACM Transactions on Audio, Speech, and Language Processing</em> 28: 2895–905.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="zolzer2008" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Zolzer2008]</td><td>Zölzer, Udo, ed. 2008. <em>Digital Audio Signal Processing</em>. 2nd ed. Chichester, UK: John Wiley &amp; Sons.</td></tr>
+</tbody>
+</table>
+<br/><br/><br/></div>
+<script type='text/javascript'>if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>    
+
+<ul class="nav pull-right scroll-top">
+  <li>
+    <a title="Scroll to top" href="#" class="page-scroll-top">
+      <i class="glyphicon glyphicon-chevron-up"></i>
+    </a>
+  </li>
+</ul>
+<script type="text/javascript" src="/theme/assets/jquery/jquery.easing.min.js"></script>
+<script type="text/javascript" src="/theme/assets/bootstrap5/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="/theme/js/theme5.js"></script><script type="text/javascript" src="/theme/assets/scrollreveal/scrollreveal.min.js"></script>
+<script type="text/javascript" src="/theme/js/setup.scrollreveal.js"></script>
+<script type="text/javascript" src="/theme/assets/highlight/highlight.pack.js"></script>
+<script type="text/javascript">
+    document.querySelectorAll('pre code:not([class])').forEach(function($) {$.className = 'no-highlight';});
+    hljs.initHighlightingOnLoad();
+</script>
+<script type="text/javascript" src="/theme/js/respond.min.js"></script>
+<script type="text/javascript" src="/theme/js/tocbot.min.js"></script>
+<script type="text/javascript" src="/theme/js/btoc-bot.min.js"></script>
+</body>
+</html>

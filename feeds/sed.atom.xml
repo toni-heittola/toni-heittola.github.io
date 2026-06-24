@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Toni Heittola - SED</title><link href="/" rel="alternate"></link><link href="/feeds/sed.atom.xml" rel="self"></link><id>/</id><updated>2024-03-13T12:00:00+02:00</updated><entry><title>IEEE Signal Processing Society's Best Paper Award 2023</title><link href="/articles/ieee-signal-processing-societys-best-paper-award-2023" rel="alternate"></link><published>2024-03-13T12:00:00+02:00</published><updated>2024-03-13T12:00:00+02:00</updated><author><name>Toni Heittola</name></author><id>tag:None,2024-03-13:/articles/ieee-signal-processing-societys-best-paper-award-2023</id><summary type="html">&lt;p&gt;Our 2017 TASLP journal paper “Convolutional Recurrent Neural Networks for Polyphonic Sound Event Detection” IEEE Signal Processing Society's Best Paper Award 2023&lt;/p&gt;</summary><content type="html">&lt;p&gt;Our 2017 TASLP journal paper “Convolutional Recurrent Neural Networks for Polyphonic Sound Event Detection” has received the &lt;a href="https://signalprocessingsociety.org/community-involvement/award-recipients"&gt;IEEE Signal Processing Society's Best Paper Award 2023&lt;/a&gt;. I am deeply honoured to have contributed to such impactful work in our field. Special congratulations go to Emre Çakır and Giambattista Parascandolo on their outstanding work!&lt;/p&gt;
+&lt;div class="btex-item" data-item="Cakir2017_TASLP" data-source="content/data/publications.bib"&gt;
+&lt;div class="card mb-3"&gt;
+&lt;span class="label label-default" style="width:100px;padding-top:0.4em;margin-left:0em;margin-top:0em;"&gt;Publication&lt;a name="Cakir2017_TASLP"&gt;&lt;/a&gt;&lt;/span&gt;
+&lt;div class="card-body"&gt;
+&lt;div class="row"&gt;
+&lt;div class="col-md-9"&gt;
+&lt;p style="text-align:left"&gt;
+                                Emre Cakir, Giambattista Parascandolo, Toni Heittola, Heikki Huttunen, and Tuomas Virtanen.
+&lt;em&gt;Convolutional recurrent neural networks for polyphonic sound event detection.&lt;/em&gt;
+&lt;em&gt;Transactions on Audio, Speech and Language Processing: Special issue on Sound Scene and Event Analysis&lt;/em&gt;, 25(6):1291–1303, June 2017.
+&lt;a href="https://doi.org/10.1109/TASLP.2017.2690575"&gt;doi:10.1109/TASLP.2017.2690575&lt;/a&gt;.
+                                
+                                
+                                &lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="col-md-3"&gt;
+&lt;div class="btn-group pull-right"&gt;
+&lt;button class="btn btn-xs btn-danger" data-bs-target="#bibtexCakir2017_TASLPb531bb7ff9744f4197b10c3269841043" data-bs-toggle="modal" type="button"&gt;&lt;i class="fa fa-solid fa-file-text fa-file-text-o"&gt;&lt;/i&gt; Bib&lt;/button&gt;
+&lt;a class="btn btn-xs btn-warning btn-btex text-white" data-placement="bottom" href="https://arxiv.org/pdf/1702.06286" rel="tooltip" title="Download pdf"&gt;&lt;i class="fa fa-solid fa-file-pdf fa-file-pdf-o fa-1x"&gt;&lt;/i&gt; PDF&lt;/a&gt;
+&lt;a class="btn btn-xs btn-info btn-btex text-white" data-placement="bottom" href="https://webpages.tuni.fi/arg/paper/taslp2017-crnn-sed/tut-sed-synthetic-2016" rel="tooltip" title=""&gt;&lt;i class="fa fa-solid fa-database"&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;button aria-controls="collapseCakir2017_TASLPb531bb7ff9744f4197b10c3269841043" aria-expanded="true" class="btn btn-default btn-xs" data-bs-parent="#btex-items-accordion" data-bs-target="#collapseCakir2017_TASLPb531bb7ff9744f4197b10c3269841043" data-bs-toggle="collapse" type="button"&gt;
+&lt;i class="fa fa-solid fa-caret-down"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div aria-labelledby="headingCakir2017_TASLPb531bb7ff9744f4197b10c3269841043" class="panel-collapse collapse mb-3" id="collapseCakir2017_TASLPb531bb7ff9744f4197b10c3269841043"&gt;
+&lt;h4&gt;Convolutional Recurrent Neural Networks for Polyphonic Sound Event Detection&lt;/h4&gt;
+&lt;h5&gt;Abstract&lt;/h5&gt;
+&lt;p class="text-justify"&gt;Sound events often occur in unstructured environments where they exhibit wide variations in their frequency content and temporal structure. Convolutional neural networks (CNN) are able to extract higher level features that are invariant to local spectral and temporal variations. Recurrent neural networks (RNNs) are powerful in learning the longer term temporal context in the audio signals. CNNs and RNNs as classifiers have recently shown improved performances over established methods in various sound recognition tasks. We combine these two approaches in a Convolutional Recurrent Neural Network (CRNN) and apply it on a polyphonic sound event detection task. We compare the performance of the proposed CRNN method with CNN, RNN, and other established methods, and observe a considerable improvement for four different datasets consisting of everyday sound events.&lt;/p&gt;
+&lt;div class="btn-group"&gt;
+&lt;button class="btn btn-sm btn-danger" data-target="#bibtexCakir2017_TASLPb531bb7ff9744f4197b10c3269841043" data-toggle="modal" type="button"&gt;&lt;i class="fa fa-solid fa-file-text fa-file-text-o"&gt;&lt;/i&gt; Bibtex&lt;/button&gt;
+&lt;a class="btn btn-sm btn-warning text-white btn-btex2" data-placement="bottom" href="https://arxiv.org/pdf/1702.06286" rel="tooltip" title="Download pdf"&gt;&lt;i class="fa fa-solid fa-file-pdf fa-file-pdf-o fa-1x"&gt;&lt;/i&gt; PDF&lt;/a&gt;
+&lt;a class="btn btn-sm btn-info btn-btex2 text-white" href="http://ieeexplore.ieee.org/document/7933050/?arnumber=7933050" title=""&gt;&lt;i class="fa fa-solid fa-book"&gt;&lt;/i&gt; Web publication&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class="btn-group"&gt;
+&lt;a class="btn btn-sm btn-info btn-btex2 text-white" data-placement="bottom" href="https://webpages.tuni.fi/arg/paper/taslp2017-crnn-sed/tut-sed-synthetic-2016" rel="tooltip" title="Toolbox"&gt;&lt;i class="fa fa-solid fa-database"&gt;&lt;/i&gt; &lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- Modal --&gt;
+&lt;div aria-hidden="true" aria-labelledby="bibtexCakir2017_TASLPb531bb7ff9744f4197b10c3269841043label" class="modal fade" id="bibtexCakir2017_TASLPb531bb7ff9744f4197b10c3269841043" role="dialog" tabindex="-1"&gt;
+&lt;div class="modal-dialog"&gt;
+&lt;div class="modal-content"&gt;
+&lt;div class="modal-header"&gt;
+&lt;h4 class="modal-title" id="bibtexCakir2017_TASLPb531bb7ff9744f4197b10c3269841043label"&gt;Convolutional Recurrent Neural Networks for Polyphonic Sound Event Detection&lt;/h4&gt;
+&lt;button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"&gt;&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class="modal-body"&gt;&lt;pre&gt;@article{Cakir2017_TASLP,
+    author = "Cakir, Emre and Parascandolo, Giambattista and Heittola, Toni and Huttunen, Heikki and Virtanen, Tuomas",
+    title = "Convolutional Recurrent Neural Networks for Polyphonic Sound Event Detection",
+    journal = "Transactions on Audio, Speech and Language Processing: Special issue on Sound Scene and Event Analysis",
+    year = "2017",
+    volume = "25",
+    number = "6",
+    pages = "1291-1303",
+    month = "June",
+    doi = "10.1109/TASLP.2017.2690575",
+    issn = "2329-9290",
+    abstract = "Sound events often occur in unstructured environments where they exhibit wide variations in their frequency content and temporal structure. Convolutional neural networks (CNN) are able to extract higher level features that are invariant to local spectral and temporal variations. Recurrent neural networks (RNNs) are powerful in learning the longer term temporal context in the audio signals. CNNs and RNNs as classifiers have recently shown improved performances over established methods in various sound recognition tasks. We combine these two approaches in a Convolutional Recurrent Neural Network (CRNN) and apply it on a polyphonic sound event detection task. We compare the performance of the proposed CRNN method with CNN, RNN, and other established methods, and observe a considerable improvement for four different datasets consisting of everyday sound events."
+}
+&lt;/pre&gt;&lt;/div&gt;
+&lt;div class="modal-footer"&gt;&lt;button class="btn btn-default" data-bs-dismiss="modal" type="button"&gt;Close&lt;/button&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</content><category term="SED"></category></entry><entry><title>Tutorial article on Sound Event Detection in IEEE Signal Processing Magazine</title><link href="/articles/tutorial-article-on-sound-event-detection-in-ieee-signal-processing-magazine" rel="alternate"></link><published>2021-09-21T21:00:00+03:00</published><updated>2021-09-21T21:00:00+03:00</updated><author><name>Toni Heittola</name></author><id>tag:None,2021-09-21:/articles/tutorial-article-on-sound-event-detection-in-ieee-signal-processing-magazine</id><summary type="html">&lt;p&gt;Our paper "Sound Event Detection: A tutorial" was published in the September issue of the IEEE Signal Processing Magazine.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Our paper "Sound Event Detection: A tutorial" was published in the September issue of the IEEE Signal Processing Magazine. &lt;/p&gt;
+&lt;div class="btex-item" data-item="Mesaros2021_SPM" data-source="content/data/publications.bib"&gt;
+&lt;div class="card mb-3"&gt;
+&lt;span class="label label-default" style="width:100px;padding-top:0.4em;margin-left:0em;margin-top:0em;"&gt;Publication&lt;a name="Mesaros2021_SPM"&gt;&lt;/a&gt;&lt;/span&gt;
+&lt;div class="card-body"&gt;
+&lt;div class="row"&gt;
+&lt;div class="col-md-9"&gt;
+&lt;p style="text-align:left"&gt;
+                                Annamaria Mesaros, Toni Heittola, Tuomas Virtanen, and Mark D. Plumbley.
+&lt;em&gt;Sound event detection: a tutorial.&lt;/em&gt;
+&lt;em&gt;IEEE Signal Processing Magazine,&lt;/em&gt;, 2021.
+&lt;a href="https://doi.org/10.1109/MSP.2021.3090678"&gt;doi:10.1109/MSP.2021.3090678&lt;/a&gt;.
+                                
+                                
+                                &lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="col-md-3"&gt;
+&lt;div class="btn-group pull-right"&gt;
+&lt;button class="btn btn-xs btn-danger" data-bs-target="#bibtexMesaros2021_SPMfbe28dd830fd40e68014caacd495d48f" data-bs-toggle="modal" type="button"&gt;&lt;i class="fa fa-solid fa-file-text fa-file-text-o"&gt;&lt;/i&gt; Bib&lt;/button&gt;
+&lt;a class="btn btn-xs btn-warning btn-btex text-white" data-placement="bottom" href="https://arxiv.org/abs/2107.05463" rel="tooltip" title="Download pdf"&gt;&lt;i class="fa fa-solid fa-file-pdf fa-file-pdf-o fa-1x"&gt;&lt;/i&gt; PDF&lt;/a&gt;
+&lt;button aria-controls="collapseMesaros2021_SPMfbe28dd830fd40e68014caacd495d48f" aria-expanded="true" class="btn btn-default btn-xs" data-bs-parent="#btex-items-accordion" data-bs-target="#collapseMesaros2021_SPMfbe28dd830fd40e68014caacd495d48f" data-bs-toggle="collapse" type="button"&gt;
+&lt;i class="fa fa-solid fa-caret-down"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div aria-labelledby="headingMesaros2021_SPMfbe28dd830fd40e68014caacd495d48f" class="panel-collapse collapse mb-3" id="collapseMesaros2021_SPMfbe28dd830fd40e68014caacd495d48f"&gt;
+&lt;h4&gt;Sound Event Detection: A Tutorial&lt;/h4&gt;
+&lt;h5&gt;Abstract&lt;/h5&gt;
+&lt;p class="text-justify"&gt;The goal of automatic sound event detection (SED) methods is to recognize what is happening in an audio signal and when it is happening. In practice, the goal is to recognize at what temporal instances different sounds are active within an audio signal. This paper gives a tutorial presentation of sound event detection, including its definition, signal processing and machine learning approaches, evaluation, and future perspectives.&lt;/p&gt;
+&lt;div class="btn-group"&gt;
+&lt;button class="btn btn-sm btn-danger" data-target="#bibtexMesaros2021_SPMfbe28dd830fd40e68014caacd495d48f" data-toggle="modal" type="button"&gt;&lt;i class="fa fa-solid fa-file-text fa-file-text-o"&gt;&lt;/i&gt; Bibtex&lt;/button&gt;
+&lt;a class="btn btn-sm btn-warning text-white btn-btex2" data-placement="bottom" href="https://arxiv.org/abs/2107.05463" rel="tooltip" title="Download pdf"&gt;&lt;i class="fa fa-solid fa-file-pdf fa-file-pdf-o fa-1x"&gt;&lt;/i&gt; PDF&lt;/a&gt;
+&lt;a class="btn btn-sm btn-info btn-btex2 text-white" href="https://ieeexplore.ieee.org/document/9524590" title=""&gt;&lt;i class="fa fa-solid fa-book"&gt;&lt;/i&gt; Web publication&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class="btn-group"&gt;
+&lt;a class="btn btn-sm btn-info btn-btex2 text-white" href="https://read.nxtbook.com/ieee/signal_processing/signal_processing_sept_2021/sound_event_detection.html" title=""&gt;&lt;i class="fa fa-solid fa-square-up-right fa-external-link-square"&gt;&lt;/i&gt; &lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- Modal --&gt;
+&lt;div aria-hidden="true" aria-labelledby="bibtexMesaros2021_SPMfbe28dd830fd40e68014caacd495d48flabel" class="modal fade" id="bibtexMesaros2021_SPMfbe28dd830fd40e68014caacd495d48f" role="dialog" tabindex="-1"&gt;
+&lt;div class="modal-dialog"&gt;
+&lt;div class="modal-content"&gt;
+&lt;div class="modal-header"&gt;
+&lt;h4 class="modal-title" id="bibtexMesaros2021_SPMfbe28dd830fd40e68014caacd495d48flabel"&gt;Sound Event Detection: A Tutorial&lt;/h4&gt;
+&lt;button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"&gt;&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class="modal-body"&gt;&lt;pre&gt;@article{Mesaros2021_SPM,
+    author = "Mesaros, Annamaria and Heittola, Toni and Virtanen, Tuomas and Plumbley, Mark D.",
+    journal = "IEEE Signal Processing Magazine,",
+    title = "Sound Event Detection: A Tutorial",
+    year = "2021",
+    volume = "38",
+    issue = "5",
+    doi = "10.1109/MSP.2021.3090678",
+    abstract = "The goal of automatic sound event detection (SED) methods is to recognize what is happening in an audio signal and when it is happening. In practice, the goal is to recognize at what temporal instances different sounds are active within an audio signal. This paper gives a tutorial presentation of sound event detection, including its definition, signal processing and machine learning approaches, evaluation, and future perspectives."
+}
+&lt;/pre&gt;&lt;/div&gt;
+&lt;div class="modal-footer"&gt;&lt;button class="btn btn-default" data-bs-dismiss="modal" type="button"&gt;Close&lt;/button&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</content><category term="SED"></category></entry></feed>

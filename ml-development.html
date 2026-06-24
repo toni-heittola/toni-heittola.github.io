@@ -1,0 +1,497 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <title>Machine Learning for Computational Sound Analysis - Toni Heittola</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <link href="/static/favicon.png" rel="icon">
+<link rel="canonical" href="/ml-development">
+        <meta name="author" content="Toni Heittola" />
+        <meta name="description" content="This page collects machine learning resources, tools, and example systems designed to support research in audio content analysis in everyday environments, especially in fields such as acoustic scene classification and sound event detection. What You&#39;ll Find Here: Evaluation and Data Handling Tools: Standardized Python libraries such as sed_eval and dcase_util …" />
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;900&family=Roboto:wght@900&family=Bungee+Spice" rel="stylesheet">
+    <link rel="stylesheet" href="/theme/assets/bootstrap5/css/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/assets/fontawesome6/css/all.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/assets/academicons/css/academicons.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/assets/dcaseicons/css/dcaseicons.css?v=1.1" type="text/css"/>
+<link rel="stylesheet" href="/theme/assets/highlight/styles/atom-one-light.css" type="text/css"/>
+                <link rel="stylesheet" href="/theme/css/btoc-bot.min.css">
+<link rel="stylesheet" href="/theme/css/theme5.css?v=1.1" type="text/css"/><link rel="stylesheet" href="/static/assets/css/icons.css" type="text/css"/><link rel="stylesheet" href="/static/assets/css/extra.css" type="text/css"/><script type="text/javascript" src="/theme/assets/jquery/jquery-3.7.1.min.js"></script>    <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Toni Heittola ATOM Feed"/>
+
+
+    <style>            .card{margin:5% 0%;}
+</style>
+</head>
+<body>
+
+
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark pt-0 pb-0 flex-column" role="navigation" data-spy="affix" data-offset-top="195" id="topmenu">
+    <div class="container p-0">
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-main" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar-main">
+            <div class="container-fluid p-0">
+                <div class="row g-0 p-0">
+                    <div class="col-md d-flex">
+                        <a href="/" class="navbar-brand align-self-start" ></a><ul class="navbar-nav flex-sm-row2 flex-lg-grow flex-lg-fill align-self-start" id="menuitem-list-main"><li class="nav-item ">
+        <a href="/"
+        class="nav-link"
+        ><strong>Toni Heittola</strong></a>
+    </li></ul><ul class="navbar-nav flex-lg-nowrap align-self-start" id="menuitem-list"><li class="nav-item " data-bs-toggle="tooltip" data-bs-placement="bottom" title="About me">
+        <a href="/about-me"
+        class="nav-link"
+        ><i class="fa fa-solid fa-user fa-1x fa-fw"></i>&nbsp;About</a>
+    </li><li class="nav-item dropdown ">
+        <a href="#"
+ class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+        ><i class="fa fa-solid fa-magnifying-glass fa-1x fa-fw text-danger text-dcase-a1"></i>&nbsp;Research&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class=" ">
+        <a href="/research"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-circle-notch fa-circle-o-notch fa-1x fa-fw text-dcase-a1"></i>&nbsp;Overview</a>
+    </li>
+            <li class=" ">
+        <a href="/research-portfolio"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-cog fa-1x fa-fw text-dcase-a2"></i>&nbsp;Portfolio</a>
+    </li>
+            <li class=" ">
+        <a href="/guiding-research"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-users fa-fw text-dcase-a3"></i>&nbsp;Guiding Research</a>
+    </li>
+            <li class="nav-item divider dropdown-divider" role="presentation"></li>
+            <li class=" ">
+        <a href="/publications"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-copy fa-files-o fa-1x fa-fw text-dcase-a4"></i>&nbsp;Publications</a>
+    </li>
+            <li class=" ">
+        <a href="/opendata"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-database fa-fw text-dcase-a5"></i>&nbsp;Open Data</a>
+    </li>
+            <li class="nav-item divider dropdown-divider" role="presentation"></li>
+            <li class=" ">
+        <a href="/academic-illustrations"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-image fa-1x fa-fw text-dcase-a7"></i>&nbsp;Illustrations</a>
+    </li>
+            <li class="nav-item divider dropdown-divider" role="presentation"></li>
+            <li class=" ">
+        <a href="/academic-bio"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-user fa-1x fa-fw text-dcase-a6"></i>&nbsp;Biography</a>
+    </li>
+            <li class="nav-item divider dropdown-divider" role="presentation"></li>
+            <li class=" ">
+        <a href="/glossary"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-list fa-1x fa-fw text-dcase-a7"></i>&nbsp;Glossary</a>
+    </li>
+            <li class="nav-item divider dropdown-divider" role="presentation"></li>
+            <li class="nav-link disabled subheader" >
+       <a><strong><small class="fw-light">Audio Content Analysis <br>in Everyday Environments</small></strong></a>
+    </li>
+            <li class=" ">
+        <a href="/thesis/introduction"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-book-open fa-1x fa-fw text-dcase-a1"></i>&nbsp;Introduction</a>
+    </li>
+            <li class=" ">
+        <a href="/thesis/everyday_environments"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-person-walking fa-1x fa-fw text-dcase-a1"></i>&nbsp;Everyday Environments</a>
+    </li>
+            <li class=" ">
+        <a href="/thesis/content_analysis"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-brain fa-1x fa-fw text-dcase-a1"></i>&nbsp;Audio Content Analysis</a>
+    </li>
+            <li class=" ">
+        <a href="/thesis/sed"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-ear-listen fa-1x fa-fw text-dcase-a1"></i>&nbsp;Sound Event Detection</a>
+    </li>
+            <li class="nav-item divider dropdown-divider" role="presentation"></li>
+            <li class="nav-item dropdown ">
+        <a href="#"
+ class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+        ><i class="fa fa-solid fa-file-alt fa-1x fa-fw"></i>&nbsp;Publication Add-ons&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class=" ">
+        <a href="/audiotexture/index"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-file-alt fa-1x fa-fw"></i>&nbsp;Location-Specific Audio Textures</a>
+    </li>
+            <li class=" ">
+        <a href="/ismir09/index"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-file-alt fa-1x fa-fw"></i>&nbsp;Musical Instrument Recognition</a>
+    </li>
+            <li class=" ">
+        <a href="/musicalgenre/index"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-file-alt fa-1x fa-fw"></i>&nbsp;Musical Genre Classification</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li><li class="nav-item dropdown  active">
+        <a href="/development"
+ class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+        ><i class="fa fa-solid fa-code fa-1x fa-fw text-warning text-thesis-a3"></i>&nbsp;Develop&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class=" ">
+        <a href="/development"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-code fa-1x fa-fw text-thesis-a3"></i>&nbsp;Introduction</a>
+    </li>
+            <li class="nav-item divider dropdown-divider" role="presentation"></li>
+            <li class="  active">
+        <a href="/ml-development"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-search fa-1x fa-fw text-thesis-a4"></i>&nbsp;Machine Learning</a>
+    </li>
+            <li class=" ">
+        <a href="/websites"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-desktop fa-1x fa-fw text-thesis-a2"></i>&nbsp;Websites</a>
+    </li>
+            <li class=" ">
+        <a href="/web-development"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-plug fa-1x fa-fw text-thesis-a1"></i>&nbsp;Web Development</a>
+    </li>
+        </ul>
+    </li><li class="nav-item ">
+        <a href="/publications"
+        class="nav-link"
+        ><i class="fa fa-solid fa-copy fa-files-o fa-1x fa-fw text-success text-dcase-a4"></i>&nbsp;Publish</a>
+    </li><li class="nav-item dropdown ">
+        <a href="#"
+ class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+        ><i class="fa fa-solid fa-wave-square fa-fw text-primary text-dcase-a5"></i>&nbsp;Data&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class=" ">
+        <a href="/opendata"
+ class="dropdown-item"
+        ><i class="fa fa-solid fa-folder-open fa-fw"></i>&nbsp;Open Data</a>
+    </li>
+            <li class=" ">
+        <a href="/datasets"
+ class="dropdown-item"
+        ><i class="fa fa-list-ul fa-fw"></i>&nbsp;Data & Tools</a>
+    </li>
+            <li class="nav-item divider dropdown-divider" role="presentation"></li>
+            <li class=" " data-bs-toggle="tooltip" data-bs-placement="bottom" title="DCASE Datalist">
+        <a href="https://dcase-repo.github.io/dcase_datalist/"
+ target="_blank"  class="dropdown-item"
+        ><i class="fa fa-database fa-1x fa-fw"></i>&nbsp;DCASE DataList</a>
+    </li>
+        </ul>
+    </li><li class="nav-item " data-bs-toggle="tooltip" data-bs-placement="bottom" title="Glossary">
+        <a href="/glossary"
+        class="nav-link"
+        ><i class="fa fa-solid fa-list fa-1x fa-fw"></i>&nbsp;</a>
+    </li><li class="nav-item " data-bs-toggle="tooltip" data-bs-placement="bottom" title="News articles">
+        <a href="/news"
+        class="nav-link"
+        ><i class="fa fa-solid fa-newspaper fa-newspaper-o fa-fw"></i>&nbsp;</a>
+    </li><li class="nav-item " data-bs-toggle="tooltip" data-bs-placement="bottom" title="Github">
+        <a href="https://github.com/toni-heittola?tab=repositories"
+ target="_blank"         class="nav-link"
+        ><i class="fa fa-brands fa-github fa-1x"></i>&nbsp;</a>
+    </li>                        </ul>                    </div></div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+<header class="page-top" style="background-image: url(theme/images/everyday-patterns/tiles-13.jpg);box-shadow: 0px 1000px rgba(0, 0, 0, 0.85) inset;overflow:hidden;position:relative">
+    <div class="container" style="box-shadow: 0px 1000px rgba(255, 255, 255, 0.1) inset;;height:100%;padding-bottom:20px;">
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                <div class="page-heading text-end"><h1 class="toc-skip bold" data-toc-skip>Machine Learning for Computational Sound Analysis</h1><hr class="small right bold"><span class="subheading">Open-Source Libraries, Baselines, and Code Examples</span></div>
+            </div>
+        </div>
+    </div>
+<span class="header-cc-logo" data-bs-toggle="tooltip" data-bs-placement="top" title="Background photo by Toni Heittola / CC BY-NC 4.0"><i class="fa fa-brands fa-creative-commons" aria-hidden="true"></i></span></header><div class="container">
+    <div class="row">
+        <div class="col-sm-3 sidecolumn-left ">
+ <div class="btoc-container hidden-print sticky-top" role="complementary">
+<div class="btoc-header bg-light text-muted">Content</div>
+<div class="btoc-body">
+<nav class="btoc-nav" data-toc-levels="h1,h2,h3"></nav>
+</div>
+</div>
+
+        </div>
+        <div class="col-sm-9 content">
+            <section id="content" class="body">
+                <div class="entry-content">
+                    <p class="lead">
+This page collects machine learning resources, tools, and example systems designed to support research in audio content analysis in everyday environments, especially in fields such as acoustic scene classification and sound event detection.
+</p>
+<h4><i class="fa fa-solid fa-wave-square fa-fw"></i> What You'll Find Here:</h4>
+<ul>
+<li>
+<p><strong>Evaluation and Data Handling Tools:</strong> Standardized Python libraries such as sed_eval and dcase_util for evaluating system performance and managing audio datasets.</p>
+</li>
+<li>
+<p><strong>Visualization Tools</strong>: Interactive and video-based visualizations using <code>sed_vis</code> for presenting system outputs and annotations, as well as dynamic data tables and visualizations with <code>js-datatable</code>.</p>
+</li>
+<li>
+<p><strong>Machine Learning Tutorials</strong>: Hands-on code examples from workshops and tutorials (ICASSP 2019 Tutorial about deep learning for acoustic scenes and events, Practical tools for sound classification and speech AI presented in AI Hub Audio and Speech Technology Workshop 2022).</p>
+</li>
+<li>
+<p><strong>Example Systems from Research</strong>: Implementations from the book <em>Computational Analysis of Sound Scenes and Events</em> demonstrating single-label and multi-label classification tasks as well as the sound event detection task.</p>
+</li>
+<li>
+<p><strong>DCASE Challenge Baselines (2016–2020)</strong>: Reference systems for acoustic scene classification and sound event detection, implemented in Python and MATLAB.</p>
+</li>
+</ul>
+<p>A practical set of entry points into machine learning for audio analysis.</p>
+<h1 id="research-tools---evaluation-and-data-handling">Research tools - Evaluation and Data Handling</h1>
+<div class="container">
+<div class="card-deck row">
+<div class="col-xs-12 col-sm-6 col-md-6 py-2">
+<div class="card h-100">
+<a href="https://github.com/TUT-ARG/sed_eval"><img alt="dcase_util" class="card-img-top" src="images/screen/sed_eval.png" style="filter: brightness(80%) contrast(114%)"/>
+</a>
+<div class="card-body">
+<h4 class="card-title">Evaluation toolbox for Sound Event Detection</h4>
+<h5 class="card-subtitle mb-2 text-body-secondary">sed_eval</h5>
+<p class="card-text">An open-source Python toolbox that provides a standardized and transparent method for evaluating sound event detection systems (see Sound Event Detection). Additionally, it provides tools for evaluating acoustic scene classification systems, as the fields are closely related (see Acoustic Scene Classification).</p>
+</div>
+<div class="card-footer d-grid">
+<div class="btn-group">
+<a class="card-link btn btn-default" href="https://github.com/TUT-ARG/sed_eval"><i class="fa fa-brands fa-github"></i> Code</a>
+<a class="card-link btn btn-default" href="https://tut-arg.github.io/sed_eval/"><i class="fa fa-solid fa-file"></i> Docs</a>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6 col-md-6 py-2">
+<div class="card h-100">
+<a href="https://github.com/DCASE-REPO/dcase_util"><img alt="dcase_util" class="card-img-top" src="images/screen/dcase_util.png" style="filter: brightness(80%) contrast(114%)"/>
+</a>
+<div class="card-body">
+<h4 class="card-title">Utilities for Detection and Classification of Acoustic Scenes and Events </h4>
+<h5 class="card-subtitle mb-2 text-body-secondary">dcase_util</h5>
+<p class="card-text">These utilities were initially created for the DCASE challenge baseline systems (2016 &amp; 2017) and are bundled into a standalone library to allow their re-usage in other research projects. The primary goal of the utilities is to streamline the research code, making it more readable and easier to maintain. Most of the implemented utilities are related to audio datasets: handling metadata and various forms of structured data, and providing a standardized usage API for audio datasets from multiple sources.</p>
+</div>
+<div class="card-footer d-grid">
+<div class="btn-group">
+<a class="card-link btn btn-default" href="https://github.com/DCASE-REPO/dcase_util"><i class="fa fa-brands fa-github"></i> Code</a>
+<a class="card-link btn btn-default" href="https://dcase-repo.github.io/dcase_util/"><i class="fa fa-solid fa-file"></i> Docs</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p><br/></p>
+<h1 id="data-and-system-results-visualization">Data and System Results Visualization</h1>
+<div class="container">
+<div class="card-deck row">
+<div class="col-xs-12 col-sm-6 col-md-6 py-2">
+<div class="card h-100">
+<a href="https://github.com/TUT-ARG/sed_vis"><img alt="sed_vis" class="card-img-top" src="images/screen/sed_vis.png" style="filter: brightness(80%) contrast(114%)"/>
+</a>
+<div class="card-body">
+<h4 class="card-title">Visualization toolbox for Sound Event Detection</h4>
+<h5 class="card-subtitle mb-2 text-body-secondary">sed_vis</h5>
+<p class="card-text">An open-source Python toolbox for visualizing annotations and system outputs of sound event detection systems. The toolbox features an event roll-style visualizer that displays annotations and/or system outputs alongside the audio waveform. Users can play the audio and follow sound events using an interactive indicator bar. In addition to the interactive visualizer, the toolbox includes a video generator for creating demonstration videos for sound event detection, audio tagging, and audio captioning tasks.</p>
+</div>
+<div class="card-footer d-grid">
+<a class="card-link btn btn-default" href="https://github.com/TUT-ARG/sed_vis"><i class="fa fa-brands fa-github"></i> Code</a>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6 col-md-6 py-2">
+<div class="card h-100">
+<a href="https://github.com/toni-heittola/js-datatable"><img alt="js-datatable" class="card-img-top" src="images/screen/js_datatable.png" style="filter: brightness(80%) contrast(114%)"/>
+</a>
+<div class="card-body">
+<h4 class="card-title">Dynamic HTML tables with data visualization</h4>
+<h5 class="card-subtitle mb-2 text-body-secondary">js-datatable</h5>
+<p class="card-text">An open-source jQuery plugin for creating dynamic HTML tables with built-in data visualization capabilities. This plugin was originally developed to support academic data visualization, and specifically for presenting results from the DCASE2016 evaluation campaign. The plugin was designed to integrate seamlessly with the Pelican static site generator. The project later evolved into js-datatable, a standalone jQuery plugin that encapsulates the core functionality. For Pelican integration, refer to the companion project: pelican-datatable.</p>
+</div>
+<div class="card-footer d-grid">
+<div class="btn-group">
+<a class="card-link btn btn-default" href="https://github.com/toni-heittola/js-datatable"><i class="fa fa-brands fa-github"></i> Code</a>
+<a class="card-link btn btn-default" href="https://toni-heittola.github.io/js-datatable/"><i class="fa fa-solid fa-file"></i> Docs</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p><br/></p>
+<h1 id="machine-learning-tutorials">Machine Learning Tutorials</h1>
+<div class="container">
+<div class="card-deck row">
+<div class="col-xs-12 col-sm-6 col-md-6 py-2">
+<div class="card h-100">
+<a href="https://github.com/toni-heittola/audio-and-speech-tech-2022"><img alt="audio-and-speech-tech-2022" class="card-img-top" src="images/screen/ai_hub.png" style="filter: brightness(80%) contrast(114%)"/>
+</a>
+<div class="card-body">
+<h4 class="card-title">Audio Technologies Code Examples</h4>
+<h5 class="card-subtitle mb-2 text-body-secondary">Audio and Speech Technologies Workshop 2022</h5>
+<p class="card-text">This repository contains code examples from the tutorial presented at the AI Hub Audio and Speech Technology Workshop 2022. The workshop was co-hosted by AI Hub Tampere and the MARVEL project to showcase  practical tools and techniques in modern audio and speech processing. The tutorial introduced participants to key concepts and hands-on methods in sound classification, environmental audio AI, and speech AI.</p>
+</div>
+<div class="card-footer d-grid">
+<div class="btn-group">
+<a class="card-link btn btn-default" href="https://github.com/toni-heittola/audio-and-speech-tech-2022"><i class="fa fa-brands fa-github"></i><br/> Code</a>
+<a class="card-link btn btn-default" href="https://rawcdn.githack.com/toni-heittola/audio-and-speech-tech-2022/94e4f1b2d2e2dcb36cf8333ba24f8c345712e8ff/examples/1_sound_classification_example.slides.html"><i class="fa fa-solid fa-file"></i><br/>Sound classification</a>
+<a class="card-link btn btn-default" href="https://rawcdn.githack.com/toni-heittola/audio-and-speech-tech-2022/94e4f1b2d2e2dcb36cf8333ba24f8c345712e8ff/examples/2_environmental_audio_ai_examples.slides.html"><i class="fa fa-solid fa-file"></i><br/> Environmental audio AI</a>
+<a class="card-link btn btn-default" href="https://rawcdn.githack.com/toni-heittola/audio-and-speech-tech-2022/94e4f1b2d2e2dcb36cf8333ba24f8c345712e8ff/examples/3_speech_ai_examples.slides.html"><i class="fa fa-solid fa-file"></i><br/> Speech AI</a>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6 col-md-6 py-2">
+<div class="card h-100">
+<a href="https://github.com/toni-heittola/icassp2019-tutorial"><img alt="icassp2019-tutorial" class="card-img-top" src="images/screen/icassp2019_tutorial.png" style="filter: brightness(80%) contrast(114%)"/>
+</a>
+<div class="card-body">
+<h4 class="card-title">Detection and Classification of Acoustic Scenes and Events Tutorial</h4>
+<h5 class="card-subtitle mb-2 text-body-secondary">ICASSP2019 Tutorial</h5>
+<p class="card-text">This repository contains code examples from the ICASSP 2019 tutorial "Detection and Classification of Acoustic Scenes and Events", presented by Tuomas Virtanen, Annamaria Mesaros, and Toni Heittola. The tutorial highlights key methods for acoustic scene classification and sound event detection, with a focus on deep learning. It includes practical examples of convolutional neural networks (CNNs) and convolutional recurrent neural networks (CRNNs).</p>
+</div>
+<div class="card-footer d-grid">
+<div class="btn-group">
+<a class="card-link btn btn-default" href="https://github.com/toni-heittola/icassp2019-tutorial"><i class="fa fa-brands fa-github"></i> Code</a>
+<a class="card-link btn btn-default" href="https://homepages.tuni.fi/toni.heittola/pubs/ICASSP2019_DCASE_tutorial.pdf"><i class="fa fa-solid fa-file"></i> Slides</a>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6 col-md-6 py-2">
+<div class="card h-100">
+<a href="https://github.com/TUT-ARG/CASSE_book_ch2_examples"><img alt="CASSE_book_ch2_examples" class="card-img-top" src="images/screen/casse_book.png" style="filter: brightness(80%) contrast(114%)"/>
+</a>
+<div class="card-body">
+<h4 class="card-title">Example Systems for a Book</h4>
+<h5 class="card-subtitle mb-2 text-body-secondary">The Machine Learning Approach for Analysis of Sound Scenes and Events</h5>
+<p class="card-text">Example Systems for Chapter 2: "The Machine Learning Approach for Analysis of Sound Scenes and Events" Toni Heittola, Emre Çakır, and Tuomas Virtanen In Computational Analysis of Sound Scenes and Events, edited by T. Virtanen, M. Plumbley, and D. Ellis, pp. 13–40, Springer, 2018. This repository provides example systems that demonstrate how to address key audio analysis tasks using machine learning techniques: 1) Single-label classification: An example system for classifying audio into mutually exclusive categories, 2) Multi-label classification: A system designed to handle overlapping sound events within a single audio segment, 3) Sound event detection: A system that identifies the presence and timing of specific sound events within an audio stream. These code examples aim to support the concepts presented in Chapter 2 of the book and provide practical starting points for researchers and developers in computational sound analysis.</p>
+</div>
+<div class="card-footer d-grid">
+<div class="btn-group">
+<a class="card-link btn btn-default" href="https://github.com/TUT-ARG/CASSE_book_ch2_examples"><i class="fa fa-brands fa-github"></i> Code</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p><br/></p>
+<h1 id="benchmarks-for-dcase-challenge">Benchmarks for DCASE Challenge</h1>
+<div class="container">
+<div class="card-deck row">
+<div class="col-xs-12 col-sm-6 col-md-6 py-2">
+<div class="card h-100">
+<a href="https://github.com/toni-heittola/dcase2020_task1_baseline"><img alt="dcase2020_task1_baseline" class="card-img-top" src="images/screen/dcase2020_baseline.png" style="filter: brightness(80%) contrast(114%)"/>
+</a>
+<div class="card-body">
+<h4 class="card-title">Acoustic Scene Classification Baseline</h4>
+<h5 class="card-subtitle mb-2 text-body-secondary">DCASE2020 Challenge Task 1</h5>
+<p class="card-text">A simple entry-level state-of-the-art approach based on <strong>OpenL3 embeddings</strong> and <strong>log Mel-band energy</strong> features, and multilayer perceptron (<strong>MLP</strong>) and convolutional neural network (<strong>CNN</strong>) classifiers. The system is built on the Tensorflow framework, and it is easily extendable through YAML configurations and extending classes.</p>
+</div>
+<div class="card-footer d-grid">
+<a class="card-link btn btn-default" href="https://github.com/toni-heittola/dcase2020_task1_baseline"><i class="fa fa-brands fa-github"></i> Code</a>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6 col-md-6 py-2">
+<div class="card h-100">
+<a href="https://github.com/toni-heittola/dcase2019_task1_baseline"><img alt="dcase2019_task1_baseline" class="card-img-top" src="images/screen/dcase2019_baseline.png" style="filter: brightness(80%) contrast(114%)"/>
+</a>
+<div class="card-body">
+<h4 class="card-title">Acoustic Scene Classification Baseline</h4>
+<h5 class="card-subtitle mb-2 text-body-secondary">DCASE2019 Challenge Task 1</h5>
+<p class="card-text">A simple entry-level state-of-the-art approach based on <strong>log Mel-band energy</strong> features and a convolutional neural network (<strong>CNN</strong>) classifier. The system is built on the Tensorflow framework, and it is easily extendable through YAML configurations and extending classes.</p>
+</div>
+<div class="card-footer d-grid">
+<a class="card-link btn btn-default" href="https://github.com/toni-heittola/dcase2019_task1_baseline"><i class="fa fa-brands fa-github"></i> Code</a>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6 col-md-6 py-2">
+<div class="card h-100">
+<a href="https://github.com/DCASE-REPO/dcase2018_baseline/tree/master/task1"><img alt="dcase2018_baseline" class="card-img-top" src="images/screen/dcase2018_baseline.png" style="filter: brightness(80%) contrast(114%)"/>
+</a>
+<div class="card-body">
+<h4 class="card-title">Acoustic Scene Classification Baseline</h4>
+<h5 class="card-subtitle mb-2 text-body-secondary">DCASE2018 Challenge Task 1</h5>
+<p class="card-text">A simple entry-level state-of-the-art approach based on <strong>log Mel-band energy</strong> features and a convolutional neural network (<strong>CNN</strong>) classifier. The system is built on the Keras / Tensorflow framework, and it is easily extendable through YAML configurations and extending classes.</p>
+</div>
+<div class="card-footer d-grid">
+<a class="card-link btn btn-default" href="https://github.com/DCASE-REPO/dcase2018_baseline/tree/master/task1"><i class="fa fa-brands fa-github"></i> Code</a>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6 col-md-6 py-2">
+<div class="card h-100">
+<a href="https://github.com/TUT-ARG/DCASE2017-baseline-system"><img alt="dcase2017_baseline" class="card-img-top" src="images/screen/dcase2017_baseline.png" style="filter: brightness(80%) contrast(114%)"/>
+</a>
+<div class="card-body">
+<h4 class="card-title">DCASE Baselines for ASC and SED</h4>
+<h5 class="card-subtitle mb-2 text-body-secondary">DCASE2017 Challenge Task 1-3</h5>
+<p class="card-text">An entry-level system based on <strong>log Mel-band energy</strong> features and a multilayer perceptron (<strong>MLP</strong>) classifier. The system is built on the Keras / Theano framework.</p>
+</div>
+<div class="card-footer d-grid">
+<a class="card-link btn btn-default" href="https://github.com/TUT-ARG/DCASE2017-baseline-system"><i class="fa fa-brands fa-github"></i> Code</a>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6 col-md-6 py-2">
+<div class="card h-100">
+<a href="https://github.com/TUT-ARG/DCASE2016-baseline-system-matlab"><img alt="dcase2016_baseline" class="card-img-top" src="images/screen/dcase2016_baseline.png" style="filter: brightness(80%) contrast(114%)"/>
+</a>
+<div class="card-body">
+<h4 class="card-title">DCASE Baselines for ASC and SED (Python&amp;Matlab)</h4>
+<h5 class="card-subtitle mb-2 text-body-secondary">DCASE2016 Challenge Task 1 &amp; 3</h5>
+<p class="card-text">A system based on <strong>MFCC</strong> features and a Gaussian Mixture Model (<strong>GMM</strong>) classifier. For ASC, a separate model is trained per scene class using maximum likelihood classification. For SED, each event class has a binary classifier. There are reference implementations in both Python and MATLAB.</p>
+</div>
+<div class="card-footer d-grid">
+<div class="btn-group">
+<a class="card-link btn btn-default" href="https://github.com/TUT-ARG/DCASE2016-baseline-system-python"><i class="fa fa-brands fa-github"></i> Python system</a>
+<a class="card-link btn btn-default" href="https://github.com/TUT-ARG/DCASE2016-baseline-system-matlab"><i class="fa fa-brands fa-github"></i> Matlab system</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p><br/></p>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>    
+
+<ul class="nav pull-right scroll-top">
+  <li>
+    <a title="Scroll to top" href="#" class="page-scroll-top">
+      <i class="glyphicon glyphicon-chevron-up"></i>
+    </a>
+  </li>
+</ul>
+<script type="text/javascript" src="/theme/assets/jquery/jquery.easing.min.js"></script>
+<script type="text/javascript" src="/theme/assets/bootstrap5/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="/theme/js/theme5.js"></script><script type="text/javascript" src="/theme/assets/scrollreveal/scrollreveal.min.js"></script>
+<script type="text/javascript" src="/theme/js/setup.scrollreveal.js"></script>
+<script type="text/javascript" src="/theme/assets/highlight/highlight.pack.js"></script>
+<script type="text/javascript">
+    document.querySelectorAll('pre code:not([class])').forEach(function($) {$.className = 'no-highlight';});
+    hljs.initHighlightingOnLoad();
+</script>
+<script type="text/javascript" src="/theme/js/respond.min.js"></script>
+<script type="text/javascript" src="/theme/js/tocbot.min.js"></script>
+<script type="text/javascript" src="/theme/js/btoc-bot.min.js"></script>
+</body>
+</html>
